@@ -1,27 +1,36 @@
-# Docsify-Guide
-> 🐱‍🏍Docsify使用指南，使用Typora+Docsify打造最强、最快捷、最轻量级的个人&团队文档。
 
-## Docsify使用教程
-- [docsify-github地址](https://github.com/docsifyjs/docsify/#showcase)
-- [docsify快速开始-官方教程](https://docsify.js.org/#/zh-cn/quickstart)
-- [使用开源文档工具docsify，用写博客的姿势写文档](https://www.cnblogs.com/throwable/p/13605289.html)
-- [Docsify使用指南（打造最强、最轻量级的个人&团队文档）](https://www.cnblogs.com/Can-daydayup/p/15413267.html)
+# 欢迎来到我的博客！
 
-## Docsify部署教程
-- [Docsify部署IIS](https://www.cnblogs.com/Can-daydayup/p/15779788.html)
-- [GitHub Pages](https://docsify.js.org/#/zh-cn/deploy?id=github-pages)
-- [GitLab Pages](https://docsify.js.org/#/zh-cn/deploy?id=gitlab-pages)
-- [Gitee Pages](https://docsify.js.org/#/zh-cn/deploy?id=gitee-pages)
-- [Docker](https://docsify.js.org/#/zh-cn/deploy?id=docker)
-- [Firebase 主机](https://docsify.js.org/#/zh-cn/deploy?id=firebase-主机)
-- [VPS](https://docsify.js.org/#/zh-cn/deploy?id=vps)
-- [Netlify](https://docsify.js.org/#/zh-cn/deploy?id=netlify)
-- [ZEIT Now](https://docsify.js.org/#/zh-cn/deploy?id=zeit-now)
-- [AWS Amplify](https://docsify.js.org/#/zh-cn/deploy?id=aws-amplify)
-- [官方docsify部署教程](https://docsify.js.org/#/zh-cn/deploy)
-- [30分钟使用Docsify+Github Pages搭建个人博客 ](https://www.cnblogs.com/Can-daydayup/p/15779888.html)
+> 大家好，欢迎来到我的个人博客！在这里，我会分享我的技术见解、生活感悟和各种有趣的发现。我热爱编程、设计和探索新技术，希望这个博客能成为我们交流和学习的平台。
 
-![image-20211016011310154](images/image-20211016011310154.png)
+## 🚀 关于我
 
-![image-20211016011222107](images/image-20211016011222107.png)
+我是一名软件工程师，对前端和后端开发都有一定的研究。我喜欢挑战自己，不断学习新技能，并将这些知识应用到实际项目中。在业余时间，我也喜欢看书和喝茶，探索世界的每一个角落。
+
+## 📝 博客内容
+
+这个博客将涵盖以下主题：
+
+- **技术分享**：我会分享我在编程和技术领域的最新发现和心得。
+- **项目案例**：展示我参与或主导的项目，包括开发过程和遇到的挑战。
+- **学习笔记**：记录我在学习和工作中遇到的知识点和解决方案。
+- **生活点滴**：分享我的旅行故事和日常生活中的小确幸。
+
+## 🌟 特色
+
+- **简洁设计**：我的博客采用简洁的设计风格，注重内容的呈现，让你的阅读体验更加舒适。
+- **实时更新**：我会定期更新博客内容，确保你总能获取最新的信息。
+- **互动交流**：欢迎在文章下方留言，我会及时回复，与你进行深入的讨论。
+
+## 📅 更新频率
+
+我计划每周至少更新一次博客，分享我的新发现或者新项目。如果你对我的某个话题特别感兴趣，也可以通过邮件或者社交媒体联系我，我会根据你的反馈调整内容。
+
+## 📧 联系方式
+
+- **邮箱**：[18561977738@163.com](18561977738@163.com)
+- **GitHub**：[your-github](https://github.com/gengxiaoyu)
+
+感谢你的访问，希望我的博客能给你带来一些有价值的内容和启发。让我们一起成长，一起探索这个精彩的世界！
+
 
