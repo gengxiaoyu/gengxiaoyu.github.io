@@ -22,4 +22,8 @@
   * [2024年-08月](/ProjectDocs/%E6%97%A5%E6%8A%A5%E5%91%A8%E6%8A%A5/2024%E5%B9%B4-08%E6%9C%88.md)
   * [2024年-09月](/ProjectDocs/%E6%97%A5%E6%8A%A5%E5%91%A8%E6%8A%A5/2024%E5%B9%B4-09%E6%9C%88.md)
   * [2024年-10月](/ProjectDocs/%E6%97%A5%E6%8A%A5%E5%91%A8%E6%8A%A5/2024%E5%B9%B4-10%E6%9C%88.md)
+* Web3
+  * [web3入门大纲](/ProjectDocs/web3/web3%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80.md)
+  * [智能合约-合约结构](/ProjectDocs/web3/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/%E5%90%88%E7%BA%A6%E7%BB%93%E6%9E%84.md)
+  * [智能合约-合约类型](/ProjectDocs/web3/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/%E5%90%88%E7%BA%A6%E7%B1%BB%E5%9E%8B.md)
   
