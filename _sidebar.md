@@ -1,18 +1,18 @@
 * VUE
-  * [前端工程搭建](/ProjectDocs/webEngineeringConstruction.md)
-  * [大屏适配](/ProjectDocs/largeScreenAdaptation.md)
-  * [PDF预览](/ProjectDocs/previewPdf.md)
-  * [弹窗拖拽](/ProjectDocs/popUpDrag.md)
-  * [字体压缩](/ProjectDocs/fontCompression.md)
+  * [前端工程搭建](/ProjectDocs/WebEngineeringConstruction.md)
+  * [PDF预览](/ProjectDocs/PreviewPdf.md)
+  * [弹窗拖拽](/ProjectDocs/Pop-Up-Drag.md)
+  * [字体压缩](/ProjectDocs/FontCompression.md)
+  * [大屏适配](/ProjectDocs/LargeScreenAdaptation.md)
 * JavaScript
-  * [flv-hls播放](/ProjectDocs/flv-hlsPlay.md)
-  * [js 方法汇总](/ProjectDocs/methodJs.md)
+  * [flv-hls播放](/ProjectDocs/Flv-Hls-Play.md)
+  * [js 方法汇总](/ProjectDocs/MethodJs.md)
 * Element-Ui
   * [表单-遍历-rules](/ProjectDocs/Form-Traversal-Rules.md)
 * Uni-App
   * [uni-app设置navigation高度计算](/ProjectDocs/NavigationHeightCalculation.md)
 * Git
-  * [git使用](/ProjectDocs/methodGit.md)
+  * [git使用](/ProjectDocs/MethodGit.md)
 * Web3
   * [web3入门大纲](/ProjectDocs/StartedOutline.md)
   * [智能合约-合约结构](/ProjectDocs/SolidityStructure.md)
