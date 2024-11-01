@@ -12,7 +12,7 @@
 * Uni-App
   * [uni-app设置navigation高度计算](/ProjectDocs/NavigationHeightCalculation.md)
 * Git
-  * [git使用](/ProjectDocs/MethodGit.md)
+  * [git使用](/ProjectDocs/MethodGit.md) 
 * Web3
   * [web3入门大纲](/ProjectDocs/StartedOutline.md)
   * [智能合约-合约结构](/ProjectDocs/SolidityStructure.md)
