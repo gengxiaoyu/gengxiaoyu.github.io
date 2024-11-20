@@ -1,121 +1,124 @@
 # Vue 3 的前端工程
 
 ## 1. **环境准备**：
-   - 确保已安装 Node.js（建议版本 16 或更高）。
-   - 安装最新版本的 npm 或 Yarn 作为包管理工具。
+  - 确保已安装 Node.js（建议版本 16 或更高）。
+  - 安装最新版本的 npm 或 Yarn 作为包管理工具。
 - 在Windows上安装Node.js和包管理工具（npm或Yarn）的步骤如下：
 - 安装 Node.js
 
 1. **下载 Node.js安装包**：
-   - 打开浏览器，访问[Node.js官方网站](https://nodejs.org/)。
-   - 点击“Download”按钮下载推荐版本（通常是LTS版本）的安装包。你也可以下载最新版本的Node.js，但请确保它与你的项目依赖兼容。
+  - 打开浏览器，访问[Node.js官方网站](https://nodejs.org/)。
+  - 点击“Download”按钮下载推荐版本（通常是LTS版本）的安装包。你也可以下载最新版本的Node.js，但请确保它与你的项目依赖兼容。
 
 2. **运行安装程序**：
-   - 找到下载的`.msi`文件（例如：`node-v16.X.X-x64.msi`），双击运行安装程序。
-   - 在安装向导中，按照提示进行操作。在安装类型选择界面，你可以选择“典型”安装或“自定义”安装。通常情况下，“典型”安装就足够了。
+  - 找到下载的`.msi`文件（例如：`node-v16.X.X-x64.msi`），双击运行安装程序。
+  - 在安装向导中，按照提示进行操作。在安装类型选择界面，你可以选择“典型”安装或“自定义”安装。通常情况下，“典型”安装就足够了。
 
 3. **安装选项**：
-   - 在安装过程中，会询问你是否要将Node.js添加到系统环境变量，建议勾选这个选项，这样你就可以在命令提示符下方便地使用`node`和`npm`命令了。
-   - 另外，你还可以选择“使用Node.js更新Windows PATH（通过Internet Explorer）”，这将自动配置环境变量。
+  - 在安装过程中，会询问你是否要将Node.js添加到系统环境变量，建议勾选这个选项，这样你就可以在命令提示符下方便地使用`node`和`npm`命令了。
+  - 另外，你还可以选择“使用Node.js更新Windows PATH（通过Internet Explorer）”，这将自动配置环境变量。
 
 4. **完成安装**：
-   - 完成安装向导，Node.js和npm将被安装到你的系统上。
+  - 完成安装向导，Node.js和npm将被安装到你的系统上。
 
 5. **验证安装**：
-   - 打开命令提示符（可以在开始菜单搜索`cmd`或`命令提示符`）。
-   - 输入以下命令来验证Node.js和npm是否正确安装：
+  - 打开命令提示符（可以在开始菜单搜索`cmd`或`命令提示符`）。
+  - 输入以下命令来验证Node.js和npm是否正确安装：
 ```cmd
 node -v
 npm -v
 ```
-   - 这将分别显示Node.js和npm的版本号。
-   - 安装 Yarn（可选）
+  - 这将分别显示Node.js和npm的版本号。
+  - 安装 Yarn（可选）
 1. **下载 Yarn 安装脚本**：
-   - 打开命令提示符。
-   - 运行以下命令来下载并运行Yarn安装脚本：
+  - 打开命令提示符。
+  - 运行以下命令来下载并运行Yarn安装脚本：
 ```cmd
 npm install -g yarn
 ```
-   - 这将使用npm来全局安装Yarn。
+  - 这将使用npm来全局安装Yarn。
 
 2. **验证 Yarn 安装**：
-   - 在命令提示符中输入以下命令来验证Yarn是否正确安装：
+  - 在命令提示符中输入以下命令来验证Yarn是否正确安装：
 ```cmd
 yarn --version
 ```
-   - 这将显示Yarn的版本号。
+  - 这将显示Yarn的版本号。
 
 - 注意事项
-   - 在安装Node.js时，如果系统提示任何安全警告，请确保下载的是官方的安装包。
-   - 如果你使用的是Windows的旧版本（如Windows 7），可能需要手动下载并安装更新的Visual C++可再发行包（Redistributable Packages）。
-   - 如果你在使用npm安装Yarn时遇到权限问题，尝试以管理员身份运行命令提示符。
-   - 如果你在使用代理上网，确保你的npm配置正确地设置了代理。
+  - 在安装Node.js时，如果系统提示任何安全警告，请确保下载的是官方的安装包。
+  - 如果你使用的是Windows的旧版本（如Windows 7），可能需要手动下载并安装更新的Visual C++可再发行包（Redistributable Packages）。
+  - 如果你在使用npm安装Yarn时遇到权限问题，尝试以管理员身份运行命令提示符。
+  - 如果你在使用代理上网，确保你的npm配置正确地设置了代理。
 
 ## 2. **项目初始化**：
-   - **使用 `npm create vite@latest` 命令创建一个新的 Vue 3 项目**：
-     这个命令会使用最新的 Vite 版本来初始化一个新的 Vue 3 项目。Vite 是一个现代化的前端构建工具，它提供了丰富的功能来优化开发体验和生产环境的构建性能。
-   - **选择 Vue 框架和所需的配置（如 JavaScript 支持）**：
-     在初始化过程中，你会被询问一系列问题，以定制项目配置。这些问题可能包括：
-     - 是否使用 TypeScript。
-     - 选择 JavaScript 版本（例如 ES6 或更高）。
-     - 选择 CSS 预处理器（例如 Sass、Less）。
-     - 是否使用 Vue 路由。
-     - 是否使用 Vuex 状态管理。
-     - 是否需要添加 ESLint 和 Prettier 等代码质量和格式化工具。
-     - 是否需要添加单元测试和端到端测试。
+  - **使用 `npm create vite@latest` 命令创建一个新的 Vue 3 项目**：
+    这个命令会使用最新的 Vite 版本来初始化一个新的 Vue 3 项目。Vite 是一个现代化的前端构建工具，它提供了丰富的功能来优化开发体验和生产环境的构建性能。
+  - **选择 Vue 框架和所需的配置（如 JavaScript 支持）**：
+    在初始化过程中，你会被询问一系列问题，以定制项目配置。这些问题可能包括：
+    - 是否使用 TypeScript。
+    - 选择 JavaScript 版本（例如 ES6 或更高）。
+    - 选择 CSS 预处理器（例如 Sass、Less）。
+    - 是否使用 Vue 路由。
+    - 是否使用 Vuex 状态管理。
+    - 是否需要添加 ESLint 和 Prettier 等代码质量和格式化工具。
+    - 是否需要添加单元测试和端到端测试。
 
 以下是详细的步骤说明：
 
 1. **打开终端**：
-   打开你的命令行界面（CLI），如 Terminal、Command Prompt 或 VSCode 的集成终端。
+  打开你的命令行界面（CLI），如 Terminal、Command Prompt 或 VSCode 的集成终端。
 
 2. **运行创建命令**：
-   在终端中运行以下命令：
+  在终端中运行以下命令：
 ```bash
 npm create vite@latest
 ```
-   这个命令会启动 Vite 的创建向导。
+  这个命令会启动 Vite 的创建向导。
 
 3. **选择项目模板**：
-   选择 `Vue` 作为项目模板。你可能会被问到是否需要添加其他功能，如 Vue Router、Vuex、CSS 预处理器等。
+  选择 `Vue` 作为项目模板。你可能会被问到是否需要添加其他功能，如 Vue Router、Vuex、CSS 预处理器等。
 
 4. **选择语言特性**：
-   根据你的需要选择 JavaScript 版本。如果你不确定，可以选择默认的 ES6 支持。
+  根据你的需要选择 JavaScript 版本。如果你不确定，可以选择默认的 ES6 支持。
 
 5. **选择 CSS 预处理器**：
-   如果你需要使用 CSS 预处理器，如 Sass 或 Less，选择一个你喜欢的。
+  如果你需要使用 CSS 预处理器，如 Sass 或 Less，选择一个你喜欢的。
 
 6. **配置路由和状态管理**：
-   如果你的项目需要路由或状态管理，选择 Vue Router 和 Pinia
+  如果你的项目需要路由或状态管理，选择 Vue Router 和 Pinia
 
 7. **选择代码质量和格式化工具**：
-   选择 ESLint 和 Prettier 可以帮助你维护代码质量和风格一致性。
+  选择 ESLint 和 Prettier 可以帮助你维护代码质量和风格一致性。
 
 8. **选择测试框架**：
-   如果你需要进行单元测试或端到端测试，可以选择相应的测试框架。
-   
+  如果你需要进行单元测试或端到端测试，可以选择相应的测试框架。
+或者
+```sh
+npm create vite@latest my-project-template -- --template vue
+``` 
 ## 3. **安装依赖**：
-   - 进入项目目录，运行 `npm install` 安装依赖。
+  - 进入项目目录，运行 `npm install` 安装依赖。
 ``` bash
 npm install
 ```
 ## 4. **启动开发服务器**：
-   - 在项目目录中运行以下命令启动开发服务器：
+  - 在项目目录中运行以下命令启动开发服务器：
 ``` bash
 npm run dev
 ```
 这将启动一个本地开发服务器，通常在 `localhost:3000`。
 ## 5. **项目结构调整**：
-   - 根据需要调整项目结构，例如创建 `views`、`components`、`router`、`store` 等目录。
+  - 根据需要调整项目结构，例如创建 `views`、`components`、`router`、`store` 等目录。
 
 ## 6. **配置路由**：
-   - 安装 Vue Router：`npm install vue-router@next`。
-   - 使用 `import.meta.globEager` 自动导入路由模块，减少手动维护路由配置的复杂性。
-   - 创建路由配置文件并在 `main.js` 中引入。
-   - **自动化路由配置**：
-     - 在 `router` 目录下创建一个 `modules` 文件夹。
-     - 将不同的路由配置分散到 `modules` 文件夹中的不同文件里。
-     - 使用 `import.meta.globEager` 来自动化地加载这些路由配置。
+  - 安装 Vue Router：`npm install vue-router@next`。
+  - 使用 `import.meta.globEager` 自动导入路由模块，减少手动维护路由配置的复杂性。
+  - 创建路由配置文件并在 `main.js` 中引入。
+  - **自动化路由配置**：
+    - 在 `router` 目录下创建一个 `modules` 文件夹。
+    - 将不同的路由配置分散到 `modules` 文件夹中的不同文件里。
+    - 使用 `import.meta.globEager` 来自动化地加载这些路由配置。
 ```javascript
 // router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
@@ -123,56 +126,56 @@ const routeFiles = import.meta.globEager('./modules/**/*.js');
 
 const routes = [];
 for (const path in routeFiles) {
-    const routeConfig = routeFiles[path].default;
-    routes.push(routeConfig);
+  const routeConfig = routeFiles[path].default;
+  routes.push(routeConfig);
 }
 const router = createRouter({
-    history: createWebHistory(),
-    routes
+  history: createWebHistory(),
+  routes
 });
 
 router.beforeEach((to, from, next) => {
-    // 验证用户是否登录的逻辑
-    const isLoggedIn = /* 检查登录状态 */;
-    if (to.matched.some(record => record.meta.requiresAuth) && !isLoggedIn) {
-    	next({ name: 'Login' });
-    } else {
-    	next();
-    }
+  // 验证用户是否登录的逻辑
+  const isLoggedIn = /* 检查登录状态 */;
+  if (to.matched.some(record => record.meta.requiresAuth) && !isLoggedIn) {
+    next({ name: 'Login' });
+  } else {
+    next();
+  }
 });
 
 export default router;
 ```
-   - 在 `modules` 文件夹中创建路由配置文件，例如 `home.js` 和 `about.js`。
+  - 在 `modules` 文件夹中创建路由配置文件，例如 `home.js` 和 `about.js`。
 ```javascript
 // router/modules/home.js
 import HomeView from '../views/HomeView.vue';
 export default {
-    path: '/',
-    name: 'Home',
-    component: HomeView
+  path: '/',
+  name: 'Home',
+  component: HomeView
 };
 ```
 ```javascript
 // router/modules/about.js
 import AboutView from '../views/AboutView.vue';
 export default {
-    path: '/about',
-    name: 'About',
-    component: AboutView
+  path: '/about',
+  name: 'About',
+  component: AboutView
 };
 ```
-   - 添加 404 页面路由：
+  - 添加 404 页面路由：
 ```javascript
 // router/modules/not-found.js
 import NotFoundView from '../views/NotFoundView.vue';
 export default {
-    path: '/:notFound(.*)',
-    name: 'NotFound',
-    component: NotFoundView
+  path: '/:notFound(.*)',
+  name: 'NotFound',
+  component: NotFoundView
 };
 ```
-   - 在 `main.js` 中引入路由配置：
+  - 在 `main.js` 中引入路由配置：
 ```javascript
 // src/main.js
 import { createApp } from 'vue';
@@ -180,35 +183,35 @@ import App from './App.vue';
 import router from './router';
 createApp(App).use(router).mount('#app');
 ```
-   - 使用 `<router-view>` 来显示路由匹配的组件：
+  - 使用 `<router-view>` 来显示路由匹配的组件：
 ```vue
 <!-- src/App.vue -->
 <template>
-    <div id="app">
-    	<router-view></router-view>
-    </div>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 ```
-   - 使用 `<router-link>` 创建导航链接：
+  - 使用 `<router-link>` 创建导航链接：
 ```vue
 <!-- src/components/Navigation.vue -->
 <template>
-    <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-    </nav>
+  <nav>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
+  </nav>
 </template>
 ```
 - **优化点**： 
-   - 使用 `import.meta.globEager` 实现自动化路由配置，减少了手动维护的工作量。
-   - 利用路由懒加载，按需加载路由对应的组件，减少应用初始加载时间。
-   - 使用路由守卫进行登录验证，确保用户在访问受保护路由之前已经登录。
-   - 添加 404 路由作为全局的兜底路由，提高应用的健壮性。
-   - 通过配置 `meta` 字段，为路由添加额外的元信息，如 `requiresAuth` 标记需要登录的路由。
+  - 使用 `import.meta.globEager` 实现自动化路由配置，减少了手动维护的工作量。
+  - 利用路由懒加载，按需加载路由对应的组件，减少应用初始加载时间。
+  - 使用路由守卫进行登录验证，确保用户在访问受保护路由之前已经登录。
+  - 添加 404 路由作为全局的兜底路由，提高应用的健壮性。
+  - 通过配置 `meta` 字段，为路由添加额外的元信息，如 `requiresAuth` 标记需要登录的路由。
 
 ##7. **状态管理**：
-   - 安装 Pinia：`npm install pinia`。
-   - 在 `main.js` 中创建并引入 Pinia 存储。
+  - 安装 Pinia：`npm install pinia`。
+  - 在 `main.js` 中创建并引入 Pinia 存储。
 ```javascript
 // src/main.js
 import { createApp } from 'vue';
@@ -220,56 +223,56 @@ const pinia = createPinia();
 app.use(pinia);
 app.mount('#app');
 ```
-   - 创建 Pinia 存储文件。
+  - 创建 Pinia 存储文件。
 ```javascript
 // src/stores/counter.js
 import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore('counter', {
-    state: () => ({
-        count: 0
-    }),
-    actions: {
-        increment() {
-            this.count++;
-        },
-        decrement() {
-            this.count--;
-        }
+  state: () => ({
+    count: 0
+  }),
+  actions: {
+    increment() {
+      this.count++;
+    },
+    decrement() {
+      this.count--;
     }
+  }
 });
 ```
-   - 在页面组件中使用 Pinia 存储。
+  - 在页面组件中使用 Pinia 存储。
 ```vue
 <!-- src/components/Counter.vue -->
 <template>
 	<div>
-        <button @click="decrement">-</button>
-        <span>{{ count }}</span>
-        <button @click="increment">+</button>
-    </div>
+    <button @click="decrement">-</button>
+    <span>{{ count }}</span>
+    <button @click="increment">+</button>
+  </div>
 </template>
 
 <script setup>
-    import { useCounterStore } from '../stores/counter';
-    const counterStore = useCounterStore();
-    function increment() {
-        counterStore.increment();
-    }
-    function decrement() {
-        counterStore.decrement();
-    }
+import { useCounterStore } from '../stores/counter';
+const counterStore = useCounterStore();
+function increment() {
+  counterStore.increment();
+}
+function decrement() {
+  counterStore.decrement();
+}
 </script>
 ```
 - **优化点**：
-   - 使用 `storeToRefs` 来将 Store 的响应式状态转换为单独的 ref，以在组件中使用。
+  - 使用 `storeToRefs` 来将 Store 的响应式状态转换为单独的 ref，以在组件中使用。
 ```javascript
 import { storeToRefs } from 'pinia';
 import { useCounterStore } from '@/stores/counter';
 
 const { count } = storeToRefs(useCounterStore());
 ```
-   - 使用 `computed` 属性来创建派生状态。
+  - 使用 `computed` 属性来创建派生状态。
 ```javascript
 import { computed } from 'vue';
 import { useCounterStore } from '@/stores/counter';
@@ -277,17 +280,17 @@ import { useCounterStore } from '@/stores/counter';
 const counterStore = useCounterStore();
 const doubleCount = computed(() => counterStore.count * 2);
 ```
-   - 使用 `watch` 来监听 Store 中状态的变化。
+  - 使用 `watch` 来监听 Store 中状态的变化。
 ```javascript
 import { watch } from 'vue';
 import { useCounterStore } from '@/stores/counter';
 
 const counterStore = useCounterStore();
 watch(() => counterStore.count, (newCount) => {
-    console.log(`Count has been updated to: ${newCount}`);
+  console.log(`Count has been updated to: ${newCount}`);
 });
 ```
-   - 使用 Pinia 的 `mapActions` 和 `mapGetters` 辅助函数来简化组件中的代码。
+  - 使用 Pinia 的 `mapActions` 和 `mapGetters` 辅助函数来简化组件中的代码。
 ```javascript
 import { mapActions, mapGetters } from 'pinia';
 import { useCounterStore } from '@/stores/counter';
@@ -295,22 +298,22 @@ const { increment, decrement } = mapActions(useCounterStore());
 const { count } = mapGetters(useCounterStore(), ['count']);
 ```
 - **代码备注**：
-   - `defineStore` 创建了一个 Pinia store，它接受一个 ID 和一个定义状态、getters 和 actions 的对象。
-   - `state` 定义了 store 所拥有的状态。
-   - `getters` 定义了计算属性，它们是响应式的，并可作为 store 状态的派生状态。
-   - `actions` 定义了可执行的方法，它们可以是同步或异步的，用于修改状态。
-   - 在组件中，使用 `useCounterStore` 来获取 store 实例，并调用其 `increment` 和 `decrement` 方法来修改状态。
+  - `defineStore` 创建了一个 Pinia store，它接受一个 ID 和一个定义状态、getters 和 actions 的对象。
+  - `state` 定义了 store 所拥有的状态。
+  - `getters` 定义了计算属性，它们是响应式的，并可作为 store 状态的派生状态。
+  - `actions` 定义了可执行的方法，它们可以是同步或异步的，用于修改状态。
+  - 在组件中，使用 `useCounterStore` 来获取 store 实例，并调用其 `increment` 和 `decrement` 方法来修改状态。
 - **Pinia 优点**：
-   - 更简洁的 API，易于理解和使用。
-   - 与 Vue 3 的组合式 API 紧密结合，支持在 setup 中直接使用。
-   - 更好的 TypeScript 支持，提供类型推断和自动补全。
-   - 无需显式注册模块，store 自动化管理。
-   - 支持 Vue Devtools，方便调试。
+  - 更简洁的 API，易于理解和使用。
+  - 与 Vue 3 的组合式 API 紧密结合，支持在 setup 中直接使用。
+  - 更好的 TypeScript 支持，提供类型推断和自动补全。
+  - 无需显式注册模块，store 自动化管理。
+  - 支持 Vue Devtools，方便调试。
 - **为什么不使用 Vuex**：
-   - Pinia 是为 Vue 3 设计的状态管理库，与 Vue 3 的组合式 API 更加契合。
-   - Vuex 需要使用 `mutations` 和 `actions` 来修改状态，而 Pinia 允许直接修改状态，减少了样板代码。
-   - Pinia 提供了更好的 TypeScript 支持，对于使用 TypeScript 的项目来说，这是一个显著的优势。
-   - Pinia 的设计更加现代化，适合新的开发模式。
+  - Pinia 是为 Vue 3 设计的状态管理库，与 Vue 3 的组合式 API 更加契合。
+  - Vuex 需要使用 `mutations` 和 `actions` 来修改状态，而 Pinia 允许直接修改状态，减少了样板代码。
+  - Pinia 提供了更好的 TypeScript 支持，对于使用 TypeScript 的项目来说，这是一个显著的优势。
+  - Pinia 的设计更加现代化，适合新的开发模式。
 ## 8. **样式管理**：
 - **使用 CSS 预处理器**（Less）：
 ```javascript
@@ -319,13 +322,13 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
-    css: {
-        preprocessorOptions: {
-            less: {
-                additionalData: `@import "${path.resolve(__dirname, 'src/styles/variables.less')}";`
-            }
-        }
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `@import "${path.resolve(__dirname, 'src/styles/variables.less')}";`
+      }
     }
+  }
 });
 ```
    在 Vue 组件中使用：
@@ -335,9 +338,9 @@ export default defineConfig({
 	<div class="my-component"></div>
 </template>
 <style lang="less">
-    .my-component {
-        color: @primary-color;
-    }
+  .my-component {
+    color: @primary-color;
+  }
 </style>
 ```
    创建一个变量文件：
@@ -354,10 +357,10 @@ export default defineConfig({
 	<div class="my-component">This is my component</div>
 </template>
 <style scoped lang="less">
-    .my-component {
-        font-size: 16px;
-        padding: @padding;
-    }
+.my-component {
+  font-size: 16px;
+  padding: @padding;
+}
 </style>
 ```
 
@@ -368,45 +371,45 @@ export default defineConfig({
 	<div :class="$style.myComponent">This is my component</div>
 </template>
 <style module lang="less">
-    .myComponent {
-        font-size: 16px;
-        color: @primary-color;
-    }
+.myComponent {
+  font-size: 16px;
+  color: @primary-color;
+}
 </style>
 ```
 
 - **使用 BEM 命名规范**：
-     BEM 是一种流行的命名约定，旨在帮助开发者编写更易于理解和维护的 CSS 代码。它由块（Block）、元素（Element）和修饰符（Modifier）组成。
-     - **块（Block）**：代表一个独立的页面组件，如 `button`、`header` 等。
-     - **元素（Element）**：块的组成部分，如 `button__label`、`header__logo` 等。
-     - **修饰符（Modifier）**：块或元素的不同状态或版本，如 `button--primary`、`header--fixed` 等。
-     在 Less 中使用 BEM：
+  BEM 是一种流行的命名约定，旨在帮助开发者编写更易于理解和维护的 CSS 代码。它由块（Block）、元素（Element）和修饰符（Modifier）组成。
+  - **块（Block）**：代表一个独立的页面组件，如 `button`、`header` 等。
+  - **元素（Element）**：块的组成部分，如 `button__label`、`header__logo` 等。
+  - **修饰符（Modifier）**：块或元素的不同状态或版本，如 `button--primary`、`header--fixed` 等。
+  在 Less 中使用 BEM：
 ```less
 // Block
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 // Element
 .button__label {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
 }
 // Modifier
 .button--primary {
-    background-color: @primary-color;
+  background-color: @primary-color;
 }
 .button--large {
-    padding: 15px 30px;
+  padding: 15px 30px;
 }
 ```
    对应的 HTML 结构：
 ```html
 <button class="button button--primary">
-    <span class="button__label">Click me</span>
+  <span class="button__label">Click me</span>
 </button>
 ```
 
@@ -419,60 +422,60 @@ import '@/styles/global.less';
 
 createApp(App).mount('#app');
 ```
-   创建全局样式文件：
+  创建全局样式文件：
 ```less
 // src/styles/global.less
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 ```
 
 - **使用 PostCSS**：
   PostCSS 是一个用 JavaScript 编写的工具，它可以对 CSS 代码进行转换和处理。它提供了一种强大而灵活的方式，通过插件来修改和增强 CSS，使开发者能够以更高效和个性化的方式管理 CSS 样式。
 - **具体作用**：
-   1. **自动添加浏览器前缀**：使用 `autoprefixer` 插件自动添加必要的浏览器前缀，确保 CSS 属性在所有浏览器上的兼容性。
-   2. **CSS 压缩**：使用 `cssnano` 插件对 CSS 代码进行压缩和优化，减小文件体积。
-   3. **CSS 变量**：使用 `postcss-custom-properties` 插件支持 CSS 变量。
-   4. **嵌套规则**：使用 `postcss-nested` 插件允许 CSS 嵌套规则，使结构更清晰。
-   5. **自定义语法**：使用 `postcss-mixins` 插件创建可重用的混合样式。
-   6. **网格布局**：使用 `postcss-grid` 插件支持 CSS 网格布局。
-   7. **伪类和伪元素**：使用 `postcss-pseudo-class` 插件增强伪类和伪元素的选择器。
+  1. **自动添加浏览器前缀**：使用 `autoprefixer` 插件自动添加必要的浏览器前缀，确保 CSS 属性在所有浏览器上的兼容性。
+  2. **CSS 压缩**：使用 `cssnano` 插件对 CSS 代码进行压缩和优化，减小文件体积。
+  3. **CSS 变量**：使用 `postcss-custom-properties` 插件支持 CSS 变量。
+  4. **嵌套规则**：使用 `postcss-nested` 插件允许 CSS 嵌套规则，使结构更清晰。
+  5. **自定义语法**：使用 `postcss-mixins` 插件创建可重用的混合样式。
+  6. **网格布局**：使用 `postcss-grid` 插件支持 CSS 网格布局。
+  7. **伪类和伪元素**：使用 `postcss-pseudo-class` 插件增强伪类和伪元素的选择器。
 - **安装 PostCSS**：
 ```bash
 npm install postcss autoprefixer cssnano --save-dev
 ```
-   - **配置 PostCSS**：
-       创建 `postcss.config.js` 文件：
+  - **配置 PostCSS**：
+    创建 `postcss.config.js` 文件：
 ```javascript
 module.exports = {
-    plugins: [
-        require('autoprefixer'),
-        require('cssnano')
-    ]
+  plugins: [
+    require('autoprefixer'),
+    require('cssnano')
+  ]
 };
 ```
 
 - **优化点**：
-   - **性能**：利用 Less 的编译速度和性能优势，减少样式计算的开销。
-   - **模块化**：通过 CSS 模块化，实现样式的局部作用域，避免全局污染。
-   - **可读性**：BEM 或其他命名规范提供了清晰的样式结构，易于理解和维护。
-   - **兼容性**：样式管理工具可以自动处理浏览器兼容性问题，减少手动添加前缀的工作量。
-   - **一致性**：UI 框架提供了一套统一的样式和组件，确保应用界面的一致性。
+  - **性能**：利用 Less 的编译速度和性能优势，减少样式计算的开销。
+  - **模块化**：通过 CSS 模块化，实现样式的局部作用域，避免全局污染。
+  - **可读性**：BEM 或其他命名规范提供了清晰的样式结构，易于理解和维护。
+  - **兼容性**：样式管理工具可以自动处理浏览器兼容性问题，减少手动添加前缀的工作量。
+  - **一致性**：UI 框架提供了一套统一的样式和组件，确保应用界面的一致性。
 - **为什么不使用 Sass**：
-   - **生态兼容性**：Vue 3 与 Less 的集成更为无缝，特别是在使用 Vite 这类现代前端构建工具时，Less 的集成和配置往往更简单。
-   - **性能**：Less 通常在编译速度和性能上略胜一筹，这对于大型项目来说可能是一个考虑因素。
-   - **易用性**：Less 的语法相对简单直观，对于初学者来说更容易上手。
-   - **功能覆盖**：对于大多数项目来说，Less 提供的功能已经足够使用，包括变量、混合器、函数等。
-   - **团队熟悉度**：如果团队对 Less 更熟悉，那么继续使用 Less 可以减少学习成本。
-   - **工具链支持**：某些项目可能已经建立了基于 Less 的工具链和样式指南，切换到 Sass 可能会导致额外的迁移成本。
+  - **生态兼容性**：Vue 3 与 Less 的集成更为无缝，特别是在使用 Vite 这类现代前端构建工具时，Less 的集成和配置往往更简单。
+  - **性能**：Less 通常在编译速度和性能上略胜一筹，这对于大型项目来说可能是一个考虑因素。
+  - **易用性**：Less 的语法相对简单直观，对于初学者来说更容易上手。
+  - **功能覆盖**：对于大多数项目来说，Less 提供的功能已经足够使用，包括变量、混合器、函数等。
+  - **团队熟悉度**：如果团队对 Less 更熟悉，那么继续使用 Less 可以减少学习成本。
+  - **工具链支持**：某些项目可能已经建立了基于 Less 的工具链和样式指南，切换到 Sass 可能会导致额外的迁移成本。
 
 ## 9. **组件库**：
 - **优化**：
-   - 使用 `unplugin-vue-components` 和 `unplugin-auto-import` 实现组件的按需加载，减少初始加载时间。
-   - 利用 `Element Plus`、`Vant` 或 `Ant Design Vue` 等组件库提供的按需加载功能，只加载项目中实际使用的组件。
-   - 对于常用的组件库，如 `Element Plus`，可以通过配置其按需加载来优化性能：
+  - 使用 `unplugin-vue-components` 和 `unplugin-auto-import` 实现组件的按需加载，减少初始加载时间。
+  - 利用 `Element Plus`、`Vant` 或 `Ant Design Vue` 等组件库提供的按需加载功能，只加载项目中实际使用的组件。
+  - 对于常用的组件库，如 `Element Plus`，可以通过配置其按需加载来优化性能：
 ```javascript
 // vite.config.js
 import { defineConfig } from 'vite';
@@ -482,34 +485,34 @@ import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
-    plugins: [
-        vue(),
-        AutoImport({
-            resolvers: [
-                ElementPlusResolver(),
-            ],
-        }),
-        Components({
-            resolvers: [
-                ElementPlusResolver(),
-            ],
-        }),
-    ],
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [
+        ElementPlusResolver(),
+      ],
+    }),
+    Components({
+      resolvers: [
+        ElementPlusResolver(),
+      ],
+    }),
+  ],
 });
 ```
 - **引用方式**：
-   - 在项目中使用组件库时，可以直接通过 `import` 语法引入所需的组件：
+  - 在项目中使用组件库时，可以直接通过 `import` 语法引入所需的组件：
 ```javascript
 import { ElButton, ElMessageBox } from 'element-plus';
 ```
-   - 对于需要按需加载的组件，可以使用动态 `import()` 语法：
+  - 对于需要按需加载的组件，可以使用动态 `import()` 语法：
 ```javascript
 const MyComponent = defineAsyncComponent(() =>
 	import('./components/MyComponent.vue')
 );
 ```
 - **按需加载配置**：
-   - 在 `vite.config.js` 中配置 `unplugin-vue-components` 插件，实现组件的自动按需加载：
+  - 在 `vite.config.js` 中配置 `unplugin-vue-components` 插件，实现组件的自动按需加载：
 ```javascript
 // vite.config.js
 import { defineConfig } from 'vite';
@@ -519,19 +522,19 @@ import Components from 'unplugin-vue-components/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
-    plugins: [
-        vue(),
-        AutoImport({
-            resolvers: [
-                ElementPlusResolver(),
-            ],
-        }),
-        Components({
-            resolvers: [
-                ElementPlusResolver(),
-            ],
-        }),
-    ],
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [
+        ElementPlusResolver(),
+      ],
+    }),
+    Components({
+      resolvers: [
+        ElementPlusResolver(),
+      ],
+    }),
+  ],
 });
 ```
 - 在组件中使用按需加载的组件：
@@ -542,15 +545,15 @@ export default defineConfig({
 </template>
 
 <script setup>
-    import { ElButton } from 'element-plus';
+  import { ElButton } from 'element-plus';
 
-    const handleClick = () => {
-        // Handle click event
-    };
+  const handleClick = () => {
+      // Handle click event
+  };
 </script>
 ```
 - **图标按需加载**：
-   - 使用 `unplugin-icons` 插件来实现图标的按需加载：
+  - 使用 `unplugin-icons` 插件来实现图标的按需加载：
 ```javascript
 // vite.config.js
 import { defineConfig } from 'vite';
@@ -559,13 +562,13 @@ import Icons from 'unplugin-icons/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
-    plugins: [
-        vue(),
-        Icons({
-            // 自动安装依赖
-            autoInstall: true,
-        }),
-    ],
+  plugins: [
+    vue(),
+    Icons({
+      // 自动安装依赖
+      autoInstall: true,
+    }),
+  ],
 });
 ```
 - 在组件中使用图标：
@@ -1512,4 +1515,140 @@ npx husky install
 }
 ```
 
-完成这些步骤后，Husky将根据你的配置在相应的Git钩子触发时执行指定的脚本。这有助于自动化代码质量检查和格式化，确保代码的一致性和可维护性。
+## 18. 集成 UnoCSS
+
+### 1. 安装 UnoCSS
+
+首先，您需要安装 UnoCSS 及其所需的依赖：
+
+```bash
+npm install unocss vite-plugin-unocss --save-dev
+```
+
+### 2. 配置 UnoCSS
+
+在 `vite.config.js` 中配置 UnoCSS 插件：
+
+```javascript
+// vite.config.js
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import Unocss from 'vite-plugin-unocss';
+import path from 'path';
+import styleImport from 'vite-plugin-style-import';
+
+export default defineConfig({
+    plugins: [
+        vue(),
+        styleImport({
+            libs: [
+                { libraryName: 'element-plus', resolveStyle: (name) => `element-plus/lib/theme-chalk/${name}.css` },
+            ],
+        }),
+        Unocss(),
+    ],
+    server: {
+        host: '0.0.0.0',
+        port: 3000,
+        open: true,
+        proxy: {
+            '/api': {
+                target: 'http://localhost:5000',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/api/, ''),
+            },
+        },
+        hmr: { overlay: false },
+    },
+    build: {
+        sourcemap: true,
+        terserOptions: {
+            compress: {
+                drop_console: true,
+                drop_debugger: true,
+            },
+            format: {
+                comments: 'none',
+            },
+        },
+        rollupOptions: {
+            output: {
+                chunkFileNames: 'assets/js/[name]-[hash].js',
+                entryFileNames: 'assets/js/[name]-[hash].js',
+                assetFileNames: 'assets/[name]-[hash][extname]',
+            },
+            resolve: {
+                alias: {
+                    '@/': '/src',
+                },
+            },
+        },
+    },
+    base: '/subpath/',
+});
+```
+
+### 3. 使用 UnoCSS
+
+在您的 Vue 组件中，您可以直接使用 UnoCSS 提供的实用类：
+
+```vue
+<!-- src/components/MyComponent.vue -->
+<template>
+  <div class="p-4 max-w-screen-lg mx-auto bg-[#1e1e1e] text-[#ffffff]">
+    <h1 class="text-3xl font-bold">Hello, UnoCSS!</h1>
+    <p class="mt-4">This is a simple component using UnoCSS.</p>
+  </div>
+</template>
+
+<script setup>
+// Your component logic here
+</script>
+
+<style>
+@import 'uno.css';
+</style>
+```
+
+### 4. 自定义 UnoCSS 配置（可选）
+
+如果您需要自定义 UnoCSS 的配置，例如添加预设或自定义规则，您可以创建一个 `unocss.config.js` 文件：
+
+```javascript
+// unocss.config.js
+import { defineConfig } from 'unocss';
+
+export default defineConfig({
+    presets: [
+        // 预设列表
+    ],
+    rules: [
+        // 自定义规则列表
+    ],
+});
+```
+
+然后在 `vite.config.js` 中引入自定义配置：
+
+```javascript
+// vite.config.js
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import Unocss from 'vite-plugin-unocss';
+import path from 'path';
+import styleImport from 'vite-plugin-style-import';
+import unocssConfig from './unocss.config';
+
+export default defineConfig({
+    plugins: [
+        vue(),
+        styleImport({
+            libs: [
+                { libraryName: 'element-plus', resolveStyle: (name) => `element-plus/lib/theme-chalk/${name}.css` },
+            ],
+        }),
+        Unocss(unocssConfig),
+    ],
+    // 其他配置...
+});
+```
