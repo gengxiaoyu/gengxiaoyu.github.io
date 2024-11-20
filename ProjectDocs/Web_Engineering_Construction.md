@@ -119,10 +119,15 @@ npm run dev
     - 在 `router` 目录下创建一个 `modules` 文件夹。
     - 将不同的路由配置分散到 `modules` 文件夹中的不同文件里。
     - 使用 `import.meta.globEager` 来自动化地加载这些路由配置。
+
   ``` javascript
   // router/index.js
   import { createRouter, createWebHistory } from 'vue-router';
+  // vite5之前
   const routeFiles = import.meta.globEager('./modules/**/*.js');
+  // vite5之后
+  const routeFiles = import.meta.glob('./modules/**/*.js', { eager: true });
+
   const routes = [];
   for (const path in routeFiles) {
     const routeConfig = routeFiles[path].default;
@@ -148,7 +153,7 @@ npm run dev
   - 在 `modules` 文件夹中创建路由配置文件，例如 `home.js` 和 `about.js`。
 ``` javascript
 // router/modules/home.js
-import HomeView from '../views/HomeView.vue';
+import HomeView from '../views/HomeView/index.vue';
 export default {
   path: '/',
   name: 'Home',
@@ -157,7 +162,7 @@ export default {
 ```
 ```javascript
 // router/modules/about.js
-import AboutView from '../views/AboutView.vue';
+import AboutView from '../views/AboutView/index.vue';
 export default {
   path: '/about',
   name: 'About',
@@ -313,7 +318,7 @@ const { count } = mapGetters(useCounterStore(), ['count']);
   - Vuex 需要使用 `mutations` 和 `actions` 来修改状态，而 Pinia 允许直接修改状态，减少了样板代码。
   - Pinia 提供了更好的 TypeScript 支持，对于使用 TypeScript 的项目来说，这是一个显著的优势。
   - Pinia 的设计更加现代化，适合新的开发模式。
-## 8. **样式管理**：
+## 8. **样式管理**：（可以忽略）
 - **使用 CSS 预处理器**（Less）：
 ```javascript
 // vite.config.js
@@ -510,8 +515,19 @@ const MyComponent = defineAsyncComponent(() =>
 	import('./components/MyComponent.vue')
 );
 ```
+
+
 - **按需加载配置**：
   - 在 `vite.config.js` 中配置 `unplugin-vue-components` 插件，实现组件的自动按需加载：
+
+```sh
+npm install unplugin-auto-import -D
+yarn add unplugin-auto-import -D
+```
+```sh
+npm install unplugin-vue-components -D
+yarn add unplugin-vue-components -D
+```
 ```javascript
 // vite.config.js
 import { defineConfig } from 'vite';
@@ -553,6 +569,10 @@ export default defineConfig({
 ```
 - **图标按需加载**：
   - 使用 `unplugin-icons` 插件来实现图标的按需加载：
+  ```sh
+  npm install unplugin-icons -D
+  yarn add unplugin-icons -D
+  ```
 ```javascript
 // vite.config.js
 import { defineConfig } from 'vite';
@@ -1005,6 +1025,32 @@ module.exports = {
         'vue/no-multiple-template-root': 'off',
     },
 };
+
+//eslint. config.js 9开始
+module.exports = {
+    root: true,
+    env: {
+        node: true,
+        browser: true,
+        es6: true,
+    },
+    extends: [
+        'plugin:vue/vue3-recommended',
+        '@vue/prettier',
+        '@vue/prettier/vue3',
+    ],
+    parserOptions: {
+        ecmaVersion: 2020,
+        parser: '@babel/eslint-parser',
+        sourceType: 'module',
+    },
+    plugins: ['vue'],
+    rules: {
+        // 可以在这里自定义规则
+        'vue/no-unused-vars': 'warn',
+        'vue/no-multiple-template-root': 'off',
+    },
+};
 ```
 
 4. **创建 Prettier 配置文件**：
@@ -1032,10 +1078,17 @@ module.exports = {
 5. **创建 lint 脚本**：
    在 `package.json` 文件中添加 lint 脚本：
 ```json
+--ext 8之后的版本已经弃用
 "scripts": {
 	"lint": "eslint ./src --ext .js,.vue",
 	"lint:fix": "eslint ./src --ext .js,.vue --fix"
 }
+
+最新
+"scripts": {
+ "lint": "eslint ./src --ignore-pattern '!**/*.js' --ignore-pattern '!**/*.vue'",
+  "lint:fix": "eslint ./src --ignore-pattern '!**/*.js' --ignore-pattern '!**/*.vue' --fix"
+  }
 ```
 
 6. **在编辑器中集成 ESLint 和 Prettier**：
