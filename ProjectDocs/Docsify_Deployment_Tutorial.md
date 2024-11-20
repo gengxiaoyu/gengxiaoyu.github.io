@@ -1,5 +1,12 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: GXY
+ * @Date: 2024-10-31 13:23:26
+ * @LastEditors: GXY
+ * @LastEditTime: 2024-11-20 09:46:50
+-->
 ## 参考文章
-
 - [Docsify部署IIS](https://www.cnblogs.com/Can-daydayup/p/15779788.html)
 - [GitHub Pages](https://docsify.js.org/#/zh-cn/deploy?id=github-pages)
 - [GitLab Pages](https://docsify.js.org/#/zh-cn/deploy?id=gitlab-pages)
