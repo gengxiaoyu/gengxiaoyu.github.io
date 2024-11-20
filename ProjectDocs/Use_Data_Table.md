@@ -1,4 +1,4 @@
-### 具体方法：
+### 具体方法API：
 ```js
 import { ref } from 'vue';
 import Api from "@/api/generalApi.js";
@@ -88,7 +88,7 @@ export function useDataTable(opts) {
   };
 }
 ```
-### 使用示例：
+### 使用示例1：
 ```vue
 <script setup>
 import { useDataTable } from '@/composables/useDataTable.js';
