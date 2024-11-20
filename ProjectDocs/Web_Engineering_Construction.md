@@ -119,35 +119,34 @@ npm run dev
     - 在 `router` 目录下创建一个 `modules` 文件夹。
     - 将不同的路由配置分散到 `modules` 文件夹中的不同文件里。
     - 使用 `import.meta.globEager` 来自动化地加载这些路由配置。
-```javascript
-// router/index.js
-import { createRouter, createWebHistory } from 'vue-router';
-const routeFiles = import.meta.globEager('./modules/**/*.js');
-
-const routes = [];
-for (const path in routeFiles) {
-  const routeConfig = routeFiles[path].default;
-  routes.push(routeConfig);
-}
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-});
-
-router.beforeEach((to, from, next) => {
-  // 验证用户是否登录的逻辑
-  const isLoggedIn = /* 检查登录状态 */;
-  if (to.matched.some(record => record.meta.requiresAuth) && !isLoggedIn) {
-    next({ name: 'Login' });
-  } else {
-    next();
+  ``` javascript
+  // router/index.js
+  import { createRouter, createWebHistory } from 'vue-router';
+  const routeFiles = import.meta.globEager('./modules/**/*.js');
+  const routes = [];
+  for (const path in routeFiles) {
+    const routeConfig = routeFiles[path].default;
+    routes.push(routeConfig);
   }
-});
+  const router = createRouter({
+    history: createWebHistory(),
+    routes
+  });
 
-export default router;
-```
+  router.beforeEach((to, from, next) => {
+    // 验证用户是否登录的逻辑
+    const isLoggedIn = /* 检查登录状态 */;
+    if (to.matched.some(record => record.meta.requiresAuth) && !isLoggedIn) {
+      next({ name: 'Login' });
+    } else {
+      next();
+    }
+  });
+
+  export default router;
+  ```
   - 在 `modules` 文件夹中创建路由配置文件，例如 `home.js` 和 `about.js`。
-```javascript
+``` javascript
 // router/modules/home.js
 import HomeView from '../views/HomeView.vue';
 export default {
