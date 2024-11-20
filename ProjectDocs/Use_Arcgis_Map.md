@@ -386,5 +386,5 @@ onMounted(async () => {
 </style>
 ```
 * 组件中使用
-* [点位图层切换](./Arcgis_Panel.md)
-* [点位自定义弹窗](./ArcGis_Popup.md)
+* [点位图层切换](/ProjectDocs/Arcgis_Panel.md)
+* [点位自定义弹窗](/ProjectDocs/ArcGis_Popup.md)
