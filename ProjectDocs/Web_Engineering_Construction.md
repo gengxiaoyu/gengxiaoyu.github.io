@@ -2,7 +2,7 @@
 要构建一个基于JavaScript、Pinia、Tailwind CSS、Lint-Staged、Vue Router、ESLint、Prettier、Vite、Ant Design Vue、Axios、Vue 3、pnpm的前端工程，可以按照以下步骤进行：
 
 ## 前端工程构建指南
-
+---
 ### 1. 项目初始化
 
 使用 Vite 创建一个新的 Vue 3 项目：
@@ -11,7 +11,7 @@
 pnpm create vite@latest my-vue-app --template vue
 cd my-vue-app
 ```
-
+---
 ### 2. 安装依赖
 
 安装项目所需的依赖包：
@@ -19,7 +19,7 @@ cd my-vue-app
 ```bash
 pnpm install
 ```
-
+---
 ### 3. 配置 Tailwind CSS
 
 #### 安装 Tailwind CSS 及其相关依赖：
@@ -54,7 +54,7 @@ module.exports = {
   }
 }
 ```
-
+---
 ### 4. 配置 ESLint 和 Prettier
 
 #### 4.1 安装 ESLint 和 Prettier 依赖
@@ -115,7 +115,7 @@ export default defineConfig({
   }
 }
 ```
-
+---
 ### 5. 配置 Vue Router 和 Pinia
 
 #### 安装 Vue Router 和 Pinia：
@@ -153,7 +153,7 @@ const app = createApp(App)
 app.use(router)
 app.mount('#app')
 ```
-
+---
 ### 6. 配置 Axios
 
 #### 安装 Axios：
@@ -292,7 +292,7 @@ app.use(router)
 app.use(Antd)
 app.mount('#app')
 ```
-
+---
 ### 8. 配置 Lint-Staged 和 Husky
 
 安装 Lint-Staged 和 Husky：
@@ -319,7 +319,7 @@ pnpm add -D lint-staged husky
   }
 }
 ```
-
+---
 ### 9. Commitlint 检查提交消息
 
 #### 安装 Commitlint：
@@ -384,7 +384,7 @@ pnpm add -D commitizen cz-git
 2. `pnpm commit`
 3. 根据提示填写提交信息
 4. `git push`
-
+---
 ### 11. 启动项目
 
 启动开发服务器：
