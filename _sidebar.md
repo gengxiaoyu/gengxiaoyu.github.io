@@ -34,4 +34,5 @@
   * [Docsify使用指南](/ProjectDocs/Docsify_User_Guide.md)
   * [Docsify部署教程](/ProjectDocs/Docsify_Deployment_Tutorial.md)
   * [Typora+Docsify快速入门](/ProjectDocs/Typora_Docsify_Quick_Start.md)
-  
+   vscode使用指南
+  * [koroFileHeader](/ProjectDocs/Docsify_User_Guide.md)

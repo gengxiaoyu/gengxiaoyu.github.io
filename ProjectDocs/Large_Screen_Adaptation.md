@@ -1,5 +1,3 @@
-下面是优化后的代码，包括性能优化、代码组织、可维护性、用户体验和代码可读性的改进：
-
 ### 1. 安装 `vue3-scale-box`
 ```bash
 npm install vue3-scale-box
