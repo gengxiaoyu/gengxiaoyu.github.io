@@ -38,7 +38,7 @@
     </radialGradient>
     <!-- 文字阴影滤镜（更强烈） -->
     <filter id="textShadowStrong" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
       <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
       <feFlood flood-color="#FF69B4" flood-opacity="0.38" result="offsetColor"/>
       <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
@@ -60,13 +60,14 @@
     </filter>
     <!-- 立体描边 -->
     <filter id="strokeOutline" x="-30%" y="-30%" width="160%" height="160%">
-      <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="DILATED"/>
-      <feFlood flood-color="#fff" result="WHITE"/>
-      <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"/>
-      <feMerge>
-        <feMergeNode in="OUTLINE"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMorphology in="SourceAlpha" operator="dilate" radius="10" result="DILATED"/>
+      <feFlood flood-color="#FF1493" result="PINK_OUTLINE"/>
+      <feComposite in="PINK_OUTLINE" in2="DILATED" operator="in" result="OUTLINE"/>
+  <feGaussianBlur in="OUTLINE" stdDeviation="12" result="BLURRED_OUTLINE"/>
+  <feMerge>
+    <feMergeNode in="BLURRED_OUTLINE"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
     </filter>
   </defs>
   <!-- 背景层 -->
@@ -94,7 +95,7 @@
       <animateTransform attributeName="transform" type="scale" values="1;1.13;1" keyTimes="0;0.5;1" dur="1.2s" repeatCount="indefinite" additive="sum"/>
     </path>
     <!-- 副标题：爱意满满 -->
-    <text x="50%" y="540" font-family="'FZShuTi','楷体',serif" font-size="62" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)">
+    <text x="50%" y="540" font-family="'FZShuTi','楷体',serif" font-size="62" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadowStrong)">
       爱意满满
     </text>
     <!-- 祝福语 -->
@@ -104,14 +105,14 @@
     <!-- 强调语：老婆我爱你，极致突出，优化视觉效果和动画 -->
     <g>
       <!-- 白色立体描边 -->
-      <text x="50%" y="730" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="100" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#strokeOutline)">
+      <text x="50%" y="730" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="100" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#strokeOutline)" opacity="0.9">
         老婆我爱你
       </text>
       <!-- 主色填充+强烈阴影+渐变描边，增强跳动和闪烁效果 -->
-      <text x="50%" y="730" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="100" font-weight="bold" fill="url(#heartGradient)" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadowStrong)" stroke="#FF69B4" stroke-width="4" paint-order="stroke fill">
+      <text x="50%" y="730" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="100" font-weight="bold" fill="url(#heartGradient)" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadowStrong)" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.6" paint-order="stroke fill">
         老婆我爱你
-        <animateTransform attributeName="transform" type="scale" values="1;1.15;1" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" additive="sum"/>
-        <animate attributeName="opacity" values="0.85;1;0.85" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.1;1" keyTimes="0;0.5;1" dur="1.5s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="opacity" values="0.85;1;0.85" keyTimes="0;0.5;1" dur="1.5s" repeatCount="indefinite"/>
       </text>
     </g>
     <!-- 爱心环绕点缀 -->
