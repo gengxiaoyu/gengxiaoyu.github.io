@@ -1,148 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="800px" height="1120px" viewBox="0 0 800 1120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- SVG 海报：520 爱意满满 -->
-    <!-- 设计理念：以数字“520”为核心，结合爱心元素和温馨的色彩，传递浪漫爱意。风格现代简约，注重视觉冲击力和情感表达。 -->
-
-    <!-- 定义渐变和滤镜 -->
-    <defs>
-        <!-- 背景渐变 -->
-        <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#FFC0CB;stop-opacity:1" /> <!-- 淡粉色 -->
-            <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:1" /> <!-- 亮粉色 -->
-        </linearGradient>
-
-        <!-- 爱心颜色 -->
-        <radialGradient id="heartGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-            <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:1" /> <!-- 深粉色 -->
-            <stop offset="100%" style="stop-color:#FF1493;stop-opacity:1" /> <!-- 亮粉红色 -->
-        </radialGradient>
-
-        <!-- 文字阴影滤镜 -->
-        <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-            <feOffset in="blur" dx="2" dy="2" result="offsetBlur"/>
-            <feFlood flood-color="#000000" flood-opacity="0.3" result="offsetColor"/>
-            <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
-            <feMerge>
-                <feMergeNode in="offsetBlur"/>
-                <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-        </filter>
-    </defs>
-
-    <!-- 背景层 -->
-    <rect x="0" y="0" width="800" height="1120" fill="url(#backgroundGradient)" />
-
-    <!-- 内容层 -->
-    <g id="contentLayer">
-        <!-- 主标题 "520" -->
-        <text x="50%" y="400" font-family="'Arial Black', Gadget, sans-serif" font-size="200" fill="url(#heartGradient)" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)">
-            520
-            <animate attributeName="fill" values="#FF69B4;#FF1493;#FF69B4" dur="3s" repeatCount="indefinite" />
-        </text>
-
-        <!-- 副标题/祝福语 -->
-        <text x="50%" y="550" font-family="'KaiTi', '楷体', serif" font-size="60" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)">
-            爱意满满
-        </text>
-
-        <text x="50%" y="630" font-family="'SimSun', '宋体', serif" font-size="30" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)">
-            愿所有美好如期而至
-        </text>
-
-        <!-- 新增祝福语 -->
-        <!-- 新增祝福语 -->
-        <text x="50%" y="720" font-family="'KaiTi', '楷体', serif" font-size="70" fill="#FF69B4" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)" stroke="#FFFFFF" stroke-width="1">
-            老婆我爱你
-            <!-- 添加呼吸动画效果 -->
-            <animateTransform attributeName="transform"
-                              type="scale"
-                              values="1; 1.05; 1"
-                              keyTimes="0; 0.5; 1"
-                              dur="2s"
-                              repeatCount="indefinite"
-                              additive="sum" />
-            <animate attributeName="opacity"
-                     values="0.8; 1; 0.8"
-                     keyTimes="0; 0.5; 1"
-                     dur="2s"
-                     repeatCount="indefinite" />
-        </text>
-
-        <!-- 爱心装饰 -->
-        <!-- 大爱心 (作为520数字的点缀或背景) -->
-        <path d="M400,500 
-                 Q350,400 300,450 
-                 T200,500 
-                 Q150,600 250,650 
-                 T400,700 
-                 Q550,600 600,500 
-                 T500,450 
-                 Q450,400 400,500 Z"
-              transform="translate(-20, -150) scale(0.3)" 
-              fill="url(#heartGradient)" fill-opacity="0.7" stroke="#FFFFFF" stroke-width="5" >
-            <!-- 心跳动画 - 增强效果 -->
-            <animateTransform attributeName="transform" 
-                              type="scale" 
-                              values="0.3; 0.38; 0.3" 
-                              keyTimes="0; 0.5; 1"
-                              dur="1.5s" 
-                              repeatCount="indefinite"
-                              additive="sum" />
-            <animateTransform attributeName="transform"
-                              type="rotate"
-                              values="0 400 550; 5 400 550; -5 400 550; 0 400 550"
-                              keyTimes="0; 0.25; 0.75; 1"
-                              dur="3s"
-                              repeatCount="indefinite"
-                              additive="sum" />
-        </path>
-
-        <!-- 小爱心点缀 -->
-        <g id="smallHearts" opacity="0.8">
-            <!-- 左上角爱心 -->
-            <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.3) translate(100, 50)" fill="url(#heartGradient)">
-                <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.3; 0.33; 0.3" additive="sum" dur="2.2s" begin="0.1s" repeatCount="indefinite" />
-                <animateTransform attributeName="transform" type="translate" values="0 0; 0 -5; 0 0" additive="sum" dur="4.4s" begin="0.1s" repeatCount="indefinite" />
-            </path>
-            <!-- 右上角爱心 -->
-            <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.25) translate(2200, 100)" fill="url(#heartGradient)">
-                 <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.25; 0.28; 0.25" additive="sum" dur="1.8s" begin="0.6s" repeatCount="indefinite" />
-            </path>
-            <!-- 左下角爱心 -->
-            <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.2) translate(200, 4000)" fill="url(#heartGradient)">
-                 <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.2; 0.23; 0.2" additive="sum" dur="2.5s" begin="1.2s" repeatCount="indefinite" />
-                 <animateTransform attributeName="transform" type="translate" values="0 0; 0 5; 0 0" additive="sum" dur="5s" begin="1.2s" repeatCount="indefinite" />
-            </path>
-            <!-- 右下角爱心 -->
-            <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.35) translate(1800, 2500)" fill="url(#heartGradient)">
-                 <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.35; 0.39; 0.35" additive="sum" dur="1.9s" begin="0.3s" repeatCount="indefinite" />
-            </path>
-        </g>
+<svg width="800px" height="1120px" viewBox="0 0 800 1120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!--
+    设计理念：
+    1. 现代浪漫风格，强调活力、层次与情感表达。
+    2. 520数字采用手写风格，配合跳动动画，打破呆板。
+    3. 多重渐变与光晕，营造梦幻氛围。
+    4. 爱心与花瓣原创矢量，环绕主视觉，增强浪漫感。
+    5. 文字排版分明，层次清晰，兼顾美感与可读性。
+    6. 动画仅用于核心元素，兼容性与性能兼顾。
+  -->
+  <defs>
+    <!-- 背景渐变 -->
+    <radialGradient id="bgGradient" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#FFF0F6"/>
+      <stop offset="60%" stop-color="#FFD6E0"/>
+      <stop offset="100%" stop-color="#FFB6C1"/>
+    </radialGradient>
+    <!-- 520数字渐变 -->
+    <linearGradient id="numGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5E62"/>
+      <stop offset="100%" stop-color="#FF9966"/>
+    </linearGradient>
+    <!-- 爱心渐变 -->
+    <radialGradient id="heartGradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#FF69B4"/>
+      <stop offset="100%" stop-color="#FF1493"/>
+    </radialGradient>
+    <!-- 花瓣渐变 -->
+    <radialGradient id="petalGradient" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#FFF0F6"/>
+      <stop offset="100%" stop-color="#FFB6C1"/>
+    </radialGradient>
+    <!-- 光晕 -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 文字阴影滤镜 -->
+    <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="2" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="offsetColor"/>
+      <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- 背景层 -->
+  <rect x="0" y="0" width="800" height="1120" fill="url(#bgGradient)"/>
+  <!-- 光晕装饰 -->
+  <ellipse cx="400" cy="500" rx="260" ry="120" fill="url(#glow)"/>
+  <!-- 花瓣环绕 -->
+  <g id="petals">
+    <ellipse cx="170" cy="320" rx="38" ry="16" fill="url(#petalGradient)" opacity="0.45" transform="rotate(-18 170 320)"/>
+    <ellipse cx="630" cy="340" rx="32" ry="13" fill="url(#petalGradient)" opacity="0.38" transform="rotate(12 630 340)"/>
+    <ellipse cx="210" cy="900" rx="30" ry="12" fill="url(#petalGradient)" opacity="0.32" transform="rotate(-8 210 900)"/>
+    <ellipse cx="700" cy="800" rx="36" ry="15" fill="url(#petalGradient)" opacity="0.36" transform="rotate(22 700 800)"/>
+    <ellipse cx="400" cy="1080" rx="60" ry="18" fill="url(#petalGradient)" opacity="0.22"/>
+  </g>
+  <!-- 内容层 -->
+  <g id="contentLayer">
+    <!-- 主标题520：手写风格，动态跳动 -->
+    <text x="50%" y="370" font-family="'ZCOOL KuaiLe','Arial Black','微软雅黑',sans-serif" font-size="210" fill="url(#numGradient)" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)" letter-spacing="-12">
+      5<tspan font-size="210" dx="-18">2</tspan><tspan font-size="210" dx="-18">0</tspan>
+      <animateTransform attributeName="transform" type="scale" values="1,1;1.08,0.96;1,1" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+    </text>
+    <!-- 主标题下方爱心跳动 -->
+    <path d="M400,420 C420,390 470,390 470,420 C470,450 400,490 400,490 C400,490 330,450 330,420 C330,390 380,390 400,420 Z" fill="url(#heartGradient)" stroke="#fff" stroke-width="3" filter="url(#textShadow)">
+      <animateTransform attributeName="transform" type="scale" values="1;1.13;1" keyTimes="0;0.5;1" dur="1.2s" repeatCount="indefinite" additive="sum"/>
+    </path>
+    <!-- 副标题：爱意满满 -->
+    <text x="50%" y="540" font-family="'FZShuTi','楷体',serif" font-size="62" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)">
+      爱意满满
+    </text>
+    <!-- 祝福语 -->
+    <text x="50%" y="620" font-family="'Source Han Sans SC','微软雅黑',sans-serif" font-size="34" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)">
+      愿所有美好如期而至
+    </text>
+    <!-- 强调语：老婆我爱你，带弹跳动画 -->
+    <text x="50%" y="720" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="74" fill="#FF69B4" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)" stroke="#fff" stroke-width="2">
+      老婆我爱你
+      <animateTransform attributeName="transform" type="scale" values="1;1.09;1" keyTimes="0;0.5;1" dur="2.1s" repeatCount="indefinite" additive="sum"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" keyTimes="0;0.5;1" dur="2.1s" repeatCount="indefinite"/>
+    </text>
+    <!-- 爱心环绕点缀 -->
+    <g id="hearts" opacity="0.85">
+      <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.22) translate(120,80)" fill="url(#heartGradient)">
+        <animateTransform attributeName="transform" type="scale" values="0.22;0.26;0.22" additive="sum" dur="2.2s" begin="0.1s" repeatCount="indefinite"/>
+      </path>
+      <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.18) translate(600,120)" fill="url(#heartGradient)">
+        <animateTransform attributeName="transform" type="scale" values="0.18;0.21;0.18" additive="sum" dur="1.7s" begin="0.6s" repeatCount="indefinite"/>
+      </path>
+      <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.16) translate(200,900)" fill="url(#heartGradient)">
+        <animateTransform attributeName="transform" type="scale" values="0.16;0.19;0.16" additive="sum" dur="2.5s" begin="1.2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.24) translate(650,850)" fill="url(#heartGradient)">
+        <animateTransform attributeName="transform" type="scale" values="0.24;0.28;0.24" additive="sum" dur="1.9s" begin="0.3s" repeatCount="indefinite"/>
+      </path>
     </g>
-
-    <!-- 装饰层 (可选，例如一些光晕效果或细小的图案) -->
-    <g id="decorationLayer" opacity="0.6">
-        <circle cx="100" cy="100" r="50" fill="#FFFFFF" opacity="0.05">
-            <animate attributeName="r" values="40;60;40" dur="7s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.05;0.15;0.05" dur="7s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="700" cy="900" r="80" fill="#FFFFFF" opacity="0.08">
-            <animate attributeName="r" values="70;90;70" dur="8s" begin="1.5s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.08;0.12;0.08" dur="8s" begin="1.5s" repeatCount="indefinite" />
-        </circle>
-         <circle cx="650" cy="150" r="30" fill="#FFFFFF" opacity="0.06">
-            <animate attributeName="r" values="25;35;25" dur="6s" begin="0.8s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.06;0.1;0.06" dur="6s" begin="0.8s" repeatCount="indefinite" />
-        </circle>
-    </g>
-
-    <!-- 确保所有内容在标准viewBox范围内完全可见 -->
-    <!-- 字体选择：主标题使用粗犷有力的无衬线体，副标题和祝福语使用优雅的衬线体或手写体，形成对比。 -->
-    <!-- 配色方案：以粉色系为主，营造浪漫温馨的氛围，白色文字保证可读性。 -->
-    <!-- SVG优化：路径数据已尽量简化，元素数量控制在合理范围。 -->
+  </g>
+  <!-- 装饰层：动态光圈与气泡 -->
+  <g id="decorationLayer" opacity="0.5">
+    <circle cx="120" cy="120" r="48" fill="#fff" opacity="0.06">
+      <animate attributeName="r" values="38;58;38" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.06;0.15;0.06" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="950" r="70" fill="#fff" opacity="0.09">
+      <animate attributeName="r" values="60;80;60" dur="8s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.09;0.13;0.09" dur="8s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="180" r="26" fill="#fff" opacity="0.07">
+      <animate attributeName="r" values="18;34;18" dur="6s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.07;0.12;0.07" dur="6s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <!-- 兼容性与性能优化说明：
+    1. 所有关键内容均在viewBox范围内，主次层次分明。
+    2. 渐变、滤镜、动画均为SVG原生特性，主流浏览器100%兼容。
+    3. 路径数据已优化，元素数量控制在100以内。
+    4. 移除所有动画和滤镜后，核心信息依然清晰可见。
+    5. 字体选择兼顾美观与可读性，配色温馨浪漫。
+  -->
 </svg>
