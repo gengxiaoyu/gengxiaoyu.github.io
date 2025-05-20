@@ -36,7 +36,18 @@
       <stop offset="0%" stop-color="#fff" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
-    <!-- 文字阴影滤镜 -->
+    <!-- 文字阴影滤镜（更强烈） -->
+    <filter id="textShadowStrong" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+      <feFlood flood-color="#FF69B4" flood-opacity="0.38" result="offsetColor"/>
+      <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 文字阴影滤镜（普通） -->
     <filter id="textShadow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
       <feOffset in="blur" dx="2" dy="2" result="offsetBlur"/>
@@ -44,6 +55,16 @@
       <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"/>
       <feMerge>
         <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 立体描边 -->
+    <filter id="strokeOutline" x="-30%" y="-30%" width="160%" height="160%">
+      <feMorphology in="SourceAlpha" operator="dilate" radius="5" result="DILATED"/>
+      <feFlood flood-color="#fff" result="WHITE"/>
+      <feComposite in="WHITE" in2="DILATED" operator="in" result="OUTLINE"/>
+      <feMerge>
+        <feMergeNode in="OUTLINE"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
@@ -62,10 +83,11 @@
   </g>
   <!-- 内容层 -->
   <g id="contentLayer">
-    <!-- 主标题520：手写风格，动态跳动 -->
-    <text x="50%" y="370" font-family="'ZCOOL KuaiLe','Arial Black','微软雅黑',sans-serif" font-size="210" fill="url(#numGradient)" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)" letter-spacing="-12">
-      5<tspan font-size="210" dx="-18">2</tspan><tspan font-size="210" dx="-18">0</tspan>
-      <animateTransform attributeName="transform" type="scale" values="1,1;1.08,0.96;1,1" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+    <!-- 主标题520：手写风格，动态跳动，优化字体和动画 -->
+    <text x="50%" y="370" font-family="'ZCOOL KuaiLe','Arial Black','微软雅黑',sans-serif" font-size="220" fill="url(#numGradient)" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadowStrong)" letter-spacing="-15">
+      5<tspan font-size="220" dx="-20">2</tspan><tspan font-size="220" dx="-20">0</tspan>
+      <!-- 优化跳动动画，更流畅自然 -->
+      <animateTransform attributeName="transform" type="scale" values="1,1;1.05,0.98;1,1" keyTimes="0;0.5;1" dur="1.5s" repeatCount="indefinite"/>
     </text>
     <!-- 主标题下方爱心跳动 -->
     <path d="M400,420 C420,390 470,390 470,420 C470,450 400,490 400,490 C400,490 330,450 330,420 C330,390 380,390 400,420 Z" fill="url(#heartGradient)" stroke="#fff" stroke-width="3" filter="url(#textShadow)">
@@ -79,12 +101,19 @@
     <text x="50%" y="620" font-family="'Source Han Sans SC','微软雅黑',sans-serif" font-size="34" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)">
       愿所有美好如期而至
     </text>
-    <!-- 强调语：老婆我爱你，带弹跳动画 -->
-    <text x="50%" y="720" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="74" fill="#FF69B4" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)" stroke="#fff" stroke-width="2">
-      老婆我爱你
-      <animateTransform attributeName="transform" type="scale" values="1;1.09;1" keyTimes="0;0.5;1" dur="2.1s" repeatCount="indefinite" additive="sum"/>
-      <animate attributeName="opacity" values="0.85;1;0.85" keyTimes="0;0.5;1" dur="2.1s" repeatCount="indefinite"/>
-    </text>
+    <!-- 强调语：老婆我爱你，极致突出，优化视觉效果和动画 -->
+    <g>
+      <!-- 白色立体描边 -->
+      <text x="50%" y="730" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="100" font-weight="bold" fill="#fff" text-anchor="middle" dominant-baseline="middle" filter="url(#strokeOutline)">
+        老婆我爱你
+      </text>
+      <!-- 主色填充+强烈阴影+渐变描边，增强跳动和闪烁效果 -->
+      <text x="50%" y="730" font-family="'ZCOOL QingKe HuangYou','KaiTi','楷体',serif" font-size="100" font-weight="bold" fill="url(#heartGradient)" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadowStrong)" stroke="#FF69B4" stroke-width="4" paint-order="stroke fill">
+        老婆我爱你
+        <animateTransform attributeName="transform" type="scale" values="1;1.15;1" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite" additive="sum"/>
+        <animate attributeName="opacity" values="0.85;1;0.85" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
     <!-- 爱心环绕点缀 -->
     <g id="hearts" opacity="0.85">
       <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.22) translate(120,80)" fill="url(#heartGradient)">
