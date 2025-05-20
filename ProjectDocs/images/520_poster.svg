@@ -51,8 +51,22 @@
         </text>
 
         <!-- 新增祝福语 -->
+        <!-- 新增祝福语 -->
         <text x="50%" y="720" font-family="'KaiTi', '楷体', serif" font-size="70" fill="#FF69B4" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)" stroke="#FFFFFF" stroke-width="1">
             老婆我爱你
+            <!-- 添加呼吸动画效果 -->
+            <animateTransform attributeName="transform"
+                              type="scale"
+                              values="1; 1.05; 1"
+                              keyTimes="0; 0.5; 1"
+                              dur="2s"
+                              repeatCount="indefinite"
+                              additive="sum" />
+            <animate attributeName="opacity"
+                     values="0.8; 1; 0.8"
+                     keyTimes="0; 0.5; 1"
+                     dur="2s"
+                     repeatCount="indefinite" />
         </text>
 
         <!-- 爱心装饰 -->
@@ -67,8 +81,21 @@
                  Q450,400 400,500 Z"
               transform="translate(-20, -150) scale(0.3)" 
               fill="url(#heartGradient)" fill-opacity="0.7" stroke="#FFFFFF" stroke-width="5" >
-            <!-- 心跳动画 -->
-            <animateTransform attributeName="transform" type="scale" values="0.3; 0.35; 0.3" additive="sum" dur="1.5s" repeatCount="indefinite" />
+            <!-- 心跳动画 - 增强效果 -->
+            <animateTransform attributeName="transform" 
+                              type="scale" 
+                              values="0.3; 0.38; 0.3" 
+                              keyTimes="0; 0.5; 1"
+                              dur="1.5s" 
+                              repeatCount="indefinite"
+                              additive="sum" />
+            <animateTransform attributeName="transform"
+                              type="rotate"
+                              values="0 400 550; 5 400 550; -5 400 550; 0 400 550"
+                              keyTimes="0; 0.25; 0.75; 1"
+                              dur="3s"
+                              repeatCount="indefinite"
+                              additive="sum" />
         </path>
 
         <!-- 小爱心点缀 -->
@@ -76,39 +103,41 @@
             <!-- 左上角爱心 -->
             <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.3) translate(100, 50)" fill="url(#heartGradient)">
                 <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.3; 0.33; 0.3" additive="sum" dur="1.8s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="scale" values="0.3; 0.33; 0.3" additive="sum" dur="2.2s" begin="0.1s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="translate" values="0 0; 0 -5; 0 0" additive="sum" dur="4.4s" begin="0.1s" repeatCount="indefinite" />
             </path>
             <!-- 右上角爱心 -->
             <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.25) translate(2200, 100)" fill="url(#heartGradient)">
                  <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.25; 0.28; 0.25" additive="sum" dur="1.6s" begin="0.5s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="scale" values="0.25; 0.28; 0.25" additive="sum" dur="1.8s" begin="0.6s" repeatCount="indefinite" />
             </path>
             <!-- 左下角爱心 -->
             <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.2) translate(200, 4000)" fill="url(#heartGradient)">
                  <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.2; 0.23; 0.2" additive="sum" dur="2s" begin="1s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="scale" values="0.2; 0.23; 0.2" additive="sum" dur="2.5s" begin="1.2s" repeatCount="indefinite" />
+                 <animateTransform attributeName="transform" type="translate" values="0 0; 0 5; 0 0" additive="sum" dur="5s" begin="1.2s" repeatCount="indefinite" />
             </path>
             <!-- 右下角爱心 -->
             <path d="M100,150 Q80,120 60,150 T20,150 Q0,180 50,200 T100,230 Q150,180 180,150 T140,120 Q120,120 100,150 Z" transform="scale(0.35) translate(1800, 2500)" fill="url(#heartGradient)">
                  <!-- 心跳动画 -->
-                <animateTransform attributeName="transform" type="scale" values="0.35; 0.38; 0.35" additive="sum" dur="1.7s" begin="0.2s" repeatCount="indefinite" />
+                <animateTransform attributeName="transform" type="scale" values="0.35; 0.39; 0.35" additive="sum" dur="1.9s" begin="0.3s" repeatCount="indefinite" />
             </path>
         </g>
     </g>
 
     <!-- 装饰层 (可选，例如一些光晕效果或细小的图案) -->
-    <g id="decorationLayer" opacity="0.5">
-        <circle cx="100" cy="100" r="50" fill="#FFFFFF" opacity="0.1">
-            <animate attributeName="r" values="50;60;50" dur="5s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.1;0.3;0.1" dur="5s" repeatCount="indefinite" />
+    <g id="decorationLayer" opacity="0.6">
+        <circle cx="100" cy="100" r="50" fill="#FFFFFF" opacity="0.05">
+            <animate attributeName="r" values="40;60;40" dur="7s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.05;0.15;0.05" dur="7s" repeatCount="indefinite" />
         </circle>
-        <circle cx="700" cy="900" r="80" fill="#FFFFFF" opacity="0.1">
-            <animate attributeName="r" values="80;100;80" dur="6s" begin="1s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.1;0.2;0.1" dur="6s" begin="1s" repeatCount="indefinite" />
+        <circle cx="700" cy="900" r="80" fill="#FFFFFF" opacity="0.08">
+            <animate attributeName="r" values="70;90;70" dur="8s" begin="1.5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.08;0.12;0.08" dur="8s" begin="1.5s" repeatCount="indefinite" />
         </circle>
-         <circle cx="650" cy="150" r="30" fill="#FFFFFF" opacity="0.1">
-            <animate attributeName="r" values="30;40;30" dur="4s" begin="0.5s" repeatCount="indefinite" />
-            <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" begin="0.5s" repeatCount="indefinite" />
+         <circle cx="650" cy="150" r="30" fill="#FFFFFF" opacity="0.06">
+            <animate attributeName="r" values="25;35;25" dur="6s" begin="0.8s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.06;0.1;0.06" dur="6s" begin="0.8s" repeatCount="indefinite" />
         </circle>
     </g>
 
