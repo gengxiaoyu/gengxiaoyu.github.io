@@ -1,11 +1,13 @@
 {
-  "dependencies": {
-    "@vue/eslint-config-prettier": "^10.1.0",
-    "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.6",
-    "eslint": "^9.15.0",
-    "eslint-plugin-vue": "^9.31.0",
-    "postcss": "^8.4.49",
-    "prettier": "^3.3.3"
-  }
+  "name": "toolbox-website",
+  "version": "1.0.0",
+  "description": "炫酷工具箱网站 - 专业工具下载平台",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": ["toolbox", "tools", "download", "website"],
+  "author": "gengxiaoyu",
+  "license": "MIT"
 }

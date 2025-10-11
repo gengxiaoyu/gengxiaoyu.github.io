@@ -1,77 +1,169 @@
-<!--
- * @Description  : 
- * @Version      : V1.0.0
- * @Author       : huojiyanzui 18561977738@163.com
- * @Date         : 2025-05-20 14:09:49
- * @LastEditors  : huojiyanzui 18561977738@163.com
- * @LastEditTime : 2025-05-20 15:04:57
- * @FilePath     : index.html
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我爱你</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- 设置浏览器图标 -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- 默认主题 -->
-    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"> -->
-    <!-- <link rel="stylesheet" href="/lib/vue.css"> -->
-    
-    <style>
-      nav.app-nav li ul {
-        min-width: 100px;
-      }
-
-      #carbonads {
-        box-shadow: none !important;
-        width: auto !important;
-      }
-      
-      main{
-        width:100%;
-      }
-
-      /* 响应式布局：适配手机和电脑 */
-      html, body {
-        margin: 0;
-        padding: 0;
-        font-family: "微软雅黑", Arial, sans-serif;
-        height: 100%;
-      }
-      #app {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0;
-        height: 100%;
-      }
-      /* 针对小屏幕设备优化 */
-      @media (max-width: 600px) {
-        #app {
-          /* padding: 8px; */
-          font-size: 0;
-        }
-        main {
-          padding: 0;
-        }
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>炫酷工具箱 - 专业工具下载平台</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-    <!-- 定义加载时候的动作 -->
-    <div id="app">
-      <!-- 加载中... -->
-      <!-- 引入SVG图片示例 -->
-      <!-- 方法1：img标签引入SVG -->
-      <img src="/ProjectDocs/images/520_poster.svg" alt="示例SVG图片" style="width:100%;height:100%;display:block;object-fit: cover;">
-    </div>
-</body>
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>🔧 炫酷工具箱</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#tools" class="nav-link">工具库</a>
+                <a href="#categories" class="nav-link">分类</a>
+                <a href="#downloads" class="nav-link">下载排行</a>
+            </div>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索工具..." class="search-input">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </nav>
 
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">探索无限可能</h1>
+            <p class="hero-subtitle">专业工具集合，助力您的数字生活</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">精品工具</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">累计下载</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99%</span>
+                    <span class="stat-label">用户满意</span>
+                </div>
+            </div>
+            <button class="cta-button">开始探索</button>
+        </div>
+    </section>
+
+    <!-- 工具分类 -->
+    <section id="categories" class="categories">
+        <h2 class="section-title">工具分类</h2>
+        <div class="categories-grid">
+            <div class="category-card" data-category="utility">
+                <div class="category-icon">🛠️</div>
+                <h3>实用软件</h3>
+                <p>日常办公、效率工具、媒体处理</p>
+                <span class="tool-count">45款工具</span>
+            </div>
+            <div class="category-card" data-category="system">
+                <div class="category-icon">⚙️</div>
+                <h3>系统工具</h3>
+                <p>系统优化、安全防护、驱动管理</p>
+                <span class="tool-count">38款工具</span>
+            </div>
+            <div class="category-card" data-category="development">
+                <div class="category-icon">💻</div>
+                <h3>开发工具</h3>
+                <p>编程软件、IDE、调试工具</p>
+                <span class="tool-count">52款工具</span>
+            </div>
+            <div class="category-card" data-category="gaming">
+                <div class="category-icon">🎮</div>
+                <h3>游戏工具</h3>
+                <p>游戏辅助、修改器、补丁</p>
+                <span class="tool-count">27款工具</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门工具 -->
+    <section id="tools" class="tools">
+        <h2 class="section-title">热门工具</h2>
+        <div class="tools-grid" id="tools-container">
+            <!-- 工具卡片将通过JavaScript动态加载 -->
+        </div>
+    </section>
+
+    <!-- 下载统计 -->
+    <section id="downloads" class="downloads">
+        <h2 class="section-title">下载排行</h2>
+        <div class="downloads-list" id="downloads-container">
+            <!-- 下载排行将通过JavaScript动态加载 -->
+        </div>
+    </section>
+
+    <!-- 统计信息 -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-content">
+                    <h3 class="stat-number">150+</h3>
+                    <p class="stat-label">精品工具</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📥</div>
+                <div class="stat-content">
+                    <h3 class="stat-number">50K+</h3>
+                    <p class="stat-label">累计下载</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-content">
+                    <h3 class="stat-number">99%</h3>
+                    <p class="stat-label">用户满意</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔄</div>
+                <div class="stat-content">
+                    <h3 class="stat-number">24/7</h3>
+                    <p class="stat-label">持续更新</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🔧 炫酷工具箱</h3>
+                <p>专业工具下载平台，为您提供最优质的软件资源</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <a href="#home">首页</a>
+                <a href="#tools">工具库</a>
+                <a href="#categories">分类</a>
+                <a href="#downloads">下载排行</a>
+            </div>
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>邮箱: contact@toolbox.com</p>
+                <p>GitHub: gengxiaoyu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 炫酷工具箱. 保留所有权利. | 版本 1.0.0</p>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/download.js"></script>
+</body>
 </html>

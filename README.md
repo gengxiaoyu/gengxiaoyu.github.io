@@ -1,36 +1,115 @@
+# 🔧 炫酷工具箱网站
 
-# 欢迎来到我的博客！
+一个现代化的工具下载平台，提供各种实用软件、系统工具和开发工具的下载服务。
 
-> 大家好，欢迎来到我的个人博客！在这里，我会分享我的技术见解、生活感悟和各种有趣的发现。我热爱编程、设计和探索新技术，希望这个博客能成为我们交流和学习的平台。
+## ✨ 特性
 
-## 🚀 关于我
+- 🎨 **炫酷界面设计** - 赛博朋克风格，动态粒子背景
+- 📱 **完全响应式** - 适配所有设备尺寸
+- 🔍 **智能搜索** - 快速找到所需工具
+- 📊 **下载统计** - 实时显示下载排行
+- 🚀 **高性能** - 纯前端实现，加载迅速
 
-我是一名软件工程师，对前端和后端开发都有一定的研究。我喜欢挑战自己，不断学习新技能，并将这些知识应用到实际项目中。在业余时间，我也喜欢看书和喝茶，探索世界的每一个角落。
+## 🗂️ 项目结构
 
-## 📝 博客内容
+```
+gengxiaoyu.github.io/
+├── index.html              # 主页面
+├── css/                   # 样式文件
+│   ├── main.css           # 主样式
+│   ├── animations.css     # 动画效果
+│   ├── particles.css      # 粒子背景
+│   └── responsive.css     # 响应式设计
+├── js/                    # JavaScript文件
+│   ├── main.js            # 主逻辑
+│   ├── particles.js       # 粒子系统
+│   └── download.js        # 下载管理
+├── data/                  # 数据文件
+│   └── tools.json         # 工具数据
+├── downloads/             # 下载文件目录
+│   ├── utility/           # 实用软件
+│   ├── system/           # 系统工具
+│   ├── development/      # 开发工具
+│   └── gaming/           # 游戏工具
+└── images/               # 图片资源
+```
 
-这个博客将涵盖以下主题：
+## 🚀 快速开始
 
-- **技术分享**：我会分享我在编程和技术领域的最新发现和心得。
-- **项目案例**：展示我参与或主导的项目，包括开发过程和遇到的挑战。
-- **学习笔记**：记录我在学习和工作中遇到的知识点和解决方案。
-- **生活点滴**：分享我的旅行故事和日常生活中的小确幸。
+1. **克隆项目**
+   ```bash
+   git clone https://github.com/gengxiaoyu/gengxiaoyu.github.io.git
+   ```
 
-## 🌟 特色
+2. **添加工具文件**
+   - 将安装包文件放入对应的 `downloads/` 子目录
+   - 在 `data/tools.json` 中添加工具信息
 
-- **简洁设计**：我的博客采用简洁的设计风格，注重内容的呈现，让你的阅读体验更加舒适。
-- **实时更新**：我会定期更新博客内容，确保你总能获取最新的信息。
-- **互动交流**：欢迎在文章下方留言，我会及时回复，与你进行深入的讨论。
+3. **本地测试**
+   - 使用任何HTTP服务器（如Python的 `python -m http.server`）
+   - 或直接在浏览器中打开 `index.html`
 
-## 📅 更新频率
+4. **部署到GitHub Pages**
+   - 推送到GitHub仓库
+   - 在仓库设置中启用GitHub Pages
 
-我计划每周至少更新一次博客，分享我的新发现或者新项目。如果你对我的某个话题特别感兴趣，也可以通过邮件或者社交媒体联系我，我会根据你的反馈调整内容。
+## 📋 工具数据格式
 
-## 📧 联系方式
+在 `data/tools.json` 中添加工具信息：
 
-- **邮箱**：[18561977738@163.com](18561977738@163.com)
-- **GitHub**：[your-github](https://github.com/gengxiaoyu)
+```json
+{
+  "id": 1,
+  "name": "工具名称",
+  "category": "工具分类",
+  "version": "版本号",
+  "description": "工具描述",
+  "downloadUrl": "下载链接",
+  "fileSize": "文件大小",
+  "downloadCount": 下载次数,
+  "rating": 评分,
+  "icon": "图标表情",
+  "features": ["功能1", "功能2"],
+  "requirements": "系统要求"
+}
+```
 
-感谢你的访问，希望我的博客能给你带来一些有价值的内容和启发。让我们一起成长，一起探索这个精彩的世界！
+## 🎨 自定义样式
 
+- **主题颜色**: 修改CSS变量中的渐变色值
+- **动画效果**: 调整 `animations.css` 中的关键帧
+- **粒子效果**: 配置 `particles.js` 中的参数
 
+## 📱 响应式断点
+
+- **桌面端**: > 1200px
+- **平板端**: 768px - 1200px  
+- **手机端**: < 768px
+
+## 🔧 技术栈
+
+- **前端**: HTML5, CSS3, JavaScript (ES6+)
+- **样式**: CSS Grid, Flexbox, CSS变量
+- **动画**: CSS动画, Web动画API
+- **数据**: JSON文件管理
+
+## 🤝 贡献指南
+
+1. Fork 本项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启Pull Request
+
+## 📄 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 📞 联系我们
+
+- 邮箱: contact@toolbox.com
+- GitHub: [gengxiaoyu](https://github.com/gengxiaoyu)
+
+---
+
+⭐ 如果这个项目对您有帮助，请给它一个星标！
