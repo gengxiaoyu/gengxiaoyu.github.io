@@ -1,28 +1,30 @@
-// 主应用程序逻辑
+// 工具箱应用主逻辑
 class ToolboxApp {
     constructor() {
         this.tools = [];
-        this.filteredTools = [];
         this.currentCategory = 'all';
+        this.searchQuery = '';
+        this.mouseX = 0;
+        this.mouseY = 0;
         this.init();
     }
 
     async init() {
-        await this.loadToolsData();
-        this.renderTools();
+        await this.loadTools();
         this.setupEventListeners();
-        this.setupScrollAnimations();
+        this.renderTools();
+        this.initParticles();
+        this.initMouseEffects();
+        this.initScrollEffects();
     }
 
-    async loadToolsData() {
+    async loadTools() {
         try {
             const response = await fetch('data/tools.json');
             this.tools = await response.json();
-            this.filteredTools = [...this.tools];
         } catch (error) {
             console.error('加载工具数据失败:', error);
             this.tools = this.getSampleTools();
-            this.filteredTools = [...this.tools];
         }
     }
 
@@ -36,8 +38,7 @@ class ToolboxApp {
                 description: "轻量级强大的代码编辑器",
                 downloadUrl: "downloads/development/vscode-setup.exe",
                 fileSize: "85.2 MB",
-                downloadCount: 12500,
-                rating: 4.8,
+                downloadCount: "12500",
                 icon: "💻"
             },
             {
@@ -48,8 +49,7 @@ class ToolboxApp {
                 description: "快速安全的网页浏览器",
                 downloadUrl: "downloads/utility/chrome-setup.exe",
                 fileSize: "72.1 MB",
-                downloadCount: 89300,
-                rating: 4.7,
+                downloadCount: "89300",
                 icon: "🌐"
             },
             {
@@ -60,78 +60,32 @@ class ToolboxApp {
                 description: "系统优化和清理工具",
                 downloadUrl: "downloads/system/ccleaner-setup.exe",
                 fileSize: "25.3 MB",
-                downloadCount: 45600,
-                rating: 4.5,
+                downloadCount: "45600",
                 icon: "🧹"
+            },
+            {
+                id: 4,
+                name: "Steam 游戏平台",
+                category: "gaming",
+                version: "2.10.91.91",
+                description: "全球最大的游戏分发平台",
+                downloadUrl: "downloads/gaming/steam-setup.exe",
+                fileSize: "1.2 MB",
+                downloadCount: "78900",
+                icon: "🎮"
             }
         ];
     }
 
-    renderTools() {
-        const container = document.getElementById('tools-container');
-        container.innerHTML = '';
-
-        this.filteredTools.forEach(tool => {
-            const toolCard = this.createToolCard(tool);
-            container.appendChild(toolCard);
-        });
-
-        this.updateDownloadStats();
-    }
-
-    createToolCard(tool) {
-        const card = document.createElement('div');
-        card.className = 'tool-card scroll-reveal';
-        card.innerHTML = `
-            <div class="tool-header">
-                <div class="tool-icon">${tool.icon}</div>
-                <div class="tool-info">
-                    <h3 class="tool-name">${tool.name}</h3>
-                    <span class="tool-version">v${tool.version}</span>
-                </div>
-            </div>
-            <p class="tool-description">${tool.description}</p>
-            <div class="tool-stats">
-                <span class="download-count">📥 ${this.formatNumber(tool.downloadCount)} 下载</span>
-                <span class="tool-rating">⭐ ${tool.rating}</span>
-            </div>
-            <div class="tool-meta">
-                <span class="file-size">📦 ${tool.fileSize}</span>
-                <span class="tool-category">${this.getCategoryName(tool.category)}</span>
-            </div>
-            <button class="download-btn" data-tool-id="${tool.id}">
-                立即下载
-            </button>
-        `;
-
-        // 添加动画延迟
-        setTimeout(() => card.classList.add('visible'), 100);
-
-        return card;
-    }
-
-    getCategoryName(category) {
-        const categories = {
-            'utility': '实用软件',
-            'system': '系统工具',
-            'development': '开发工具',
-            'gaming': '游戏工具'
-        };
-        return categories[category] || '其他';
-    }
-
-    formatNumber(num) {
-        if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-        if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-        return num.toString();
-    }
-
     setupEventListeners() {
-        // 分类筛选
-        document.querySelectorAll('.category-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                const category = e.currentTarget.dataset.category;
-                this.filterByCategory(category);
+        // 分类导航
+        const categoryItems = document.querySelectorAll('.category-item');
+        categoryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                categoryItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                this.currentCategory = item.dataset.category;
+                this.renderTools();
             });
         });
 
@@ -140,112 +94,248 @@ class ToolboxApp {
         const searchBtn = document.querySelector('.search-btn');
         
         searchInput.addEventListener('input', (e) => {
-            this.searchTools(e.target.value);
+            this.searchQuery = e.target.value.toLowerCase();
+            this.renderTools();
         });
 
         searchBtn.addEventListener('click', () => {
-            this.searchTools(searchInput.value);
+            this.renderTools();
         });
 
-        // 下载按钮
+        // 下载按钮事件委托
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('download-btn')) {
-                const toolId = parseInt(e.target.dataset.toolId);
-                this.downloadTool(toolId);
+                this.handleDownload(e.target.dataset.toolId);
             }
         });
+    }
 
-        // 导航平滑滚动
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                this.scrollToSection(targetId);
-            });
+    renderTools() {
+        const container = document.getElementById('tools-container');
+        if (!container) return;
+
+        const filteredTools = this.filterTools();
+        
+        if (filteredTools.length === 0) {
+            container.innerHTML = this.getNoResultsHTML();
+            return;
+        }
+
+        container.innerHTML = filteredTools.map(tool => this.createToolCardHTML(tool)).join('');
+    }
+
+    filterTools() {
+        return this.tools.filter(tool => {
+            const matchesCategory = this.currentCategory === 'all' || tool.category === this.currentCategory;
+            const matchesSearch = !this.searchQuery || 
+                tool.name.toLowerCase().includes(this.searchQuery) ||
+                tool.description.toLowerCase().includes(this.searchQuery);
+            return matchesCategory && matchesSearch;
         });
     }
 
-    filterByCategory(category) {
-        this.currentCategory = category;
-        if (category === 'all') {
-            this.filteredTools = [...this.tools];
-        } else {
-            this.filteredTools = this.tools.filter(tool => tool.category === category);
-        }
-        this.renderTools();
+    createToolCardHTML(tool) {
+        return `
+            <div class="tool-card" data-category="${tool.category}">
+                <div class="tool-header">
+                    <div class="tool-icon">${tool.icon}</div>
+                    <div class="tool-info">
+                        <h3>${tool.name}</h3>
+                        <span class="tool-version">${tool.version}</span>
+                    </div>
+                </div>
+                <p class="tool-description">${tool.description}</p>
+                <div class="tool-meta">
+                    <span class="file-size">${tool.fileSize}</span>
+                </div>
+                <button class="download-btn" data-tool-id="${tool.id}">
+                    下载 (${tool.downloadCount})
+                </button>
+            </div>
+        `;
     }
 
-    searchTools(query) {
-        if (query.trim() === '') {
-            this.filteredTools = [...this.tools];
-        } else {
-            this.filteredTools = this.tools.filter(tool =>
-                tool.name.toLowerCase().includes(query.toLowerCase()) ||
-                tool.description.toLowerCase().includes(query.toLowerCase())
-            );
-        }
-        this.renderTools();
+    getNoResultsHTML() {
+        return `
+            <div class="no-results">
+                <h3>未找到匹配的工具</h3>
+                <p>请尝试其他搜索关键词或选择不同的分类</p>
+            </div>
+        `;
     }
 
-    downloadTool(toolId) {
-        const tool = this.tools.find(t => t.id === toolId);
-        if (tool) {
-            // 模拟下载过程
-            this.showDownloadProgress(tool);
-            
-            // 更新下载计数
-            tool.downloadCount++;
-            this.updateDownloadStats();
-            
-            // 实际下载（如果文件存在）
-            setTimeout(() => {
-                window.open(tool.downloadUrl, '_blank');
-            }, 1000);
+    async handleDownload(toolId) {
+        const tool = this.tools.find(t => t.id == toolId);
+        if (!tool) return;
+
+        this.showDownloadProgress(tool.name);
+        
+        try {
+            await this.simulateDownload(tool);
+            this.updateDownloadCount(toolId);
+            this.hideDownloadProgress();
+        } catch (error) {
+            console.error('下载失败:', error);
+            this.hideDownloadProgress();
         }
     }
 
-    showDownloadProgress(tool) {
-        const progress = document.createElement('div');
-        progress.className = 'download-progress';
-        progress.innerHTML = `
-            <div class="progress-content">
-                <span>正在下载 ${tool.name}...</span>
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
+    showDownloadProgress(toolName) {
+        const progressHTML = `
+            <div class="download-progress">
+                <div class="progress-content">
+                    <h3>正在下载 ${toolName}</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p>请稍候...</p>
                 </div>
             </div>
         `;
-        
-        document.body.appendChild(progress);
-        
-        setTimeout(() => {
-            progress.remove();
-        }, 2000);
+        document.body.insertAdjacentHTML('beforeend', progressHTML);
     }
 
-    updateDownloadStats() {
-        const totalDownloads = this.tools.reduce((sum, tool) => sum + tool.downloadCount, 0);
-        document.querySelector('.stat-number').textContent = this.formatNumber(totalDownloads);
+    hideDownloadProgress() {
+        const progress = document.querySelector('.download-progress');
+        if (progress) progress.remove();
     }
 
-    scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+    simulateDownload(tool) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                // 模拟实际下载
+                const link = document.createElement('a');
+                link.href = tool.downloadUrl;
+                link.download = tool.name + '.exe';
+                link.click();
+                resolve();
+            }, 2000);
+        });
+    }
+
+    updateDownloadCount(toolId) {
+        const tool = this.tools.find(t => t.id == toolId);
+        if (tool) {
+            tool.downloadCount = (parseInt(tool.downloadCount) + 1).toString();
+            this.renderTools();
         }
     }
 
-    setupScrollAnimations() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
+    initParticles() {
+        // 背景粒子层
+        if (typeof Particles !== 'undefined') {
+            Particles.init({
+                selector: '#particles-js',
+                color: ['#ff6b6b', '#4ecdc4', '#45b7d1'],
+                connectParticles: true,
+                maxParticles: 80,
+                sizeVariations: 3,
+                speed: 0.5,
+                minDistance: 100
+            });
+
+            // 内容区域粒子层
+            Particles.init({
+                selector: '#particles-content',
+                color: ['#4ecdc4', '#45b7d1', '#96ceb4'],
+                connectParticles: false,
+                maxParticles: 50,
+                sizeVariations: 2,
+                speed: 0.3,
+                minDistance: 150
+            });
+
+            // 前景粒子层
+            Particles.init({
+                selector: '#particles-foreground',
+                color: ['#ffffff', '#ff6b6b', '#4ecdc4'],
+                connectParticles: false,
+                maxParticles: 30,
+                sizeVariations: 4,
+                speed: 0.8,
+                minDistance: 200
+            });
+        }
+    }
+
+    initMouseEffects() {
+        // 创建鼠标跟随光点
+        const cursorGlow = document.createElement('div');
+        cursorGlow.className = 'cursor-glow';
+        document.body.appendChild(cursorGlow);
+
+        let mouseTrail = [];
+        const maxTrailLength = 5;
+
+        document.addEventListener('mousemove', (e) => {
+            this.mouseX = e.clientX;
+            this.mouseY = e.clientY;
+            
+            // 更新主光点位置
+            cursorGlow.style.left = this.mouseX - 10 + 'px';
+            cursorGlow.style.top = this.mouseY - 10 + 'px';
+
+            // 创建拖尾效果
+            mouseTrail.push({ x: this.mouseX, y: this.mouseY });
+            if (mouseTrail.length > maxTrailLength) {
+                mouseTrail.shift();
+            }
+
+            // 更新拖尾光点
+            mouseTrail.forEach((pos, index) => {
+                let trailDot = document.getElementById(`trail-${index}`);
+                if (!trailDot) {
+                    trailDot = document.createElement('div');
+                    trailDot.id = `trail-${index}`;
+                    trailDot.className = 'cursor-glow trail';
+                    document.body.appendChild(trailDot);
+                }
+                trailDot.style.left = pos.x - 20 + 'px';
+                trailDot.style.top = pos.y - 20 + 'px';
+                trailDot.style.opacity = (index + 1) / maxTrailLength * 0.3;
+            });
+        });
+
+        // 鼠标悬停效果
+        document.addEventListener('mouseover', (e) => {
+            if (e.target.classList.contains('tool-card') || e.target.classList.contains('download-btn')) {
+                cursorGlow.style.transform = 'scale(1.5)';
+                cursorGlow.style.background = 'radial-gradient(circle, rgba(255, 107, 107, 0.8) 0%, transparent 70%)';
+            }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.target.classList.contains('tool-card') || e.target.classList.contains('download-btn')) {
+                cursorGlow.style.transform = 'scale(1)';
+                cursorGlow.style.background = 'radial-gradient(circle, rgba(78, 205, 196, 0.8) 0%, transparent 70%)';
+            }
+        });
+    }
+
+    initScrollEffects() {
+        // 滚动视差效果
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.header-content h1');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+
+            // 工具卡片渐入效果
+            const toolCards = document.querySelectorAll('.tool-card');
+            toolCards.forEach((card, index) => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = cardTop < window.innerHeight - 100;
+                
+                if (cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                    card.style.transitionDelay = `${index * 0.1}s`;
+                } else {
+                    card.style.opacity = '0.7';
+                    card.style.transform = 'translateY(20px)';
                 }
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
         });
     }
 }
