@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "VS Code",
+    "category": "software",
+    "subcategory": "development",
+    "description": "微软推出的轻量级代码编辑器，支持插件扩展",
+    "officialUrl": "https://code.visualstudio.com",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
+        "password": "abcd"
+      },
+      {
+        "platform": "aliyun",
+        "url": "https://www.aliyundrive.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ"
+      }
+    ],
+    "updateTime": "2025-12-10",
+    "version": "1.85.0",
+    "fileSize": "85.2 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 5,
+    "icon": "💻",
+    "tags": ["IDE", "代码编辑器", "开发工具"]
+  },
+  {
+    "id": 2,
+    "name": "Figma",
+    "category": "software",
+    "subcategory": "design",
+    "description": "基于浏览器的UI/UX设计工具，支持实时协作",
+    "officialUrl": "https://www.figma.com",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
+        "password": "efgh"
+      }
+    ],
+    "updateTime": "2025-12-08",
+    "version": "118.2.0",
+    "fileSize": "120.5 MB",
+    "platform": ["Windows", "macOS", "Web"],
+    "needRegistration": true,
+    "recommendation": 4.8,
+    "icon": "🎨",
+    "tags": ["UI设计", "UX设计", "协作工具"]
+  },
+  {
+    "id": 3,
+    "name": "Python 从入门到精通",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "Python 编程语言的完整学习资料，从基础语法到高级应用",
+    "officialUrl": "",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
+        "password": "ijkl"
+      }
+    ],
+    "updateTime": "2025-12-05",
+    "version": "2025修订版",
+    "fileSize": "2.3 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.9,
+    "icon": "🐍",
+    "tags": ["Python", "编程", "学习资料"]
+  },
+  {
+    "id": 4,
+    "name": "简历模板合集",
+    "category": "collections",
+    "subcategory": "templates",
+    "description": "包含多种风格的简历模板，适合不同行业和职位",
+    "officialUrl": "",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
+        "password": "mnop"
+      }
+    ],
+    "updateTime": "2025-12-03",
+    "version": "2025版",
+    "fileSize": "150.8 MB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "📄",
+    "tags": ["简历", "模板", "合集"]
+  }
+]

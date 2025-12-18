@@ -1,9 +1,10 @@
-// 工具箱应用主逻辑
-class ToolboxApp {
+// 实用资料库应用主逻辑
+class ResourceLibraryApp {
     constructor() {
-        this.tools = [];
+        this.resources = [];
         this.config = null;
         this.currentCategory = 'all';
+        this.currentSubcategory = 'all';
         this.searchQuery = '';
         this.mouseX = 0;
         this.mouseY = 0;
@@ -13,10 +14,11 @@ class ToolboxApp {
     async init() {
         await Promise.all([
             this.loadConfig(),
-            this.loadTools()
+            this.loadResources()
         ]);
         this.setupEventListeners();
-        this.renderTools();
+        this.renderCategories();
+        this.renderResources();
         this.initParticles();
         this.initMouseEffects();
         this.initScrollEffects();
@@ -25,37 +27,125 @@ class ToolboxApp {
 
     async loadConfig() {
         try {
-            const response = await fetch('data/config.json');
+            // 尝试加载新的配置文件
+            const response = await fetch('data/config_new.json');
             this.config = await response.json();
         } catch (error) {
-            console.error('加载配置数据失败:', error);
-            this.config = this.getDefaultConfig();
+            console.error('加载新配置数据失败，尝试使用旧配置:', error);
+            try {
+                const response = await fetch('data/config.json');
+                this.config = await response.json();
+            } catch (e) {
+                console.error('加载配置数据失败:', e);
+                this.config = this.getDefaultConfig();
+            }
         }
     }
 
-    async loadTools() {
+    async loadResources() {
         try {
-            const response = await fetch('data/tools.json');
-            this.tools = await response.json();
+            // 尝试加载新的资源文件
+            const response = await fetch('data/resources_new.json');
+            this.resources = await response.json();
         } catch (error) {
-            console.error('加载工具数据失败:', error);
-            this.tools = this.getSampleTools();
+            console.error('加载新资源数据失败，尝试加载旧工具数据:', error);
+            try {
+                const response = await fetch('data/tools.json');
+                const tools = await response.json();
+                this.resources = this.convertToolsToResources(tools);
+            } catch (e) {
+                console.error('加载资源数据失败:', e);
+                this.resources = this.getSampleResources();
+            }
         }
+    }
+
+    // 将旧工具数据转换为新资源格式
+    convertToolsToResources(tools) {
+        return tools.map(tool => {
+            return {
+                id: tool.id,
+                name: tool.name,
+                category: this.mapCategory(tool.category),
+                subcategory: this.mapSubcategory(tool.category),
+                description: tool.description,
+                officialUrl: '',
+                cloudLinks: [
+                    {
+                        platform: "baidu",
+                        url: tool.downloadUrl,
+                        password: ""
+                    }
+                ],
+                updateTime: "2025-12-18",
+                version: tool.version,
+                fileSize: tool.fileSize,
+                platform: ["Windows"],
+                needRegistration: false,
+                recommendation: 4,
+                icon: tool.icon,
+                tags: [tool.name.replace(/\s+/g, "").toLowerCase()]
+            };
+        });
+    }
+
+    // 映射旧类别到新类别
+    mapCategory(oldCategory) {
+        const categoryMap = {
+            'development': 'software',
+            'utility': 'software',
+            'system': 'software',
+            'gaming': 'software'
+        };
+        return categoryMap[oldCategory] || 'software';
+    }
+
+    // 映射旧类别到新子类别
+    mapSubcategory(oldCategory) {
+        const subcategoryMap = {
+            'development': 'development',
+            'utility': 'productivity',
+            'system': 'system',
+            'gaming': 'multimedia'
+        };
+        return subcategoryMap[oldCategory] || 'development';
     }
 
     getDefaultConfig() {
         return {
             app: {
-                title: "炫酷工具箱",
-                description: "专业工具下载平台"
+                title: "实用资料库",
+                description: "专业资源下载平台"
             },
             theme: {
                 primaryColor: "#4ecdc4",
                 secondaryColor: "#ff6b6b"
             },
+            categories: [
+                {
+                    id: "all",
+                    name: "全部资源",
+                    icon: "📚",
+                    description: "查看所有可用资源"
+                },
+                {
+                    id: "software",
+                    name: "软件工具",
+                    icon: "💻",
+                    description: "各类实用软件工具",
+                    subcategories: [
+                        { id: "development", name: "开发工具", icon: "🔧" },
+                        { id: "design", name: "设计工具", icon: "🎨" },
+                        { id: "productivity", name: "办公效率", icon: "📋" },
+                        { id: "system", name: "系统工具", icon: "⚙️" },
+                        { id: "multimedia", name: "多媒体", icon: "🎬" },
+                        { id: "free-alternatives", name: "免费替代品", icon: "💰" }
+                    ]
+                }
+            ],
             search: {
-                placeholder: "搜索工具名称或描述...",
-                noResultsMessage: "未找到匹配的工具",
+                placeholder: "搜索资源名称或描述...",
+                noResultsMessage: "未找到匹配的资源",
                 noResultsSubMessage: "请尝试其他搜索关键词或选择不同的分类"
             }
         };
@@ -74,51 +164,53 @@ class ToolboxApp {
         }
     }
 
-    getSampleTools() {
+    getSampleResources() {
         return [
             {
                 id: 1,
-                name: "VS Code 编辑器",
-                category: "development",
+                name: "VS Code",
+                category: "software",
+                subcategory: "development",
+                description: "微软推出的轻量级代码编辑器，支持插件扩展",
+                officialUrl: "https://code.visualstudio.com",
+                cloudLinks: [
+                    {
+                        platform: "baidu",
+                        url: "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
+                        password: "abcd"
+                    }
+                ],
+                updateTime: "2025-12-10",
                 version: "1.85.0",
-                description: "轻量级强大的代码编辑器",
-                downloadUrl: "downloads/development/vscode-setup.exe",
                 fileSize: "85.2 MB",
-                downloadCount: "12500",
-                icon: "💻"
+                platform: ["Windows", "macOS", "Linux"],
+                needRegistration: false,
+                recommendation: 5,
+                icon: "💻",
+                tags: ["IDE", "代码编辑器", "开发工具"]
             },
             {
                 id: 2,
-                name: "Chrome 浏览器",
-                category: "utility",
-                version: "120.0.6099.109",
-                description: "快速安全的网页浏览器",
-                downloadUrl: "downloads/utility/chrome-setup.exe",
-                fileSize: "72.1 MB",
-                downloadCount: "89300",
-                icon: "🌐"
-            },
-            {
-                id: 3,
-                name: "CCleaner 系统清理",
-                category: "system",
-                version: "6.15.0",
-                description: "系统优化和清理工具",
-                downloadUrl: "downloads/system/ccleaner-setup.exe",
-                fileSize: "25.3 MB",
-                downloadCount: "45600",
-                icon: "🧹"
-            },
-            {
-                id: 4,
-                name: "Steam 游戏平台",
-                category: "gaming",
-                version: "2.10.91.91",
-                description: "全球最大的游戏分发平台",
-                downloadUrl: "downloads/gaming/steam-setup.exe",
-                fileSize: "1.2 MB",
-                downloadCount: "78900",
-                icon: "🎮"
+                name: "Figma",
+                category: "software",
+                subcategory: "design",
+                description: "基于浏览器的UI/UX设计工具，支持实时协作",
+                officialUrl: "https://www.figma.com",
+                cloudLinks: [
+                    {
+                        platform: "baidu",
+                        url: "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
+                        password: "efgh"
+                    }
+                ],
+                updateTime: "2025-12-08",
+                version: "118.2.0",
+                fileSize: "120.5 MB",
+                platform: ["Windows", "macOS", "Web"],
+                needRegistration: true,
+                recommendation: 4.8,
+                icon: "🎨",
+                tags: ["UI设计", "UX设计", "协作工具"]
             }
         ];
     }
@@ -126,17 +218,6 @@ class ToolboxApp {
     setupEventListeners() {
         // 顶部导航菜单功能
         this.setupHeaderNavigation();
-        
-        // 分类导航
-        const categoryItems = document.querySelectorAll('.category-item');
-        categoryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                categoryItems.forEach(i => i.classList.remove('active'));
-                item.classList.add('active');
-                this.currentCategory = item.dataset.category;
-                this.renderTools();
-            });
-        });
 
         // 搜索功能
         const searchInput = document.querySelector('.search-input');
@@ -144,17 +225,52 @@ class ToolboxApp {
         
         searchInput.addEventListener('input', (e) => {
             this.searchQuery = e.target.value.toLowerCase();
-            this.renderTools();
+            this.renderResources();
         });
 
         searchBtn.addEventListener('click', () => {
-            this.renderTools();
+            this.renderResources();
         });
 
-        // 下载按钮事件委托
+        // 资源卡片和详情按钮事件委托
         document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('download-btn')) {
-                this.handleDownload(e.target.dataset.toolId);
+            // 查看详情按钮
+            if (e.target.classList.contains('view-details-btn') || e.target.closest('.resource-card')) {
+                const resourceId = e.target.dataset.resourceId || e.target.closest('.resource-card').dataset.resourceId;
+                this.showResourceDetail(resourceId);
+            }
+            
+            // 关闭弹窗按钮
+            if (e.target.classList.contains('close-btn')) {
+                this.hideResourceDetail();
+            }
+            
+            // 复制链接按钮
+            if (e.target.classList.contains('copy-link-btn')) {
+                const link = e.target.dataset.link;
+                const password = e.target.dataset.password;
+                this.copyToClipboard(link, password);
+            }
+            
+            // 一键复制所有链接按钮
+            if (e.target.classList.contains('copy-all-btn')) {
+                this.copyAllLinks();
+            }
+            
+            // 子分类筛选按钮（支持点击内部元素）
+            const subcategoryFilterItem = e.target.closest('.subcategory-filter-item');
+            if (subcategoryFilterItem) {
+                const categoryId = subcategoryFilterItem.dataset.category;
+                const subcategoryId = subcategoryFilterItem.dataset.subcategory;
+                this.handleSubcategoryFilterClick(categoryId, subcategoryId);
+            }
+        });
+        
+        // 点击弹窗外部关闭弹窗
+        document.addEventListener('click', (e) => {
+            const modal = document.getElementById('resource-modal');
+            if (modal && e.target === modal) {
+                this.hideResourceDetail();
             }
         });
     }
@@ -182,54 +298,225 @@ class ToolboxApp {
         }
     }
 
-    renderTools() {
-        const container = document.getElementById('tools-container');
+    // 渲染主分类（去掉子分类）
+    renderCategories() {
+        const categoryList = document.querySelector('.category-list');
+        if (!categoryList || !this.config.categories) return;
+
+        categoryList.innerHTML = '';
+        
+        this.config.categories.forEach(category => {
+            // 创建主分类项
+            const categoryItem = document.createElement('li');
+            categoryItem.className = 'category-item';
+            categoryItem.dataset.category = category.id;
+            categoryItem.innerHTML = `
+                <span class="category-icon">${category.icon}</span>
+                <span class="category-name">${category.name}</span>
+            `;
+            
+            // 添加点击事件
+            categoryItem.addEventListener('click', () => {
+                this.handleCategoryClick(category.id);
+            });
+            
+            categoryList.appendChild(categoryItem);
+        });
+        
+        // 默认激活"全部资源"分类
+        const allCategory = categoryList.querySelector('[data-category="all"]');
+        if (allCategory) {
+            allCategory.classList.add('active');
+        }
+    }
+    
+    // 处理主分类点击
+    handleCategoryClick(categoryId) {
+        this.currentCategory = categoryId;
+        this.currentSubcategory = 'all';
+        
+        // 更新分类激活状态
+        const categoryItems = document.querySelectorAll('.category-item');
+        categoryItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        const clickedCategory = document.querySelector(`[data-category="${categoryId}"]`);
+        if (clickedCategory) {
+            clickedCategory.classList.add('active');
+        }
+        
+        // 渲染子分类筛选栏
+        this.renderSubcategoryFilter(categoryId);
+        
+        this.renderResources();
+    }
+    
+    // 处理子分类点击
+    handleSubcategoryClick(categoryId, subcategoryId) {
+        this.currentCategory = categoryId;
+        this.currentSubcategory = subcategoryId;
+        
+        // 更新分类激活状态
+        const categoryItems = document.querySelectorAll('.category-item');
+        categoryItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        const clickedCategory = document.querySelector(`[data-category="${categoryId}"]`);
+        if (clickedCategory) {
+            clickedCategory.classList.add('active');
+        }
+        
+        // 渲染子分类筛选栏
+        this.renderSubcategoryFilter(categoryId);
+        
+        // 更新子分类筛选激活状态
+        const subcategoryFilterItems = document.querySelectorAll('.subcategory-filter-item');
+        subcategoryFilterItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        const clickedSubcategoryFilter = document.querySelector(`[data-subcategory="${subcategoryId}"]`);
+        if (clickedSubcategoryFilter) {
+            clickedSubcategoryFilter.classList.add('active');
+        }
+        
+        this.renderResources();
+    }
+    
+    // 渲染子分类筛选栏
+    renderSubcategoryFilter(categoryId) {
+        const container = document.getElementById('subcategory-filter-container');
+        if (!container) return;
+        
+        // 清空容器
+        container.innerHTML = '';
+        
+        // 如果是"全部资源"，不显示子分类筛选
+        if (categoryId === 'all') {
+            return;
+        }
+        
+        // 找到当前分类
+        const category = this.config.categories.find(cat => cat.id === categoryId);
+        if (!category || !category.subcategories || category.subcategories.length === 0) {
+            return;
+        }
+        
+        // 添加"全部子分类"选项
+        const allSubcategoryItem = document.createElement('div');
+        allSubcategoryItem.className = 'subcategory-filter-item';
+        allSubcategoryItem.dataset.category = categoryId;
+        allSubcategoryItem.dataset.subcategory = 'all';
+        allSubcategoryItem.textContent = '全部子分类';
+        
+        // 设置激活状态
+        if (this.currentSubcategory === 'all') {
+            allSubcategoryItem.classList.add('active');
+        }
+        
+        container.appendChild(allSubcategoryItem);
+        
+        // 添加各个子分类选项
+        category.subcategories.forEach(subcategory => {
+            const subcategoryItem = document.createElement('div');
+            subcategoryItem.className = 'subcategory-filter-item';
+            subcategoryItem.dataset.category = categoryId;
+            subcategoryItem.dataset.subcategory = subcategory.id;
+            subcategoryItem.innerHTML = `
+                <span class="subcategory-icon">${subcategory.icon}</span>
+                <span class="subcategory-name">${subcategory.name}</span>
+            `;
+            
+            // 设置激活状态
+            if (this.currentSubcategory === subcategory.id) {
+                subcategoryItem.classList.add('active');
+            }
+            
+            container.appendChild(subcategoryItem);
+        });
+    }
+    
+    // 处理子分类筛选点击
+    handleSubcategoryFilterClick(categoryId, subcategoryId) {
+        this.currentCategory = categoryId;
+        this.currentSubcategory = subcategoryId;
+        
+        // 更新子分类筛选激活状态
+        const subcategoryFilterItems = document.querySelectorAll('.subcategory-filter-item');
+        subcategoryFilterItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        const clickedItem = document.querySelector(`[data-subcategory="${subcategoryId}"]`);
+        if (clickedItem) {
+            clickedItem.classList.add('active');
+        }
+        
+        this.renderResources();
+    }
+
+    renderResources() {
+        const container = document.getElementById('resources-container') || document.getElementById('tools-container');
         if (!container) return;
 
-        const filteredTools = this.filterTools();
+        const filteredResources = this.filterResources();
         
-        if (filteredTools.length === 0) {
+        if (filteredResources.length === 0) {
             container.innerHTML = this.getNoResultsHTML();
             return;
         }
 
-        container.innerHTML = filteredTools.map(tool => this.createToolCardHTML(tool)).join('');
+        container.innerHTML = filteredResources.map(resource => this.createResourceCardHTML(resource)).join('');
     }
 
-    filterTools() {
-        return this.tools.filter(tool => {
-            const matchesCategory = this.currentCategory === 'all' || tool.category === this.currentCategory;
+    filterResources() {
+        let filtered = this.resources.filter(resource => {
+            const matchesCategory = this.currentCategory === 'all' || resource.category === this.currentCategory;
+            const matchesSubcategory = this.currentSubcategory === 'all' || resource.subcategory === this.currentSubcategory;
             const matchesSearch = !this.searchQuery || 
-                tool.name.toLowerCase().includes(this.searchQuery) ||
-                tool.description.toLowerCase().includes(this.searchQuery);
-            return matchesCategory && matchesSearch;
+                resource.name.toLowerCase().includes(this.searchQuery) ||
+                resource.description.toLowerCase().includes(this.searchQuery) ||
+                (resource.tags && resource.tags.some(tag => tag.toLowerCase().includes(this.searchQuery)));
+            
+            return matchesCategory && matchesSubcategory && matchesSearch;
         });
+        
+        // 默认按最新更新排序
+        filtered = filtered.sort((a, b) => new Date(b.updateTime) - new Date(a.updateTime));
+        
+        return filtered;
     }
 
-    createToolCardHTML(tool) {
+    createResourceCardHTML(resource) {
         return `
-            <div class="tool-card" data-category="${tool.category}">
-                <div class="tool-header">
-                    <div class="tool-icon">${tool.icon}</div>
-                    <div class="tool-info">
-                        <h3>${tool.name}</h3>
-                        <span class="tool-version">${tool.version}</span>
+            <div class="resource-card" data-resource-id="${resource.id}" data-category="${resource.category}">
+                <div class="resource-header">
+                    <div class="resource-icon">${resource.icon}</div>
+                    <div class="resource-info">
+                        <h3>${resource.name}</h3>
+                        <span class="resource-version">${resource.version}</span>
                     </div>
                 </div>
-                <p class="tool-description">${tool.description}</p>
-                <div class="tool-meta">
-                    <span class="file-size">${tool.fileSize}</span>
+                <p class="resource-description">${resource.description}</p>
+                <div class="resource-tags">
+                    ${resource.tags ? resource.tags.map(tag => `<span class="resource-tag">${tag}</span>`).join('') : ''}
                 </div>
-                <button class="download-btn" data-tool-id="${tool.id}">
-                    下载 (${tool.downloadCount})
-                </button>
+                <div class="resource-meta">
+                    <span class="resource-platform">${resource.platform.join(', ')}</span>
+                    <span class="resource-date">更新: ${resource.updateTime}</span>
+                    <span class="file-size">${resource.fileSize}</span>
+                    ${resource.recommendation ? `<span class="recommendation">⭐ ${resource.recommendation}</span>` : ''}
+                </div>
+                <button class="view-details-btn" data-resource-id="${resource.id}">查看详情</button>
             </div>
         `;
     }
 
     getNoResultsHTML() {
         // 使用配置中的无结果消息，或默认值
-        const noResultsMessage = this.config?.search?.noResultsMessage || "未找到匹配的工具";
+        const noResultsMessage = this.config?.search?.noResultsMessage || "未找到匹配的资源";
         const noResultsSubMessage = this.config?.search?.noResultsSubMessage || "请尝试其他搜索关键词或选择不同的分类";
         
         return `
@@ -239,62 +526,167 @@ class ToolboxApp {
             </div>
         `;
     }
-
-    async handleDownload(toolId) {
-        const tool = this.tools.find(t => t.id == toolId);
-        if (!tool) return;
-
-        this.showDownloadProgress(tool.name);
+    
+    // 显示资源详情弹窗
+    showResourceDetail(resourceId) {
+        const resource = this.resources.find(r => r.id == resourceId);
+        if (!resource) return;
         
-        try {
-            await this.simulateDownload(tool);
-            this.updateDownloadCount(toolId);
-            this.hideDownloadProgress();
-        } catch (error) {
-            console.error('下载失败:', error);
-            this.hideDownloadProgress();
+        const modal = document.getElementById('resource-modal');
+        const modalBody = document.getElementById('modal-body');
+        
+        if (!modal || !modalBody) return;
+        
+        // 生成资源详情HTML
+        const detailHTML = this.createResourceDetailHTML(resource);
+        modalBody.innerHTML = detailHTML;
+        
+        // 显示弹窗
+        modal.classList.add('active');
+    }
+    
+    // 隐藏资源详情弹窗
+    hideResourceDetail() {
+        const modal = document.getElementById('resource-modal');
+        if (modal) {
+            modal.classList.remove('active');
         }
     }
-
-    showDownloadProgress(toolName) {
-        const progressHTML = `
-            <div class="download-progress">
-                <div class="progress-content">
-                    <h3>正在下载 ${toolName}</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
+    
+    // 创建资源详情HTML
+    createResourceDetailHTML(resource) {
+        return `
+            <div class="resource-detail-header">
+                <div class="resource-detail-icon">${resource.icon}</div>
+                <div class="resource-detail-info">
+                    <h2>${resource.name}</h2>
+                    <div class="resource-detail-meta">
+                        <span>版本: ${resource.version}</span>
+                        <span>大小: ${resource.fileSize}</span>
+                        <span>平台: ${resource.platform.join(', ')}</span>
+                        <span>更新: ${resource.updateTime}</span>
+                        ${resource.recommendation ? `<span>推荐指数: ⭐ ${resource.recommendation}</span>` : ''}
                     </div>
-                    <p>请稍候...</p>
                 </div>
             </div>
+            
+            <div class="resource-detail-description">
+                <h3>资源描述</h3>
+                <p>${resource.description}</p>
+            </div>
+            
+            ${resource.officialUrl ? `
+            <div class="resource-detail-links">
+                <h3>官方链接</h3>
+                <div class="link-item">
+                    <div class="link-platform">🌐</div>
+                    <div class="link-info">
+                        <a href="${resource.officialUrl}" target="_blank" rel="noopener noreferrer">${resource.officialUrl}</a>
+                    </div>
+                    <button class="copy-link-btn" data-link="${resource.officialUrl}">复制</button>
+                </div>
+            </div>
+            ` : ''}
+            
+            <div class="resource-detail-links">
+                <h3>下载链接</h3>
+                ${resource.cloudLinks ? resource.cloudLinks.map((link, index) => {
+                    const platformIcon = this.getPlatformIcon(link.platform);
+                    return `
+                    <div class="link-item">
+                        <div class="link-platform">${platformIcon}</div>
+                        <div class="link-info">
+                            <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.url}</a>
+                            ${link.password ? `<span class="link-password">提取码: ${link.password}</span>` : ''}
+                        </div>
+                        <button class="copy-link-btn" data-link="${link.url}" data-password="${link.password || ''}">复制</button>
+                    </div>
+                    `;
+                }).join('') : ''}
+            </div>
+            
+            ${resource.tags ? `
+            <div class="resource-detail-tags">
+                <h3>标签</h3>
+                <div class="resource-tags">
+                    ${resource.tags.map(tag => `<span class="resource-tag">${tag}</span>`).join('')}
+                </div>
+            </div>
+            ` : ''}
+            
+            <button class="copy-all-btn" data-resource-id="${resource.id}">一键复制所有链接</button>
         `;
-        document.body.insertAdjacentHTML('beforeend', progressHTML);
     }
-
-    hideDownloadProgress() {
-        const progress = document.querySelector('.download-progress');
-        if (progress) progress.remove();
+    
+    // 获取平台图标
+    getPlatformIcon(platform) {
+        const icons = {
+            'baidu': '💾',
+            'aliyun': '☁️',
+            'quark': '⚡',
+            'google': '🔍'
+        };
+        return icons[platform] || '📥';
     }
-
-    simulateDownload(tool) {
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                // 模拟实际下载
-                const link = document.createElement('a');
-                link.href = tool.downloadUrl;
-                link.download = tool.name + '.exe';
-                link.click();
-                resolve();
-            }, 2000);
+    
+    // 复制到剪贴板
+    copyToClipboard(link, password) {
+        let text = link;
+        if (password) {
+            text += `\n提取码: ${password}`;
+        }
+        
+        navigator.clipboard.writeText(text).then(() => {
+            this.showCopySuccess();
+        }).catch(err => {
+            console.error('复制失败:', err);
         });
     }
-
-    updateDownloadCount(toolId) {
-        const tool = this.tools.find(t => t.id == toolId);
-        if (tool) {
-            tool.downloadCount = (parseInt(tool.downloadCount) + 1).toString();
-            this.renderTools();
+    
+    // 一键复制所有链接
+    copyAllLinks() {
+        const modal = document.getElementById('resource-modal');
+        if (!modal) return;
+        
+        const links = [];
+        const linkItems = modal.querySelectorAll('.link-item');
+        
+        linkItems.forEach(item => {
+            const link = item.querySelector('a').href;
+            const password = item.querySelector('.link-password');
+            let text = link;
+            if (password) {
+                text += `\n提取码: ${password.textContent.replace('提取码: ', '')}`;
+            }
+            links.push(text);
+        });
+        
+        if (links.length > 0) {
+            navigator.clipboard.writeText(links.join('\n\n')).then(() => {
+                this.showCopySuccess();
+            }).catch(err => {
+                console.error('复制失败:', err);
+            });
         }
+    }
+    
+    // 显示复制成功提示
+    showCopySuccess() {
+        // 创建提示元素
+        let successElement = document.querySelector('.copy-success');
+        if (!successElement) {
+            successElement = document.createElement('div');
+            successElement.className = 'copy-success';
+            document.body.appendChild(successElement);
+        }
+        
+        successElement.textContent = '复制成功！';
+        successElement.classList.add('active');
+        
+        // 3秒后隐藏
+        setTimeout(() => {
+            successElement.classList.remove('active');
+        }, 3000);
     }
 
     initParticles() {
@@ -397,13 +789,13 @@ class ToolboxApp {
         
         // 简化悬停效果
         document.addEventListener('mouseover', (e) => {
-            if (e.target.closest('.tool-card') || e.target.classList.contains('download-btn')) {
+            if (e.target.closest('.resource-card') || e.target.classList.contains('view-details-btn')) {
                 mainCursor.classList.add('hovering');
             }
         });
         
         document.addEventListener('mouseout', (e) => {
-            if (!e.relatedTarget || (!e.relatedTarget.closest('.tool-card') && !e.relatedTarget.classList.contains('download-btn'))) {
+            if (!e.relatedTarget || (!e.relatedTarget.closest('.resource-card') && !e.relatedTarget.classList.contains('view-details-btn'))) {
                 mainCursor.classList.remove('hovering');
             }
         });
@@ -430,9 +822,9 @@ class ToolboxApp {
                 parallax.style.transform = `translateY(${scrolled * 0.3}px)`;
             }
 
-            // 工具卡片渐入效果
-            const toolCards = document.querySelectorAll('.tool-card');
-            toolCards.forEach((card, index) => {
+            // 资源卡片渐入效果
+            const resourceCards = document.querySelectorAll('.resource-card, .tool-card');
+            resourceCards.forEach((card, index) => {
                 const cardTop = card.getBoundingClientRect().top;
                 const cardVisible = cardTop < window.innerHeight - 100;
                 
@@ -451,5 +843,5 @@ class ToolboxApp {
 
 // 初始化应用
 document.addEventListener('DOMContentLoaded', () => {
-    new ToolboxApp();
+    new ResourceLibraryApp();
 });

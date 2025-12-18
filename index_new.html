@@ -1,11 +1,3 @@
-<!--
- * @Author: huojiyanzui 18561977738@163.com
- * @Date: 2024-10-31 11:15:41
- * @LastEditors: huojiyanzui 18561977738@163.com
- * @LastEditTime: 2025-10-11 17:23:23
- * @FilePath: \gengxiaoyu.github.io\index.html
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -57,12 +49,13 @@
         </div>
     </header>
 
+    <!-- 主容器 -->
     <div class="main-container">
         <!-- 左侧分类导航 -->
         <aside class="sidebar">
             <nav class="category-nav">
                 <ul class="category-list">
-                    <!-- 分类将通过JavaScript动态加载 -->
+                    <!-- 主分类将通过JavaScript动态加载 -->
                 </ul>
             </nav>
         </aside>
@@ -77,10 +70,27 @@
                 </div>
             </div>
 
-            <!-- 子分类筛选栏 -->
-            <div class="subcategory-filter-section">
-                <div class="subcategory-filter-container" id="subcategory-filter-container">
-                    <!-- 子分类将通过JavaScript动态加载 -->
+            <!-- 筛选栏 -->
+            <div class="filter-section">
+                <div class="filter-container">
+                    <select class="filter-select">
+                        <option value="all">全部类别</option>
+                        <!-- 子分类将通过JavaScript动态加载 -->
+                    </select>
+                    <select class="filter-select">
+                        <option value="all">全部平台</option>
+                        <option value="windows">Windows</option>
+                        <option value="macos">macOS</option>
+                        <option value="linux">Linux</option>
+                        <option value="web">Web</option>
+                        <option value="all">All</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="latest">最新更新</option>
+                        <option value="popular">最受欢迎</option>
+                        <option value="size-asc">文件最小</option>
+                        <option value="size-desc">文件最大</option>
+                    </select>
                 </div>
             </div>
 

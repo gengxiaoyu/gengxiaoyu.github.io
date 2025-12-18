@@ -1,0 +1,151 @@
+{
+  "app": {
+    "title": "实用资料库",
+    "description": "专业的资源下载平台，提供软件工具、学习资料和合集资源",
+    "version": "2.0.0",
+    "author": "gengxiaoyu",
+    "contact": "gengxiaoyu@example.com"
+  },
+  "theme": {
+    "primaryColor": "#4ecdc4",
+    "secondaryColor": "#ff6b6b",
+    "accentColor": "#45b7d1",
+    "backgroundColor": "#1a1a2e",
+    "textPrimary": "#ffffff",
+    "textSecondary": "#cccccc",
+    "cardBackground": "rgba(255, 255, 255, 0.1)"
+  },
+  "categories": [
+    {
+      "id": "all",
+      "name": "全部资源",
+      "icon": "📚",
+      "description": "查看所有可用资源"
+    },
+    {
+      "id": "software",
+      "name": "软件工具",
+      "icon": "💻",
+      "description": "各类实用软件工具",
+      "subcategories": [
+        {
+          "id": "development",
+          "name": "开发工具",
+          "icon": "🔧",
+          "description": "IDE、调试、版本控制等"
+        },
+        {
+          "id": "design",
+          "name": "设计工具",
+          "icon": "🎨",
+          "description": "UI/UX、图像处理、3D建模等"
+        },
+        {
+          "id": "productivity",
+          "name": "办公效率",
+          "icon": "📋",
+          "description": "文档、表格、笔记、日程等"
+        },
+        {
+          "id": "system",
+          "name": "系统工具",
+          "icon": "⚙️",
+          "description": "压缩、杀毒、优化等"
+        },
+        {
+          "id": "multimedia",
+          "name": "多媒体",
+          "icon": "🎬",
+          "description": "音视频编辑、播放器等"
+        },
+        {
+          "id": "free-alternatives",
+          "name": "免费替代品",
+          "icon": "💰",
+          "description": "替代付费软件的免费工具"
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "name": "学习资料",
+      "icon": "📖",
+      "description": "各类学习资源",
+      "subcategories": [
+        {
+          "id": "programming",
+          "name": "编程开发",
+          "icon": "💻",
+          "description": "语言、框架、算法等"
+        },
+        {
+          "id": "data-science",
+          "name": "数据科学与AI",
+          "icon": "🤖",
+          "description": "Python、机器学习、大模型等"
+        },
+        {
+          "id": "design-creative",
+          "name": "设计与创意",
+          "icon": "🎨",
+          "description": "UI/UX、摄影、插画等"
+        },
+        {
+          "id": "career-skills",
+          "name": "职场技能",
+          "icon": "💼",
+          "description": "PPT、Excel、沟通、项目管理等"
+        },
+        {
+          "id": "exams",
+          "name": "考试考证",
+          "icon": "📝",
+          "description": "四六级、考研、软考、PMP等"
+        },
+        {
+          "id": "language-learning",
+          "name": "语言学习",
+          "icon": "🗣️",
+          "description": "英语、日语、编程语言等"
+        }
+      ]
+    },
+    {
+      "id": "collections",
+      "name": "合集资源",
+      "icon": "📦",
+      "description": "整理的高质量合集资源",
+      "subcategories": [
+        {
+          "id": "templates",
+          "name": "模板合集",
+          "icon": "📄",
+          "description": "简历、PPT、合同等"
+        },
+        {
+          "id": "tutorials",
+          "name": "教程打包",
+          "icon": "🎓",
+          "description": "某领域从入门到精通全套"
+        },
+        {
+          "id": "ebooks",
+          "name": "电子书合集",
+          "icon": "📚",
+          "description": "技术、人文、工具书等"
+        },
+        {
+          "id": "toolboxes",
+          "name": "工具箱合集",
+          "icon": "🧰",
+          "description": "一键安装包、绿色软件集合等"
+        }
+      ]
+    }
+  ],
+  "search": {
+    "placeholder": "搜索资源名称或描述...",
+    "noResultsMessage": "未找到匹配的资源",
+    "noResultsSubMessage": "请尝试其他搜索关键词或选择不同的分类"
+  }
+}
