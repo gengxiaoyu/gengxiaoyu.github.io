@@ -1,0 +1,83 @@
+{
+  "app": {
+    "title": "炫酷工具箱",
+    "description": "专业工具下载平台，提供各种实用软件、系统工具、开发工具和游戏工具",
+    "version": "1.0.0",
+    "author": "huojiyanzui",
+    "contact": "18561977738@163.com"
+  },
+  "theme": {
+    "primaryColor": "#4ecdc4",
+    "secondaryColor": "#ff6b6b",
+    "accentColor": "#45b7d1",
+    "backgroundColor": "#1a1a2e",
+    "textPrimary": "#ffffff",
+    "textSecondary": "#cccccc",
+    "cardBackground": "rgba(255, 255, 255, 0.1)"
+  },
+  "particles": {
+    "background": {
+      "color": ["#ff6b6b", "#4ecdc4", "#45b7d1"],
+      "maxParticles": 80,
+      "speed": 0.5,
+      "connectParticles": true
+    },
+    "content": {
+      "color": ["#4ecdc4", "#45b7d1", "#96ceb4"],
+      "maxParticles": 50,
+      "speed": 0.3,
+      "connectParticles": false
+    },
+    "foreground": {
+      "color": ["#ffffff", "#ff6b6b", "#4ecdc4"],
+      "maxParticles": 30,
+      "speed": 0.8,
+      "connectParticles": false
+    }
+  },
+  "categories": [
+    {
+      "id": "all",
+      "name": "全部工具",
+      "icon": "📱",
+      "description": "查看所有可用工具"
+    },
+    {
+      "id": "utility",
+      "name": "实用软件",
+      "icon": "🛠️",
+      "description": "日常实用的工具软件"
+    },
+    {
+      "id": "system",
+      "name": "系统工具",
+      "icon": "⚙️",
+      "description": "系统优化和管理工具"
+    },
+    {
+      "id": "development",
+      "name": "开发工具",
+      "icon": "💻",
+      "description": "编程和开发相关工具"
+    },
+    {
+      "id": "gaming",
+      "name": "游戏工具",
+      "icon": "🎮",
+      "description": "游戏平台和辅助工具"
+    }
+  ],
+  "featuredTools": [
+    1, 2, 3, 4
+  ],
+  "downloadStats": {
+    "totalDownloads": "386000",
+    "dailyDownloads": "1250",
+    "topTool": "Chrome 浏览器"
+  },
+  "search": {
+    "placeholder": "搜索工具名称或描述...",
+    "noResultsMessage": "未找到匹配的工具",
+    "noResultsSubMessage": "请尝试其他搜索关键词或选择不同的分类"
+  }
+}

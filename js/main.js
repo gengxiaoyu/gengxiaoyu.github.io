@@ -2,6 +2,7 @@
 class ToolboxApp {
     constructor() {
         this.tools = [];
+        this.config = null;
         this.currentCategory = 'all';
         this.searchQuery = '';
         this.mouseX = 0;
@@ -10,12 +11,26 @@ class ToolboxApp {
     }
 
     async init() {
-        await this.loadTools();
+        await Promise.all([
+            this.loadConfig(),
+            this.loadTools()
+        ]);
         this.setupEventListeners();
         this.renderTools();
         this.initParticles();
         this.initMouseEffects();
         this.initScrollEffects();
+        this.applyConfig();
+    }
+
+    async loadConfig() {
+        try {
+            const response = await fetch('data/config.json');
+            this.config = await response.json();
+        } catch (error) {
+            console.error('加载配置数据失败:', error);
+            this.config = this.getDefaultConfig();
+        }
     }
 
     async loadTools() {
@@ -25,6 +40,37 @@ class ToolboxApp {
         } catch (error) {
             console.error('加载工具数据失败:', error);
             this.tools = this.getSampleTools();
+        }
+    }
+
+    getDefaultConfig() {
+        return {
+            app: {
+                title: "炫酷工具箱",
+                description: "专业工具下载平台"
+            },
+            theme: {
+                primaryColor: "#4ecdc4",
+                secondaryColor: "#ff6b6b"
+            },
+            search: {
+                placeholder: "搜索工具名称或描述...",
+                noResultsMessage: "未找到匹配的工具",
+                noResultsSubMessage: "请尝试其他搜索关键词或选择不同的分类"
+            }
+        };
+    }
+
+    applyConfig() {
+        // 更新页面标题
+        if (this.config.app && this.config.app.title) {
+            document.title = this.config.app.title;
+        }
+
+        // 更新搜索框占位符
+        const searchInput = document.querySelector('.search-input');
+        if (searchInput && this.config.search && this.config.search.placeholder) {
+            searchInput.placeholder = this.config.search.placeholder;
         }
     }
 
@@ -78,6 +124,9 @@ class ToolboxApp {
     }
 
     setupEventListeners() {
+        // 顶部导航菜单功能
+        this.setupHeaderNavigation();
+        
         // 分类导航
         const categoryItems = document.querySelectorAll('.category-item');
         categoryItems.forEach(item => {
@@ -108,6 +157,29 @@ class ToolboxApp {
                 this.handleDownload(e.target.dataset.toolId);
             }
         });
+    }
+    
+    // 设置顶部导航事件监听
+    setupHeaderNavigation() {
+        // 移动端菜单按钮
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const headerNav = document.querySelector('.header-nav');
+        
+        if (mobileMenuBtn && headerNav) {
+            // 菜单按钮点击事件
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                headerNav.classList.toggle('active');
+            });
+            
+            // 点击菜单外部关闭菜单
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuBtn.contains(e.target) && !headerNav.contains(e.target)) {
+                    mobileMenuBtn.classList.remove('active');
+                    headerNav.classList.remove('active');
+                }
+            });
+        }
     }
 
     renderTools() {
@@ -156,10 +228,14 @@ class ToolboxApp {
     }
 
     getNoResultsHTML() {
+        // 使用配置中的无结果消息，或默认值
+        const noResultsMessage = this.config?.search?.noResultsMessage || "未找到匹配的工具";
+        const noResultsSubMessage = this.config?.search?.noResultsSubMessage || "请尝试其他搜索关键词或选择不同的分类";
+        
         return `
             <div class="no-results">
-                <h3>未找到匹配的工具</h3>
-                <p>请尝试其他搜索关键词或选择不同的分类</p>
+                <h3>${noResultsMessage}</h3>
+                <p>${noResultsSubMessage}</p>
             </div>
         `;
     }
@@ -258,56 +334,77 @@ class ToolboxApp {
         }
     }
 
+    // 节流函数，限制事件触发频率
+    throttle(func, limit) {
+        let inThrottle;
+        return function(...args) {
+            if (!inThrottle) {
+                func.apply(this, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        };
+    }
+
     initMouseEffects() {
-        // 创建鼠标跟随光点
-        const cursorGlow = document.createElement('div');
-        cursorGlow.className = 'cursor-glow';
-        document.body.appendChild(cursorGlow);
-
-        let mouseTrail = [];
-        const maxTrailLength = 5;
-
+        // 创建主光标元素
+        const mainCursor = document.createElement('div');
+        mainCursor.className = 'custom-cursor';
+        document.body.appendChild(mainCursor);
+        
+        // 减少拖尾数量以提高性能
+        const trailLength = 1;
+        const trailDots = [];
+        
+        // 存储鼠标位置
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        
+        // 仅存储最近的位置用于拖尾
+        let lastMouseX = mouseX;
+        let lastMouseY = mouseY;
+        
+        // 创建拖尾元素
+        for (let i = 0; i < trailLength; i++) {
+            const trailDot = document.createElement('div');
+            trailDot.className = 'cursor-trail';
+            trailDot.style.opacity = (1 - (i * 0.5));
+            trailDot.style.left = (mouseX - 10) + 'px';
+            trailDot.style.top = (mouseY - 10) + 'px';
+            document.body.appendChild(trailDot);
+            trailDots.push(trailDot);
+        }
+        
+        // 优化鼠标移动事件 - 直接更新DOM位置，减少中间变量
         document.addEventListener('mousemove', (e) => {
-            this.mouseX = e.clientX;
-            this.mouseY = e.clientY;
+            // 直接更新主光标位置，避免在animate函数中再次访问
+            mainCursor.style.left = (e.clientX - 15) + 'px';
+            mainCursor.style.top = (e.clientY - 15) + 'px';
             
-            // 更新主光点位置
-            cursorGlow.style.left = this.mouseX - 10 + 'px';
-            cursorGlow.style.top = this.mouseY - 10 + 'px';
-
-            // 创建拖尾效果
-            mouseTrail.push({ x: this.mouseX, y: this.mouseY });
-            if (mouseTrail.length > maxTrailLength) {
-                mouseTrail.shift();
-            }
-
-            // 更新拖尾光点
-            mouseTrail.forEach((pos, index) => {
-                let trailDot = document.getElementById(`trail-${index}`);
-                if (!trailDot) {
-                    trailDot = document.createElement('div');
-                    trailDot.id = `trail-${index}`;
-                    trailDot.className = 'cursor-glow trail';
-                    document.body.appendChild(trailDot);
-                }
-                trailDot.style.left = pos.x - 20 + 'px';
-                trailDot.style.top = pos.y - 20 + 'px';
-                trailDot.style.opacity = (index + 1) / maxTrailLength * 0.3;
+            // 更新拖尾位置 - 平滑过渡
+            trailDots.forEach((dot, index) => {
+                // 使用简单的线性插值，减少计算量
+                const targetX = lastMouseX - 10;
+                const targetY = lastMouseY - 10;
+                dot.style.left = targetX + 'px';
+                dot.style.top = targetY + 'px';
             });
+            
+            // 更新上一次的位置
+            lastMouseX = e.clientX;
+            lastMouseY = e.clientY;
         });
-
-        // 鼠标悬停效果
+        
+        // 简化悬停效果
         document.addEventListener('mouseover', (e) => {
-            if (e.target.classList.contains('tool-card') || e.target.classList.contains('download-btn')) {
-                cursorGlow.style.transform = 'scale(1.5)';
-                cursorGlow.style.background = 'radial-gradient(circle, rgba(255, 107, 107, 0.8) 0%, transparent 70%)';
+            if (e.target.closest('.tool-card') || e.target.classList.contains('download-btn')) {
+                mainCursor.classList.add('hovering');
             }
         });
-
+        
         document.addEventListener('mouseout', (e) => {
-            if (e.target.classList.contains('tool-card') || e.target.classList.contains('download-btn')) {
-                cursorGlow.style.transform = 'scale(1)';
-                cursorGlow.style.background = 'radial-gradient(circle, rgba(78, 205, 196, 0.8) 0%, transparent 70%)';
+            if (!e.relatedTarget || (!e.relatedTarget.closest('.tool-card') && !e.relatedTarget.classList.contains('download-btn'))) {
+                mainCursor.classList.remove('hovering');
             }
         });
     }
@@ -316,6 +413,18 @@ class ToolboxApp {
         // 滚动视差效果
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
+            
+            // 顶部导航滚动效果
+            const header = document.querySelector('.top-header');
+            if (header) {
+                if (scrolled > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+            
+            // 标题视差效果
             const parallax = document.querySelector('.header-content h1');
             if (parallax) {
                 parallax.style.transform = `translateY(${scrolled * 0.3}px)`;

@@ -86,5 +86,137 @@
     "fileSize": "68.9 MB",
     "downloadCount": "56700",
     "icon": "💬"
+  },
+  {
+    "id": 9,
+    "name": "GitHub Desktop",
+    "category": "development",
+    "version": "3.3.4",
+    "description": "GitHub 桌面客户端，简化 Git 工作流程",
+    "downloadUrl": "downloads/development/github-desktop.exe",
+    "fileSize": "120.5 MB",
+    "downloadCount": "18900",
+    "icon": "🔧"
+  },
+  {
+    "id": 10,
+    "name": "Firefox 浏览器",
+    "category": "utility",
+    "version": "121.0",
+    "description": "注重隐私保护的开源网页浏览器",
+    "downloadUrl": "downloads/utility/firefox-setup.exe",
+    "fileSize": "65.8 MB",
+    "downloadCount": "45600",
+    "icon": "🦊"
+  },
+  {
+    "id": 11,
+    "name": "WinRAR 压缩软件",
+    "category": "utility",
+    "version": "6.24",
+    "description": "功能强大的文件压缩和解压缩工具",
+    "downloadUrl": "downloads/utility/winrar-setup.exe",
+    "fileSize": "4.2 MB",
+    "downloadCount": "52300",
+    "icon": "📁"
+  },
+  {
+    "id": 12,
+    "name": "Malwarebytes 杀毒软件",
+    "category": "system",
+    "version": "4.5.32",
+    "description": "专业的反恶意软件和杀毒工具",
+    "downloadUrl": "downloads/system/malwarebytes-setup.exe",
+    "fileSize": "105.6 MB",
+    "downloadCount": "34800",
+    "icon": "🛡️"
+  },
+  {
+    "id": 13,
+    "name": "Node.js 运行环境",
+    "category": "development",
+    "version": "20.10.0",
+    "description": "基于 Chrome V8 引擎的 JavaScript 运行环境",
+    "downloadUrl": "downloads/development/nodejs-setup.exe",
+    "fileSize": "68.3 MB",
+    "downloadCount": "25600",
+    "icon": "🟢"
+  },
+  {
+    "id": 14,
+    "name": "OBS Studio 录屏软件",
+    "category": "gaming",
+    "version": "30.0.2",
+    "description": "免费开源的视频录制和直播软件",
+    "downloadUrl": "downloads/gaming/obs-studio-setup.exe",
+    "fileSize": "118.7 MB",
+    "downloadCount": "41200",
+    "icon": "🎥"
+  },
+  {
+    "id": 15,
+    "name": "Adobe Reader PDF阅读器",
+    "category": "utility",
+    "version": "2023.008.20458",
+    "description": "专业的 PDF 文档阅读和编辑工具",
+    "downloadUrl": "downloads/utility/adobe-reader-setup.exe",
+    "fileSize": "232.1 MB",
+    "downloadCount": "67800",
+    "icon": "📄"
+  },
+  {
+    "id": 16,
+    "name": "VLC 媒体播放器",
+    "category": "utility",
+    "version": "3.0.20",
+    "description": "开源免费的多功能媒体播放器",
+    "downloadUrl": "downloads/utility/vlc-setup.exe",
+    "fileSize": "40.2 MB",
+    "downloadCount": "92300",
+    "icon": "🎵"
+  },
+  {
+    "id": 17,
+    "name": "Visual Studio 2022",
+    "category": "development",
+    "version": "17.8.3",
+    "description": "微软官方的集成开发环境，支持多种编程语言",
+    "downloadUrl": "downloads/development/visual-studio-2022.exe",
+    "fileSize": "1.2 GB",
+    "downloadCount": "7800",
+    "icon": "🏢"
+  },
+  {
+    "id": 18,
+    "name": "Putty SSH 客户端",
+    "category": "development",
+    "version": "0.79",
+    "description": "免费开源的 SSH 和 Telnet 客户端",
+    "downloadUrl": "downloads/development/putty.exe",
+    "fileSize": "0.8 MB",
+    "downloadCount": "21400",
+    "icon": "💻"
+  },
+  {
+    "id": 19,
+    "name": "TeamViewer 远程控制",
+    "category": "utility",
+    "version": "15.45.3",
+    "description": "跨平台的远程控制和桌面共享软件",
+    "downloadUrl": "downloads/utility/teamviewer-setup.exe",
+    "fileSize": "30.5 MB",
+    "downloadCount": "58900",
+    "icon": "🖥️"
+  },
+  {
+    "id": 20,
+    "name": "Razer Cortex 游戏优化",
+    "category": "gaming",
+    "version": "10.22.18.0",
+    "description": "Razer 游戏优化工具，提升游戏性能",
+    "downloadUrl": "downloads/gaming/razer-cortex.exe",
+    "fileSize": "150.2 MB",
+    "downloadCount": "32100",
+    "icon": "🐍"
   }
 ]
