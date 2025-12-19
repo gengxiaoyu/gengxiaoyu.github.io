@@ -1,20 +1,4 @@
 {
-  "app": {
-    "title": "实用资料库",
-    "description": "专业的资源下载平台，提供软件工具、学习资料和合集资源",
-    "version": "2.0.0",
-    "author": "gengxiaoyu",
-    "contact": "gengxiaoyu@example.com"
-  },
-  "theme": {
-    "primaryColor": "#4ecdc4",
-    "secondaryColor": "#ff6b6b",
-    "accentColor": "#45b7d1",
-    "backgroundColor": "#1a1a2e",
-    "textPrimary": "#ffffff",
-    "textSecondary": "#cccccc",
-    "cardBackground": "rgba(255, 255, 255, 0.1)"
-  },
   "categories": [
     {
       "id": "all",
@@ -32,7 +16,7 @@
           "id": "development",
           "name": "开发工具",
           "icon": "🔧",
-          "description": "IDE、调试、版本控制等"
+          "description": "IDE、调试、版本控制、代码仓库等"
         },
         {
           "id": "design",
@@ -59,6 +43,12 @@
           "description": "音视频编辑、播放器等"
         },
         {
+          "id": "ai-tools",
+          "name": "AI工具",
+          "icon": "🤖",
+          "description": "AI绘画、智能体、数字人、AI工具箱等人工智能应用"
+        },
+        {
           "id": "free-alternatives",
           "name": "免费替代品",
           "icon": "💰",
@@ -76,7 +66,7 @@
           "id": "programming",
           "name": "编程开发",
           "icon": "💻",
-          "description": "语言、框架、算法等"
+          "description": "语言、框架、算法、前端、后端等开发技术"
         },
         {
           "id": "data-science",
@@ -117,10 +107,16 @@
       "description": "整理的高质量合集资源",
       "subcategories": [
         {
+          "id": "official-links",
+          "name": "官网链接合集",
+          "icon": "🔗",
+          "description": "技术框架、组件库、开发工具、开源项目的官方网址导航"
+        },
+        {
           "id": "templates",
           "name": "模板合集",
           "icon": "📄",
-          "description": "简历、PPT、合同等"
+          "description": "简历、PPT、合同、前端模板等"
         },
         {
           "id": "tutorials",
@@ -139,6 +135,12 @@
           "name": "工具箱合集",
           "icon": "🧰",
           "description": "一键安装包、绿色软件集合等"
+        },
+        {
+          "id": "ai-resources",
+          "name": "AI资源合集",
+          "icon": "🧠",
+          "description": "AI模型、工具、数字人、图片处理资源包"
         }
       ]
     }
