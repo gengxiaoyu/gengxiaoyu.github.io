@@ -69,10 +69,10 @@ class ResourceLibraryApp {
                 category: this.mapCategory(tool.category),
                 subcategory: this.mapSubcategory(tool.category),
                 description: tool.description,
-                officialUrl: '',
                 cloudLinks: [
                     {
                         platform: "baidu",
+                        title: "百度网盘链接",
                         url: tool.downloadUrl,
                         password: ""
                     }
@@ -172,10 +172,15 @@ class ResourceLibraryApp {
                 category: "software",
                 subcategory: "development",
                 description: "微软推出的轻量级代码编辑器，支持插件扩展",
-                officialUrl: "https://code.visualstudio.com",
                 cloudLinks: [
                     {
+                        platform: "official",
+                        title: "官方网站链接",
+                        url: "https://code.visualstudio.com"
+                    },
+                    {
                         platform: "baidu",
+                        title: "百度网盘链接",
                         url: "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
                         password: "abcd"
                     }
@@ -195,10 +200,15 @@ class ResourceLibraryApp {
                 category: "software",
                 subcategory: "design",
                 description: "基于浏览器的UI/UX设计工具，支持实时协作",
-                officialUrl: "https://www.figma.com",
                 cloudLinks: [
                     {
+                        platform: "official",
+                        title: "官方网站链接",
+                        url: "https://www.figma.com"
+                    },
+                    {
                         platform: "baidu",
+                        title: "百度网盘链接",
                         url: "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
                         password: "efgh"
                     }
@@ -575,35 +585,25 @@ class ResourceLibraryApp {
                 <p>${resource.description}</p>
             </div>
             
-            ${resource.officialUrl ? `
+            ${resource.cloudLinks ? `
             <div class="resource-detail-links">
-                <h3>官方链接</h3>
-                <div class="link-item">
-                    <div class="link-platform">🌐</div>
-                    <div class="link-info">
-                        <a href="${resource.officialUrl}" target="_blank" rel="noopener noreferrer">${resource.officialUrl}</a>
-                    </div>
-                    <button class="copy-link-btn" data-link="${resource.officialUrl}">复制</button>
-                </div>
-            </div>
-            ` : ''}
-            
-            <div class="resource-detail-links">
-                <h3>下载链接</h3>
-                ${resource.cloudLinks ? resource.cloudLinks.map((link, index) => {
+                <h3>资源链接</h3>
+                ${resource.cloudLinks.map((link, index) => {
                     const platformIcon = this.getPlatformIcon(link.platform);
                     return `
                     <div class="link-item">
                         <div class="link-platform">${platformIcon}</div>
                         <div class="link-info">
+                            <div class="link-title">${link.title || `${link.platform} 链接`}</div>
                             <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.url}</a>
                             ${link.password ? `<span class="link-password">提取码: ${link.password}</span>` : ''}
                         </div>
                         <button class="copy-link-btn" data-link="${link.url}" data-password="${link.password || ''}">复制</button>
                     </div>
                     `;
-                }).join('') : ''}
+                }).join('')}
             </div>
+            ` : ''}
             
             ${resource.tags ? `
             <div class="resource-detail-tags">

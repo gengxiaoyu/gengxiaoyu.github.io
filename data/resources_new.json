@@ -1,98 +1,2815 @@
 [
   {
     "id": 1,
-    "name": "VS Code",
+    "name": "Visual Studio Code",
     "category": "software",
     "subcategory": "development",
-    "description": "微软推出的轻量级代码编辑器，支持插件扩展",
-    "officialUrl": "https://code.visualstudio.com",
+    "description": "微软开源代码编辑器，支持AI插件GitHub Copilot，2025年开发者首选工具",
     "cloudLinks": [
       {
-        "platform": "baidu",
-        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
-        "password": "abcd"
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://code.visualstudio.com"
       },
       {
-        "platform": "aliyun",
-        "url": "https://www.aliyundrive.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ"
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1dev-vscode-2025",
+        "password": "vscode"
       }
     ],
-    "updateTime": "2025-12-10",
-    "version": "1.85.0",
-    "fileSize": "85.2 MB",
+    "updateTime": "2025-12-18",
+    "version": "1.96.0",
+    "fileSize": "95.3 MB",
     "platform": ["Windows", "macOS", "Linux"],
     "needRegistration": false,
-    "recommendation": 5,
+    "recommendation": 5.0,
     "icon": "💻",
-    "tags": ["IDE", "代码编辑器", "开发工具"]
+    "tags": ["编辑器", "AI编程", "VS Code"]
   },
   {
     "id": 2,
-    "name": "Figma",
+    "name": "Cursor AI编辑器",
     "category": "software",
-    "subcategory": "design",
-    "description": "基于浏览器的UI/UX设计工具，支持实时协作",
-    "officialUrl": "https://www.figma.com",
+    "subcategory": "development",
+    "description": "基于GPT-4的AI原生代码编辑器，2025年最受欢迎的AI编程工具",
     "cloudLinks": [
       {
+        "platform": "official",
+        "title": "官方下载",
+        "url": "https://cursor.sh"
+      },
+      {
         "platform": "baidu",
-        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
-        "password": "efgh"
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1dev-cursor-2025",
+        "password": "cursor"
       }
     ],
-    "updateTime": "2025-12-08",
-    "version": "118.2.0",
-    "fileSize": "120.5 MB",
-    "platform": ["Windows", "macOS", "Web"],
+    "updateTime": "2025-12-17",
+    "version": "0.45.1",
+    "fileSize": "165.2 MB",
+    "platform": ["Windows", "macOS", "Linux"],
     "needRegistration": true,
-    "recommendation": 4.8,
-    "icon": "🎨",
-    "tags": ["UI设计", "UX设计", "协作工具"]
+    "recommendation": 4.9,
+    "icon": "🤖",
+    "tags": ["AI编程", "Cursor", "GPT-4"]
   },
   {
     "id": 3,
-    "name": "Python 从入门到精通",
-    "category": "learning",
-    "subcategory": "programming",
-    "description": "Python 编程语言的完整学习资料，从基础语法到高级应用",
-    "officialUrl": "",
+    "name": "Windsurf编辑器",
+    "category": "software",
+    "subcategory": "development",
+    "description": "Codeium推出的AI驱动IDE，支持智能代码补全和Agent功能",
     "cloudLinks": [
       {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://codeium.com/windsurf"
+      },
+      {
         "platform": "baidu",
-        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
-        "password": "ijkl"
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1dev-windsurf-2025",
+        "password": "windsurf"
       }
     ],
-    "updateTime": "2025-12-05",
-    "version": "2025修订版",
-    "fileSize": "2.3 GB",
-    "platform": ["All"],
-    "needRegistration": false,
-    "recommendation": 4.9,
-    "icon": "🐍",
-    "tags": ["Python", "编程", "学习资料"]
+    "updateTime": "2025-12-16",
+    "version": "1.3.2",
+    "fileSize": "142.8 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": true,
+    "recommendation": 4.8,
+    "icon": "🌊",
+    "tags": ["AI编程", "Windsurf", "Agent"]
   },
   {
     "id": 4,
-    "name": "简历模板合集",
-    "category": "collections",
-    "subcategory": "templates",
-    "description": "包含多种风格的简历模板，适合不同行业和职位",
-    "officialUrl": "",
+    "name": "IntelliJ IDEA Ultimate",
+    "category": "software",
+    "subcategory": "development",
+    "description": "JetBrains顶级Java IDE，2025年AI Assistant功能全面升级",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官网下载",
+        "url": "https://www.jetbrains.com/idea"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1dev-idea-2025"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025.3.1",
+    "fileSize": "892.5 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": true,
+    "recommendation": 4.9,
+    "icon": "☕",
+    "tags": ["Java", "IDE", "JetBrains"]
+  },
+  {
+    "id": 5,
+    "name": "Docker Desktop",
+    "category": "software",
+    "subcategory": "development",
+    "description": "2025年容器化开发必备工具，支持GPU加速和AI模型部署",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官网下载",
+        "url": "https://www.docker.com/products/docker-desktop"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1dev-docker-2025",
+        "password": "docker"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "4.37.0",
+    "fileSize": "585.2 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "🐳",
+    "tags": ["Docker", "容器", "部署"]
+  },
+  {
+    "id": 6,
+    "name": "GitHub Desktop",
+    "category": "software",
+    "subcategory": "development",
+    "description": "GitHub官方桌面客户端，2025年集成Copilot代码审查",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方下载",
+        "url": "https://desktop.github.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1dev-github-2025",
+        "password": "github"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "3.4.9",
+    "fileSize": "168.5 MB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🐙",
+    "tags": ["Git", "GitHub", "版本控制"]
+  },
+  {
+    "id": 7,
+    "name": "TablePlus",
+    "category": "software",
+    "subcategory": "development",
+    "description": "2025年主流数据库管理工具，支持AI查询生成",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://tableplus.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1dev-tableplus-2025",
+        "password": "tableplus"
+      }
+    ],
+    "updateTime": "2025-12-12",
+    "version": "6.1.2",
+    "fileSize": "95.8 MB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": true,
+    "recommendation": 4.5,
+    "icon": "🗄️",
+    "tags": ["数据库", "SQL", "管理工具"]
+  },
+  {
+    "id": 8,
+    "name": "nvm for Windows",
+    "category": "software",
+    "subcategory": "development",
+    "description": "Node.js版本管理器，2025年前端开发必备环境工具",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "GitHub下载",
+        "url": "https://github.com/coreybutler/nvm-windows"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1dev-nvm-2025",
+        "password": "nvm"
+      }
+    ],
+    "updateTime": "2025-12-11",
+    "version": "1.2.1",
+    "fileSize": "2.8 MB",
+    "platform": ["Windows"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "📦",
+    "tags": ["Node.js", "版本管理", "前端"]
+  },
+  {
+    "id": 9,
+    "name": "Figma专业版",
+    "category": "software",
+    "subcategory": "design",
+    "description": "2025年UI设计行业标准工具，支持AI设计助手和Dev Mode",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.figma.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1des-figma-2025",
+        "password": "figma"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025.12",
+    "fileSize": "Web应用",
+    "platform": ["Web", "Windows", "macOS"],
+    "needRegistration": true,
+    "recommendation": 5.0,
+    "icon": "🎨",
+    "tags": ["UI设计", "协作", "原型"]
+  },
+  {
+    "id": 10,
+    "name": "Photoshop 2025",
+    "category": "software",
+    "subcategory": "design",
+    "description": "Adobe最新版PS，集成Firefly AI生成填充功能",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "Adobe官网",
+        "url": "https://www.adobe.com/products/photoshop.html"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1des-photoshop-2025"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "26.0.0",
+    "fileSize": "3.2 GB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": true,
+    "recommendation": 4.9,
+    "icon": "🖼️",
+    "tags": ["图像处理", "AI生成", "设计"]
+  },
+  {
+    "id": 11,
+    "name": "MasterGo",
+    "category": "software",
+    "subcategory": "design",
+    "description": "国产在线UI设计工具，2025年企业协作首选",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://mastergo.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1des-mastergo-2025",
+        "password": "mastergo"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025.12",
+    "fileSize": "Web应用",
+    "platform": ["Web"],
+    "needRegistration": true,
+    "recommendation": 4.6,
+    "icon": "🇨🇳",
+    "tags": ["UI设计", "国产", "协作"]
+  },
+  {
+    "id": 12,
+    "name": "Illustrator 2025",
+    "category": "software",
+    "subcategory": "design",
+    "description": "Adobe矢量图形设计软件，AI生成矢量图功能升级",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "Adobe官网",
+        "url": "https://www.adobe.com/products/illustrator.html"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1des-illustrator-2025",
+        "password": "illustrator"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "29.0.0",
+    "fileSize": "2.1 GB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": true,
+    "recommendation": 4.7,
+    "icon": "🖋️",
+    "tags": ["矢量设计", "插画", "AI"]
+  },
+  {
+    "id": 13,
+    "name": "Canva可画企业版",
+    "category": "software",
+    "subcategory": "design",
+    "description": "在线设计协作平台，2025年新增AI设计套件",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.canva.cn"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1des-canva-2025",
+        "password": "canva"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "2025.12",
+    "fileSize": "Web应用",
+    "platform": ["Web", "iOS", "Android"],
+    "needRegistration": true,
+    "recommendation": 4.5,
+    "icon": "🖼️",
+    "tags": ["在线设计", "模板", "AI设计"]
+  },
+  {
+    "id": 14,
+    "name": "Spline 3D",
+    "category": "software",
+    "subcategory": "design",
+    "description": "轻量级3D网页设计工具，2025年Web 3D设计趋势",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://spline.design"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1des-spline-2025",
+        "password": "spline"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "2025.12",
+    "fileSize": "Web应用",
+    "platform": ["Web"],
+    "needRegistration": true,
+    "recommendation": 4.4,
+    "icon": "🎮",
+    "tags": ["3D设计", "Web 3D", "交互"]
+  },
+  {
+    "id": 15,
+    "name": "Notion AI专业版",
+    "category": "software",
+    "subcategory": "productivity",
+    "description": "2025年知识管理神器，集成Notion AI助手和数据库自动化",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.notion.so"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1prod-notion-2025",
+        "password": "notionai"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "3.0.0",
+    "fileSize": "Web应用",
+    "platform": ["Web", "Windows", "macOS", "iOS", "Android"],
+    "needRegistration": true,
+    "recommendation": 4.9,
+    "icon": "📝",
+    "tags": ["知识管理", "AI助手", "协作"]
+  },
+  {
+    "id": 16,
+    "name": "Obsidian Publish",
+    "category": "software",
+    "subcategory": "productivity",
+    "description": "2025年最火的本地知识库工具，支持发布到网络",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://obsidian.md/publish"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1prod-obsidian-2025"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "1.7.7",
+    "fileSize": "98.5 MB",
+    "platform": ["Windows", "macOS", "Linux", "iOS", "Android"],
+    "needRegistration": true,
+    "recommendation": 4.8,
+    "icon": "🧠",
+    "tags": ["知识库", "双向链接", "Markdown"]
+  },
+  {
+    "id": 17,
+    "name": "Microsoft Teams",
+    "category": "software",
+    "subcategory": "productivity",
+    "description": "2025年企业协作标准，集成Microsoft 365 Copilot",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官网下载",
+        "url": "https://www.microsoft.com/en-us/microsoft-teams"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1prod-teams-2025",
+        "password": "teams"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "24297.610.3122",
+    "fileSize": "135.8 MB",
+    "platform": ["Windows", "macOS", "Web", "iOS", "Android"],
+    "needRegistration": true,
+    "recommendation": 4.5,
+    "icon": "💼",
+    "tags": ["协作", "Teams", "视频会议"]
+  },
+  {
+    "id": 18,
+    "name": "Raycast Pro",
+    "category": "software",
+    "subcategory": "productivity",
+    "description": "Mac平台最强启动器，2025年AI功能全面增强",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.raycast.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1prod-raycast-2025",
+        "password": "raycast"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "1.88.4",
+    "fileSize": "45.2 MB",
+    "platform": ["macOS"],
+    "needRegistration": true,
+    "recommendation": 4.7,
+    "icon": "⚡",
+    "tags": ["启动器", "Mac", "效率工具"]
+  },
+  {
+    "id": 19,
+    "name": "uTools",
+    "category": "software",
+    "subcategory": "productivity",
+    "description": "国产效率工具平台，插件生态丰富，2025年用户量激增",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://u.tools"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1prod-utools-2025"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "5.3.1",
+    "fileSize": "62.8 MB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🧰",
+    "tags": ["效率", "插件", "国产"]
+  },
+  {
+    "id": 20,
+    "name": "Trello看板",
+    "category": "software",
+    "subcategory": "productivity",
+    "description": "Atlassian旗下看板工具，2025年AI自动化功能上线",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://trello.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1prod-trello-2025",
+        "password": "trello"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "Web应用",
+    "fileSize": "Web应用",
+    "platform": ["Web", "iOS", "Android"],
+    "needRegistration": true,
+    "recommendation": 4.4,
+    "icon": "📋",
+    "tags": ["看板", "管理", "协作"]
+  },
+  {
+    "id": 21,
+    "name": "PowerToys",
+    "category": "software",
+    "subcategory": "system",
+    "description": "微软官方Windows效率工具集，2025年新增高级粘贴功能",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "GitHub下载",
+        "url": "https://github.com/microsoft/PowerToys"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1sys-powertoys-2025",
+        "password": "powertoys"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "0.88.0",
+    "fileSize": "145.6 MB",
+    "platform": ["Windows"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "⚙️",
+    "tags": ["系统工具", "微软", "效率"]
+  },
+  {
+    "id": 22,
+    "name": "Alfred 5",
+    "category": "software",
+    "subcategory": "system",
+    "description": "Mac效率神器，Workflow功能强大，2025年AI Workflows发布",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.alfredapp.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1sys-alfred-2025",
+        "password": "alfred"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "5.5.1",
+    "fileSize": "8.2 MB",
+    "platform": ["macOS"],
+    "needRegistration": true,
+    "recommendation": 4.9,
+    "icon": "🎩",
+    "tags": ["Mac", "启动器", "Workflow"]
+  },
+  {
+    "id": 23,
+    "name": "iStat Menus",
+    "category": "software",
+    "subcategory": "system",
+    "description": "Mac系统监控工具，2025年支持M4芯片优化",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://bjango.com/mac/istatmenus/"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1sys-istat-2025",
+        "password": "istat"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "7.0.4",
+    "fileSize": "25.6 MB",
+    "platform": ["macOS"],
+    "needRegistration": true,
+    "recommendation": 4.6,
+    "icon": "📊",
+    "tags": ["系统监控", "Mac", "硬件"]
+  },
+  {
+    "id": 24,
+    "name": "7-Zip 24.09",
+    "category": "software",
+    "subcategory": "system",
+    "description": "2025年最高压缩比工具，支持Zstandard新算法",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.7-zip.org"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1sys-7zip-2025"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "24.09",
+    "fileSize": "2.8 MB",
+    "platform": ["Windows", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "🗜️",
+    "tags": ["压缩", "开源", "高效"]
+  },
+  {
+    "id": 25,
+    "name": "Everything",
+    "category": "software",
+    "subcategory": "system",
+    "description": "Windows极速文件搜索工具，2025年支持AI语义搜索",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.voidtools.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1sys-everything-2025",
+        "password": "everything"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "1.4.1.1024",
+    "fileSize": "3.2 MB",
+    "platform": ["Windows"],
+    "needRegistration": false,
+    "recommendation": 4.9,
+    "icon": "🔍",
+    "tags": ["搜索", "效率", "系统工具"]
+  },
+  {
+    "id": 26,
+    "name": "QuickLook",
+    "category": "software",
+    "subcategory": "system",
+    "description": "Windows文件快速预览工具，模仿Mac空格键功能",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "GitHub下载",
+        "url": "https://github.com/QL-Win/QuickLook"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1sys-quicklook-2025",
+        "password": "quicklook"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "3.7.3",
+    "fileSize": "52.8 MB",
+    "platform": ["Windows"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "👁️",
+    "tags": ["预览", "效率", "文件管理"]
+  },
+  {
+    "id": 27,
+    "name": "OBS Studio 30.2",
+    "category": "software",
+    "subcategory": "multimedia",
+    "description": "2025年直播录制标准工具，支持AV1编码和AI降噪",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://obsproject.com"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1med-obs-2025",
+        "password": "obs"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1med-obs-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "30.2.3",
+    "fileSize": "135.6 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "📺",
+    "tags": ["直播", "录屏", "开源"]
+  },
+  {
+    "id": 28,
+    "name": "DaVinci Resolve Studio",
+    "category": "software",
+    "subcategory": "multimedia",
+    "description": "2025年专业视频剪辑调色软件，AI调色大师功能",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方下载",
+        "url": "https://www.blackmagicdesign.com/products/davinciresolve"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1med-davinci-2025",
+        "password": "davinci"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "19.1.3",
+    "fileSize": "3.8 GB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": true,
+    "recommendation": 4.9,
+    "icon": "🎬",
+    "tags": ["视频剪辑", "调色", "专业"]
+  },
+  {
+    "id": 29,
+    "name": "Adobe Premiere Pro 2025",
+    "category": "software",
+    "subcategory": "multimedia",
+    "description": "Adobe专业剪辑软件，2025年AI音频分类功能",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官网下载",
+        "url": "https://www.adobe.com/products/premiere.html"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1med-premiere-2025",
+        "password": "premiere"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "25.0.0",
+    "fileSize": "3.5 GB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": true,
+    "recommendation": 4.7,
+    "icon": "🎞️",
+    "tags": ["视频剪辑", "后期", "Adobe"]
+  },
+  {
+    "id": 30,
+    "name": "CapCut剪映专业版",
+    "category": "software",
+    "subcategory": "multimedia",
+    "description": "字节跳动视频剪辑工具，2025年AI口播功能领先",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.capcut.cn"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1med-capcut-2025",
+        "password": "capcut"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "5.0.0",
+    "fileSize": "485.6 MB",
+    "platform": ["Windows", "macOS", "Web"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "✂️",
+    "tags": ["短视频", "剪辑", "AI"]
+  },
+  {
+    "id": 31,
+    "name": "FL Studio 21.2",
+    "category": "software",
+    "subcategory": "multimedia",
+    "description": "2025年最火音乐制作DAW，AI旋律生成功能",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.image-line.com/fl-studio/"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1med-flstudio-2025",
+        "password": "flstudio"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "21.2.5",
+    "fileSize": "1.2 GB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": true,
+    "recommendation": 4.7,
+    "icon": "🎵",
+    "tags": ["音乐制作", "编曲", "DAW"]
+  },
+  {
+    "id": 32,
+    "name": "VLC Media Player 4.0",
+    "category": "software",
+    "subcategory": "multimedia",
+    "description": "2025年万能播放器，支持AV1和H.266解码",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.videolan.org/vlc/"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1med-vlc-2025"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "4.0.0",
+    "fileSize": "58.2 MB",
+    "platform": ["Windows", "macOS", "Linux", "iOS", "Android"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "▶️",
+    "tags": ["播放器", "开源", "万能"]
+  },
+  {
+    "id": 33,
+    "name": "GIMP 3.0",
+    "category": "software",
+    "subcategory": "free-alternatives",
+    "description": "2025年开源Photoshop替代品，非破坏性编辑增强",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.gimp.org"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1free-gimp-2025",
+        "password": "gimp"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1free-gimp-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "3.0.0",
+    "fileSize": "285.6 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🎨",
+    "tags": ["图像编辑", "开源", "免费"]
+  },
+  {
+    "id": 34,
+    "name": "Inkscape 1.4",
+    "category": "software",
+    "subcategory": "free-alternatives",
+    "description": "2025年开源矢量设计工具，支持SVG 2.0标准",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://inkscape.org"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1free-inkscape-2025",
+        "password": "inkscape"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "1.4.0",
+    "fileSize": "128.5 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "🖋️",
+    "tags": ["矢量", "SVG", "开源"]
+  },
+  {
+    "id": 35,
+    "name": "LibreOffice 25.02",
+    "category": "software",
+    "subcategory": "free-alternatives",
+    "description": "2025年开源办公套件，兼容Office 2025格式",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.libreoffice.org"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1free-libreoffice-2025",
+        "password": "libreoffice"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "25.2.0",
+    "fileSize": "328.5 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.3,
+    "icon": "📊",
+    "tags": ["办公", "开源", "免费"]
+  },
+  {
+    "id": 36,
+    "name": "DaVinci Resolve Free",
+    "category": "software",
+    "subcategory": "free-alternatives",
+    "description": "Blackmagic免费专业剪辑调色软件，2025年功能接近Studio版",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方下载",
+        "url": "https://www.blackmagicdesign.com/products/davinciresolve"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1free-davinci-2025",
+        "password": "davincifree"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "19.1.3",
+    "fileSize": "3.8 GB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "🎬",
+    "tags": ["视频编辑", "免费", "专业"]
+  },
+  {
+    "id": 37,
+    "name": "Krita 5.2.6",
+    "category": "software",
+    "subcategory": "free-alternatives",
+    "description": "2025年开源数字绘画软件，概念艺术家首选",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://krita.org"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1free-krita-2025"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "5.2.6",
+    "fileSize": "155.3 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🖌️",
+    "tags": ["绘画", "开源", "免费"]
+  },
+  {
+    "id": 38,
+    "name": "Blender 4.3",
+    "category": "software",
+    "subcategory": "free-alternatives",
+    "description": "2025年开源3D创作套件，AI纹理生成新功能",
+    "cloudLinks": [
+      {
+        "platform": "official",
+        "title": "官方网站",
+        "url": "https://www.blender.org"
+      },
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1free-blender-2025",
+        "password": "blender"
+      },
+      {
+        "platform": "community",
+        "title": "开源社区",
+        "url": "https://developer.blender.org"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "4.3.2",
+    "fileSize": "285.6 MB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 5.0,
+    "icon": "🎭",
+    "tags": ["3D", "渲染", "开源"]
+  },
+  {
+    "id": 39,
+    "name": "Vue 3 + TypeScript全栈实战",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "2025年前端主流技术栈，Vite + Vue 3 + TypeScript + Node.js完整项目",
     "cloudLinks": [
       {
         "platform": "baidu",
-        "url": "https://pan.baidu.com/s/1aBcDeFgHiJkLmNoPqRsTuVwXyZ",
-        "password": "mnop"
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-vue3-ts-2025",
+        "password": "vue3ts"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-vue3-ts-2025"
+      },
+      {
+        "platform": "official",
+        "title": "官方文档",
+        "url": "https://cn.vuejs.org"
       }
     ],
-    "updateTime": "2025-12-03",
-    "version": "2025版",
-    "fileSize": "150.8 MB",
+    "updateTime": "2025-12-18",
+    "version": "2025实战版",
+    "fileSize": "12.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.9,
+    "icon": "💚",
+    "tags": ["Vue3", "TypeScript", "全栈"]
+  },
+  {
+    "id": 40,
+    "name": "React 18 + Next.js 15",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "2025年前端框架王者，App Router + Turbopack + RSC完整教程",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-react-next-2025",
+        "password": "reactnext"
+      },
+      {
+        "platform": "official",
+        "title": "Next.js官方",
+        "url": "https://nextjs.org"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "Next.js 15",
+    "fileSize": "10.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 5.0,
+    "icon": "⚛️",
+    "tags": ["React", "Next.js", "前端"]
+  },
+  {
+    "id": 41,
+    "name": "Python机器学习实战",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "Scikit-learn、TensorFlow、PyTorch的2025年最新项目实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-ml-python-2025",
+        "password": "mlpython"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-ml-python-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025项目版",
+    "fileSize": "9.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "🐍",
+    "tags": ["Python", "机器学习", "项目"]
+  },
+  {
+    "id": 42,
+    "name": "Go微服务架构实战",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "Go + gRPC + Kubernetes + Istio的云原生微服务实战，2025大厂必备",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-go-micro-2025",
+        "password": "gomicro"
+      },
+      {
+        "platform": "official",
+        "title": "Go官方",
+        "url": "https://go.dev"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025云原生版",
+    "fileSize": "8.5 GB",
     "platform": ["All"],
     "needRegistration": false,
     "recommendation": 4.7,
+    "icon": "🔷",
+    "tags": ["Go", "微服务", "云原生"]
+  },
+  {
+    "id": 43,
+    "name": "Rust系统编程权威指南",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "2025年系统编程新宠，Tokio、Axum、WebAssembly完整生态",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-rust-2025",
+        "password": "rust2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-rust-2025"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "2025权威版",
+    "fileSize": "6.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🦀",
+    "tags": ["Rust", "系统编程", "性能"]
+  },
+  {
+    "id": 44,
+    "name": "Spring Boot 3.x实战",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "Java企业级开发框架，2025年Spring AI + GraalVM实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-springboot-2025",
+        "password": "springboot"
+      },
+      {
+        "platform": "official",
+        "title": "Spring官方",
+        "url": "https://spring.io"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "Spring Boot 3.4",
+    "fileSize": "7.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "☕",
+    "tags": ["Java", "Spring Boot", "企业级"]
+  },
+  {
+    "id": 45,
+    "name": "Django 5全栈开发",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "Python Web开发框架，2025年Django Ninja + HTMX现代开发",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-django-2025",
+        "password": "django2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-django-2025"
+      }
+    ],
+    "updateTime": "2025-12-12",
+    "version": "Django 5.1",
+    "fileSize": "5.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🐍",
+    "tags": ["Django", "Python", "Web"]
+  },
+  {
+    "id": 46,
+    "name": "Flutter跨平台开发",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "Google Flutter 3.24，2025年跨平台开发首选，AI代码补全",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-flutter-2025",
+        "password": "flutter2025"
+      },
+      {
+        "platform": "official",
+        "title": "Flutter官方",
+        "url": "https://flutter.dev"
+      }
+    ],
+    "updateTime": "2025-12-11",
+    "version": "Flutter 3.24",
+    "fileSize": "8.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "🦋",
+    "tags": ["Flutter", "跨平台", "Dart"]
+  },
+  {
+    "id": 47,
+    "name": "FastAPI高性能API开发",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "Python异步API框架，2025年OpenAPI 3.1 + Pydantic v2实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-fastapi-2025",
+        "password": "fastapi2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-fastapi-2025"
+      }
+    ],
+    "updateTime": "2025-12-10",
+    "version": "FastAPI 0.115",
+    "fileSize": "4.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "⚡",
+    "tags": ["FastAPI", "API", "Python"]
+  },
+  {
+    "id": 48,
+    "name": "TypeScript进阶实战",
+    "category": "learning",
+    "subcategory": "programming",
+    "description": "TS 5.5+高级类型、装饰器、工具类型项目实战，2025前端必备",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-typescript-2025",
+        "password": "typescript"
+      },
+      {
+        "platform": "official",
+        "title": "TS官方",
+        "url": "https://www.typescriptlang.org"
+      }
+    ],
+    "updateTime": "2025-12-09",
+    "version": "TypeScript 5.7",
+    "fileSize": "3.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "📘",
+    "tags": ["TypeScript", "前端", "类型系统"]
+  },
+  {
+    "id": 49,
+    "name": "大语言模型微调实战",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "Llama 3.3、Qwen 2.5、ChatGLM的LoRA/QLoRA微调，2025年AI应用核心技能",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-llm-2025",
+        "password": "llm2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-llm-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025微调版",
+    "fileSize": "22.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.9,
+    "icon": "🤖",
+    "tags": ["大模型", "微调", "LoRA"]
+  },
+  {
+    "id": 50,
+    "name": "LangChain应用开发",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "2025年LLM应用框架标准，RAG、Agent、Tools完整生态",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-langchain-2025",
+        "password": "langchain"
+      },
+      {
+        "platform": "official",
+        "title": "LangChain官方",
+        "url": "https://www.langchain.com"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "LangChain 0.3",
+    "fileSize": "8.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "🔗",
+    "tags": ["LangChain", "RAG", "Agent"]
+  },
+  {
+    "id": 51,
+    "name": "Stable Diffusion XL精通",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "AIGC图像生成，ControlNet、LORA、ComfyUI完整工作流，2025设计师必备",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-sdxl-2025",
+        "password": "sdxl2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-sdxl-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "SDXL 1.0",
+    "fileSize": "15.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "🎨",
+    "tags": ["Stable Diffusion", "AIGC", "图像生成"]
+  },
+  {
+    "id": 52,
+    "name": "计算机视觉YOLOv10实战",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "2025年目标检测最新算法，TensorRT部署优化",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-yolov10-2025",
+        "password": "yolov10"
+      },
+      {
+        "platform": "official",
+        "title": "YOLO官方",
+        "url": "https://github.com/ultralytics"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "YOLOv10",
+    "fileSize": "12.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "👁️",
+    "tags": ["计算机视觉", "YOLO", "目标检测"]
+  },
+  {
+    "id": 53,
+    "name": "MLOps实战：模型部署与监控",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "MLflow、Kubeflow、Arize AI的2025年MLOps最佳实践",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-mlops-2025",
+        "password": "mlops2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-mlops-2025"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "2025运维版",
+    "fileSize": "9.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🔄",
+    "tags": ["MLOps", "模型部署", "监控"]
+  },
+  {
+    "id": 54,
+    "name": "LangGraph复杂Agent构建",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "2025年Agent开发框架，循环、记忆、多Agent协作",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-langgraph-2025",
+        "password": "langgraph"
+      },
+      {
+        "platform": "official",
+        "title": "LangGraph官方",
+        "url": "https://langchain-ai.github.io/langgraph/"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "LangGraph 0.2",
+    "fileSize": "7.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "🕸️",
+    "tags": ["LangGraph", "Agent", "AI"]
+  },
+  {
+    "id": 55,
+    "name": "图神经网络GNN实战",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "PyG、DGL框架下的图神经网络应用，2025推荐系统热点",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-gnn-2025",
+        "password": "gnn2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-gnn-2025"
+      }
+    ],
+    "updateTime": "2025-12-12",
+    "version": "2025图神经网络版",
+    "fileSize": "8.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "🕸️",
+    "tags": ["图神经网络", "GNN", "推荐系统"]
+  },
+  {
+    "id": 56,
+    "name": "Hugging Face Transformers",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "2025年NLP基石，BERT、GPT、T5模型微调和部署",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-huggingface-2025",
+        "password": "huggingface"
+      },
+      {
+        "platform": "official",
+        "title": "Hugging Face",
+        "url": "https://huggingface.co"
+      }
+    ],
+    "updateTime": "2025-12-11",
+    "version": "Transformers 4.47",
+    "fileSize": "11.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.9,
+    "icon": "🤗",
+    "tags": ["Hugging Face", "NLP", "Transformer"]
+  },
+  {
+    "id": 57,
+    "name": "时序预测DeepAR实战",
+    "category": "learning",
+    "subcategory": "data-science",
+    "description": "2025年时间序列预测，GluonTS、PyTorch Forecasting实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-timeseries-2025",
+        "password": "timeseries"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-timeseries-2025"
+      }
+    ],
+    "updateTime": "2025-12-10",
+    "version": "2025时序版",
+    "fileSize": "6.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.3,
+    "icon": "📈",
+    "tags": ["时序预测", "DeepAR", "GluonTS"]
+  },
+  {
+    "id": 58,
+    "name": "Figma高级设计系统",
+    "category": "learning",
+    "subcategory": "design-creative",
+    "description": "2025年设计系统构建，Tokens、Variants、Variables进阶",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-figma-system-2025",
+        "password": "figmasystem"
+      },
+      {
+        "platform": "official",
+        "title": "Figma官方",
+        "url": "https://www.figma.com/community"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025设计系统版",
+    "fileSize": "5.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "🎨",
+    "tags": ["Figma", "设计系统", "UI设计"]
+  },
+  {
+    "id": 59,
+    "name": "UI/UX用户体验设计思维",
+    "category": "learning",
+    "subcategory": "design-creative",
+    "description": "2025年设计思维、用户研究、原型测试完整方法论",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-ux-thinking-2025",
+        "password": "uxthinking"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-ux-thinking-2025"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025思维版",
+    "fileSize": "4.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "🧠",
+    "tags": ["UX设计", "用户体验", "设计思维"]
+  },
+  {
+    "id": 60,
+    "name": "C4D三维设计系统课程",
+    "category": "learning",
+    "subcategory": "design-creative",
+    "description": "Cinema 4D 2025建模、动画、渲染完整商业项目",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-c4d-2025",
+        "password": "c4d2025"
+      },
+      {
+        "platform": "official",
+        "title": "Maxon官方",
+        "url": "https://www.maxon.net/en/cinema-4d"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "C4D 2025",
+    "fileSize": "8.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🎬",
+    "tags": ["C4D", "3D设计", "动画"]
+  },
+  {
+    "id": 61,
+    "name": "After Effects动效设计",
+    "category": "learning",
+    "subcategory": "design-creative",
+    "description": "2025年AE动效，Expressions、插件、MG动画实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-ae-motion-2025",
+        "password": "aemotion"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-ae-motion-2025"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025动效版",
+    "fileSize": "6.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "✨",
+    "tags": ["AE", "动效", "MG动画"]
+  },
+  {
+    "id": 62,
+    "name": "商业插画设计技法",
+    "category": "learning",
+    "subcategory": "design-creative",
+    "description": "2025年扁平插画、手绘、IP形象设计商业项目",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-illustration-2025",
+        "password": "illustration"
+      },
+      {
+        "platform": "official",
+        "title": "Behance",
+        "url": "https://www.behance.net"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "2025插画版",
+    "fileSize": "4.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🖌️",
+    "tags": ["插画", "商业插画", "手绘"]
+  },
+  {
+    "id": 63,
+    "name": "品牌视觉设计系统",
+    "category": "learning",
+    "subcategory": "design-creative",
+    "description": "2025年品牌VI、logo、视觉识别系统完整方案",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-brand-design-2025",
+        "password": "branddesign"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-brand-design-2025"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "2025品牌版",
+    "fileSize": "3.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🎯",
+    "tags": ["品牌设计", "VI", "Logo"]
+  },
+  {
+    "id": 64,
+    "name": "摄影后期Lightroom AI",
+    "category": "learning",
+    "subcategory": "design-creative",
+    "description": "2025年LR AI修图，人像、风景、商业摄影后期技巧",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-lightroom-2025",
+        "password": "lightroom2025"
+      },
+      {
+        "platform": "official",
+        "title": "Adobe",
+        "url": "https://www.adobe.com/products/photoshop-lightroom.html"
+      }
+    ],
+    "updateTime": "2025-12-12",
+    "version": "LR 2025",
+    "fileSize": "2.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "📸",
+    "tags": ["摄影", "后期", "调色"]
+  },
+  {
+    "id": 65,
+    "name": "Excel数据分析师",
+    "category": "learning",
+    "subcategory": "career-skills",
+    "description": "2025年Excel Power Query、Pivot、VBA数据分析实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-excel-da-2025",
+        "password": "excelda2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-excel-da-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025分析版",
+    "fileSize": "4.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "📊",
+    "tags": ["Excel", "数据分析", "VBA"]
+  },
+  {
+    "id": 66,
+    "name": "PPT设计大师课",
+    "category": "learning",
+    "subcategory": "career-skills",
+    "description": "2025年商务演示PPT，设计逻辑、动画、演讲技巧",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-ppt-design-2025",
+        "password": "pptdesign2025"
+      },
+      {
+        "platform": "official",
+        "title": "演示之家",
+        "url": "https://www.yanj.cn"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025演示版",
+    "fileSize": "3.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🎨",
+    "tags": ["PPT", "演示", "商务"]
+  },
+  {
+    "id": 67,
+    "name": "职场高情商沟通",
+    "category": "learning",
+    "subcategory": "career-skills",
+    "description": "2025年职场沟通、汇报、谈判、邮件写作软技能",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-communication-2025",
+        "password": "communication"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-communication-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025职场版",
+    "fileSize": "2.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "💬",
+    "tags": ["沟通", "职场", "软技能"]
+  },
+  {
+    "id": 68,
+    "name": "产品经理实战手册",
+    "category": "learning",
+    "subcategory": "career-skills",
+    "description": "2025年产品思维、需求分析、用户研究、数据分析",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-pm-2025",
+        "password": "pm2025"
+      },
+      {
+        "platform": "official",
+        "title": "PMCAFF",
+        "url": "https://www.pmcaff.com"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025产品版",
+    "fileSize": "6.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "📱",
+    "tags": ["产品经理", "产品设计", "用户研究"]
+  },
+  {
+    "id": 69,
+    "name": "敏捷开发Scrum实战",
+    "category": "learning",
+    "subcategory": "career-skills",
+    "description": "2025年Scrum、看板、用户故事地图敏捷实践",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-scrum-2025",
+        "password": "scrum2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1learn-scrum-2025"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "2025敏捷版",
+    "fileSize": "2.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🏃",
+    "tags": ["敏捷", "Scrum", "项目管理"]
+  },
+  {
+    "id": 70,
+    "name": "商务英语实战900句",
+    "category": "learning",
+    "subcategory": "career-skills",
+    "description": "2025年商务场景英语口语，邮件、会议、演讲、谈判",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1learn-biz-english-2025",
+        "password": "bizenglish"
+      },
+      {
+        "platform": "official",
+        "title": "BBC Learning",
+        "url": "https://www.bbc.co.uk/learningenglish"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "2025商务版",
+    "fileSize": "1.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.3,
+    "icon": "💼",
+    "tags": ["商务英语", "口语", "职场"]
+  },
+  {
+    "id": 71,
+    "name": "考研数学一全程班",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "2026考研数学，高数、线代、概率论体系化课程",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-kaoyan-math-2025",
+        "password": "kaoyanmath"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1exam-kaoyan-math-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2026考研版",
+    "fileSize": "9.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "🧮",
+    "tags": ["考研", "数学", "高数"]
+  },
+  {
+    "id": 72,
+    "name": "英语四六级冲刺",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "2025年CET4/6听力、阅读、写作、翻译提分技巧",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-cet46-2025",
+        "password": "cet46"
+      },
+      {
+        "platform": "official",
+        "title": "四六级官网",
+        "url": "https://cet.neea.edu.cn"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025四六级",
+    "fileSize": "2.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🎯",
+    "tags": ["四六级", "英语", "CET"]
+  },
+  {
+    "id": 73,
+    "name": "软考高级系统架构师",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "2025年软考架构师，综合知识、案例分析、论文写作",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-ruankao-2025",
+        "password": "ruankao2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1exam-ruankao-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025软考版",
+    "fileSize": "4.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🏆",
+    "tags": ["软考", "系统架构师", "IT认证"]
+  },
+  {
+    "id": 74,
+    "name": "PMP项目管理认证",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "PMBOK第7版 + 敏捷实践指南，2025年PMP备考",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-pmp-2025",
+        "password": "pmp2025"
+      },
+      {
+        "platform": "official",
+        "title": "PMI官网",
+        "url": "https://www.pmi.org"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "PMBOK 7th",
+    "fileSize": "3.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "📊",
+    "tags": ["PMP", "项目管理", "认证"]
+  },
+  {
+    "id": 75,
+    "name": "教师资格证全科",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "2025年小学、中学教资笔试面试全科课程",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-teacher-2025",
+        "password": "teacher2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1exam-teacher-2025"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "2025教资版",
+    "fileSize": "6.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "👨‍🏫",
+    "tags": ["教资", "教师资格证", "教师"]
+  },
+  {
+    "id": 76,
+    "name": "雅思IELTS保分班",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "2025年雅思7+备考，听说读写全科提分方案",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-ielts-2025",
+        "password": "ielts2025"
+      },
+      {
+        "platform": "official",
+        "title": "雅思官网",
+        "url": "https://www.ielts.org"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "2025雅思版",
+    "fileSize": "4.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🌏",
+    "tags": ["雅思", "IELTS", "英语"]
+  },
+  {
+    "id": 77,
+    "name": "托福TOEFL冲刺班",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "2025年托福100+备考，听说读写冲刺技巧",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-toefl-2025",
+        "password": "toefl2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1exam-toefl-2025"
+      }
+    ],
+    "updateTime": "2025-12-12",
+    "version": "2025托福版",
+    "fileSize": "3.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "🏫",
+    "tags": ["托福", "TOEFL", "英语"]
+  },
+  {
+    "id": 78,
+    "name": "法考客观题全程",
+    "category": "learning",
+    "subcategory": "exams",
+    "description": "2025年法考民法、刑法、行政法等全8科",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1exam-fakao-2025",
+        "password": "fakao2025"
+      },
+      {
+        "platform": "official",
+        "title": "司法部官网",
+        "url": "https://www.moj.gov.cn"
+      }
+    ],
+    "updateTime": "2025-12-11",
+    "version": "2025法考版",
+    "fileSize": "14.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "⚖️",
+    "tags": ["法考", "司法考试", "法律"]
+  },
+  {
+    "id": 79,
+    "name": "日语N1-N5考级大全",
+    "category": "learning",
+    "subcategory": "language-learning",
+    "description": "2025年JLPT日语能力考N1-N5全级别词汇、语法、真题",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1lang-japanese-2025",
+        "password": "japanese2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1lang-japanese-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025日语版",
+    "fileSize": "3.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🗾",
+    "tags": ["日语", "JLPT", "考级"]
+  },
+  {
+    "id": 80,
+    "name": "韩语TOPIK备考大全",
+    "category": "learning",
+    "subcategory": "language-learning",
+    "description": "2025年韩语能力考TOPIK I+II词汇语法真题",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1lang-korean-2025",
+        "password": "korean2025"
+      },
+      {
+        "platform": "official",
+        "title": "TOPIK官网",
+        "url": "http://www.topik.go.kr"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025韩语版",
+    "fileSize": "2.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "🇰🇷",
+    "tags": ["韩语", "TOPIK", "考级"]
+  },
+  {
+    "id": 81,
+    "name": "法语DELF/DALF备考",
+    "category": "learning",
+    "subcategory": "language-learning",
+    "description": "2025年法语DELF A1-C2和DALF C1-C2考试资料",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1lang-french-2025",
+        "password": "french2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1lang-french-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025法语版",
+    "fileSize": "3.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.3,
+    "icon": "🇫🇷",
+    "tags": ["法语", "DELF", "DALF"]
+  },
+  {
+    "id": 82,
+    "name": "德语A1-B2系统课",
+    "category": "learning",
+    "subcategory": "language-learning",
+    "description": "2025年德语欧标A1到B2级别听说读写训练",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1lang-german-2025",
+        "password": "german2025"
+      },
+      {
+        "platform": "official",
+        "title": "歌德学院",
+        "url": "https://www.goethe.de"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025德语版",
+    "fileSize": "4.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "🇩🇪",
+    "tags": ["德语", "欧标", "德语学习"]
+  },
+  {
+    "id": 83,
+    "name": "西班牙语DELE备考",
+    "category": "learning",
+    "subcategory": "language-learning",
+    "description": "2025年西班牙语DELE A1-C2各级别考试资料",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1lang-spanish-2025",
+        "password": "spanish2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1lang-spanish-2025"
+      }
+    ],
+    "updateTime": "2025-12-14",
+    "version": "2025西语版",
+    "fileSize": "2.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.2,
+    "icon": "🇪🇸",
+    "tags": ["西班牙语", "DELE", "语言学习"]
+  },
+  {
+    "id": 84,
+    "name": "商务英语口语900句",
+    "category": "learning",
+    "subcategory": "language-learning",
+    "description": "2025年商务场景常用英语口语表达实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1lang-biz-english-2025",
+        "password": "bizenglish900"
+      },
+      {
+        "platform": "official",
+        "title": "BBC商务英语",
+        "url": "https://www.bbc.co.uk/learningenglish/business"
+      }
+    ],
+    "updateTime": "2025-12-13",
+    "version": "2025口语版",
+    "fileSize": "1.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.2,
+    "icon": "💼",
+    "tags": ["商务英语", "口语", "职场"]
+  },
+  {
+    "id": 85,
+    "name": "500套精选PPT模板",
+    "category": "collections",
+    "subcategory": "templates",
+    "description": "2025年商务、科技、教育、市场行业PPT模板",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-ppt-templates-2025",
+        "password": "ppttemplates2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-ppt-templates-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025商务版",
+    "fileSize": "2.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "📊",
+    "tags": ["PPT模板", "商务", "设计"]
+  },
+  {
+    "id": 86,
+    "name": "800套简历模板合集",
+    "category": "collections",
+    "subcategory": "templates",
+    "description": "2025年IT、金融、设计、市场等行业专业简历模板",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-resume-2025",
+        "password": "resume2025"
+      },
+      {
+        "platform": "official",
+        "title": "简历模板网",
+        "url": "https://www.jianlimuban.com"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025求职版",
+    "fileSize": "1.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
     "icon": "📄",
-    "tags": ["简历", "模板", "合集"]
+    "tags": ["简历", "模板", "求职"]
+  },
+  {
+    "id": 87,
+    "name": "300套数据图表模板",
+    "category": "collections",
+    "subcategory": "templates",
+    "description": "2025年Excel、PPT可编辑数据可视化图表模板",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-chart-templates-2025",
+        "password": "charttemplates2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-chart-templates-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025图表版",
+    "fileSize": "950 MB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "📈",
+    "tags": ["图表", "数据可视化", "模板"]
+  },
+  {
+    "id": 88,
+    "name": "200套合同协议模板",
+    "category": "collections",
+    "subcategory": "templates",
+    "description": "2025年劳动合同、租赁合同、合作协议法律文书",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-contracts-2025",
+        "password": "contracts2025"
+      },
+      {
+        "platform": "official",
+        "title": "法律文书网",
+        "url": "https://www.66law.cn"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025法律版",
+    "fileSize": "520 MB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.3,
+    "icon": "📋",
+    "tags": ["合同", "法律", "模板"]
+  },
+  {
+    "id": 89,
+    "name": "前端开发全栈教程",
+    "category": "collections",
+    "subcategory": "tutorials",
+    "description": "2025年HTML/CSS/JS + Vue/React + Node.js完整学习路径",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-fe-fullstack-2025",
+        "password": "fefullstack2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-fe-fullstack-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025全栈版",
+    "fileSize": "18.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 5.0,
+    "icon": "💻",
+    "tags": ["前端", "全栈", "教程"]
+  },
+  {
+    "id": 90,
+    "name": "Python数据分析实战",
+    "category": "collections",
+    "subcategory": "tutorials",
+    "description": "2025年Python数据科学完整教程，Pandas、NumPy、可视化",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-py-da-2025",
+        "password": "pypyda2025"
+      },
+      {
+        "platform": "official",
+        "title": "Kaggle",
+        "url": "https://www.kaggle.com"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025数据版",
+    "fileSize": "8.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "🐍",
+    "tags": ["Python", "数据分析", "教程"]
+  },
+  {
+    "id": 91,
+    "name": "人工智能AIGC实战",
+    "category": "collections",
+    "subcategory": "tutorials",
+    "description": "2025年AIGC应用开发，LLM、SD、多模态模型实战",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-aigc-2025",
+        "password": "aigctutorial"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-aigc-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025AIGC版",
+    "fileSize": "16.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.9,
+    "icon": "🤖",
+    "tags": ["AIGC", "AI应用", "实战"]
+  },
+  {
+    "id": 92,
+    "name": "机器学习项目实战",
+    "category": "collections",
+    "subcategory": "tutorials",
+    "description": "2025年15个经典ML项目，从数据到部署全流程",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-ml-projects-2025",
+        "password": "mlprojects2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-ml-projects-2025"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025项目版",
+    "fileSize": "12.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.7,
+    "icon": "📊",
+    "tags": ["机器学习", "项目", "实战"]
+  },
+  {
+    "id": 93,
+    "name": "计算机经典电子书100本",
+    "category": "collections",
+    "subcategory": "ebooks",
+    "description": "2025年程序员必读书单，算法、架构、设计模式经典",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-cs-books-2025",
+        "password": "csbooks2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-cs-books-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025典藏版",
+    "fileSize": "2.5 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "📚",
+    "tags": ["电子书", "计算机", "经典"]
+  },
+  {
+    "id": 94,
+    "name": "设计类经典书籍合集",
+    "category": "collections",
+    "subcategory": "ebooks",
+    "description": "2025年设计思维、UI/UX、品牌设计必读书籍",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-design-books-2025",
+        "password": "designbooks2025"
+      },
+      {
+        "platform": "official",
+        "title": "豆瓣读书",
+        "url": "https://book.douban.com"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025设计版",
+    "fileSize": "1.8 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🎨",
+    "tags": ["设计", "电子书", "UI/UX"]
+  },
+  {
+    "id": 95,
+    "name": "商业管理经典20本",
+    "category": "collections",
+    "subcategory": "ebooks",
+    "description": "2025年商业思维、管理、领导力必读书籍",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-biz-books-2025",
+        "password": "bizbooks2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-biz-books-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025商业版",
+    "fileSize": "850 MB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "💼",
+    "tags": ["商业", "管理", "电子书"]
+  },
+  {
+    "id": 96,
+    "name": "个人成长必读50本",
+    "category": "collections",
+    "subcategory": "ebooks",
+    "description": "2025年自我提升、效率、心理学经典书籍",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-growth-books-2025",
+        "password": "growthbooks2025"
+      },
+      {
+        "platform": "official",
+        "title": "微信读书",
+        "url": "https://weread.qq.com"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025成长版",
+    "fileSize": "1.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "📖",
+    "tags": ["个人成长", "电子书", "自我提升"]
+  },
+  {
+    "id": 97,
+    "name": "开发者工具箱2025",
+    "category": "collections",
+    "subcategory": "toolboxes",
+    "description": "2025年开发者必备工具，Git、Docker、Postman、IDE插件一键安装",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-dev-toolbox-2025",
+        "password": "devtoolbox2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-dev-toolbox-2025"
+      }
+    ],
+    "updateTime": "2025-12-18",
+    "version": "2025新春版",
+    "fileSize": "3.5 GB",
+    "platform": ["Windows", "macOS", "Linux"],
+    "needRegistration": false,
+    "recommendation": 4.6,
+    "icon": "🧰",
+    "tags": ["工具箱", "开发", "一键安装"]
+  },
+  {
+    "id": 98,
+    "name": "设计师效率工具箱",
+    "category": "collections",
+    "subcategory": "toolboxes",
+    "description": "2025年设计师必备插件、字体、素材、软件集合",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-design-toolbox-2025",
+        "password": "designtoolbox2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-design-toolbox-2025"
+      }
+    ],
+    "updateTime": "2025-12-17",
+    "version": "2025设计版",
+    "fileSize": "2.8 GB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": false,
+    "recommendation": 4.5,
+    "icon": "🎨",
+    "tags": ["工具箱", "设计", "效率"]
+  },
+  {
+    "id": 99,
+    "name": "办公效率工具合集",
+    "category": "collections",
+    "subcategory": "toolboxes",
+    "description": "2025年Office、PDF、思维导图、笔记软件绿色版",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-office-toolbox-2025",
+        "password": "officetoolbox2025"
+      },
+      {
+        "platform": "aliyun",
+        "title": "阿里云盘",
+        "url": "https://www.aliyundrive.com/s/1coll-office-toolbox-2025"
+      }
+    ],
+    "updateTime": "2025-12-16",
+    "version": "2025办公版",
+    "fileSize": "1.8 GB",
+    "platform": ["Windows", "macOS"],
+    "needRegistration": false,
+    "recommendation": 4.4,
+    "icon": "💼",
+    "tags": ["办公", "工具箱", "效率"]
+  },
+  {
+    "id": 100,
+    "name": "AI工具全家桶2025",
+    "category": "collections",
+    "subcategory": "toolboxes",
+    "description": "2025年国内外主流AI工具集合，GPT、SD、MJ、文心一言",
+    "cloudLinks": [
+      {
+        "platform": "baidu",
+        "title": "百度网盘",
+        "url": "https://pan.baidu.com/s/1coll-ai-tools-2025",
+        "password": "aitools2025"
+      },
+      {
+        "platform": "official",
+        "title": "AI工具导航",
+        "url": "https://www.ainav.cn"
+      }
+    ],
+    "updateTime": "2025-12-15",
+    "version": "2025AI版",
+    "fileSize": "5.2 GB",
+    "platform": ["All"],
+    "needRegistration": false,
+    "recommendation": 4.8,
+    "icon": "🤖",
+    "tags": ["AI工具", "全家桶", "2025"]
   }
 ]
