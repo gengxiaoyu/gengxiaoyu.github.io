@@ -27,28 +27,22 @@ class ResourceLibraryApp {
 
     async loadConfig() {
         try {
-            // 尝试加载新的配置文件
-            const response = await fetch('data/config_new.json');
+            // 直接加载配置文件
+            const response = await fetch('data/config.json');
             this.config = await response.json();
         } catch (error) {
-            console.error('加载新配置数据失败，尝试使用旧配置:', error);
-            try {
-                const response = await fetch('data/config.json');
-                this.config = await response.json();
-            } catch (e) {
-                console.error('加载配置数据失败:', e);
-                this.config = this.getDefaultConfig();
-            }
+            console.error('加载配置数据失败:', error);
+            this.config = this.getDefaultConfig();
         }
     }
 
     async loadResources() {
         try {
-            // 尝试加载新的资源文件
-            const response = await fetch('data/resources_new.json');
+            // 直接加载资源文件
+            const response = await fetch('data/resources.json');
             this.resources = await response.json();
         } catch (error) {
-            console.error('加载新资源数据失败，尝试加载旧工具数据:', error);
+            console.error('加载资源数据失败，尝试加载旧工具数据:', error);
             try {
                 const response = await fetch('data/tools.json');
                 const tools = await response.json();
@@ -273,6 +267,13 @@ class ResourceLibraryApp {
                 const categoryId = subcategoryFilterItem.dataset.category;
                 const subcategoryId = subcategoryFilterItem.dataset.subcategory;
                 this.handleSubcategoryFilterClick(categoryId, subcategoryId);
+            }
+            
+            // 分类项点击（支持点击内部元素）
+            const categoryItem = e.target.closest('.category-item');
+            if (categoryItem) {
+                const categoryId = categoryItem.dataset.category;
+                this.handleCategoryClick(categoryId);
             }
         });
         
@@ -594,7 +595,7 @@ class ResourceLibraryApp {
                     <div class="link-item">
                         <div class="link-platform">${platformIcon}</div>
                         <div class="link-info">
-                            <div class="link-title">${link.title || `${link.platform} 链接`}</div>
+                            <div class="link-title">${link.title || link.name || `${link.platform || '资源'} 链接`}</div>
                             <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.url}</a>
                             ${link.password ? `<span class="link-password">提取码: ${link.password}</span>` : ''}
                         </div>

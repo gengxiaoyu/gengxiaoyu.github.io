@@ -1,0 +1,3820 @@
+[
+  {
+    "id": 1,
+    "name": "Apifox",
+    "description": "API 协作开发平台，集文档、调试、Mock、自动化测试于一体。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web",
+      "Desktop"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://apifox.com/"
+      }
+    ],
+    "tags": [
+      "API",
+      "调试",
+      "文档",
+      "Mock"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 2,
+    "name": "sqlpub",
+    "description": "SQL 在线练习与数据库学习平台。",
+    "category": "learning",
+    "subcategory": "programming",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://sqlpub.com/"
+      }
+    ],
+    "tags": [
+      "SQL",
+      "数据库",
+      "在线练习"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 3,
+    "name": "七牛云",
+    "description": "云存储、CDN 与音视频处理服务平台。",
+    "category": "software",
+    "subcategory": "system",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.qiniu.com/"
+      }
+    ],
+    "tags": [
+      "云存储",
+      "CDN",
+      "对象存储",
+      "七牛"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 4,
+    "name": "GitHub",
+    "description": "全球最大的代码托管与开源协作平台。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://github.com/"
+      }
+    ],
+    "tags": [
+      "Git",
+      "开源",
+      "代码托管",
+      "协作"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 5,
+    "name": "Gitee",
+    "description": "码云，中国本土的代码托管平台。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://gitee.com/"
+      }
+    ],
+    "tags": [
+      "Git",
+      "国产",
+      "代码托管",
+      "开源"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 6,
+    "name": "GitPP",
+    "description": "Git 项目协作与代码托管平台。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.gitpp.com/"
+      }
+    ],
+    "tags": [
+      "Git",
+      "代码托管",
+      "协作"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 7,
+    "name": "GitCode",
+    "description": "华为支持的开源代码托管平台，兼容 GitLab。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://gitcode.net/"
+      }
+    ],
+    "tags": [
+      "Git",
+      "华为",
+      "开源",
+      "代码托管"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 8,
+    "name": "CSDN",
+    "description": "中国最大的 IT 技术社区与博客平台。",
+    "category": "collections",
+    "subcategory": "tutorials",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.csdn.net/"
+      }
+    ],
+    "tags": [
+      "博客",
+      "技术社区",
+      "教程"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 9,
+    "name": "掘金",
+    "description": "高质量的技术内容创作与分享社区。",
+    "category": "collections",
+    "subcategory": "tutorials",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://juejin.cn/"
+      }
+    ],
+    "tags": [
+      "前端",
+      "后端",
+      "博客",
+      "社区"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 10,
+    "name": "开源中国",
+    "description": "OSCHINA，中国开源技术社区。",
+    "category": "collections",
+    "subcategory": "official-links",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.oschina.net/"
+      }
+    ],
+    "tags": [
+      "开源",
+      "社区",
+      "资讯",
+      "Gitee"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 11,
+    "name": "力扣",
+    "description": "LeetCode 中文站，算法与编程面试练习平台。",
+    "category": "learning",
+    "subcategory": "programming",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://leetcode.cn/"
+      }
+    ],
+    "tags": [
+      "算法",
+      "面试",
+      "刷题",
+      "编程"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 12,
+    "name": "Element",
+    "description": "饿了么出品的 Vue 2.x UI 组件库。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://element.eleme.cn/"
+      }
+    ],
+    "tags": [
+      "Vue",
+      "UI",
+      "组件库",
+      "Element"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 13,
+    "name": "Element Plus",
+    "description": "Element 的 Vue 3 版本，现代化 UI 组件库。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://element-plus.org/zh-CN/"
+      }
+    ],
+    "tags": [
+      "Vue3",
+      "UI",
+      "组件库",
+      "Element Plus"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 14,
+    "name": "uView2.0",
+    "description": "uni-app 生态的 UI 组件库。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web",
+      "App"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://uviewui.com/"
+      }
+    ],
+    "tags": [
+      "uni-app",
+      "Vue",
+      "移动端",
+      "UI"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 15,
+    "name": "DataV",
+    "description": "大屏数据可视化图表库（Jiaminghi 版）。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "http://datav.jiaminghi.com/"
+      }
+    ],
+    "tags": [
+      "大屏",
+      "可视化",
+      "DataV",
+      "ECharts"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 16,
+    "name": "NutUI",
+    "description": "京东出品的 Vue 组件库，支持多端。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web",
+      "H5",
+      "小程序"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://nutui.jd.com/"
+      }
+    ],
+    "tags": [
+      "Vue",
+      "京东",
+      "UI",
+      "多端"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 17,
+    "name": "Vxe Table v4",
+    "description": "功能强大的 Vue 表格组件。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://vxetable.cn/"
+      }
+    ],
+    "tags": [
+      "表格",
+      "Vue",
+      "高性能",
+      "VxeTable"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 18,
+    "name": "Naive UI",
+    "description": "一个 Vue 3 组件库，设计优雅，TypeScript 友好。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.naiveui.com/zh-CN/os-theme"
+      }
+    ],
+    "tags": [
+      "Vue3",
+      "TypeScript",
+      "UI",
+      "Naive"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 19,
+    "name": "Ant Design Vue",
+    "description": "Ant Design 的 Vue 实现。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.antdv.com/docs/vue/introduce-cn/"
+      }
+    ],
+    "tags": [
+      "Vue",
+      "Ant Design",
+      "企业级",
+      "UI"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 20,
+    "name": "Arco Design",
+    "description": "字节跳动出品的企业级设计系统。",
+    "category": "software",
+    "subcategory": "design",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://arco.design/"
+      }
+    ],
+    "tags": [
+      "设计系统",
+      "React",
+      "字节",
+      "UI"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 21,
+    "name": "shadcn/ui",
+    "description": "可定制的 React 组件库，基于 Radix UI 和 Tailwind CSS。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.shadcn.com.cn/docs/cli"
+      }
+    ],
+    "tags": [
+      "React",
+      "Tailwind",
+      "可定制",
+      "shadcn"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 22,
+    "name": "uni-app",
+    "description": "使用 Vue 开发跨平台应用的框架。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web",
+      "App",
+      "小程序"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.dcloud.io/"
+      }
+    ],
+    "tags": [
+      "Vue",
+      "跨端",
+      "uni-app",
+      "DCloud"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 23,
+    "name": "docsify",
+    "description": "轻量级文档生成工具，无需构建。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://docsify.js.org/#/zh-cn/"
+      }
+    ],
+    "tags": [
+      "文档",
+      "Markdown",
+      "静态站点",
+      "docsify"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 24,
+    "name": "Ant Design X",
+    "description": "Ant Design 的下一代设计语言与组件库。",
+    "category": "software",
+    "subcategory": "design",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://ant-design-x.antgroup.com/index-cn"
+      }
+    ],
+    "tags": [
+      "Ant Design",
+      "设计系统",
+      "蚂蚁",
+      "X"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 25,
+    "name": "daisyUI",
+    "description": "基于 Tailwind CSS 的组件库。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://v2.daisyui.com/"
+      }
+    ],
+    "tags": [
+      "Tailwind",
+      "UI",
+      "daisyUI",
+      "主题"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 26,
+    "name": "Flutter",
+    "description": "Google 推出的跨平台 UI 工具包。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Mobile",
+      "Desktop",
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://flutter.cn/"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "跨端",
+      "Google"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 27,
+    "name": "PrimeVue",
+    "description": "丰富的 Vue UI 组件库。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://primevue.org/"
+      }
+    ],
+    "tags": [
+      "Vue",
+      "UI",
+      "PrimeVue",
+      "企业级"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 28,
+    "name": "Diboot",
+    "description": "低代码开发平台，支持快速构建企业级应用。",
+    "category": "software",
+    "subcategory": "system",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.diboot.com/"
+      }
+    ],
+    "tags": [
+      "低代码",
+      "Java",
+      "快速开发"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 29,
+    "name": "uvui",
+    "description": "uni-app 官方 UI 组件库。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "App",
+      "H5",
+      "小程序"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.uvui.cn/"
+      }
+    ],
+    "tags": [
+      "uni-app",
+      "Vue",
+      "官方UI",
+      "uvui"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 30,
+    "name": "iconfont-阿里巴巴矢量图标库",
+    "description": "阿里官方矢量图标库，支持在线管理与下载。",
+    "category": "software",
+    "subcategory": "design",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.iconfont.cn/"
+      }
+    ],
+    "tags": [
+      "图标",
+      "SVG",
+      "阿里巴巴",
+      "前端资源"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 31,
+    "name": "xicons",
+    "description": "集合多个流行图标库的 Vue/React 组件。",
+    "category": "software",
+    "subcategory": "design",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://xicons.org/"
+      }
+    ],
+    "tags": [
+      "图标",
+      "Vue",
+      "React",
+      "Iconify"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 32,
+    "name": "PakePlus",
+    "description": "将网页打包成桌面应用的工具。",
+    "category": "software",
+    "subcategory": "system",
+    "platform": [
+      "Desktop"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://pakeplus.com/zh/"
+      }
+    ],
+    "tags": [
+      "桌面应用",
+      "Electron",
+      "网页打包",
+      "Pake"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 33,
+    "name": "w3school",
+    "description": "老牌 Web 技术在线教程网站（中文版）。",
+    "category": "learning",
+    "subcategory": "programming",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.w3school.com.cn/"
+      }
+    ],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "教程"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 34,
+    "name": "菜鸟教程",
+    "description": "简单易懂的编程与 Web 开发入门教程。",
+    "category": "learning",
+    "subcategory": "programming",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.runoob.com/"
+      }
+    ],
+    "tags": [
+      "教程",
+      "入门",
+      "编程",
+      "Web"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 35,
+    "name": "书栈网",
+    "description": "聚合开源书籍、文档与教程的在线阅读平台。",
+    "category": "learning",
+    "subcategory": "programming",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.bookstack.cn/"
+      }
+    ],
+    "tags": [
+      "文档",
+      "电子书",
+      "开源",
+      "学习"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 36,
+    "name": "MDN Web Docs",
+    "description": "Mozilla 官方 Web 技术权威文档（中文）。",
+    "category": "learning",
+    "subcategory": "programming",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://developer.mozilla.org/zh-CN/"
+      }
+    ],
+    "tags": [
+      "MDN",
+      "Web标准",
+      "API文档",
+      "权威"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 37,
+    "name": "廖雪峰官网",
+    "description": "知名技术博主廖雪峰的个人网站与教程集合。",
+    "category": "learning",
+    "subcategory": "programming",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://liaoxuefeng.com/"
+      }
+    ],
+    "tags": [
+      "Python",
+      "Git",
+      "教程",
+      "博客"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 38,
+    "name": "N-Full-Kit",
+    "description": "前端工程化脚手架与工具集。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://nfull.xbzweb.com/"
+      }
+    ],
+    "tags": [
+      "脚手架",
+      "工程化",
+      "Vue",
+      "N-Full"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 39,
+    "name": "Cool官网",
+    "description": "Cool.js 提供的现代前端解决方案。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://cool-js.com/"
+      }
+    ],
+    "tags": [
+      "前端框架",
+      "Vue",
+      "Cool"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 40,
+    "name": "API数据接口",
+    "description": "API市场，提供各类数据接口服务。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.apispace.com/"
+      }
+    ],
+    "tags": [
+      "API",
+      "数据接口",
+      "开发者服务"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 41,
+    "name": "HMAC加密工具",
+    "description": "MKLab 提供的在线 HMAC 加密与编码工具。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://www.mklab.cn/"
+      }
+    ],
+    "tags": [
+      "加密",
+      "HMAC",
+      "在线工具",
+      "安全"
+    ],
+    "updateTime": "2025-12-30"
+  },
+  {
+    "id": 42,
+    "name": "RegExr",
+    "description": "交互式正则表达式在线测试与学习工具。",
+    "category": "software",
+    "subcategory": "development",
+    "platform": [
+      "Web"
+    ],
+    "cloudLinks": [
+      {
+        "name": "官网",
+        "url": "https://regexr.com/"
+      }
+    ],
+    "tags": [
+      "正则",
+      "Regex",
+      "测试",
+      "学习"
+    ],
+    "updateTime": "2025-12-30"
+  },{
+  "id": 43,
+  "name": "npm",
+  "description": "JavaScript 包管理器官方网站。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.npmjs.com/"
+    }
+  ],
+  "tags": [
+    "npm",
+    "包管理",
+    "Node.js",
+    "JavaScript"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 44,
+  "name": "网页播放器",
+  "description": "支持 HLS/FLV/RTMP 等协议的网页视频播放器。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "http://player.ruiboyun.cn/"
+    }
+  ],
+  "tags": [
+    "播放器",
+    "流媒体",
+    "HLS",
+    "视频"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 45,
+  "name": "vpsche工具箱",
+  "description": "VPSCHE 提供的在线开发与网络工具集合。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "http://tool.vpsche.com/"
+    }
+  ],
+  "tags": [
+    "工具箱",
+    "IP查询",
+    "HTTP测试",
+    "开发工具"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 46,
+  "name": "在线JSON校验",
+  "description": "BeJSON 提供的 JSON 格式校验与转换工具。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.bejson.com/"
+    }
+  ],
+  "tags": [
+    "JSON",
+    "校验",
+    "格式化",
+    "在线工具"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 47,
+  "name": "ico51",
+  "description": "在线生成透明 ICO 图标的工具。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.ico51.cn/"
+    }
+  ],
+  "tags": [
+    "ICO",
+    "图标生成",
+    "favicon",
+    "设计工具"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 48,
+  "name": "工具箱",
+  "description": "小友西湖提供的多功能在线工具集合。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://xiaoyouxihu.com/"
+    }
+  ],
+  "tags": [
+    "工具箱",
+    "日常工具",
+    "开发辅助"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 49,
+  "name": "偷懒工具",
+  "description": "集合多种实用小工具的在线平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://toolight.cn/"
+    }
+  ],
+  "tags": [
+    "工具",
+    "效率",
+    "在线工具"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 50,
+  "name": "在线字体编辑",
+  "description": "魔法精灵提供的在线字体编辑与生成工具。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://font.eelf.cn/"
+    }
+  ],
+  "tags": [
+    "字体编辑",
+    "TTF",
+    "WOFF",
+    "设计"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 51,
+  "name": "FreeTool工具",
+  "description": "免费在线工具集合站。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://xdxsb.top/FreeTool/"
+    }
+  ],
+  "tags": [
+    "工具",
+    "免费",
+    "在线"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 52,
+  "name": "老马物语",
+  "description": "前端开发者“老马”的技术博客与知识整理。",
+  "category": "learning",
+  "subcategory": "programming",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.barebear.cn/"
+    }
+  ],
+  "tags": [
+    "前端",
+    "Vue",
+    "博客",
+    "八股文"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 53,
+  "name": "Vue Data UI",
+  "description": "基于 Vue 的数据可视化组件库。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://vue-data-ui.graphieros.com/"
+    }
+  ],
+  "tags": [
+    "Vue",
+    "可视化",
+    "图表",
+    "Data UI"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 54,
+  "name": "ECharts官网",
+  "description": "百度开源的 JavaScript 可视化库。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://echarts.apache.org/zh/index.html"
+    }
+  ],
+  "tags": [
+    "ECharts",
+    "可视化",
+    "图表",
+    "百度"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 55,
+  "name": "ECharts图集",
+  "description": "ECharts 示例与模板展示站。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.isqqw.com/"
+    }
+  ],
+  "tags": [
+    "ECharts",
+    "示例",
+    "模板",
+    "图集"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 56,
+  "name": "PPChart",
+  "description": "轻量级 JavaScript 图表库。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "http://ppchart.com/"
+    }
+  ],
+  "tags": [
+    "图表",
+    "可视化",
+    "轻量",
+    "JS"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 57,
+  "name": "uCharts",
+  "description": "高性能跨端图表库，支持 uni-app。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "App",
+    "H5",
+    "小程序"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.ucharts.cn/v2/"
+    }
+  ],
+  "tags": [
+    "图表",
+    "uni-app",
+    "跨端",
+    "uCharts"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 58,
+  "name": "数字像素",
+  "description": "大屏可视化设计资源与作品展示平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.shuzixs.com/"
+    }
+  ],
+  "tags": [
+    "大屏",
+    "可视化",
+    "设计灵感",
+    "动效"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 59,
+  "name": "glowjs",
+  "description": "基于 Three.js 的 3D 可视化项目（如机房展示）。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.glowjs.com/"
+    }
+  ],
+  "tags": [
+    "Three.js",
+    "3D",
+    "可视化",
+    "机房"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 60,
+  "name": "Tailwind CSS",
+  "description": "实用优先的 CSS 框架。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.tailwindcss.cn/"
+    }
+  ],
+  "tags": [
+    "Tailwind",
+    "CSS",
+    "原子化",
+    "实用类"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 61,
+  "name": "UnoCss",
+  "description": "原子化 CSS 引擎，高度可定制。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://unocss.dev/"
+    }
+  ],
+  "tags": [
+    "UnoCss",
+    "原子化",
+    "Vite",
+    "性能"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 62,
+  "name": "CssFX",
+  "description": "精美 CSS 动效与样式集合。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://cssfx.netlify.app/"
+    }
+  ],
+  "tags": [
+    "CSS",
+    "动效",
+    "按钮",
+    "美化"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 63,
+  "name": "CSS Layout Generator",
+  "description": "可视化 CSS 布局代码生成器。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://layout.bradwoods.io/"
+    }
+  ],
+  "tags": [
+    "CSS",
+    "布局",
+    "Flexbox",
+    "Grid"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 64,
+  "name": "Uiverse",
+  "description": "开源 UI 组件与动效集合。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://uiverse.io/"
+    }
+  ],
+  "tags": [
+    "UI",
+    "动效",
+    "开源",
+    "CSS"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 65,
+  "name": "CSS动画代码",
+  "description": "CSS3 动画代码片段集合。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.webhek.com/post/css3-animation-sniplet-collection/"
+    }
+  ],
+  "tags": [
+    "CSS",
+    "动画",
+    "代码片段",
+    "前端"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 66,
+  "name": "Animista",
+  "description": "交互式 CSS 动画生成器。",
+  "category": "software",
+  "subcategory": "design",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://animista.net/play/basic/rotate"
+    }
+  ],
+  "tags": [
+    "CSS",
+    "动画",
+    "生成器",
+    "实时预览"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 67,
+  "name": "Vue Bits",
+  "description": "Vue 动效与交互动画组件集合。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://vue-bits.dev/"
+    }
+  ],
+  "tags": [
+    "Vue",
+    "动画",
+    "交互动效",
+    "组件"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 68,
+  "name": "React Bits",
+  "description": "React 动效与交互动画组件集合。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://reactbits.dev/"
+    }
+  ],
+  "tags": [
+    "React",
+    "动画",
+    "交互动效",
+    "组件"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 69,
+  "name": "Git",
+  "description": "分布式版本控制系统官方文档（中文）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "CLI",
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://git-scm.com/docs/git/zh_HANS-CN"
+    }
+  ],
+  "tags": [
+    "Git",
+    "版本控制",
+    "命令行",
+    "文档"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 70,
+  "name": "Three.js中文网",
+  "description": "Three.js 中文学习与资源站。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "http://www.webgl3d.cn/"
+    }
+  ],
+  "tags": [
+    "Three.js",
+    "WebGL",
+    "3D",
+    "中文"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 71,
+  "name": "NestJS",
+  "description": "用于构建高效、可扩展的 Node.js 服务器端应用程序的框架。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://nestjs.com/"
+    }
+  ],
+  "tags": [
+    "NestJS",
+    "Node.js",
+    "TypeScript",
+    "后端"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 72,
+  "name": "Turf.js中文网",
+  "description": "地理空间分析库 Turf.js 的中文文档与示例。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://turfjs.fenxianglu.cn/"
+    }
+  ],
+  "tags": [
+    "Turf.js",
+    "GIS",
+    "地理",
+    "空间分析"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 73,
+  "name": "electron",
+  "description": "使用 Web 技术构建跨平台桌面应用的框架。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Desktop"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.electronjs.org/"
+    }
+  ],
+  "tags": [
+    "Electron",
+    "桌面应用",
+    "Node.js",
+    "Chromium"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 74,
+  "name": "TypeScript",
+  "description": "TypeScript 官方中文文档。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.tslang.cn/"
+    }
+  ],
+  "tags": [
+    "TypeScript",
+    "JavaScript",
+    "类型系统",
+    "官方"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 75,
+  "name": "Next.js",
+  "description": "React 服务端渲染与静态站点生成框架。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.nextjs.cn/"
+    }
+  ],
+  "tags": [
+    "Next.js",
+    "React",
+    "SSR",
+    "静态站点"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 76,
+  "name": "Modern.js",
+  "description": "字节跳动开源的企业级前端工程化解决方案。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://modernjs.dev/"
+    }
+  ],
+  "tags": [
+    "Modern.js",
+    "字节",
+    "工程化",
+    "React"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 77,
+  "name": "Alova.JS",
+  "description": "新一代请求库，支持 Vue/React/Svelte 等框架。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://alova.js.org/zh-CN/"
+    }
+  ],
+  "tags": [
+    "请求库",
+    "Vue",
+    "React",
+    "TypeScript"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 78,
+  "name": "Nest.js 中文镜像",
+  "description": "NestJS 中文社区维护的文档镜像站。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://nestjs.uihtm.com/"
+    }
+  ],
+  "tags": [
+    "NestJS",
+    "Node.js",
+    "中文文档",
+    "镜像"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 79,
+  "name": "midwayjs",
+  "description": "面向未来的 Node.js 框架，由阿里出品。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.midwayjs.org/"
+    }
+  ],
+  "tags": [
+    "Midway",
+    "Node.js",
+    "阿里",
+    "IoC"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 80,
+  "name": "Nuxt",
+  "description": "Vue 的通用应用框架。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://nuxtjs.org.cn/"
+    }
+  ],
+  "tags": [
+    "Nuxt",
+    "Vue",
+    "SSR",
+    "静态生成"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 81,
+  "name": "Spring中文网",
+  "description": "Spring Framework 中文学习与文档站点。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "http://spring.p2hp.com/"
+    }
+  ],
+  "tags": [
+    "Spring",
+    "Java",
+    "中文文档"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 82,
+  "name": "React",
+  "description": "React 官方中文文档。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://zh-hans.react.dev/"
+    }
+  ],
+  "tags": [
+    "React",
+    "前端",
+    "组件",
+    "Facebook"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 84,
+  "name": "Vite中文网",
+  "description": "Vite 构建工具官方中文文档。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://vitejs.cn/"
+    }
+  ],
+  "tags": [
+    "Vite",
+    "构建工具",
+    "ESM",
+    "快速"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 85,
+  "name": "prettier",
+  "description": "代码格式化工具官方中文文档。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "CLI",
+    "Editor"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.prettier.cn/docs/"
+    }
+  ],
+  "tags": [
+    "Prettier",
+    "格式化",
+    "代码风格",
+    "自动化"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 86,
+  "name": "Vue hooks plus",
+  "description": "Vue 3 Composition API 增强工具集。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://inhiblabcore.github.io/vue-hooks-plus/"
+    }
+  ],
+  "tags": [
+    "Vue3",
+    "Hooks",
+    "Composition API",
+    "工具库"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 87,
+  "name": "Three.js",
+  "description": "WebGL 3D 库官方站点。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://threejs.org/"
+    }
+  ],
+  "tags": [
+    "Three.js",
+    "WebGL",
+    "3D",
+    "图形"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 88,
+  "name": "DCloud",
+  "description": "uni-app 背后的技术公司，提供跨端开发工具。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web",
+    "IDE"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.dcloud.io/"
+    }
+  ],
+  "tags": [
+    "DCloud",
+    "uni-app",
+    "HBuilder",
+    "跨端"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 89,
+  "name": "Trae",
+  "description": "AI 驱动的智能编程助手与 IDE 插件。",
+  "category": "software",
+  "subcategory": "ai-tools",
+  "platform": [
+    "Web",
+    "IDE"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.trae.cn/"
+    }
+  ],
+  "tags": [
+    "AI编程",
+    "Trae",
+    "智能助手"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 90,
+  "name": "CodeBuddy IDE",
+  "description": "腾讯云推出的 AI 编程 IDE，集成 Copilot 能力。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://copilot.tencent.com/ide/"
+    }
+  ],
+  "tags": [
+    "IDE",
+    "AI编程",
+    "腾讯",
+    "Copilot"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 91,
+  "name": "CodePen",
+  "description": "前端代码在线编辑与分享社区。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://codepen.io/"
+    }
+  ],
+  "tags": [
+    "CodePen",
+    "前端",
+    "在线编辑",
+    "社区"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 92,
+  "name": "DataV Geo",
+  "description": "阿里云 DataV 提供的行政区划地理选择工具。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "http://datav.aliyun.com/portal/school/atlas/area_selector"
+    }
+  ],
+  "tags": [
+    "DataV",
+    "地理",
+    "行政区",
+    "地图"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 93,
+  "name": "天地图服务中心",
+  "description": "国家地理信息公共服务平台（天地图）管理后台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://cloudcenter.tianditu.gov.cn/administrativeDivision/"
+    }
+  ],
+  "tags": [
+    "天地图",
+    "GIS",
+    "行政区划",
+    "政府数据"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 94,
+  "name": "百度拾取坐标",
+  "description": "百度地图官方坐标拾取工具。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://lbs.baidu.com/maptool/getpoint"
+    }
+  ],
+  "tags": [
+    "百度地图",
+    "坐标拾取",
+    "经纬度",
+    "LBS"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 95,
+  "name": "OpenLayers",
+  "description": "开源 Web 地图库。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://openlayers.org/"
+    }
+  ],
+  "tags": [
+    "OpenLayers",
+    "地图",
+    "GIS",
+    "开源"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 96,
+  "name": "下载geoJson",
+  "description": "提供中国各省市 GeoJSON 数据下载的演示站。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://hxkj.vip/demo/echartsMap/"
+    }
+  ],
+  "tags": [
+    "GeoJSON",
+    "地图数据",
+    "ECharts",
+    "中国"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 97,
+  "name": "百度地图API",
+  "description": "百度地图 JavaScript API 文档。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://lbsyun.baidu.com/faq/api?title=webapi"
+    }
+  ],
+  "tags": [
+    "百度地图",
+    "API",
+    "LBS",
+    "JavaScript"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 98,
+  "name": "SuperMap超图",
+  "description": "国产 GIS 平台 SuperMap 官网。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.supermap.com/"
+    }
+  ],
+  "tags": [
+    "SuperMap",
+    "GIS",
+    "国产",
+    "地理信息"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 99,
+  "name": "坐标转换",
+  "description": "超图提供的在线坐标系转换工具。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.supermapol.com/gistools/coordinateconvert"
+    }
+  ],
+  "tags": [
+    "坐标转换",
+    "SuperMap",
+    "GIS",
+    "投影"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 100,
+  "name": "EarthSDK",
+  "description": "基于 Cesium 的三维地球可视化 SDK。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "http://www.earthsdk.com/"
+    }
+  ],
+  "tags": [
+    "Cesium",
+    "3D地球",
+    "GIS",
+    "可视化"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 101,
+  "name": "卫星地图-Google",
+  "description": "Google Earth 卫星地图在线查看（非官方聚合站）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.earthol.com/"
+    }
+  ],
+  "tags": [
+    "卫星地图",
+    "Google Earth",
+    "地图浏览"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 102,
+  "name": "arcGis",
+  "description": "Esri ArcGIS API for JavaScript 官方文档。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html"
+    }
+  ],
+  "tags": [
+    "ArcGIS",
+    "Esri",
+    "GIS",
+    "JavaScript"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 103,
+  "name": "arcGis下载",
+  "description": "ArcGIS API for JavaScript SDK 下载页面。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://developers.arcgis.com/javascript/latest/downloads/"
+    }
+  ],
+  "tags": [
+    "ArcGIS",
+    "SDK",
+    "下载",
+    "离线使用"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 104,
+  "name": "GoView",
+  "description": "开源大屏可视化拖拽编辑器。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/dromara/go-view"
+    }
+  ],
+  "tags": [
+    "大屏",
+    "可视化",
+    "拖拽",
+    "开源"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 105,
+  "name": "wei_feng_qin",
+  "description": "Gitee 用户 wei_feng_qin 的开源项目主页。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/wei_feng_qin"
+    }
+  ],
+  "tags": [
+    "Gitee",
+    "个人主页",
+    "开源"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 106,
+  "name": "BigDataView",
+  "description": "大屏可视化项目模板（Gitee 开源）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/iGaoWei/big-data-view"
+    }
+  ],
+  "tags": [
+    "大屏",
+    "可视化",
+    "模板",
+    "Gitee"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 107,
+  "name": "KOI-UI",
+  "description": "基于 Vue 的 UI 组件库（Gitee 开源）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/KoiKite/koi-ui"
+    }
+  ],
+  "tags": [
+    "Vue",
+    "UI",
+    "组件库",
+    "Gitee"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 108,
+  "name": "three-editor",
+  "description": "基于 Three.js 的 3D 场景编辑器（GitHub 开源）。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/z2586300277/three-editor"
+    }
+  ],
+  "tags": [
+    "Three.js",
+    "3D编辑",
+    "WebGL",
+    "开源"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 109,
+  "name": "金合可视化",
+  "description": "大屏数据可视化解决方案（Gitee 开源）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/ikingtech/iking-datav"
+    }
+  ],
+  "tags": [
+    "大屏",
+    "可视化",
+    "企业级",
+    "Gitee"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 110,
+  "name": "Light Chaser",
+  "description": "轻量级大屏可视化模板（Gitee 开源）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/xiaopujun/light-chaser"
+    }
+  ],
+  "tags": [
+    "大屏",
+    "可视化",
+    "轻量",
+    "模板"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 111,
+  "name": "datav-vue",
+  "description": "基于 Vue 的大屏可视化组件库（Gitee 开源）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/pengxiaotian/datav-vue"
+    }
+  ],
+  "tags": [
+    "Vue",
+    "大屏",
+    "可视化",
+    "组件"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 112,
+  "name": "HeyGem",
+  "description": "开源 AI Agent 框架（GitHub）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/GuijiAI/HeyGem.ai"
+    }
+  ],
+  "tags": [
+    "AI Agent",
+    "LLM",
+    "开源",
+    "框架"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 113,
+  "name": "Vue 3.5/Nest.js Admin",
+  "description": "Vue3 + Nest.js 全栈后台管理系统模板。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/baiwumm/vue3-admin/"
+    }
+  ],
+  "tags": [
+    "Vue3",
+    "NestJS",
+    "全栈",
+    "后台"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 114,
+  "name": "Astral 3D Editor",
+  "description": "基于 Web 的 3D 场景编辑器，支持导出代码。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://editor.astraljs.com/"
+    }
+  ],
+  "tags": [
+    "3D编辑",
+    "WebGL",
+    "场景构建",
+    "可视化"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 115,
+  "name": "NestJS 模板",
+  "description": "Faster Template 提供的 NestJS 快速开发模板。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/faster-template/backend-nestjs"
+    }
+  ],
+  "tags": [
+    "NestJS",
+    "模板",
+    "快速开发",
+    "后端"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 116,
+  "name": "WeCh Markdown",
+  "description": "Doocs 提供的 Markdown 编辑与排版工具。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/doocs/md"
+    }
+  ],
+  "tags": [
+    "Markdown",
+    "写作",
+    "排版",
+    "开源"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 117,
+  "name": "DataRoom",
+  "description": "大屏可视化项目（Gitee + 语雀文档）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/gcpaas/DataRoom"
+    },
+    {
+      "name": "文档",
+      "url": "https://www.yuque.com/chuinixiongkou/bigscreen/index"
+    }
+  ],
+  "tags": [
+    "大屏",
+    "可视化",
+    "Gitee",
+    "语雀"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 118,
+  "name": "unibest",
+  "description": "uni-app 最佳实践与文档。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://codercup.github.io/unibest-docs/"
+    }
+  ],
+  "tags": [
+    "uni-app",
+    "最佳实践",
+    "文档",
+    "Vue"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 119,
+  "name": "百炼控制台",
+  "description": "阿里云百炼大模型开发与部署平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://bailian.console.aliyun.com/"
+    }
+  ],
+  "tags": [
+    "大模型",
+    "阿里云",
+    "百炼",
+    "MCP"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 120,
+  "name": "MCP Server Playground",
+  "description": "MCP 协议服务器测试沙盒。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://mcp.so/playground"
+    }
+  ],
+  "tags": [
+    "MCP",
+    "AI Agent",
+    "协议",
+    "测试"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 121,
+  "name": "AI工具集",
+  "description": "聚合各类 AI 工具的导航站。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://ai-bot.cn/"
+    }
+  ],
+  "tags": [
+    "AI",
+    "工具集",
+    "导航",
+    "聚合"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 122,
+  "name": "WaytoAGI",
+  "description": "通往 AGI 之路，AI 学习与资源社区。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.waytoagi.com/zh"
+    }
+  ],
+  "tags": [
+    "AGI",
+    "AI",
+    "社区",
+    "学习"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 123,
+  "name": "Toolify.ai",
+  "description": "最好的 AI 导航站和 AI 工具列表。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.toolify.ai/zh/"
+    }
+  ],
+  "tags": [
+    "AI",
+    "工具导航",
+    "聚合",
+    "国际"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 124,
+  "name": "腾讯元器",
+  "description": "腾讯推出的 AI 智能体商店与开发平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://yuanqi.tencent.com/agent-shop"
+    }
+  ],
+  "tags": [
+    "腾讯",
+    "AI Agent",
+    "智能体",
+    "元器"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 125,
+  "name": "文心智能体平台",
+  "description": "百度文心大模型智能体构建平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://agents.baidu.com/center"
+    }
+  ],
+  "tags": [
+    "百度",
+    "文心",
+    "智能体",
+    "AgentBuilder"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 126,
+  "name": "AutoGLM 沉思",
+  "description": "智谱 AI 推出的自主推理大模型。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://autoglm-research.zhipuai.cn/"
+    }
+  ],
+  "tags": [
+    "AutoGLM",
+    "智谱",
+    "大模型",
+    "推理"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 127,
+  "name": "美图设计室",
+  "description": "美图推出的 AI 图像增强与设计工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.x-design.com/image-upscaler/edit"
+    }
+  ],
+  "tags": [
+    "美图",
+    "AI",
+    "图像增强",
+    "设计"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 128,
+  "name": "一键抠图",
+  "description": "在线图片背景移除工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://remove.photos/zh-cn/"
+    }
+  ],
+  "tags": [
+    "抠图",
+    "AI",
+    "背景移除",
+    "在线工具"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 129,
+  "name": "arkthinker",
+  "description": "AI 工具聚合平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.arkthinker.com/zh/"
+    }
+  ],
+  "tags": [
+    "AI",
+    "工具",
+    "聚合",
+    "导航"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 130,
+  "name": "Free Watermark Remover",
+  "description": "在线去除图片水印的 AI 工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.aiseesoft.com/watermark-remover-online/"
+    }
+  ],
+  "tags": [
+    "去水印",
+    "AI",
+    "图片编辑",
+    "在线"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 131,
+  "name": "AnyRec AI Image Upscaler",
+  "description": "AI 图像放大与增强工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.anyrec.io/image-upscaler/"
+    }
+  ],
+  "tags": [
+    "图像放大",
+    "AI",
+    "超分",
+    "增强"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 132,
+  "name": "BlueWillow",
+  "description": "AI 图像生成工具（Discord 机器人形式）。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.bluewillow.ai/"
+    }
+  ],
+  "tags": [
+    "AI绘画",
+    "图像生成",
+    "Discord",
+    "BlueWillow"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 133,
+  "name": "Yescribe",
+  "description": "免费在线音频与视频转录为文本工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://yescribe.ai/zh-CN"
+    }
+  ],
+  "tags": [
+    "语音识别",
+    "转录",
+    "AI",
+    "字幕"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 134,
+  "name": "Free AI Design Playground",
+  "description": "AI 设计实验平台（Playground）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://playground.com/"
+    }
+  ],
+  "tags": [
+    "AI设计",
+    "Playground",
+    "创意",
+    "实验"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 135,
+  "name": "Photo Watermark Remover",
+  "description": "AVAide 提供的在线去水印工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.avaide.com/zh/watermark-remover/"
+    }
+  ],
+  "tags": [
+    "去水印",
+    "图片编辑",
+    "在线工具",
+    "AVAide"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 136,
+  "name": "Photo to Anime",
+  "description": "照片转动漫风格的 AI 工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://remaker.ai/"
+    }
+  ],
+  "tags": [
+    "动漫化",
+    "AI",
+    "风格迁移",
+    "照片"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 137,
+  "name": "Lexica",
+  "description": "Stable Diffusion 图像搜索与提示词平台。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://aihh.cn/"
+    }
+  ],
+  "tags": [
+    "Stable Diffusion",
+    "提示词",
+    "图像搜索",
+    "Lexica"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 138,
+  "name": "MD2Card",
+  "description": "将 Markdown 转换为精美卡片的工具。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://md2card.com/zh"
+    }
+  ],
+  "tags": [
+    "Markdown",
+    "卡片",
+    "排版",
+    "分享"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 139,
+  "name": "digiKam",
+  "description": "开源照片管理与编辑软件。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Desktop"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.digikam.org/"
+    }
+  ],
+  "tags": [
+    "照片管理",
+    "开源",
+    "Linux",
+    "编辑"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 140,
+  "name": "Upscayl",
+  "description": "开源 AI 图像放大工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Desktop"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://upscayl.org/"
+    }
+  ],
+  "tags": [
+    "图像放大",
+    "AI",
+    "开源",
+    "超分"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 141,
+  "name": "Uncrop AI",
+  "description": "AI 智能扩展图片边界的工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://uncrop.org/"
+    }
+  ],
+  "tags": [
+    "图片扩展",
+    "AI",
+    "智能填充",
+    "Uncrop"
+  ],
+  "updateTime": "2025-12-30"
+},
+{
+  "id": 142,
+  "name": "视频转换宝",
+  "description": "免费视频转 GIF 工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://livecapture.toolooz.com/"
+    }
+  ],
+  "tags": [
+    "视频",
+    "GIF",
+    "转换",
+    "在线工具"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 143,
+  "name": "谷歌压缩",
+  "description": "Google 出品的在线图片压缩工具 Squoosh。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://squoosh.app/"
+    }
+  ],
+  "tags": [
+    "图片压缩",
+    "Google",
+    "Squoosh",
+    "WebP"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 144,
+  "name": "Video Unscreen",
+  "description": "在线视频去背景（透明背景）工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.unscreen.com/"
+    }
+  ],
+  "tags": [
+    "视频去背景",
+    "透明",
+    "AI",
+    "Unscreen"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 145,
+  "name": "LiblibAI",
+  "description": "哩布哩布 AI，国产 AI 绘画平台。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.liblib.art/"
+    }
+  ],
+  "tags": [
+    "AI绘画",
+    "国产",
+    "Stable Diffusion",
+    "Liblib"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 146,
+  "name": "即梦AI",
+  "description": "剪映推出的 AI 创作工具集。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://jimeng.jianying.com/ai-tool/home"
+    }
+  ],
+  "tags": [
+    "剪映",
+    "AI",
+    "创作",
+    "即梦"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 147,
+  "name": "稿定AI绘画",
+  "description": "稿定设计推出的 AI 绘画与设计工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.gaoding.com/"
+    }
+  ],
+  "tags": [
+    "AI绘画",
+    "稿定",
+    "设计",
+    "国产"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 148,
+  "name": "WHEEL",
+  "description": "AI 创意设计平台（WHEE）。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.whee.com/"
+    }
+  ],
+  "tags": [
+    "AI设计",
+    "创意",
+    "WHEE",
+    "阿里"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 149,
+  "name": "万兴爱画",
+  "description": "万兴科技推出的 AI 绘画工具。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://aigc.wondershare.cn/"
+    }
+  ],
+  "tags": [
+    "AI绘画",
+    "万兴",
+    "国产",
+    "AIGC"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 150,
+  "name": "Kimi",
+  "description": "月之暗面推出的超长上下文 AI 助手。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web",
+    "App"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.kimi.com/"
+    }
+  ],
+  "tags": [
+    "Kimi",
+    "大模型",
+    "长文本",
+    "月之暗面"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 151,
+  "name": "豆包",
+  "description": "字节跳动推出的 AI 助手。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web",
+    "App"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.doubao.com/chat/"
+    }
+  ],
+  "tags": [
+    "豆包",
+    "字节",
+    "AI助手",
+    "大模型"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 152,
+  "name": "n8n",
+  "description": "开源工作流自动化工具。",
+  "category": "software",
+  "subcategory": "system",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://n8n.io/"
+    }
+  ],
+  "tags": [
+    "自动化",
+    "工作流",
+    "开源",
+    "n8n"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 153,
+  "name": "灵光全模态AI助手",
+  "description": "多模态 AI 助手，支持图文对话。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.lingguang.com/chat"
+    }
+  ],
+  "tags": [
+    "多模态",
+    "AI助手",
+    "图文",
+    "灵光"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 154,
+  "name": "扣子空间",
+  "description": "字节跳动推出的 AI 办公助手一站式解决方案。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://space.coze.cn/"
+    }
+  ],
+  "tags": [
+    "扣子",
+    "字节",
+    "AI办公",
+    "Coze"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 155,
+  "name": "千问",
+  "description": "通义千问大模型官方平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web",
+    "App"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.qianwen.com/"
+    }
+  ],
+  "tags": [
+    "通义千问",
+    "阿里",
+    "大模型",
+    "Qwen"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 156,
+  "name": "秒哒",
+  "description": "AI 会议记录与摘要工具。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.miaoda.cn/"
+    }
+  ],
+  "tags": [
+    "会议记录",
+    "AI摘要",
+    "效率",
+    "秒哒"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 157,
+  "name": "资料收集",
+  "description": "飞书多维表格 AI 资料收集模板。",
+  "category": "software",
+  "subcategory": "productivity",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "飞书文档",
+      "url": "https://ai.feishu.cn/wiki/GoQOw0wQPiv3zakLvsBceNvlnhc"
+    }
+  ],
+  "tags": [
+    "飞书",
+    "资料收集",
+    "模板",
+    "AI"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 158,
+  "name": "拾光壁纸",
+  "description": "高质量动态与静态壁纸站。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://gallery.timeline.ink/"
+    }
+  ],
+  "tags": [
+    "壁纸",
+    "动态",
+    "高清",
+    "拾光"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 159,
+  "name": "壁纸湖",
+  "description": "海量高清壁纸下载站。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://bizihu.com/"
+    }
+  ],
+  "tags": [
+    "壁纸",
+    "高清",
+    "下载",
+    "壁纸湖"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 160,
+  "name": "wallspic",
+  "description": "高质量壁纸搜索引擎。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://wallspic.com/cn"
+    }
+  ],
+  "tags": [
+    "壁纸",
+    "搜索",
+    "高清",
+    "wallspic"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 161,
+  "name": "4K Wallpapers",
+  "description": "4K 超高清壁纸站。",
+  "category": "software",
+  "subcategory": "multimedia",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://4kwallpapers.com/"
+    }
+  ],
+  "tags": [
+    "4K",
+    "壁纸",
+    "超高清",
+    "桌面"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 162,
+  "name": "虎课网",
+  "description": "设计与办公软件在线学习平台。",
+  "category": "learning",
+  "subcategory": "design-creative",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://huke88.com/"
+    }
+  ],
+  "tags": [
+    "设计",
+    "PS",
+    "AI",
+    "教程"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 163,
+  "name": "翼狐网",
+  "description": "CG 设计与特效学习平台。",
+  "category": "learning",
+  "subcategory": "design-creative",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.yiihuu.com/"
+    }
+  ],
+  "tags": [
+    "CG",
+    "3D",
+    "特效",
+    "翼狐"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 164,
+  "name": "Baidu AI Studio",
+  "description": "百度 AI 开发实训平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://aistudio.baidu.com/overview"
+    }
+  ],
+  "tags": [
+    "百度",
+    "AI Studio",
+    "实训",
+    "GPU"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 165,
+  "name": "Manus",
+  "description": "AI Agent 构建与部署平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://manus.im/"
+    }
+  ],
+  "tags": [
+    "AI Agent",
+    "Manus",
+    "自动化",
+    "LLM"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 166,
+  "name": "爱派（AiPy）",
+  "description": "本地化 Manus 替代方案。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.aipyaipy.com/"
+    }
+  ],
+  "tags": [
+    "Manus",
+    "本地部署",
+    "AI Agent",
+    "AiPy"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 167,
+  "name": "SiliconCloud",
+  "description": "硅基流动的大模型推理平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://cloud.siliconflow.cn/"
+    }
+  ],
+  "tags": [
+    "大模型",
+    "推理",
+    "API",
+    "硅基流动"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 168,
+  "name": "扣子",
+  "description": "字节跳动推出的 AI Bot 开发平台。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "官网",
+      "url": "https://www.coze.cn/"
+    }
+  ],
+  "tags": [
+    "扣子",
+    "Coze",
+    "Bot",
+    "字节"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 169,
+  "name": "APIJSON",
+  "description": "零代码 API 自动生成框架。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "Gitee",
+      "url": "https://gitee.com/Tencent/APIJSON"
+    }
+  ],
+  "tags": [
+    "APIJSON",
+    "零代码",
+    "API",
+    "腾讯"
+  ],
+  "updateTime": "2025-12-30"
+},{
+  "id": 170,
+  "name": "HeyGem.ai",
+  "description": "开源 AI Agent 框架，支持多模态与工具调用。",
+  "category": "software",
+  "subcategory": "development",
+  "platform": [
+    "Web"
+  ],
+  "cloudLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/GuijiAI/HeyGem.ai"
+    }
+  ],
+  "tags": [
+    "AI Agent",
+    "LLM",
+    "开源",
+    "框架"
+  ],
+  "updateTime": "2025-12-30"
+}]
