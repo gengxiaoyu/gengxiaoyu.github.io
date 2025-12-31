@@ -1,0 +1,294 @@
+/**
+ * 关于页面样式
+ */
+
+/* ========== 关于页面布局 ========== */
+.about {
+  min-height: calc(100vh - var(--nav-height));
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.about-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+/* ========== 个人简介卡片 ========== */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+.profile-title {
+  font-size: var(--font-size-lg);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.profile-bio {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-md);
+}
+
+.profile-meta {
+  display: flex;
+  gap: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.profile-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* ========== 技能展示 ========== */
+.skills-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.skills-section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.skills-section-title::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.skill-card {
+  padding: var(--spacing-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.skill-card-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-icon {
+  font-size: var(--font-size-lg);
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.skill-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+}
+
+.skill-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-level {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.skill-bar {
+  height: 6px;
+  background: var(--bg-input);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+
+/* ========== 技术栈标签 ========== */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.tech-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.tech-tag:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.tech-tag-icon {
+  font-size: var(--font-size-sm);
+}
+
+/* ========== 联系方式 ========== */
+.contact-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.contact-section-title::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.contact-link:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-link-icon {
+  font-size: 32px;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.contact-link:hover .contact-link-icon {
+  color: var(--primary-color);
+}
+
+.contact-link-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.contact-link-value {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .about {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .profile-meta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+}

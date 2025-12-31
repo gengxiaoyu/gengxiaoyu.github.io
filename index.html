@@ -1,109 +1,201 @@
-<!--
- * @Author: huojiyanzui 18561977738@163.com
- * @Date: 2024-10-31 11:15:41
- * @LastEditors: huojiyanzui 18561977738@163.com
- * @LastEditTime: 2025-10-11 17:23:23
- * @FilePath: \gengxiaoyu.github.io\index.html
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>实用资料库 - 专业资源下载平台</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeVault - 全栈开发者资源站，170+开发工具、框架、AI工具聚合">
+  <meta name="keywords" content="开发工具,前端,后端,全栈,资源分享">
+  <meta name="author" content="gengxiaoyu">
+  <title>CodeVault - 全栈开发者资源站</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- CSS样式 -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Font Awesome图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 粒子背景 -->
-    <div id="particles-js"></div>
-    <div id="particles-content" class="particles-layer"></div>
-    <div id="particles-foreground" class="particles-layer"></div>
-    
-    <!-- 顶部导航 -->
-    <header class="top-header">
-        <div class="header-content">
-            <!-- 左侧Logo和标题 -->
-            <div class="header-left">
-                <h1>实用资料库</h1>
+  <!-- ========== 导航栏 ========== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="navbar-brand">
+        <span class="navbar-brand-icon">📚</span>
+        <span>CodeVault</span>
+      </a>
+      <div class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="navbar-nav">
+        <a href="#home" class="navbar-link" data-route="home">
+          <span class="navbar-link-icon">🏠</span>
+          <span>首页</span>
+        </a>
+        <a href="#resources" class="navbar-link" data-route="resources">
+          <span class="navbar-link-icon">📚</span>
+          <span>资源库</span>
+        </a>
+        <a href="#about" class="navbar-link" data-route="about">
+          <span class="navbar-link-icon">👤</span>
+          <span>关于</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== 页面内容 ========== -->
+  <div class="page-content">
+    <!-- 首页 -->
+    <div id="home" class="page visible">
+      <!-- Hero区域 -->
+      <section class="hero">
+        <div class="hero-content">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=gengxiaoyu" alt="头像" class="hero-avatar">
+          <h1 class="hero-name">gengxiaoyu</h1>
+          <h2 class="hero-title">Full-Stack Developer</h2>
+          <p class="hero-subtitle">
+            <span class="typing-text" data-texts='["Full-Stack Developer", "Open Source Enthusiast", "Technical Blogger"]'></span>
+            <span class="typing-cursor"></span>
+          </p>
+          <p class="hero-bio">热衷于开源和知识分享，专注于前端技术和全栈开发</p>
+          <div class="hero-actions">
+            <a href="#resources" class="btn btn-primary">
+              <i class="fas fa-book"></i>
+              浏览资源
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <i class="fas fa-user"></i>
+              了解更多
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/gengxiaoyu" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:gengxiaoyu@example.com" class="social-link" title="邮箱">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer" class="social-link" title="博客">
+              <i class="fas fa-blog"></i>
+            </a>
+          </div>
+          
+          <!-- 资源统计 -->
+          <div class="resource-stats">
+            <div class="stat-item">
+              <span class="stat-value resource-count">0+</span>
+              <span class="stat-label">精选资源</span>
             </div>
-            
-            <!-- 右侧导航菜单 -->
-            <nav class="header-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">分类</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">关于</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">联系我们</a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <!-- 移动端菜单按钮 -->
-            <button class="mobile-menu-btn">
-                <span class="menu-icon"></span>
-                <span class="menu-icon"></span>
-                <span class="menu-icon"></span>
-            </button>
+            <div class="stat-item">
+              <span class="stat-value">3</span>
+              <span class="stat-label">资源分类</span>
+            </div>
+          </div>
+          <div class="last-updated">最后更新: 未知</div>
         </div>
-    </header>
+      </section>
 
-    <div class="main-container">
-        <!-- 左侧分类导航 -->
-        <aside class="sidebar">
-            <nav class="category-nav">
-                <ul class="category-list">
-                    <!-- 分类将通过JavaScript动态加载 -->
-                </ul>
-            </nav>
-        </aside>
-
-        <!-- 右侧内容区域 -->
-        <main class="content">
-            <!-- 搜索栏 -->
-            <div class="search-section">
-                <div class="search-container">
-                    <input type="text" placeholder="搜索资源名称或描述..." class="search-input">
-                    <button class="search-btn">🔍</button>
-                </div>
-            </div>
-
-            <!-- 子分类筛选栏 -->
-            <div class="subcategory-filter-section">
-                <div class="subcategory-filter-container" id="subcategory-filter-container">
-                    <!-- 子分类将通过JavaScript动态加载 -->
-                </div>
-            </div>
-
-            <!-- 资源展示区域 -->
-            <section class="resources-section">
-                <div class="resources-grid" id="resources-container">
-                    <!-- 资源卡片将通过JavaScript动态加载 -->
-                </div>
-            </section>
-        </main>
+      <!-- 快速导航 -->
+      <section class="quick-nav">
+        <h2 class="section-title">快速导航</h2>
+        <div class="quick-nav-grid">
+          <a href="#resources" class="quick-nav-card">
+            <span class="quick-nav-icon">📚</span>
+            <h3 class="quick-nav-title">资源库</h3>
+            <p class="quick-nav-desc">170+精选开发工具与框架</p>
+          </a>
+          <a href="#about" class="quick-nav-card">
+            <span class="quick-nav-icon">👤</span>
+            <h3 class="quick-nav-title">关于我</h3>
+            <p class="quick-nav-desc">了解我的技能与经历</p>
+          </a>
+          <a href="https://github.com/gengxiaoyu" target="_blank" rel="noopener noreferrer" class="quick-nav-card">
+            <span class="quick-nav-icon">💻</span>
+            <h3 class="quick-nav-title">GitHub</h3>
+            <p class="quick-nav-desc">查看我的开源项目</p>
+          </a>
+        </div>
+      </section>
     </div>
 
-    <!-- 资源详情弹窗 -->
-    <div class="resource-modal" id="resource-modal">
-        <div class="modal-content">
-            <button class="close-btn" id="close-modal">&times;</button>
-            <div class="modal-body" id="modal-body">
-                <!-- 资源详情将通过JavaScript动态加载 -->
-            </div>
+    <!-- 资源库页面 -->
+    <div id="resources" class="page hidden">
+      <section class="resources">
+        <div class="resources-container">
+          <h1 class="section-title">资源库</h1>
+          <p class="section-subtitle">170+精选开发工具、框架与AI工具</p>
+
+          <!-- 搜索栏 -->
+          <div class="search-bar">
+            <input type="text" class="search-input" placeholder="搜索资源名称或描述...">
+          </div>
+
+          <!-- 分类导航 -->
+          <div class="category-nav">
+            <!-- 动态渲染 -->
+          </div>
+
+          <!-- 子分类导航 -->
+          <div class="subcategory-nav">
+            <!-- 动态渲染 -->
+          </div>
+
+          <!-- 资源列表 -->
+          <div class="resources-grid">
+            <!-- 动态渲染 -->
+          </div>
         </div>
+      </section>
     </div>
 
-    <script src="js/main.min.js"></script>
-    <script src="js/resource-card-renderer.js"></script>
+    <!-- 关于页面 -->
+    <div id="about" class="page hidden">
+      <section class="about">
+        <div class="about-container">
+          <h1 class="section-title">关于我</h1>
+          <p class="section-subtitle">全栈开发者 | 开源贡献者 | 技术博主</p>
+
+          <!-- 个人资料卡片 -->
+          <div class="profile-header">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=gengxiaoyu" alt="头像" class="profile-avatar">
+            <div class="profile-info">
+              <h2 class="profile-name">gengxiaoyu</h2>
+              <p class="profile-title">Full-Stack Developer</p>
+              <p class="profile-bio">热衷于开源和知识分享，专注于前端技术和全栈开发。拥有多年项目经验，热爱探索新技术，致力于通过技术创造价值。</p>
+              <div class="profile-meta">
+                <div class="profile-meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span data-contact="location">China</span>
+                </div>
+                <div class="profile-meta-item">
+                  <i class="fas fa-envelope"></i>
+                  <span data-contact="email">gengxiaoyu@example.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 技能展示 -->
+          <div class="skills-section">
+            <h2 class="skills-section-title">技能专长</h2>
+            <div class="skills-grid">
+              <!-- 动态渲染 -->
+            </div>
+          </div>
+
+          <!-- 联系方式 -->
+          <div class="contact-section">
+            <h2 class="contact-section-title">联系方式</h2>
+            <div class="contact-links">
+              <!-- 动态渲染 -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- JavaScript模块 -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

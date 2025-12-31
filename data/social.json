@@ -1,0 +1,39 @@
+{
+  "platforms": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/gengxiaoyu",
+      "icon": "fab fa-github",
+      "show": true,
+      "description": "查看我的开源项目"
+    },
+    {
+      "name": "博客",
+      "url": "https://blog.example.com",
+      "icon": "fas fa-blog",
+      "show": true,
+      "description": "阅读技术文章"
+    },
+    {
+      "name": "邮箱",
+      "url": "mailto:gengxiaoyu@example.com",
+      "icon": "fas fa-envelope",
+      "show": true,
+      "description": "发送邮件联系"
+    },
+    {
+      "name": "掘金",
+      "url": "https://juejin.cn/user",
+      "icon": "fas fa-book",
+      "show": true,
+      "description": "掘金社区"
+    },
+    {
+      "name": "CSDN",
+      "url": "https://blog.csdn.net",
+      "icon": "fas fa-code",
+      "show": false,
+      "description": "CSDN博客"
+    }
+  ]
+}

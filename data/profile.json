@@ -1,0 +1,40 @@
+{
+  "basic": {
+    "name": "gengxiaoyu",
+    "title": "Full-Stack Developer",
+    "subtitle": "全栈开发 | 开源贡献者 | 技术博主",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=gengxiaoyu",
+    "bio": "热衷于开源和知识分享，专注于前端技术和全栈开发。拥有多年项目经验，热爱探索新技术，致力于通过技术创造价值。"
+  },
+  "contact": {
+    "email": "gengxiaoyu@example.com",
+    "location": "China",
+    "github": "https://github.com/gengxiaoyu"
+  },
+  "hero": {
+    "typedText": [
+      "Full-Stack Developer",
+      "Open Source Enthusiast",
+      "Technical Blogger"
+    ],
+    "typingSpeed": 80,
+    "showSkillsRadar": true
+  },
+  "social": {
+    "github": {
+      "name": "GitHub",
+      "url": "https://github.com/gengxiaoyu",
+      "icon": "fab fa-github"
+    },
+    "email": {
+      "name": "邮箱",
+      "url": "mailto:gengxiaoyu@example.com",
+      "icon": "fas fa-envelope"
+    },
+    "blog": {
+      "name": "博客",
+      "url": "https://blog.example.com",
+      "icon": "fas fa-blog"
+    }
+  }
+}
