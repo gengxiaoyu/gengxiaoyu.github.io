@@ -3,199 +3,175 @@
   "lastUpdated": "2025-12-31",
   "total": 169,
   "categories": {
-    "frontend": {
-      "id": "frontend",
-      "name": "前端开发",
-      "icon": "🎨",
+    "development": {
+      "id": "development",
+      "name": "开发技术",
+      "icon": "🛠️",
       "subcategories": [
         {
-          "id": "api-backend",
-          "name": "接口与后端服务",
+          "id": "api-service",
+          "name": "接口与服务",
           "icon": "🔌",
-          "description": "API工具、数据库、云服务"
+          "description": "API开发、调试、云服务、数据库工具"
         },
         {
           "id": "code-hosting",
-          "name": "代码托管平台",
+          "name": "代码托管",
           "icon": "🗂️",
-          "description": "Git仓库托管服务"
+          "description": "Git仓库、协作平台"
         },
         {
-          "id": "frontend-frameworks",
-          "name": "前端框架与生态",
-          "icon": "⚡",
-          "description": "Vue/React/跨平台框架"
+          "id": "frontend-framework",
+          "name": "前端框架",
+          "icon": "⚛️",
+          "description": "跨端/渲染框架、低代码平台"
         },
         {
-          "id": "ui-libraries",
+          "id": "ui-component",
           "name": "UI组件库",
           "icon": "🎭",
-          "description": "Vue/React组件库"
+          "description": "Vue/React/多端UI组件、设计系统"
         },
         {
-          "id": "css-animation",
-          "name": "样式与动效",
-          "icon": "🌈",
-          "description": "CSS框架、动画库、设计系统"
-        },
-        {
-          "id": "data-visualization",
+          "id": "visualization",
           "name": "数据可视化",
           "icon": "📊",
-          "description": "图表库、3D可视化、大屏解决方案"
+          "description": "图表、大屏、GIS地图相关"
         },
         {
-          "id": "gis-maps",
-          "name": "地图与GIS",
-          "icon": "🗺️",
-          "description": "地图服务、GIS库、坐标工具"
-        },
-        {
-          "id": "build-engineering",
-          "name": "构建与工程化",
+          "id": "engineering",
+          "name": "工程化",
           "icon": "🔧",
-          "description": "构建工具、代码格式化、文档工具"
+          "description": "构建、文档、格式化、脚手架"
         },
         {
-          "id": "dev-toolkit",
+          "id": "dev-utils",
           "name": "开发工具箱",
           "icon": "🧰",
           "description": "在线工具、编解码、多媒体处理"
         },
         {
-          "id": "scaffolding",
-          "name": "项目脚手架",
-          "icon": "🏗️",
-          "description": "项目模板、开箱即用方案"
-        },
-        {
-          "id": "icons-fonts",
-          "name": "图标与字体",
-          "icon": "🎯",
-          "description": "图标库、字体资源"
-        },
-        {
-          "id": "docs-learning",
-          "name": "文档与学习",
-          "icon": "📚",
-          "description": "中文文档、教程、技术博客"
+          "id": "tech-docs",
+          "name": "技术文档",
+          "icon": "📖",
+          "description": "官方文档、技术社区、教程博客"
         }
       ]
     },
     "learning": {
       "id": "learning",
-      "name": "学习资料",
-      "icon": "📖",
+      "name": "学习资源",
+      "icon": "📚",
       "subcategories": [
         {
-          "id": "programming",
+          "id": "program-tutorial",
           "name": "编程教程",
           "icon": "💻",
-          "description": "编程语言与框架教程"
+          "description": "语言/框架教程、入门到进阶"
         },
         {
-          "id": "career-skills",
+          "id": "algorithm",
+          "name": "算法刷题",
+          "icon": "🧮",
+          "description": "算法练习、面试题、编程竞赛"
+        },
+        {
+          "id": "career",
           "name": "职场技能",
           "icon": "💼",
-          "description": "职场提升与软技能"
+          "description": "软技能、职业规划、管理能力"
         },
         {
-          "id": "exam-cert",
-          "name": "考试认证",
+          "id": "certification",
+          "name": "认证考试",
           "icon": "📝",
-          "description": "职业认证与考试资料"
+          "description": "职业认证、证书考试资料"
         }
       ]
     },
-    "software-tools": {
-      "id": "software-tools",
-      "name": "软件工具",
-      "icon": "💽",
+    "tools": {
+      "id": "tools",
+      "name": "效率工具",
+      "icon": "⚡",
       "subcategories": [
         {
-          "id": "development",
-          "name": "开发",
+          "id": "dev-tools",
+          "name": "开发工具",
           "icon": "💻",
-          "description": "开发相关工具"
+          "description": "编辑器、调试工具、本地开发环境"
         },
         {
-          "id": "design",
-          "name": "设计",
+          "id": "design-tools",
+          "name": "设计工具",
           "icon": "🎨",
-          "description": "设计相关工具"
+          "description": "UI/UX设计、原型、切图工具"
         },
         {
-          "id": "office",
-          "name": "办公",
+          "id": "office-tools",
+          "name": "办公工具",
           "icon": "📋",
-          "description": "办公效率工具"
+          "description": "文档、协作、效率类办公软件"
         },
         {
-          "id": "system",
-          "name": "系统",
+          "id": "system-tools",
+          "name": "系统工具",
           "icon": "🛠️",
-          "description": "系统工具"
+          "description": "系统优化、文件管理、终端工具"
         },
         {
-          "id": "multimedia",
-          "name": "多媒体",
+          "id": "multimedia-tools",
+          "name": "多媒体工具",
           "icon": "🎬",
-          "description": "音视频工具"
+          "description": "音视频处理、截图、格式转换"
         },
         {
           "id": "ai-tools",
-          "name": "AI工具",
+          "name": "AI辅助工具",
           "icon": "🤖",
-          "description": "AI辅助工具"
+          "description": "代码生成、AI绘图、智能助手"
         }
       ]
     },
-    "resource-collections": {
-      "id": "resource-collections",
-      "name": "合集资源",
-      "icon": "📦",
+    "resources": {
+      "id": "resources",
+      "name": "素材资源",
+      "icon": "🎨",
       "subcategories": [
         {
+          "id": "icons-fonts",
+          "name": "图标与字体",
+          "icon": "🎯",
+          "description": "矢量图标、字体库、图标组件"
+        },
+        {
           "id": "templates",
-          "name": "模板",
+          "name": "模板资源",
           "icon": "📄",
-          "description": "各类模板资源"
+          "description": "代码模板、文档模板、设计模板"
         },
         {
-          "id": "tutorials",
-          "name": "教程",
+          "id": "ebook",
+          "name": "电子书籍",
           "icon": "📚",
-          "description": "学习教程"
+          "description": "技术电子书、开源书籍、PDF资源"
         },
         {
-          "id": "ebooks",
-          "name": "电子书",
-          "icon": "📖",
-          "description": "电子书籍资源"
-        },
-        {
-          "id": "toolkits",
-          "name": "工具箱",
-          "icon": "🔧",
-          "description": "工具合集"
-        },
-        {
-          "id": "ai-resources",
-          "name": "AI资源",
-          "icon": "🧠",
-          "description": "AI相关资源"
+          "id": "resource-collect",
+          "name": "资源合集",
+          "icon": "📦",
+          "description": "工具合集、学习包、专题资源"
         }
       ]
     }
   },
-   "resources": [
+  "resources": [
     {
       "id": "res-001",
       "name": "Apifox",
       "slug": "apifox",
       "description": "API 协作开发平台，集文档、调试、Mock、自动化测试于一体。",
-      "category": "frontend",
-      "subcategory": "api-backend",
+      "category": "development",
+      "subcategory": "api-service",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -232,8 +208,8 @@
       "name": "sqlpub",
       "slug": "sqlpub",
       "description": "SQL 在线练习与数据库学习平台。",
-      "category": "frontend",
-      "subcategory": "api-backend",
+      "category": "development",
+      "subcategory": "api-service",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -268,8 +244,8 @@
       "name": "七牛云",
       "slug": "七牛云",
       "description": "云存储、CDN 与音视频处理服务平台。",
-      "category": "frontend",
-      "subcategory": "api-backend",
+      "category": "development",
+      "subcategory": "api-service",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -305,7 +281,7 @@
       "name": "GitHub",
       "slug": "github",
       "description": "全球最大的代码托管与开源协作平台。",
-      "category": "frontend",
+      "category": "development",
       "subcategory": "code-hosting",
       "icon": "🔗",
       "platform": [
@@ -342,7 +318,7 @@
       "name": "Gitee",
       "slug": "gitee",
       "description": "码云，中国本土的代码托管平台。",
-      "category": "frontend",
+      "category": "development",
       "subcategory": "code-hosting",
       "icon": "🔗",
       "platform": [
@@ -379,7 +355,7 @@
       "name": "GitPP",
       "slug": "gitpp",
       "description": "Git 项目协作与代码托管平台。",
-      "category": "frontend",
+      "category": "development",
       "subcategory": "code-hosting",
       "icon": "🔗",
       "platform": [
@@ -415,7 +391,7 @@
       "name": "GitCode",
       "slug": "gitcode",
       "description": "华为支持的开源代码托管平台，兼容 GitLab。",
-      "category": "frontend",
+      "category": "development",
       "subcategory": "code-hosting",
       "icon": "🔗",
       "platform": [
@@ -452,8 +428,8 @@
       "name": "CSDN",
       "slug": "csdn",
       "description": "中国最大的 IT 技术社区与博客平台。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -488,8 +464,8 @@
       "name": "掘金",
       "slug": "掘金",
       "description": "高质量的技术内容创作与分享社区。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -525,8 +501,8 @@
       "name": "开源中国",
       "slug": "开源中国",
       "description": "OSCHINA，中国开源技术社区。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -562,8 +538,8 @@
       "name": "力扣",
       "slug": "力扣",
       "description": "LeetCode 中文站，算法与编程面试练习平台。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "learning",
+      "subcategory": "algorithm",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -599,8 +575,8 @@
       "name": "Element",
       "slug": "element",
       "description": "饿了么出品的 Vue 2.x UI 组件库。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -642,8 +618,8 @@
       "name": "Element Plus",
       "slug": "element-plus",
       "description": "Element 的 Vue 3 版本，现代化 UI 组件库。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -680,8 +656,8 @@
       "name": "uView2.0",
       "slug": "uview20",
       "description": "uni-app 生态的 UI 组件库。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -719,8 +695,8 @@
       "name": "DataV",
       "slug": "datav",
       "description": "大屏数据可视化图表库（Jiaminghi 版）。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -757,8 +733,8 @@
       "name": "NutUI",
       "slug": "nutui",
       "description": "京东出品的 Vue 组件库，支持多端。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -797,8 +773,8 @@
       "name": "Vxe Table v4",
       "slug": "vxe-table-v4",
       "description": "功能强大的 Vue 表格组件。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -835,8 +811,8 @@
       "name": "Naive UI",
       "slug": "naive-ui",
       "description": "一个 Vue 3 组件库，设计优雅，TypeScript 友好。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -873,8 +849,8 @@
       "name": "Ant Design Vue",
       "slug": "ant-design-vue",
       "description": "Ant Design 的 Vue 实现。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -911,8 +887,8 @@
       "name": "Arco Design",
       "slug": "arco-design",
       "description": "字节跳动出品的企业级设计系统。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -948,8 +924,8 @@
       "name": "shadcn/ui",
       "slug": "shadcnui",
       "description": "可定制的 React 组件库，基于 Radix UI 和 Tailwind CSS。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -986,8 +962,8 @@
       "name": "uni-app",
       "slug": "uniapp",
       "description": "使用 Vue 开发跨平台应用的框架。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -1026,8 +1002,8 @@
       "name": "docsify",
       "slug": "docsify",
       "description": "轻量级文档生成工具，无需构建。",
-      "category": "frontend",
-      "subcategory": "build-engineering",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1063,8 +1039,8 @@
       "name": "Ant Design X",
       "slug": "ant-design-x",
       "description": "Ant Design 的下一代设计语言与组件库。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1101,8 +1077,8 @@
       "name": "daisyUI",
       "slug": "daisyui",
       "description": "基于 Tailwind CSS 的组件库。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1139,8 +1115,8 @@
       "name": "Flutter",
       "slug": "flutter",
       "description": "Google 推出的跨平台 UI 工具包。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Mobile",
@@ -1179,8 +1155,8 @@
       "name": "PrimeVue",
       "slug": "primevue",
       "description": "丰富的 Vue UI 组件库。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1217,8 +1193,8 @@
       "name": "Diboot",
       "slug": "diboot",
       "description": "低代码开发平台，支持快速构建企业级应用。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1253,8 +1229,8 @@
       "name": "uvui",
       "slug": "uvui",
       "description": "uni-app 官方 UI 组件库。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "App",
@@ -1293,7 +1269,7 @@
       "name": "iconfont-阿里巴巴矢量图标库",
       "slug": "iconfont阿里巴巴矢量图标库",
       "description": "阿里官方矢量图标库，支持在线管理与下载。",
-      "category": "frontend",
+      "category": "resources",
       "subcategory": "icons-fonts",
       "icon": "🔗",
       "platform": [
@@ -1330,7 +1306,7 @@
       "name": "xicons",
       "slug": "xicons",
       "description": "集合多个流行图标库的 Vue/React 组件。",
-      "category": "frontend",
+      "category": "resources",
       "subcategory": "icons-fonts",
       "icon": "🔗",
       "platform": [
@@ -1368,8 +1344,8 @@
       "name": "PakePlus",
       "slug": "pakeplus",
       "description": "将网页打包成桌面应用的工具。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Desktop"
@@ -1405,8 +1381,8 @@
       "name": "w3school",
       "slug": "w3school",
       "description": "老牌 Web 技术在线教程网站（中文版）。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1442,8 +1418,8 @@
       "name": "菜鸟教程",
       "slug": "菜鸟教程",
       "description": "简单易懂的编程与 Web 开发入门教程。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1479,8 +1455,8 @@
       "name": "书栈网",
       "slug": "书栈网",
       "description": "聚合开源书籍、文档与教程的在线阅读平台。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1516,8 +1492,8 @@
       "name": "MDN Web Docs",
       "slug": "mdn-web-docs",
       "description": "Mozilla 官方 Web 技术权威文档（中文）。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1553,8 +1529,8 @@
       "name": "廖雪峰官网",
       "slug": "廖雪峰官网",
       "description": "知名技术博主廖雪峰的个人网站与教程集合。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1590,8 +1566,8 @@
       "name": "N-Full-Kit",
       "slug": "nfullkit",
       "description": "前端工程化脚手架与工具集。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1627,8 +1603,8 @@
       "name": "Cool官网",
       "slug": "cool官网",
       "description": "Cool.js 提供的现代前端解决方案。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1663,8 +1639,8 @@
       "name": "API数据接口",
       "slug": "api数据接口",
       "description": "API市场，提供各类数据接口服务。",
-      "category": "frontend",
-      "subcategory": "api-backend",
+      "category": "development",
+      "subcategory": "api-service",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1699,8 +1675,8 @@
       "name": "HMAC加密工具",
       "slug": "hmac加密工具",
       "description": "MKLab 提供的在线 HMAC 加密与编码工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1736,8 +1712,8 @@
       "name": "RegExr",
       "slug": "regexr",
       "description": "交互式正则表达式在线测试与学习工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1773,8 +1749,8 @@
       "name": "npm",
       "slug": "npm",
       "description": "JavaScript 包管理器官方网站。",
-      "category": "frontend",
-      "subcategory": "build-engineering",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1810,8 +1786,8 @@
       "name": "网页播放器",
       "slug": "网页播放器",
       "description": "支持 HLS/FLV/RTMP 等协议的网页视频播放器。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1847,8 +1823,8 @@
       "name": "vpsche工具箱",
       "slug": "vpsche工具箱",
       "description": "VPSCHE 提供的在线开发与网络工具集合。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1884,8 +1860,8 @@
       "name": "在线JSON校验",
       "slug": "在线json校验",
       "description": "BeJSON 提供的 JSON 格式校验与转换工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1921,7 +1897,7 @@
       "name": "ico51",
       "slug": "ico51",
       "description": "在线生成透明 ICO 图标的工具。",
-      "category": "frontend",
+      "category": "resources",
       "subcategory": "icons-fonts",
       "icon": "🔗",
       "platform": [
@@ -1958,8 +1934,8 @@
       "name": "工具箱",
       "slug": "工具箱",
       "description": "小友西湖提供的多功能在线工具集合。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1994,8 +1970,8 @@
       "name": "偷懒工具",
       "slug": "偷懒工具",
       "description": "集合多种实用小工具的在线平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2030,7 +2006,7 @@
       "name": "在线字体编辑",
       "slug": "在线字体编辑",
       "description": "魔法精灵提供的在线字体编辑与生成工具。",
-      "category": "frontend",
+      "category": "resources",
       "subcategory": "icons-fonts",
       "icon": "🔗",
       "platform": [
@@ -2067,8 +2043,8 @@
       "name": "FreeTool工具",
       "slug": "freetool工具",
       "description": "免费在线工具集合站。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2103,8 +2079,8 @@
       "name": "老马物语",
       "slug": "老马物语",
       "description": "前端开发者“老马”的技术博客与知识整理。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2140,8 +2116,8 @@
       "name": "Vue Data UI",
       "slug": "vue-data-ui",
       "description": "基于 Vue 的数据可视化组件库。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2178,8 +2154,8 @@
       "name": "ECharts官网",
       "slug": "echarts官网",
       "description": "百度开源的 JavaScript 可视化库。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2216,8 +2192,8 @@
       "name": "ECharts图集",
       "slug": "echarts图集",
       "description": "ECharts 示例与模板展示站。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2254,8 +2230,8 @@
       "name": "PPChart",
       "slug": "ppchart",
       "description": "轻量级 JavaScript 图表库。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2292,8 +2268,8 @@
       "name": "uCharts",
       "slug": "ucharts",
       "description": "高性能跨端图表库，支持 uni-app。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "App",
@@ -2332,8 +2308,8 @@
       "name": "数字像素",
       "slug": "数字像素",
       "description": "大屏可视化设计资源与作品展示平台。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2370,8 +2346,8 @@
       "name": "glowjs",
       "slug": "glowjs",
       "description": "基于 Three.js 的 3D 可视化项目（如机房展示）。",
-      "category": "frontend",
-      "subcategory": "data-visualization",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2408,8 +2384,8 @@
       "name": "Tailwind CSS",
       "slug": "tailwind-css",
       "description": "实用优先的 CSS 框架。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2446,8 +2422,8 @@
       "name": "UnoCss",
       "slug": "unocss",
       "description": "原子化 CSS 引擎，高度可定制。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2484,8 +2460,8 @@
       "name": "CssFX",
       "slug": "cssfx",
       "description": "精美 CSS 动效与样式集合。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2522,8 +2498,8 @@
       "name": "CSS Layout Generator",
       "slug": "css-layout-generator",
       "description": "可视化 CSS 布局代码生成器。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2560,8 +2536,8 @@
       "name": "Uiverse",
       "slug": "uiverse",
       "description": "开源 UI 组件与动效集合。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2597,8 +2573,8 @@
       "name": "CSS动画代码",
       "slug": "css动画代码",
       "description": "CSS3 动画代码片段集合。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2634,8 +2610,8 @@
       "name": "Animista",
       "slug": "animista",
       "description": "交互式 CSS 动画生成器。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2672,8 +2648,8 @@
       "name": "Vue Bits",
       "slug": "vue-bits",
       "description": "Vue 动效与交互动画组件集合。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2710,8 +2686,8 @@
       "name": "React Bits",
       "slug": "react-bits",
       "description": "React 动效与交互动画组件集合。",
-      "category": "frontend",
-      "subcategory": "css-animation",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2748,8 +2724,8 @@
       "name": "Git",
       "slug": "git",
       "description": "分布式版本控制系统官方文档（中文）。",
-      "category": "frontend",
-      "subcategory": "build-engineering",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "CLI",
@@ -2786,8 +2762,8 @@
       "name": "Three.js中文网",
       "slug": "threejs中文网",
       "description": "Three.js 中文学习与资源站。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2824,8 +2800,8 @@
       "name": "NestJS",
       "slug": "nestjs",
       "description": "用于构建高效、可扩展的 Node.js 服务器端应用程序的框架。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2861,8 +2837,8 @@
       "name": "Turf.js中文网",
       "slug": "turfjs中文网",
       "description": "地理空间分析库 Turf.js 的中文文档与示例。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2898,8 +2874,8 @@
       "name": "electron",
       "slug": "electron",
       "description": "使用 Web 技术构建跨平台桌面应用的框架。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Desktop"
@@ -2935,8 +2911,8 @@
       "name": "TypeScript",
       "slug": "typescript",
       "description": "TypeScript 官方中文文档。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2972,8 +2948,8 @@
       "name": "Next.js",
       "slug": "nextjs",
       "description": "React 服务端渲染与静态站点生成框架。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3010,8 +2986,8 @@
       "name": "Modern.js",
       "slug": "modernjs",
       "description": "字节跳动开源的企业级前端工程化解决方案。",
-      "category": "frontend",
-      "subcategory": "build-engineering",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3047,8 +3023,8 @@
       "name": "Alova.JS",
       "slug": "alovajs",
       "description": "新一代请求库，支持 Vue/React/Svelte 等框架。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3085,8 +3061,8 @@
       "name": "Nest.js 中文镜像",
       "slug": "nestjs-中文镜像",
       "description": "NestJS 中文社区维护的文档镜像站。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3122,8 +3098,8 @@
       "name": "midwayjs",
       "slug": "midwayjs",
       "description": "面向未来的 Node.js 框架，由阿里出品。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3159,8 +3135,8 @@
       "name": "Nuxt",
       "slug": "nuxt",
       "description": "Vue 的通用应用框架。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3197,8 +3173,8 @@
       "name": "Spring中文网",
       "slug": "spring中文网",
       "description": "Spring Framework 中文学习与文档站点。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3233,8 +3209,8 @@
       "name": "React",
       "slug": "react",
       "description": "React 官方中文文档。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3270,8 +3246,8 @@
       "name": "Vite中文网",
       "slug": "vite中文网",
       "description": "Vite 构建工具官方中文文档。",
-      "category": "frontend",
-      "subcategory": "build-engineering",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3308,8 +3284,8 @@
       "name": "prettier",
       "slug": "prettier",
       "description": "代码格式化工具官方中文文档。",
-      "category": "frontend",
-      "subcategory": "build-engineering",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "CLI",
@@ -3346,8 +3322,8 @@
       "name": "Vue hooks plus",
       "slug": "vue-hooks-plus",
       "description": "Vue 3 Composition API 增强工具集。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3384,8 +3360,8 @@
       "name": "Three.js",
       "slug": "threejs",
       "description": "WebGL 3D 库官方站点。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3422,8 +3398,8 @@
       "name": "DCloud",
       "slug": "dcloud",
       "description": "uni-app 背后的技术公司，提供跨端开发工具。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -3461,8 +3437,8 @@
       "name": "Trae",
       "slug": "trae",
       "description": "AI 驱动的智能编程助手与 IDE 插件。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -3499,8 +3475,8 @@
       "name": "CodeBuddy IDE",
       "slug": "codebuddy-ide",
       "description": "腾讯云推出的 AI 编程 IDE，集成 Copilot 能力。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3537,8 +3513,8 @@
       "name": "CodePen",
       "slug": "codepen",
       "description": "前端代码在线编辑与分享社区。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3574,8 +3550,8 @@
       "name": "DataV Geo",
       "slug": "datav-geo",
       "description": "阿里云 DataV 提供的行政区划地理选择工具。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3612,8 +3588,8 @@
       "name": "天地图服务中心",
       "slug": "天地图服务中心",
       "description": "国家地理信息公共服务平台（天地图）管理后台。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3649,8 +3625,8 @@
       "name": "百度拾取坐标",
       "slug": "百度拾取坐标",
       "description": "百度地图官方坐标拾取工具。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3686,8 +3662,8 @@
       "name": "OpenLayers",
       "slug": "openlayers",
       "description": "开源 Web 地图库。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3723,8 +3699,8 @@
       "name": "下载geoJson",
       "slug": "下载geojson",
       "description": "提供中国各省市 GeoJSON 数据下载的演示站。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3760,8 +3736,8 @@
       "name": "百度地图API",
       "slug": "百度地图api",
       "description": "百度地图 JavaScript API 文档。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3797,8 +3773,8 @@
       "name": "SuperMap超图",
       "slug": "supermap超图",
       "description": "国产 GIS 平台 SuperMap 官网。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3834,8 +3810,8 @@
       "name": "坐标转换",
       "slug": "坐标转换",
       "description": "超图提供的在线坐标系转换工具。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3871,8 +3847,8 @@
       "name": "EarthSDK",
       "slug": "earthsdk",
       "description": "基于 Cesium 的三维地球可视化 SDK。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3909,8 +3885,8 @@
       "name": "卫星地图-Google",
       "slug": "卫星地图google",
       "description": "Google Earth 卫星地图在线查看（非官方聚合站）。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3945,8 +3921,8 @@
       "name": "arcGis",
       "slug": "arcgis",
       "description": "Esri ArcGIS API for JavaScript 官方文档。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3982,8 +3958,8 @@
       "name": "arcGis下载",
       "slug": "arcgis下载",
       "description": "ArcGIS API for JavaScript SDK 下载页面。",
-      "category": "frontend",
-      "subcategory": "gis-maps",
+      "category": "development",
+      "subcategory": "visualization",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4019,8 +3995,8 @@
       "name": "GoView",
       "slug": "goview",
       "description": "开源大屏可视化拖拽编辑器。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4057,8 +4033,8 @@
       "name": "wei_feng_qin",
       "slug": "wei_feng_qin",
       "description": "Gitee 用户 wei_feng_qin 的开源项目主页。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4093,8 +4069,8 @@
       "name": "BigDataView",
       "slug": "bigdataview",
       "description": "大屏可视化项目模板（Gitee 开源）。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4131,8 +4107,8 @@
       "name": "KOI-UI",
       "slug": "koiui",
       "description": "基于 Vue 的 UI 组件库（Gitee 开源）。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4169,8 +4145,8 @@
       "name": "three-editor",
       "slug": "threeeditor",
       "description": "基于 Three.js 的 3D 场景编辑器（GitHub 开源）。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4207,8 +4183,8 @@
       "name": "金合可视化",
       "slug": "金合可视化",
       "description": "大屏数据可视化解决方案（Gitee 开源）。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4245,8 +4221,8 @@
       "name": "Light Chaser",
       "slug": "light-chaser",
       "description": "轻量级大屏可视化模板（Gitee 开源）。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4283,8 +4259,8 @@
       "name": "datav-vue",
       "slug": "datavvue",
       "description": "基于 Vue 的大屏可视化组件库（Gitee 开源）。",
-      "category": "frontend",
-      "subcategory": "ui-libraries",
+      "category": "development",
+      "subcategory": "ui-component",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4321,8 +4297,8 @@
       "name": "HeyGem",
       "slug": "heygem",
       "description": "开源 AI Agent 框架（GitHub）。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4358,8 +4334,8 @@
       "name": "Vue 3.5/Nest.js Admin",
       "slug": "vue-35nestjs-admin",
       "description": "Vue3 + Nest.js 全栈后台管理系统模板。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4396,8 +4372,8 @@
       "name": "Astral 3D Editor",
       "slug": "astral-3d-editor",
       "description": "基于 Web 的 3D 场景编辑器，支持导出代码。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4433,8 +4409,8 @@
       "name": "NestJS 模板",
       "slug": "nestjs-模板",
       "description": "Faster Template 提供的 NestJS 快速开发模板。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4470,8 +4446,8 @@
       "name": "WeCh Markdown",
       "slug": "wech-markdown",
       "description": "Doocs 提供的 Markdown 编辑与排版工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4507,8 +4483,8 @@
       "name": "DataRoom",
       "slug": "dataroom",
       "description": "大屏可视化项目（Gitee + 语雀文档）。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4550,8 +4526,8 @@
       "name": "unibest",
       "slug": "unibest",
       "description": "uni-app 最佳实践与文档。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4588,8 +4564,8 @@
       "name": "百炼控制台",
       "slug": "百炼控制台",
       "description": "阿里云百炼大模型开发与部署平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4625,8 +4601,8 @@
       "name": "MCP Server Playground",
       "slug": "mcp-server-playground",
       "description": "MCP 协议服务器测试沙盒。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4662,8 +4638,8 @@
       "name": "AI工具集",
       "slug": "ai工具集",
       "description": "聚合各类 AI 工具的导航站。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4699,8 +4675,8 @@
       "name": "WaytoAGI",
       "slug": "waytoagi",
       "description": "通往 AGI 之路，AI 学习与资源社区。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4736,8 +4712,8 @@
       "name": "Toolify.ai",
       "slug": "toolifyai",
       "description": "最好的 AI 导航站和 AI 工具列表。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4773,8 +4749,8 @@
       "name": "腾讯元器",
       "slug": "腾讯元器",
       "description": "腾讯推出的 AI 智能体商店与开发平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4810,8 +4786,8 @@
       "name": "文心智能体平台",
       "slug": "文心智能体平台",
       "description": "百度文心大模型智能体构建平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4847,8 +4823,8 @@
       "name": "AutoGLM 沉思",
       "slug": "autoglm-沉思",
       "description": "智谱 AI 推出的自主推理大模型。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4884,8 +4860,8 @@
       "name": "美图设计室",
       "slug": "美图设计室",
       "description": "美图推出的 AI 图像增强与设计工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4921,8 +4897,8 @@
       "name": "一键抠图",
       "slug": "一键抠图",
       "description": "在线图片背景移除工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4958,8 +4934,8 @@
       "name": "arkthinker",
       "slug": "arkthinker",
       "description": "AI 工具聚合平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4995,8 +4971,8 @@
       "name": "Free Watermark Remover",
       "slug": "free-watermark-remover",
       "description": "在线去除图片水印的 AI 工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5032,8 +5008,8 @@
       "name": "AnyRec AI Image Upscaler",
       "slug": "anyrec-ai-image-upscaler",
       "description": "AI 图像放大与增强工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5069,8 +5045,8 @@
       "name": "BlueWillow",
       "slug": "bluewillow",
       "description": "AI 图像生成工具（Discord 机器人形式）。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5106,8 +5082,8 @@
       "name": "Yescribe",
       "slug": "yescribe",
       "description": "免费在线音频与视频转录为文本工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5143,8 +5119,8 @@
       "name": "Free AI Design Playground",
       "slug": "free-ai-design-playground",
       "description": "AI 设计实验平台（Playground）。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5180,8 +5156,8 @@
       "name": "Photo Watermark Remover",
       "slug": "photo-watermark-remover",
       "description": "AVAide 提供的在线去水印工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5217,8 +5193,8 @@
       "name": "Photo to Anime",
       "slug": "photo-to-anime",
       "description": "照片转动漫风格的 AI 工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5254,8 +5230,8 @@
       "name": "Lexica",
       "slug": "lexica",
       "description": "Stable Diffusion 图像搜索与提示词平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5291,8 +5267,8 @@
       "name": "MD2Card",
       "slug": "md2card",
       "description": "将 Markdown 转换为精美卡片的工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5328,8 +5304,8 @@
       "name": "digiKam",
       "slug": "digikam",
       "description": "开源照片管理与编辑软件。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Desktop"
@@ -5365,8 +5341,8 @@
       "name": "Upscayl",
       "slug": "upscayl",
       "description": "开源 AI 图像放大工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Desktop"
@@ -5402,8 +5378,8 @@
       "name": "Uncrop AI",
       "slug": "uncrop-ai",
       "description": "AI 智能扩展图片边界的工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5439,8 +5415,8 @@
       "name": "视频转换宝",
       "slug": "视频转换宝",
       "description": "免费视频转 GIF 工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5476,8 +5452,8 @@
       "name": "谷歌压缩",
       "slug": "谷歌压缩",
       "description": "Google 出品的在线图片压缩工具 Squoosh。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5513,8 +5489,8 @@
       "name": "Video Unscreen",
       "slug": "video-unscreen",
       "description": "在线视频去背景（透明背景）工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5550,8 +5526,8 @@
       "name": "LiblibAI",
       "slug": "liblibai",
       "description": "哩布哩布 AI，国产 AI 绘画平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5587,8 +5563,8 @@
       "name": "即梦AI",
       "slug": "即梦ai",
       "description": "剪映推出的 AI 创作工具集。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5624,8 +5600,8 @@
       "name": "稿定AI绘画",
       "slug": "稿定ai绘画",
       "description": "稿定设计推出的 AI 绘画与设计工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5661,8 +5637,8 @@
       "name": "WHEEL",
       "slug": "wheel",
       "description": "AI 创意设计平台（WHEE）。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5698,8 +5674,8 @@
       "name": "万兴爱画",
       "slug": "万兴爱画",
       "description": "万兴科技推出的 AI 绘画工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5735,8 +5711,8 @@
       "name": "Kimi",
       "slug": "kimi",
       "description": "月之暗面推出的超长上下文 AI 助手。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -5773,8 +5749,8 @@
       "name": "豆包",
       "slug": "豆包",
       "description": "字节跳动推出的 AI 助手。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -5811,8 +5787,8 @@
       "name": "n8n",
       "slug": "n8n",
       "description": "开源工作流自动化工具。",
-      "category": "frontend",
-      "subcategory": "frontend-frameworks",
+      "category": "development",
+      "subcategory": "frontend-framework",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5848,8 +5824,8 @@
       "name": "灵光全模态AI助手",
       "slug": "灵光全模态ai助手",
       "description": "多模态 AI 助手，支持图文对话。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5885,8 +5861,8 @@
       "name": "扣子空间",
       "slug": "扣子空间",
       "description": "字节跳动推出的 AI 办公助手一站式解决方案。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5922,8 +5898,8 @@
       "name": "千问",
       "slug": "千问",
       "description": "通义千问大模型官方平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -5960,8 +5936,8 @@
       "name": "秒哒",
       "slug": "秒哒",
       "description": "AI 会议记录与摘要工具。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -5997,8 +5973,8 @@
       "name": "资料收集",
       "slug": "资料收集",
       "description": "飞书多维表格 AI 资料收集模板。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6034,8 +6010,8 @@
       "name": "拾光壁纸",
       "slug": "拾光壁纸",
       "description": "高质量动态与静态壁纸站。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6071,8 +6047,8 @@
       "name": "壁纸湖",
       "slug": "壁纸湖",
       "description": "海量高清壁纸下载站。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6108,8 +6084,8 @@
       "name": "wallspic",
       "slug": "wallspic",
       "description": "高质量壁纸搜索引擎。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6145,8 +6121,8 @@
       "name": "4K Wallpapers",
       "slug": "4k-wallpapers",
       "description": "4K 超高清壁纸站。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6182,8 +6158,8 @@
       "name": "虎课网",
       "slug": "虎课网",
       "description": "设计与办公软件在线学习平台。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6219,8 +6195,8 @@
       "name": "翼狐网",
       "slug": "翼狐网",
       "description": "CG 设计与特效学习平台。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6256,8 +6232,8 @@
       "name": "Baidu AI Studio",
       "slug": "baidu-ai-studio",
       "description": "百度 AI 开发实训平台。",
-      "category": "frontend",
-      "subcategory": "docs-learning",
+      "category": "development",
+      "subcategory": "tech-docs",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6293,8 +6269,8 @@
       "name": "Manus",
       "slug": "manus",
       "description": "AI Agent 构建与部署平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6330,8 +6306,8 @@
       "name": "爱派（AiPy）",
       "slug": "爱派aipy",
       "description": "本地化 Manus 替代方案。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6367,8 +6343,8 @@
       "name": "SiliconCloud",
       "slug": "siliconcloud",
       "description": "硅基流动的大模型推理平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6404,8 +6380,8 @@
       "name": "扣子",
       "slug": "扣子",
       "description": "字节跳动推出的 AI Bot 开发平台。",
-      "category": "frontend",
-      "subcategory": "dev-toolkit",
+      "category": "development",
+      "subcategory": "dev-utils",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6441,8 +6417,8 @@
       "name": "APIJSON",
       "slug": "apijson",
       "description": "零代码 API 自动生成框架。",
-      "category": "frontend",
-      "subcategory": "api-backend",
+      "category": "development",
+      "subcategory": "api-service",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -6478,8 +6454,8 @@
       "name": "HeyGem.ai",
       "slug": "heygemai",
       "description": "开源 AI Agent 框架，支持多模态与工具调用。",
-      "category": "frontend",
-      "subcategory": "scaffolding",
+      "category": "development",
+      "subcategory": "engineering",
       "icon": "🔗",
       "platform": [
         "Web"
