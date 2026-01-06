@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局优化测试</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/resources.css">
+    <style>
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+        }
+        
+        .test-container {
+            padding: var(--spacing-2xl);
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+        }
+        
+        .test-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+        
+        .test-title {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .test-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1 class="test-title">布局优化测试</h1>
+            <p class="test-subtitle">展示优化后的资源库页面布局效果</p>
+        </div>
+        
+        <!-- 模拟分类导航 -->
+        <div class="category-nav">
+            <div class="category-item active">
+                <span class="category-icon">🏠</span>
+                <span class="category-name">全部资源</span>
+                <span class="category-count">170</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">💻</span>
+                <span class="category-name">前端开发</span>
+                <span class="category-count">80</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🤖</span>
+                <span class="category-name">AI工具</span>
+                <span class="category-count">30</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">📚</span>
+                <span class="category-name">学习资料</span>
+                <span class="category-count">60</span>
+            </div>
+        </div>
+        
+        <!-- 模拟资源网格 -->
+        <div class="resources-grid">
+            <!-- 资源卡片1 -->
+            <div class="resource-card">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon resource-card-icon-text">A</div>
+                    <div class="resource-card-title-area">
+                        <h3 class="resource-card-name">Applex</h3>
+                        <div class="resource-card-platform">API • 测试 • Mock</div>
+                    </div>
+                </div>
+                <p class="resource-card-description">API 辅助开发平台，支持调试、Mock、自动化测试一体。</p>
+                <div class="resource-card-tags">
+                    <span class="resource-tag">API</span>
+                    <span class="resource-tag">测试</span>
+                    <span class="resource-tag">Mock</span>
+                </div>
+                <div class="resource-card-footer">
+                    <div class="resource-meta">
+                        <div class="resource-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.5</span>
+                        </div>
+                        <div class="resource-meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>1234</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-card-link">
+                        <span>访问</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 资源卡片2 -->
+            <div class="resource-card">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon resource-card-icon-text">七</div>
+                    <div class="resource-card-title-area">
+                        <h3 class="resource-card-name">七牛云</h3>
+                        <div class="resource-card-platform">云存储 • CDN</div>
+                    </div>
+                </div>
+                <p class="resource-card-description">云存储、CDN 与智能视频服务平台。</p>
+                <div class="resource-card-tags">
+                    <span class="resource-tag">云存储</span>
+                    <span class="resource-tag">CDN</span>
+                    <span class="resource-tag">视频处理</span>
+                </div>
+                <div class="resource-card-footer">
+                    <div class="resource-meta">
+                        <div class="resource-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                        <div class="resource-meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>5678</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-card-link">
+                        <span>访问</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 资源卡片3 -->
+            <div class="resource-card">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon resource-card-icon-text">G</div>
+                    <div class="resource-card-title-area">
+                        <h3 class="resource-card-name">GitHub</h3>
+                        <div class="resource-card-platform">代码托管</div>
+                    </div>
+                </div>
+                <p class="resource-card-description">全球最大的代码开源协作平台。</p>
+                <div class="resource-card-tags">
+                    <span class="resource-tag">代码</span>
+                    <span class="resource-tag">开源</span>
+                    <span class="resource-tag">协作</span>
+                </div>
+                <div class="resource-card-footer">
+                    <div class="resource-meta">
+                        <div class="resource-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                        <div class="resource-meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>99999</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-card-link">
+                        <span>访问</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 资源卡片4 -->
+            <div class="resource-card">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon resource-card-icon-text">G</div>
+                    <div class="resource-card-title-area">
+                        <h3 class="resource-card-name">Gitee</h3>
+                        <div class="resource-card-platform">代码托管 • 中国</div>
+                    </div>
+                </div>
+                <p class="resource-card-description">中国领先的代码托管与协作开发平台。</p>
+                <div class="resource-card-tags">
+                    <span class="resource-tag">代码</span>
+                    <span class="resource-tag">托管</span>
+                    <span class="resource-tag">中国</span>
+                </div>
+                <div class="resource-card-footer">
+                    <div class="resource-meta">
+                        <div class="resource-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.6</span>
+                        </div>
+                        <div class="resource-meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>12345</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-card-link">
+                        <span>访问</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 资源卡片5 -->
+            <div class="resource-card">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon resource-card-icon-text">G</div>
+                    <div class="resource-card-title-area">
+                        <h3 class="resource-card-name">GPPP</h3>
+                        <div class="resource-card-platform">API • 代理</div>
+                    </div>
+                </div>
+                <p class="resource-card-description">API 通用代理与中转服务平台。</p>
+                <div class="resource-card-tags">
+                    <span class="resource-tag">API</span>
+                    <span class="resource-tag">代理</span>
+                    <span class="resource-tag">中转</span>
+                </div>
+                <div class="resource-card-footer">
+                    <div class="resource-meta">
+                        <div class="resource-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.3</span>
+                        </div>
+                        <div class="resource-meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>6789</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-card-link">
+                        <span>访问</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 资源卡片6 -->
+            <div class="resource-card">
+                <div class="resource-card-header">
+                    <div class="resource-card-icon resource-card-icon-text">G</div>
+                    <div class="resource-card-title-area">
+                        <h3 class="resource-card-name">GitCode</h3>
+                        <div class="resource-card-platform">代码托管 • 开源</div>
+                    </div>
+                </div>
+                <p class="resource-card-description">为开发者打造的开源代码托管平台，兼容 GitHub。</p>
+                <div class="resource-card-tags">
+                    <span class="resource-tag">代码</span>
+                    <span class="resource-tag">开源</span>
+                    <span class="resource-tag">托管</span>
+                </div>
+                <div class="resource-card-footer">
+                    <div class="resource-meta">
+                        <div class="resource-meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.4</span>
+                        </div>
+                        <div class="resource-meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>8901</span>
+                        </div>
+                    </div>
+                    <a href="#" class="resource-card-link">
+                        <span>访问</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

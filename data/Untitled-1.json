@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "lastUpdated": "2025-12-31",
+  "version": "1.1.0",
+  "lastUpdated": "2025-01-06",
   "total": 169,
   "categories": {
     "frontend": {
@@ -81,114 +81,9 @@
           "description": "中文文档、教程、技术博客"
         }
       ]
-    },
-    "learning": {
-      "id": "learning",
-      "name": "学习资料",
-      "icon": "📖",
-      "subcategories": [
-        {
-          "id": "programming",
-          "name": "编程教程",
-          "icon": "💻",
-          "description": "编程语言与框架教程"
-        },
-        {
-          "id": "career-skills",
-          "name": "职场技能",
-          "icon": "💼",
-          "description": "职场提升与软技能"
-        },
-        {
-          "id": "exam-cert",
-          "name": "考试认证",
-          "icon": "📝",
-          "description": "职业认证与考试资料"
-        }
-      ]
-    },
-    "software-tools": {
-      "id": "software-tools",
-      "name": "软件工具",
-      "icon": "💽",
-      "subcategories": [
-        {
-          "id": "development",
-          "name": "开发",
-          "icon": "💻",
-          "description": "开发相关工具"
-        },
-        {
-          "id": "design",
-          "name": "设计",
-          "icon": "🎨",
-          "description": "设计相关工具"
-        },
-        {
-          "id": "office",
-          "name": "办公",
-          "icon": "📋",
-          "description": "办公效率工具"
-        },
-        {
-          "id": "system",
-          "name": "系统",
-          "icon": "🛠️",
-          "description": "系统工具"
-        },
-        {
-          "id": "multimedia",
-          "name": "多媒体",
-          "icon": "🎬",
-          "description": "音视频工具"
-        },
-        {
-          "id": "ai-tools",
-          "name": "AI工具",
-          "icon": "🤖",
-          "description": "AI辅助工具"
-        }
-      ]
-    },
-    "resource-collections": {
-      "id": "resource-collections",
-      "name": "合集资源",
-      "icon": "📦",
-      "subcategories": [
-        {
-          "id": "templates",
-          "name": "模板",
-          "icon": "📄",
-          "description": "各类模板资源"
-        },
-        {
-          "id": "tutorials",
-          "name": "教程",
-          "icon": "📚",
-          "description": "学习教程"
-        },
-        {
-          "id": "ebooks",
-          "name": "电子书",
-          "icon": "📖",
-          "description": "电子书籍资源"
-        },
-        {
-          "id": "toolkits",
-          "name": "工具箱",
-          "icon": "🔧",
-          "description": "工具合集"
-        },
-        {
-          "id": "ai-resources",
-          "name": "AI资源",
-          "icon": "🧠",
-          "description": "AI相关资源"
-        }
-      ]
     }
   },
-   "resources": [
+  "resources": [
     {
       "id": "res-001",
       "name": "Apifox",

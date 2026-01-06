@@ -163,58 +163,6 @@
   color: var(--text-muted);
 }
 
-/* ========== 快速导航卡片 ========== */
-.quick-nav {
-  padding: var(--spacing-2xl) 0;
-  background: var(--bg-secondary);
-}
-
-.quick-nav-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
-}
-
-.quick-nav-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: var(--spacing-xl);
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  transition: all var(--transition-base);
-}
-
-.quick-nav-card:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--primary-color);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.quick-nav-icon {
-  font-size: 48px;
-  margin-bottom: var(--spacing-md);
-}
-
-.quick-nav-title {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-sm);
-}
-
-.quick-nav-desc {
-  font-size: var(--font-size-sm);
-  color: var(--text-secondary);
-}
-
 /* ========== 响应式 ========== */
 @media (max-width: 768px) {
   .hero {

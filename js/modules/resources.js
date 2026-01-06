@@ -35,6 +35,14 @@ class ResourcesModule {
 
     console.log('[ResourcesModule] 初始化资源库...');
     await this._loadData();
+    
+    // 默认选中第一个主分类
+    const categoriesData = this.resourcesData?.categories || {};
+    const categories = Object.values(categoriesData);
+    if (categories.length > 0 && this.currentCategory === 'all') {
+      this.currentCategory = categories[0].id;
+    }
+    
     this._renderCategories();
     this._renderSubCategories();
     this._renderResources();
@@ -69,26 +77,21 @@ class ResourcesModule {
     // 使用 resourcesData 中的 categories
     const categoriesData = this.resourcesData?.categories || {};
 
-    // 构建分类数组，包含"全部"
-    const categories = [
-      { id: 'all', name: '全部资源', icon: '📚' },
-      ...Object.values(categoriesData)
-    ];
+    // 构建分类数组，不包含"全部"
+    const categories = Object.values(categoriesData);
 
     const categoryNav = this.container.querySelector('.category-nav');
     if (!categoryNav) return;
 
     categoryNav.innerHTML = categories.map(cat => {
-      const count = cat.id === 'all'
-        ? this.allResources.length
-        : this._getCategoryCount(cat.id);
+      const count = this._getCategoryCount(cat.id);
 
       return `
         <button class="category-item ${cat.id === this.currentCategory ? 'active' : ''}"
                 data-category="${cat.id}">
           <span class="category-icon">${cat.icon}</span>
           <span class="category-name">${cat.name}</span>
-          ${cat.id === 'all' ? `<span class="category-count">${count}</span>` : ''}
+          <span class="category-count">${count}</span>
         </button>
       `;
     }).join('');
@@ -99,32 +102,41 @@ class ResourcesModule {
    * @private
    */
   _renderSubCategories() {
-    const subcategoryNav = this.container.querySelector('.subcategory-nav');
-    if (!subcategoryNav) return;
+    // 渲染卡片集合上方的子分类
+    const cardSubcategoryNav = this.container.querySelector('.card-subcategory-nav');
+    if (cardSubcategoryNav) {
+      if (!this.currentCategory || !this.resourcesData?.categories) {
+        cardSubcategoryNav.innerHTML = '';
+        return;
+      }
 
-    // 如果选择了"全部"，不显示子分类
-    if (this.currentCategory === 'all' || !this.resourcesData?.categories) {
-      subcategoryNav.style.display = 'none';
-      return;
+      // 获取当前分类的子分类
+      const categoryData = this.resourcesData.categories[this.currentCategory];
+      const subcategories = categoryData?.subcategories || [];
+
+      if (subcategories.length === 0) {
+        cardSubcategoryNav.innerHTML = '';
+        return;
+      }
+
+      // 默认选中第一个子分类
+      if (!this.currentSubCategory) {
+        this.currentSubCategory = subcategories[0].id;
+      }
+
+      // 在子分类前面添加主分类名字
+      const mainCategoryName = categoryData?.name || '';
+      
+      cardSubcategoryNav.innerHTML = `
+        <div class="subcategory-main-name">${mainCategoryName}</div>
+        ${subcategories.map(sub => `
+          <button class="card-subcategory-item ${sub.id === this.currentSubCategory ? 'active' : ''}"
+                  data-subcategory="${sub.id}">
+            <span class="subcategory-name">${sub.name}</span>
+          </button>
+        `).join('')}
+      `;
     }
-
-    // 获取当前分类的子分类
-    const categoryData = this.resourcesData.categories[this.currentCategory];
-    const subcategories = categoryData?.subcategories || [];
-
-    if (subcategories.length === 0) {
-      subcategoryNav.style.display = 'none';
-      return;
-    }
-
-    subcategoryNav.style.display = 'flex';
-    subcategoryNav.innerHTML = subcategories.map(sub => `
-      <button class="subcategory-item ${sub.id === this.currentSubCategory ? 'active' : ''}"
-              data-subcategory="${sub.id}">
-        <span class="subcategory-icon">${sub.icon}</span>
-        <span class="subcategory-name">${sub.name}</span>
-      </button>
-    `).join('');
   }
 
   /**
@@ -138,10 +150,10 @@ class ResourcesModule {
   }
 
   /**
-   * 渲染资源列表
+   * 渲染分类资源
    * @private
    */
-  _renderResources() {
+  _renderCategoryResources() {
     const filteredResources = this._filterResources();
     const resourcesGrid = this.container.querySelector('.resources-grid');
 
@@ -164,6 +176,15 @@ class ResourcesModule {
   }
 
   /**
+   * 渲染所有资源相关内容
+   * @private
+   */
+  _renderResources() {
+    // 只渲染分类资源
+    this._renderCategoryResources();
+  }
+
+  /**
    * 绑定卡片事件
    * @private
    */
@@ -176,11 +197,19 @@ class ResourcesModule {
       if (resource) {
         // 点击卡片显示详情
         card.addEventListener('click', (e) => {
-          // 如果点击的是链接，不打开弹窗
+          // 如果点击的是链接，不处理
           if (e.target.closest('[data-link]')) {
             return;
           }
-          modal.showResourceDetail(resource);
+          
+          // 根据links数组长度决定点击行为
+          if (resource.links && resource.links.length === 1) {
+            // links数组长度为1，直接跳转到链接
+            window.open(resource.links[0].url, '_blank');
+          } else {
+            // links数组长度大于1或为空，显示弹窗
+            modal.showResourceDetail(resource);
+          }
         });
 
         // 添加cursor样式
@@ -209,13 +238,33 @@ class ResourcesModule {
           // 设置一个超时，检查图片是否仍然加载失败
           setTimeout(() => {
             if (!img.complete || img.naturalWidth === 0) {
-              const parent = img.parentElement;
-              const fallback = img.dataset.fallback || '?';
-              parent.classList.remove('resource-card-icon-img');
-              parent.classList.add('resource-card-icon-text');
-              parent.textContent = fallback;
-              parent.style.background = 'rgba(78, 205, 196, 0.15)';
-              parent.style.color = 'var(--primary-color)';
+              // 如果备选服务也失败，尝试使用本地favicon
+              if (img.src !== 'favicon.png' && !img.src.endsWith('/favicon.png')) {
+                img.src = 'favicon.png';
+                
+                // 再次检查本地favicon是否加载成功
+                setTimeout(() => {
+                  if (!img.complete || img.naturalWidth === 0) {
+                    // 本地favicon也失败，才显示首字符
+                    const parent = img.parentElement;
+                    const fallback = img.dataset.fallback || '?';
+                    parent.classList.remove('resource-card-icon-img');
+                    parent.classList.add('resource-card-icon-text');
+                    parent.textContent = fallback;
+                    parent.style.background = 'rgba(78, 205, 196, 0.15)';
+                    parent.style.color = 'var(--primary-color)';
+                  }
+                }, 300);
+              } else {
+                // 已经尝试过本地favicon，显示首字符
+                const parent = img.parentElement;
+                const fallback = img.dataset.fallback || '?';
+                parent.classList.remove('resource-card-icon-img');
+                parent.classList.add('resource-card-icon-text');
+                parent.textContent = fallback;
+                parent.style.background = 'rgba(78, 205, 196, 0.15)';
+                parent.style.color = 'var(--primary-color)';
+              }
             }
           }, 300);
         } catch (error) {
@@ -255,12 +304,14 @@ class ResourcesModule {
       // 尝试直接从网站获取favicon
       const directFaviconUrl = `${urlObj.protocol}//${domain}/favicon.ico`;
       
-      // 使用多个备选的favicon服务
+      // 使用多个备选的favicon服务，最后添加本地favicon作为最终fallback
       const fallbackFaviconUrls = [
         // DuckDuckGo Favicon服务
         `https://icons.duckduckgo.com/ip3/${domain}.ico`,
         // 微软Favicon服务
-        `https://www.bing.com/favicon.ico?url=${encodeURIComponent(url)}`
+        `https://www.bing.com/favicon.ico?url=${encodeURIComponent(url)}`,
+        // 本地favicon作为最终fallback
+        'favicon.png'
       ];
 
       return `
@@ -270,13 +321,21 @@ class ResourcesModule {
             alt="Icon" 
             class="favicon-img" 
             data-fallback="${firstChar}"
-            onerror="this.onerror=null;this.src='${fallbackFaviconUrls[0]}'"
+            onerror="this.onerror=null;this.src='${fallbackFaviconUrls[0]}';"
           >
         </div>
       `;
     } catch (error) {
-      // URL解析失败，使用首字符
-      return `<div class="resource-card-icon resource-card-icon-text">${firstChar}</div>`;
+      // URL解析失败，使用本地favicon作为fallback
+      return `
+        <div class="resource-card-icon resource-card-icon-img">
+          <img 
+            src="favicon.png" 
+            alt="Default Icon" 
+            class="favicon-img"
+          >
+        </div>
+      `;
     }
   }
 
@@ -288,53 +347,19 @@ class ResourcesModule {
    * @returns {string} HTML字符串
    */
   _renderResourceCard(resource, index) {
-    const tags = (resource.tags || []).slice(0, 4).map(tag =>
-      `<span class="resource-tag">${tag}</span>`
-    ).join('');
-
+    // 获取第一个链接用于图标和点击跳转
     const link = resource.links?.[0];
     const linkUrl = link?.url || '#';
-    const linkName = link?.name || '访问';
-
-    // 从 meta 对象获取数据
-    const meta = resource.meta || {};
-    const updateTime = meta.updateTime || '未知';
-    const recommendation = meta.recommendation || 0;
-
-    // 生成星级评分
-    const stars = this._renderStars(recommendation);
 
     // 获取图标：尝试使用网站favicon，失败则使用首字符
     const iconHtml = this._getFaviconIcon(linkUrl, resource.name);
 
     return `
       <div class="resource-card animate-enter" style="animation-delay: ${Math.min(index * 0.05, 0.5)}s" data-resource-id="${resource.id}">
-        <div class="resource-card-header">
-          ${iconHtml}
-          <div class="resource-card-title-area">
-            <h3 class="resource-card-name" title="${resource.name}">${resource.name}</h3>
-            <div class="resource-card-platform">${(resource.platform || []).join(', ')}</div>
-          </div>
-        </div>
-        <p class="resource-card-description" title="${resource.description}">${resource.description}</p>
-        <div class="resource-card-tags">
-          ${tags}
-        </div>
-        <div class="resource-card-footer">
-          <div class="resource-meta">
-            <div class="resource-meta-item">
-              <i class="far fa-clock"></i>
-              <span>${updateTime}</span>
-            </div>
-            <div class="resource-meta-item resource-rating">
-              ${stars}
-              <span>${recommendation}</span>
-            </div>
-          </div>
-          <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="resource-card-link" data-link>
-            ${linkName}
-            <i class="fas fa-external-link-alt"></i>
-          </a>
+        ${iconHtml}
+        <div class="resource-card-content">
+          <h3 class="resource-card-name" title="${resource.name}">${resource.name}</h3>
+          <p class="resource-card-description" title="${resource.description}">${resource.description}</p>
         </div>
       </div>
     `;
@@ -387,17 +412,7 @@ class ResourcesModule {
   _filterResources() {
     let filtered = [...this.allResources];
 
-    // 按分类过滤
-    if (this.currentCategory !== 'all') {
-      filtered = filtered.filter(res => res.category === this.currentCategory);
-    }
-
-    // 按子分类过滤
-    if (this.currentSubCategory) {
-      filtered = filtered.filter(res => res.subcategory === this.currentSubCategory);
-    }
-
-    // 按搜索关键词过滤
+    // 按搜索关键词过滤 - 搜索时忽略分类限制，搜索全部内容
     if (this.searchQuery) {
       const query = this.searchQuery.toLowerCase();
       filtered = filtered.filter(res =>
@@ -405,6 +420,16 @@ class ResourcesModule {
         res.description.toLowerCase().includes(query) ||
         (res.tags || []).some(tag => tag.toLowerCase().includes(query))
       );
+    } else {
+      // 没有搜索关键词时，才按分类过滤
+      if (this.currentCategory !== 'all') {
+        filtered = filtered.filter(res => res.category === this.currentCategory);
+      }
+
+      // 按子分类过滤
+      if (this.currentSubCategory) {
+        filtered = filtered.filter(res => res.subcategory === this.currentSubCategory);
+      }
     }
 
     return filtered;
@@ -426,11 +451,11 @@ class ResourcesModule {
       });
     }
 
-    // 子分类点击事件
-    const subcategoryNav = this.container.querySelector('.subcategory-nav');
-    if (subcategoryNav) {
-      subcategoryNav.addEventListener('click', (e) => {
-        const subcategoryItem = e.target.closest('.subcategory-item');
+    // 卡片集合上方的子分类点击事件
+    const cardSubcategoryNav = this.container.querySelector('.card-subcategory-nav');
+    if (cardSubcategoryNav) {
+      cardSubcategoryNav.addEventListener('click', (e) => {
+        const subcategoryItem = e.target.closest('.card-subcategory-item');
         if (subcategoryItem) {
           this._handleSubCategoryChange(subcategoryItem.dataset.subcategory);
         }
@@ -456,6 +481,7 @@ class ResourcesModule {
     this.currentSubCategory = null;
     this._renderCategories();
     this._renderSubCategories();
+    
     this._renderResources();
   }
 

@@ -23,8 +23,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
+  max-width: 100%; /* 去掉最大宽度限制，实现导航栏自适应 */
+  margin: 0;
   padding: 0 var(--spacing-lg);
 }
 
