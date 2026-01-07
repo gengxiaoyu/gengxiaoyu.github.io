@@ -56,14 +56,6 @@ class Modal {
    * @param {Object} resource - 资源对象
    */
   _renderResourceDetail(resource) {
-    const meta = resource.meta || {};
-    const updateTime = meta.updateTime || '未知';
-    const version = meta.version || '最新版';
-    const recommendation = meta.recommendation || 0;
-
-    // 生成星级评分HTML
-    const stars = this._renderStars(recommendation);
-
     // 生成标签HTML
     const tags = (resource.tags || []).map(tag =>
       `<span class="detail-tag">${tag}</span>`
@@ -87,13 +79,6 @@ class Modal {
         <div class="modal-icon">${this._getFavicon(resource.links?.[0]?.url, resource.name)}</div>
         <div class="modal-title-group">
           <h2 class="modal-title">${resource.name}</h2>
-          <div class="modal-meta">
-            <span class="modal-version">${version}</span>
-            <span class="modal-rating">
-              ${stars}
-              <span class="rating-value">${recommendation}</span>
-            </span>
-          </div>
         </div>
         <button class="modal-close" aria-label="关闭">
           <i class="fas fa-times"></i>
@@ -119,16 +104,6 @@ class Modal {
         <div class="modal-section">
           <h3 class="modal-section-title">链接</h3>
           <div class="modal-links">${links}</div>
-        </div>
-
-        <div class="modal-section">
-          <h3 class="modal-section-title">信息</h3>
-          <div class="modal-info">
-            <div class="info-item">
-              <i class="far fa-clock info-icon"></i>
-              <span>更新时间: ${updateTime}</span>
-            </div>
-          </div>
         </div>
       </div>
     `;

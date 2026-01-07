@@ -78,12 +78,7 @@ class DataValidator {
       });
     }
 
-    // 评分范围验证
-    if (resource.meta && typeof resource.meta.recommendation === 'number') {
-      if (resource.meta.recommendation < 1 || resource.meta.recommendation > 5) {
-        errors.push(`评分超出范围: ${resource.meta.recommendation}，应为 1-5`);
-      }
-    }
+    // 评分范围验证已删除，不再需要验证meta字段
 
     // tags数量验证
     if (resource.tags && Array.isArray(resource.tags)) {

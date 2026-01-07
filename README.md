@@ -111,7 +111,8 @@ gengxiaoyu.github.io/
 - GitHub: [gengxiaoyu](https://github.com/gengxiaoyu)
 
 ---
-
+## 运行方式
+- python -m http.server 8000
 ⭐ 如果这个项目对您有帮助，请给它一个星标！
 
 https://16map.com/

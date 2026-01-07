@@ -31,9 +31,5 @@
         { "name": "Linux", "level": 70, "years": 3, "icon": "fab fa-linux" }
       ]
     }
-  ],
-  "techStack": [
-    "Vue.js", "React", "Node.js", "TypeScript", "Python", "Git", "Webpack",
-    "Vite", "Docker", "MySQL", "MongoDB", "Redis", "GraphQL"
   ]
 }
