@@ -1,9 +1,6 @@
 {
   "app": {
     "name": "CodeVault1",
-    "slogan": "Where Code Meets Creativity",
-    "description": "全栈开发者资源站 - 170++开发工具、框架、AI工具聚合",
-    "version": "1.0.0",
     "author": "gengxiaoyu"
   },
   "theme": {
@@ -16,11 +13,6 @@
     "title": "CodeVault - 全栈开发者资源站",
     "keywords": "开发工具,前端,后端,全栈,资源分享",
     "description": "面向全栈开发者的综合性技术站点，集资源分享、作品展示、技术博客于一体"
-  },
-  "performance": {
-    "enableAnimation": true,
-    "enableParticles": true,
-    "virtualScrollThreshold": 100
   },
   "navigation": [
     {
