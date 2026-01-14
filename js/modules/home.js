@@ -116,15 +116,10 @@ class HomeModule {
 
     // 获取显示的平台
     const platforms = this.socialData.platforms.filter(p => p.show);
-    const socialLinks = this.profileData?.social || {};
 
-    socialLinksContainer.innerHTML = platforms.map(platform => ({
-      name: platform.name,
-      url: platform.url,
-      icon: platform.icon
-    })).map(link => `
-      <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="social-link" title="${link.name}">
-        <i class="${link.icon}"></i>
+    socialLinksContainer.innerHTML = platforms.map(platform => `
+      <a href="${platform.url}" target="_blank" rel="noopener noreferrer" class="social-link" title="${platform.name}">
+        <i class="${platform.icon}"></i>
       </a>
     `).join('');
   }

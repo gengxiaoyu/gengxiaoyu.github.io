@@ -54,6 +54,9 @@ class Router {
 
     // 监听页面加载
     window.addEventListener('DOMContentLoaded', () => this._handleHashChange());
+
+    // 绑定导航栏点击事件
+    this._bindNavEvents();
   }
 
   /**
@@ -174,6 +177,32 @@ class Router {
     if (navbarToggle) {
       navbarToggle.classList.remove('active');
     }
+
+    // 重新绑定导航栏点击事件（因为导航栏是动态渲染的）
+    this._bindNavEvents();
+  }
+
+  /**
+   * 绑定导航栏点击事件
+   * @private
+   */
+  _bindNavEvents() {
+    const navbarNav = document.querySelector('.navbar-nav');
+    if (!navbarNav) return;
+
+    // 移除旧的事件监听器
+    navbarNav.onclick = null;
+
+    // 添加新的事件监听器
+    navbarNav.addEventListener('click', (e) => {
+      const link = e.target.closest('.navbar-link');
+      if (link) {
+        const routeId = link.dataset.route;
+        if (routeId) {
+          this.push(routeId);
+        }
+      }
+    });
   }
 
   /**

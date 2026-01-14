@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CodeVault - 全栈开发者资源站，170+开发工具、框架、AI工具聚合">
-  <meta name="keywords" content="开发工具,前端,后端,全栈,资源分享">
-  <meta name="author" content="gengxiaoyu">
-  <title>CodeVault - 全栈开发者资源站</title>
+  <meta name="description" content="CodeVault - 全栈开发者资源站，170+开发工具、框架、AI工具聚合" data-seo="description">
+  <meta name="keywords" content="开发工具,前端,后端,全栈,资源分享" data-seo="keywords">
+  <meta name="author" content="gengxiaoyu" data-seo="author">
+  <title data-seo="title">CodeVault - 全栈开发者资源站</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- CSS样式 -->
   <link rel="stylesheet" href="css/main.css">
@@ -19,26 +19,15 @@
     <div class="navbar-container">
       <a href="#home" class="navbar-brand">
         <span class="navbar-brand-icon">📚</span>
-        <span>CodeVault</span>
+        <span data-app="name">CodeVault</span>
       </a>
       <div class="navbar-toggle">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class="navbar-nav">
-        <a href="#home" class="navbar-link" data-route="home">
-          <span class="navbar-link-icon">🏠</span>
-          <span>首页</span>
-        </a>
-        <a href="#resources" class="navbar-link" data-route="resources">
-          <span class="navbar-link-icon">📚</span>
-          <span>资源库</span>
-        </a>
-        <a href="#about" class="navbar-link" data-route="about">
-          <span class="navbar-link-icon">👤</span>
-          <span>关于</span>
-        </a>
+      <div class="navbar-nav" data-navigation="container">
+        <!-- 动态渲染 -->
       </div>
     </div>
   </nav>
@@ -87,7 +76,7 @@
               <span class="stat-label">精选资源</span>
             </div>
             <div class="stat-item">
-              <span class="stat-value">3</span>
+              <span class="stat-value" data-resources="category-count">3</span>
               <span class="stat-label">资源分类</span>
             </div>
           </div>
@@ -119,7 +108,7 @@
             <!-- 主内容区 -->
             <main class="main-content">
               <h1 class="section-title">资源库</h1>
-              <p class="section-subtitle">170+精选开发工具、框架与AI工具</p>
+              <p class="section-subtitle" data-resources="subtitle">170+精选开发工具、框架与AI工具</p>
 
               <!-- 搜索栏 -->
               <div class="search-bar">
@@ -146,7 +135,7 @@
       <section class="about">
         <div class="about-container">
           <h1 class="section-title">关于我</h1>
-          <p class="section-subtitle">全栈开发者 | 开源贡献者 | 技术博主</p>
+          <p class="section-subtitle" data-profile="subtitle">全栈开发者 | 开源贡献者 | 技术博主</p>
 
           <!-- 个人资料卡片 -->
           <div class="profile-header">
