@@ -170,7 +170,7 @@
       "slug": "apifox",
       "description": "API 协作开发平台，集文档、调试、Mock、自动化测试于一体。",
       "category": "development",
-      "subcategory": "api-service",
+      "subcategory": "code-hosting",
       "icon": "🔗",
       "platform": [
         "Web",
