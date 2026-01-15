@@ -1,7 +1,11 @@
 {
   "app": {
     "name": "CodeVault",
-    "author": "gengxiaoyu"
+    "author": "gengxiaoyu",
+    "homeTitle": "全栈开发者资源站",
+    "homeSubtitle": "面向全栈开发者的综合性技术站点",
+    "yearLine1": "欢迎来到",
+    "yearLine2": "2026"
   },
   "theme": {
     "primaryColor": "#4ecdc4",

@@ -1,0 +1,566 @@
+@charset "utf-8";
+/* CSS Document 
+
+Tooplate 2153 Fireworks Composer
+
+https://www.tooplate.com/view/2153-fireworks-composer
+
+*/
+
+/* ========== 烟花页面特殊样式 ========== */
+
+/* 首页样式 - 覆盖所有默认样式 */
+#home.page {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	overflow: hidden !important;
+	z-index: 0 !important;
+	opacity: 1 !important;
+	transform: none !important;
+	display: block !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* 覆盖 main.css 中 .page 的默认样式 */
+body.fireworks-mode #home.page {
+	opacity: 1 !important;
+	transform: none !important;
+	transition: none !important;
+}
+
+/* 确保 body 正确显示 */
+body.fireworks-mode {
+	overflow: hidden;
+	background: var(--bg-gradient);
+	height: 100vh;
+	width: 100vw;
+}
+
+/* 隐藏导航栏 - 已注释，让导航栏显示 */
+/* body.fireworks-mode .navbar {
+	display: none;
+} */
+
+/* 隐藏其他页面内容 */
+body.fireworks-mode .page-content #resources,
+body.fireworks-mode .page-content #about {
+	display: none !important;
+}
+
+/* 确保首页内容显示 - 覆盖 page-content 的默认样式 */
+body.fireworks-mode .page-content {
+	height: 100vh !important;
+	margin-top: 0 !important;
+	overflow: hidden !important;
+}
+
+body.fireworks-mode .page-content #home {
+	display: block !important;
+	height: 100vh !important;
+	margin-top: 0 !important;
+}
+
+/* 非首页时隐藏首页内容 */
+body:not(.fireworks-mode) .page-content #home {
+	display: none !important;
+}
+
+/* 烟花区域样式 - 减去导航栏高度 */
+.fireworks-section {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	overflow: hidden !important;
+}
+
+/* 画布样式 - 减去导航栏高度避免遮挡 */
+#canvas {
+	position: fixed !important;
+	top: var(--nav-height) !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: calc(100% - var(--nav-height)) !important;
+	cursor: crosshair !important;
+	z-index: 1 !important;
+	display: block !important;
+}
+
+/* ========== 烟花效果样式 ========== */
+
+:root {
+	--charcoal: #0a0a0f;
+	--deep-burgundy: #8B2635;
+	--wine-red: #C74B50;
+	--champagne: #F4E7C3;
+	--gold: #D4AF37;
+	--emerald: #1B4D3E;
+	--amber: #E07A5F;
+	--ivory: #FFFEF7;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 600;
+}
+
+.ui-container {
+	position: relative;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.fireworks-section header {
+	padding: calc(2rem + var(--nav-height)) 2rem 1rem;
+	text-align: center;
+	pointer-events: none;
+}
+
+.fireworks-section h1 {
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	background: linear-gradient(135deg, var(--champagne) 0%, var(--gold) 50%, var(--wine-red) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 0.5rem;
+	text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+.subtitle {
+	font-size: clamp(0.9rem, 2vw, 1.1rem);
+	color: var(--champagne);
+	opacity: 0.8;
+	font-weight: 300;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+.fireworks-section .controls {
+	position: fixed;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(10, 10, 15, 0.4);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(244, 231, 195, 0.15);
+	border-radius: 20px;
+	padding: 1.2rem 2.5rem;
+	display: flex;
+	gap: 2.5rem;
+	align-items: center;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+	max-width: 98%;
+	flex-wrap: nowrap;
+	justify-content: center;
+	pointer-events: auto;
+}
+
+.fireworks-section .controls * {
+	pointer-events: auto;
+}
+
+.fireworks-section .control-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.fireworks-section .control-label {
+	font-size: 0.65rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--gold);
+	font-weight: 500;
+}
+
+.fireworks-section .color-palette {
+	display: flex;
+	gap: 0.4rem;
+}
+
+.fireworks-section .color-option {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.fireworks-section .color-option:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 20px currentColor;
+}
+
+.fireworks-section .color-option.active {
+	border-color: var(--champagne);
+	box-shadow: 0 0 20px currentColor;
+}
+
+.fireworks-section .color-option.burgundy {
+	background: #FF5A6E;
+}
+
+.fireworks-section .color-option.gold {
+	background: #FFD700;
+}
+
+.fireworks-section .color-option.emerald {
+	background: #3FE0A0;
+}
+
+.fireworks-section .color-option.purple {
+	background: #B377FF;
+}
+
+.fireworks-section .color-option.champagne {
+	background: #FFFEF7;
+}
+
+.fireworks-section .firework-types {
+	display: flex;
+	gap: 0.4rem;
+}
+
+.fireworks-section .type-btn {
+	padding: 0.5rem 0.9rem;
+	background: rgba(139, 38, 53, 0.3);
+	border: 1px solid var(--wine-red);
+	border-radius: 10px;
+	color: var(--champagne);
+	cursor: pointer;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.75rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.fireworks-section .type-btn:hover {
+	background: rgba(139, 38, 53, 0.5);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(139, 38, 53, 0.4);
+}
+
+.fireworks-section .type-btn.active {
+	background: var(--wine-red);
+	border-color: var(--gold);
+	box-shadow: 0 4px 20px rgba(199, 75, 80, 0.6);
+}
+
+.fireworks-section .action-buttons {
+	display: flex;
+	gap: 0.6rem;
+}
+
+.fireworks-section .action-btn {
+	padding: 0.6rem 0.8rem;
+	background: linear-gradient(135deg, var(--deep-burgundy) 0%, var(--wine-red) 100%);
+	border: 1px solid var(--gold);
+	border-radius: 12px;
+	color: var(--champagne);
+	cursor: pointer;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.8rem;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	min-width: 94px;
+	height: 36px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fireworks-section .action-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+	background: linear-gradient(135deg, var(--wine-red) 0%, var(--deep-burgundy) 100%);
+}
+
+.fireworks-section .action-btn.secondary {
+	background: rgba(27, 77, 62, 0.6);
+	border-color: var(--emerald);
+}
+
+.fireworks-section .action-btn.secondary:hover {
+	background: var(--emerald);
+}
+
+.fireworks-section .play-icon,
+.fireworks-section .stop-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0.4rem;
+	font-size: 0.7rem;
+	width: 0.8rem;
+	height: 0.8rem;
+}
+
+.fireworks-section .stop-icon {
+	display: none;
+}
+
+.fireworks-section .action-btn.playing .play-icon {
+	display: none;
+}
+
+.fireworks-section .action-btn.playing .stop-icon {
+	display: inline-block;
+}
+
+.fireworks-section .eye-icon {
+	font-size: 0.9rem;
+}
+
+.fireworks-section .eye-btn {
+	position: fixed;
+	top: calc(2rem + var(--nav-height));
+	left: 2rem;
+	width: 32px;
+	height: 32px;
+	background: rgba(10, 10, 15, 0.4);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(244, 231, 195, 0.15);
+	border-radius: 6px;
+	color: var(--champagne);
+	font-size: 0.9rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	z-index: 100;
+	pointer-events: auto;
+}
+
+.fireworks-section .eye-btn:hover {
+	background: rgba(139, 38, 53, 0.5);
+	transform: scale(1.05);
+	box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+}
+
+body.hide-ui .fireworks-section .eye-btn {
+	transform: translateX(-50%);
+	background: rgba(27, 77, 62, 0.6);
+	opacity: 0.5;
+}
+
+body.hide-ui .fireworks-section .eye-btn:hover {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.fireworks-section #toggleUI {
+	min-width: auto;
+	padding: 0.6rem;
+}
+
+body.hide-ui .fireworks-section #toggleUI {
+	background: rgba(27, 77, 62, 0.8);
+}
+
+body.hide-ui .fireworks-section header,
+body.hide-ui .fireworks-section .fullscreen-btn,
+body.hide-ui .fireworks-section .developer-credit,
+body.hide-ui .fireworks-section .controls {
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+
+.fireworks-section .instructions {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	pointer-events: none;
+	opacity: 0;
+	animation: fadeInOut 4s ease-in-out;
+}
+
+@keyframes fadeInOut {
+
+	0%,
+	100% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+.fireworks-section .instructions h2 {
+	font-size: 2rem;
+	color: var(--gold);
+	margin-bottom: 1rem;
+}
+
+.fireworks-section .instructions p {
+	font-size: 1.2rem;
+	color: var(--champagne);
+	opacity: 0.9;
+}
+
+.fireworks-section .year-display {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Cormorant Garamond', serif;
+	font-size: clamp(3rem, 8vw, 6rem);
+	font-weight: 700;
+	color: rgba(244, 231, 195, 0.05);
+	pointer-events: none;
+	letter-spacing: 0.05em;
+	z-index: 5;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.fireworks-section .year-line1,
+.fireworks-section .year-line2 {
+	display: inline;
+}
+
+.fireworks-section .year-line2 {
+	font-size: 1.15em;
+}
+
+.fireworks-section .year-line2::before {
+	content: ' ';
+}
+
+@media (max-width: 1000px) {
+	.fireworks-section .controls {
+		flex-wrap: wrap;
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 768px) {
+	.fireworks-section .controls {
+		bottom: 1rem;
+		padding: 1rem;
+		gap: 1rem;
+	}
+
+	.fireworks-section .action-buttons {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.fireworks-section h1 {
+		font-size: 2rem;
+	}
+
+	.fireworks-section .year-display {
+		white-space: normal;
+		max-width: 90%;
+	}
+
+	.fireworks-section .year-line1,
+	.fireworks-section .year-line2 {
+		display: block;
+	}
+
+	.fireworks-section .year-line2::before {
+		content: '';
+	}
+}
+
+.fireworks-section .fullscreen-btn {
+	position: fixed;
+	top: calc(2rem + var(--nav-height));
+	right: 2rem;
+	width: 50px;
+	height: 50px;
+	background: rgba(10, 10, 15, 0.4);
+	backdrop-filter: blur(20px);
+	border: 1px solid rgba(244, 231, 195, 0.15);
+	border-radius: 12px;
+	color: var(--champagne);
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	z-index: 100;
+	pointer-events: auto;
+}
+
+.fireworks-section .fullscreen-btn:hover {
+	background: rgba(139, 38, 53, 0.5);
+	transform: scale(1.05);
+	box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+}
+
+.fireworks-section .developer-credit {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	font-size: 0.85rem;
+	color: var(--champagne);
+	opacity: 0.7;
+	z-index: 100;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.fireworks-section .developer-credit a {
+	color: var(--gold);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
+	pointer-events: auto;
+}
+
+.fireworks-section .developer-credit a:hover {
+	color: var(--wine-red);
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.fireworks-section .fullscreen-btn {
+		top: calc(1rem + var(--nav-height));
+		right: 1rem;
+		width: 40px;
+		height: 40px;
+		font-size: 1.2rem;
+	}
+
+	.fireworks-section .eye-btn {
+		top: calc(1rem + var(--nav-height));
+		left: 1rem;
+		width: 32px;
+		height: 32px;
+		font-size: 0.85rem;
+	}
+
+	body.hide-ui .fireworks-section .eye-btn {
+		transform: translateX(-50%);
+	}
+
+	.fireworks-section .developer-credit {
+		bottom: 1rem;
+		right: 1rem;
+		left: auto;
+		font-size: 0.7rem;
+	}
+}

@@ -57,6 +57,26 @@ class Router {
 
     // 绑定导航栏点击事件
     this._bindNavEvents();
+
+    // 添加后置钩子来控制烟花模式
+    this.afterEach((routeId) => {
+      if (routeId === 'home') {
+        document.body.classList.add('fireworks-mode');
+      } else {
+        document.body.classList.remove('fireworks-mode');
+      }
+    });
+
+    // 初始化时检查当前路由
+    const initialHash = window.location.hash.slice(1) || 'home';
+    if (initialHash === 'home') {
+      document.body.classList.add('fireworks-mode');
+    }
+
+    // 延迟更新导航栏状态，确保导航栏已经渲染完成
+    setTimeout(() => {
+      this._updateNavbar(initialHash);
+    }, 100);
   }
 
   /**

@@ -46,7 +46,8 @@ body {
   font-size: var(--font-size-base);
   line-height: 1.6;
   color: var(--text-primary);
-  background: var(--bg-primary);
+  /* background: var(--bg-primary); */
+  background: var(--bg-gradient);
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

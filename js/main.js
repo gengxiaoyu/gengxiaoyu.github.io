@@ -200,6 +200,30 @@ class App {
         appName.textContent = config.app.name;
       }
 
+      // 更新首页标题
+      const homeTitle = document.querySelector('[data-app="home-title"]');
+      if (homeTitle && config.app?.homeTitle) {
+        homeTitle.textContent = config.app.homeTitle;
+      }
+
+      // 更新首页副标题
+      const homeSubtitle = document.querySelector('[data-app="home-subtitle"]');
+      if (homeSubtitle && config.app?.homeSubtitle) {
+        homeSubtitle.textContent = config.app.homeSubtitle;
+      }
+
+      // 更新年份显示第一行
+      const yearLine1 = document.querySelector('[data-app="year-line1"]');
+      if (yearLine1 && config.app?.yearLine1) {
+        yearLine1.textContent = config.app.yearLine1;
+      }
+
+      // 更新年份显示第二行
+      const yearLine2 = document.querySelector('[data-app="year-line2"]');
+      if (yearLine2 && config.app?.yearLine2) {
+        yearLine2.textContent = config.app.yearLine2;
+      }
+
       // 更新副标题
       const subtitle = document.querySelector('[data-profile="subtitle"]');
       if (subtitle && profile?.basic?.subtitle) {
@@ -273,6 +297,7 @@ class App {
         root.style.setProperty('--bg-primary', colors[0]);
         root.style.setProperty('--bg-secondary', colors[1]);
         root.style.setProperty('--bg-tertiary', colors[2]);
+        root.style.setProperty('--bg-gradient', theme.backgroundColor);
       }
     }
 

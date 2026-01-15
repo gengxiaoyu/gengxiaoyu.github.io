@@ -8,8 +8,14 @@
   <meta name="author" content="gengxiaoyu" data-seo="author">
   <title data-seo="title">CodeVault - 全栈开发者资源站</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <!-- CSS样式 -->
   <link rel="stylesheet" href="css/main.css">
+  <!-- 烟花特效样式 -->
+  <link rel="stylesheet" href="css/fireworks.css">
   <!-- Font Awesome图标库 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -36,51 +42,71 @@
   <div class="page-content">
     <!-- 首页 -->
     <div id="home" class="page visible">
-      <!-- Hero区域 -->
-      <section class="hero">
-        <div class="hero-content">
-          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=gengxiaoyu" alt="头像" class="hero-avatar">
-          <h1 class="hero-name">gengxiaoyu</h1>
-          <h2 class="hero-title">Full-Stack Developer</h2>
-          <p class="hero-subtitle">
-            <span class="typing-text" data-texts='["Full-Stack Developer", "Open Source Enthusiast", "Technical Blogger"]'></span>
-            <span class="typing-cursor"></span>
-          </p>
-          <p class="hero-bio">热衷于开源和知识分享，专注于前端技术和全栈开发</p>
-          <div class="hero-actions">
-            <a href="#resources" class="btn btn-primary">
-              <i class="fas fa-book"></i>
-              浏览资源
-            </a>
-            <a href="#about" class="btn btn-secondary">
-              <i class="fas fa-user"></i>
-              了解更多
-            </a>
-          </div>
-          <div class="social-links">
-            <a href="https://github.com/gengxiaoyu" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:gengxiaoyu@example.com" class="social-link" title="邮箱">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://blog.example.com" target="_blank" rel="noopener noreferrer" class="social-link" title="博客">
-              <i class="fas fa-blog"></i>
-            </a>
-          </div>
+      <!-- 烟花特效区域 -->
+      <section class="fireworks-section">
+        <canvas id="canvas"></canvas>
+        
+        <!-- 年份显示 -->
+        <div class="year-display">
+          <span class="year-line1" data-app="year-line1">欢迎来到</span>
+          <span class="year-line2" data-app="year-line2">2026</span>
+        </div>
+
+        <!-- UI容器 -->
+        <div class="ui-container">
+          <button class="fullscreen-btn" id="fullscreenBtn" title="Toggle Fullscreen">⛶</button>
           
-          <!-- 资源统计 -->
-          <div class="resource-stats">
-            <div class="stat-item">
-              <span class="stat-value resource-count">0+</span>
-              <span class="stat-label">精选资源</span>
+          <button class="eye-btn" id="toggleUI" title="Toggle UI Visibility">
+            <span class="eye-icon">👁</span>
+          </button>
+          
+          <!-- <div class="developer-credit">
+            Developed by <a rel="nofollow" href="https://www.tooplate.com" target="_blank">Tooplate</a>
+          </div> -->
+
+          <header>
+            <h1 data-app="home-title">全栈开发者资源站</h1>
+            <p class="subtitle" data-app="home-subtitle">全栈开发者资源站</p>
+          </header>
+
+          <div class="instructions">
+            <h2>点击任意位置发射烟花</h2>
+            <p>请在下面选择您的颜色和图案</p>
+          </div>
+
+          <div class="controls">
+            <div class="control-group">
+              <span class="control-label">颜色</span>
+              <div class="color-palette">
+                <div class="color-option burgundy active" data-color="#FF5A6E"></div>
+                <div class="color-option gold" data-color="#FFD700"></div>
+                <div class="color-option emerald" data-color="#3FE0A0"></div>
+                <div class="color-option purple" data-color="#B377FF"></div>
+                <div class="color-option champagne" data-color="#FFFEF7"></div>
+              </div>
             </div>
-            <div class="stat-item">
-              <span class="stat-value" data-resources="category-count">3</span>
-              <span class="stat-label">资源分类</span>
+
+            <div class="control-group">
+              <span class="control-label">模式</span>
+              <div class="firework-types">
+                <button class="type-btn active" data-type="burst">爆发</button>
+                <button class="type-btn" data-type="ring">环型</button>
+                <button class="type-btn" data-type="willow">柳树</button>
+                <button class="type-btn" data-type="spiral">螺旋</button>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <span class="control-label">操作</span>
+              <div class="action-buttons">
+                <button class="action-btn" id="autoShow">
+                  <span class="play-icon">▶</span>
+                  <span class="stop-icon">⏹</span>
+                  <span class="button-text">自动播放</span>
+                </button>
+              </div>
             </div>
           </div>
-          <div class="last-updated">最后更新: 未知</div>
         </div>
       </section>
     </div>
@@ -179,5 +205,7 @@
 
   <!-- JavaScript模块 -->
   <script type="module" src="js/main.js"></script>
+  <!-- 烟花特效脚本 -->
+  <script src="js/modules/fireworks.js"></script>
 </body>
 </html>

@@ -9,13 +9,5 @@
   "contact": {
     "email": "gengxiaoyu@example.com",
     "location": "China"
-  },
-  "hero": {
-    "typedText": [
-      "Full-Stack Developer",
-      "Open Source Enthusiast",
-      "Technical Blogger"
-    ],
-    "typingSpeed": 80
   }
 }
