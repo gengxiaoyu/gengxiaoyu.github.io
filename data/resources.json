@@ -170,7 +170,7 @@
       "slug": "apifox",
       "description": "API 协作开发平台，集文档、调试、Mock、自动化测试于一体。",
       "category": "development",
-      "subcategory": "code-hosting",
+      "subcategory": "api-service",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -1194,8 +1194,8 @@
       "name": "HMAC加密工具",
       "slug": "hmac加密工具",
       "description": "MKLab 提供的在线 HMAC 加密与编码工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1219,8 +1219,8 @@
       "name": "RegExr",
       "slug": "regexr",
       "description": "交互式正则表达式在线测试与学习工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1269,8 +1269,8 @@
       "name": "网页播放器",
       "slug": "网页播放器",
       "description": "支持 HLS/FLV/RTMP 等协议的网页视频播放器。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "multimedia-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1294,8 +1294,8 @@
       "name": "vpsche工具箱",
       "slug": "vpsche工具箱",
       "description": "VPSCHE 提供的在线开发与网络工具集合。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1319,8 +1319,8 @@
       "name": "在线JSON校验",
       "slug": "在线json校验",
       "description": "BeJSON 提供的 JSON 格式校验与转换工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1369,8 +1369,8 @@
       "name": "工具箱",
       "slug": "工具箱",
       "description": "小友西湖提供的多功能在线工具集合。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1393,8 +1393,8 @@
       "name": "偷懒工具",
       "slug": "偷懒工具",
       "description": "集合多种实用小工具的在线平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -1442,8 +1442,8 @@
       "name": "FreeTool工具",
       "slug": "freetool工具",
       "description": "免费在线工具集合站。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -2392,8 +2392,8 @@
       "name": "Trae",
       "slug": "trae",
       "description": "AI 驱动的智能编程助手与 IDE 插件。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -2418,8 +2418,8 @@
       "name": "CodeBuddy IDE",
       "slug": "codebuddy-ide",
       "description": "腾讯云推出的 AI 编程 IDE，集成 Copilot 能力。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3159,8 +3159,8 @@
       "name": "百炼控制台",
       "slug": "百炼控制台",
       "description": "阿里云百炼大模型开发与部署平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3184,8 +3184,8 @@
       "name": "MCP Server Playground",
       "slug": "mcp-server-playground",
       "description": "MCP 协议服务器测试沙盒。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3209,8 +3209,8 @@
       "name": "AI工具集",
       "slug": "ai工具集",
       "description": "聚合各类 AI 工具的导航站。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3234,8 +3234,8 @@
       "name": "WaytoAGI",
       "slug": "waytoagi",
       "description": "通往 AGI 之路，AI 学习与资源社区。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3259,8 +3259,8 @@
       "name": "Toolify.ai",
       "slug": "toolifyai",
       "description": "最好的 AI 导航站和 AI 工具列表。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3284,8 +3284,8 @@
       "name": "腾讯元器",
       "slug": "腾讯元器",
       "description": "腾讯推出的 AI 智能体商店与开发平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3309,8 +3309,8 @@
       "name": "文心智能体平台",
       "slug": "文心智能体平台",
       "description": "百度文心大模型智能体构建平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3334,8 +3334,8 @@
       "name": "AutoGLM 沉思",
       "slug": "autoglm-沉思",
       "description": "智谱 AI 推出的自主推理大模型。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3359,8 +3359,8 @@
       "name": "美图设计室",
       "slug": "美图设计室",
       "description": "美图推出的 AI 图像增强与设计工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3384,8 +3384,8 @@
       "name": "一键抠图",
       "slug": "一键抠图",
       "description": "在线图片背景移除工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3409,8 +3409,8 @@
       "name": "arkthinker",
       "slug": "arkthinker",
       "description": "AI 工具聚合平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3434,8 +3434,8 @@
       "name": "Free Watermark Remover",
       "slug": "free-watermark-remover",
       "description": "在线去除图片水印的 AI 工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3459,8 +3459,8 @@
       "name": "AnyRec AI Image Upscaler",
       "slug": "anyrec-ai-image-upscaler",
       "description": "AI 图像放大与增强工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3484,8 +3484,8 @@
       "name": "BlueWillow",
       "slug": "bluewillow",
       "description": "AI 图像生成工具（Discord 机器人形式）。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3509,8 +3509,8 @@
       "name": "Yescribe",
       "slug": "yescribe",
       "description": "免费在线音频与视频转录为文本工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "multimedia-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3534,8 +3534,8 @@
       "name": "Free AI Design Playground",
       "slug": "free-ai-design-playground",
       "description": "AI 设计实验平台（Playground）。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3559,8 +3559,8 @@
       "name": "Photo Watermark Remover",
       "slug": "photo-watermark-remover",
       "description": "AVAide 提供的在线去水印工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3584,8 +3584,8 @@
       "name": "Photo to Anime",
       "slug": "photo-to-anime",
       "description": "照片转动漫风格的 AI 工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3609,8 +3609,8 @@
       "name": "Lexica",
       "slug": "lexica",
       "description": "Stable Diffusion 图像搜索与提示词平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3634,8 +3634,8 @@
       "name": "MD2Card",
       "slug": "md2card",
       "description": "将 Markdown 转换为精美卡片的工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "dev-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3659,8 +3659,8 @@
       "name": "digiKam",
       "slug": "digikam",
       "description": "开源照片管理与编辑软件。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "multimedia-tools",
       "icon": "🔗",
       "platform": [
         "Desktop"
@@ -3684,8 +3684,8 @@
       "name": "Upscayl",
       "slug": "upscayl",
       "description": "开源 AI 图像放大工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Desktop"
@@ -3709,8 +3709,8 @@
       "name": "Uncrop AI",
       "slug": "uncrop-ai",
       "description": "AI 智能扩展图片边界的工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3734,8 +3734,8 @@
       "name": "视频转换宝",
       "slug": "视频转换宝",
       "description": "免费视频转 GIF 工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "multimedia-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3759,8 +3759,8 @@
       "name": "谷歌压缩",
       "slug": "谷歌压缩",
       "description": "Google 出品的在线图片压缩工具 Squoosh。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3784,8 +3784,8 @@
       "name": "Video Unscreen",
       "slug": "video-unscreen",
       "description": "在线视频去背景（透明背景）工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "multimedia-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3809,8 +3809,8 @@
       "name": "LiblibAI",
       "slug": "liblibai",
       "description": "哩布哩布 AI，国产 AI 绘画平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3834,8 +3834,8 @@
       "name": "即梦AI",
       "slug": "即梦ai",
       "description": "剪映推出的 AI 创作工具集。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3859,8 +3859,8 @@
       "name": "稿定AI绘画",
       "slug": "稿定ai绘画",
       "description": "稿定设计推出的 AI 绘画与设计工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3884,8 +3884,8 @@
       "name": "WHEEL",
       "slug": "wheel",
       "description": "AI 创意设计平台（WHEE）。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "design-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3909,8 +3909,8 @@
       "name": "万兴爱画",
       "slug": "万兴爱画",
       "description": "万兴科技推出的 AI 绘画工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -3934,8 +3934,8 @@
       "name": "Kimi",
       "slug": "kimi",
       "description": "月之暗面推出的超长上下文 AI 助手。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -3960,8 +3960,8 @@
       "name": "豆包",
       "slug": "豆包",
       "description": "字节跳动推出的 AI 助手。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -4011,8 +4011,8 @@
       "name": "灵光全模态AI助手",
       "slug": "灵光全模态ai助手",
       "description": "多模态 AI 助手，支持图文对话。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4036,8 +4036,8 @@
       "name": "扣子空间",
       "slug": "扣子空间",
       "description": "字节跳动推出的 AI 办公助手一站式解决方案。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4061,8 +4061,8 @@
       "name": "千问",
       "slug": "千问",
       "description": "通义千问大模型官方平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web",
@@ -4087,8 +4087,8 @@
       "name": "秒哒",
       "slug": "秒哒",
       "description": "AI 会议记录与摘要工具。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "office-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4112,8 +4112,8 @@
       "name": "资料收集",
       "slug": "资料收集",
       "description": "飞书多维表格 AI 资料收集模板。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "office-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4137,8 +4137,8 @@
       "name": "拾光壁纸",
       "slug": "拾光壁纸",
       "description": "高质量动态与静态壁纸站。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "resources",
+      "subcategory": "resource-collect",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4162,8 +4162,8 @@
       "name": "壁纸湖",
       "slug": "壁纸湖",
       "description": "海量高清壁纸下载站。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "resources",
+      "subcategory": "resource-collect",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4187,8 +4187,8 @@
       "name": "wallspic",
       "slug": "wallspic",
       "description": "高质量壁纸搜索引擎。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "resources",
+      "subcategory": "resource-collect",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4212,8 +4212,8 @@
       "name": "4K Wallpapers",
       "slug": "4k-wallpapers",
       "description": "4K 超高清壁纸站。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "resources",
+      "subcategory": "resource-collect",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4237,8 +4237,8 @@
       "name": "虎课网",
       "slug": "虎课网",
       "description": "设计与办公软件在线学习平台。",
-      "category": "development",
-      "subcategory": "tech-docs",
+      "category": "learning",
+      "subcategory": "program-tutorial",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4262,8 +4262,8 @@
       "name": "翼狐网",
       "slug": "翼狐网",
       "description": "CG 设计与特效学习平台。",
-      "category": "development",
-      "subcategory": "tech-docs",
+      "category": "learning",
+      "subcategory": "program-tutorial",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4287,8 +4287,8 @@
       "name": "Baidu AI Studio",
       "slug": "baidu-ai-studio",
       "description": "百度 AI 开发实训平台。",
-      "category": "development",
-      "subcategory": "tech-docs",
+      "category": "learning",
+      "subcategory": "program-tutorial",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4312,8 +4312,8 @@
       "name": "Manus",
       "slug": "manus",
       "description": "AI Agent 构建与部署平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4337,8 +4337,8 @@
       "name": "爱派（AiPy）",
       "slug": "爱派aipy",
       "description": "本地化 Manus 替代方案。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4362,8 +4362,8 @@
       "name": "SiliconCloud",
       "slug": "siliconcloud",
       "description": "硅基流动的大模型推理平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"
@@ -4387,8 +4387,8 @@
       "name": "扣子",
       "slug": "扣子",
       "description": "字节跳动推出的 AI Bot 开发平台。",
-      "category": "development",
-      "subcategory": "dev-utils",
+      "category": "tools",
+      "subcategory": "ai-tools",
       "icon": "🔗",
       "platform": [
         "Web"

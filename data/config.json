@@ -1,10 +1,10 @@
 {
   "app": {
-    "name": "CodeVault",
+    "name": "老耿资源站",
     "author": "gengxiaoyu",
-    "homeTitle": "全栈开发者资源站",
-    "homeSubtitle": "面向全栈开发者的综合性技术站点",
-    "yearLine1": "欢迎来到1",
+    "homeTitle": "网址与资料收藏站",
+    "homeSubtitle": "收藏常用网址，分享优质资料，助力个人网站搭建",
+    "yearLine1": "欢迎使用",
     "yearLine2": "2026"
   },
   "theme": {
@@ -14,9 +14,9 @@
     "backgroundColor": "linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)"
   },
   "seo": {
-    "title": "CodeVault - 全栈开发者资源站",
-    "keywords": "开发工具,前端,后端,全栈,资源分享",
-    "description": "面向全栈开发者的综合性技术站点，集资源分享、作品展示、技术博客于一体"
+    "title": "个人资源收藏站 - 网址与资料管理",
+    "keywords": "网址收藏,资源分享,网盘链接,个人网站,网站搭建",
+    "description": "个人资源收藏站，提供常用网址收藏、优质资料分享功能，支持网盘链接绑定，帮助不会开发的人快速搭建个人网站"
   },
   "navigation": [
     {
