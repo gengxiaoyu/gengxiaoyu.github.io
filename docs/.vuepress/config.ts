@@ -54,7 +54,7 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/config/theme/#autofrontmatter
      */
     markdown: {
-      mermaid: true, 
+      mermaid: true
     },
     // autoFrontmatter: {
     //   permalink: true,  // 是否生成永久链接

@@ -9,8 +9,15 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 export default defineNavbarConfig([
   { text: '首页', link: '/' },
   { text: '博客', link: '/blog/' },
-  { text: '标签', link: '/blog/tags/' },
-  { text: '归档', link: '/blog/archives/' },
+  { text: '导航', 
+    items: [
+      { text: '前端开发', link: '/navview/development.md' },
+      { text: '学习资源', link: '/navview/learning.md' },
+      { text: '效率工具', link: '/navview/tools.md' },
+      { text: '素材资源', link: '/navview/resources.md' }] 
+  },
+  // { text: '标签', link: '/blog/tags/' },
+  // { text: '归档', link: '/blog/archives/' },
   {
     text: '笔记',
     items: [{ text: '前端面试', link: '/interview/README.md' }]
