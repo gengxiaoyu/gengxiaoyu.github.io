@@ -47,7 +47,6 @@ permalink: /navview/resources/
   <LinkCard title="Unsplash" icon="https://unsplash.com/favicon.ico" href="https://unsplash.com/" />
   <LinkCard title="Pexels" icon="https://www.pexels.com/favicon.ico" href="https://www.pexels.com/" />
   <LinkCard title="Pixabay" icon="https://pixabay.com/favicon.ico" href="https://pixabay.com/" />
-  <LinkCard title="Freepik" icon="https://www.freepik.com/favicon.ico" href="https://www.freepik.com/" />
 </CardGrid>
 
 #### 其他资源
