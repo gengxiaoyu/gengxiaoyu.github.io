@@ -1,8 +1,12 @@
-# 前端学习文档系统
+---
+title: 项目总览
+createTime: 2026/02/04 15:27:13
+permalink: /webDocView/00-docs/
+---
 
-> 一个系统化的前端学习文档系统，涵盖前端核心知识、Vue框架技术栈、面试准备、实战项目和源码解析等多个维度。
+# 项目总览
 
-## 项目简介
+## 项目定位
 
 本项目是一个**系统化前端学习文档系统**，旨在为前端开发者提供从基础到高级的完整学习路径，涵盖前端核心知识、Vue框架技术栈、面试准备、实战项目和源码解析等多个维度。
 
@@ -12,45 +16,7 @@
 - **助力面试准备**：整理高频面试考点，提供面试技巧和模拟题
 - **促进技术交流与分享**：建立开放的贡献机制，鼓励社区参与和知识共享
 
-### 技术栈
-- **文档生成**：[VuePress](https://vuepress.vuejs.org/)
-- **主题**：[vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
-- **内容管理**：Markdown
-- **部署**：GitHub Pages
-
-## 快速开始
-
-### 安装依赖
-
-```sh
-pnpm i
-```
-
-### 启动开发服务器
-
-```sh
-pnpm docs:dev
-```
-
-### 构建生产版本
-
-```sh
-pnpm docs:build
-```
-
-### 本地预览生产构建
-
-```sh
-pnpm docs:preview
-```
-
-### 更新 VuePress 和主题
-
-```sh
-pnpm vp-update
-```
-
-## 学习路径
+## 推荐学习路径
 
 ### 基础层 → 进阶层 → 高级层
 
@@ -77,7 +43,7 @@ pnpm vp-update
 ## 模块说明
 
 ### 00-docs/（项目总控中心）
-- **README.md**：项目总览
+- **README.md**：项目总览（本文档）
 - **nav.md**：可视化导航（Mermaid流程图+模块跳转）
 - **keyword-index.md**：关键词检索索引
 - **changelog.md**：内容迭代日志
@@ -159,21 +125,6 @@ pnpm vp-update
 - **内容修正**：直接提交PR修正错误或补充内容
 - **讨论交流**：在相关模块下的讨论区进行技术交流
 
-## 部署到 GitHub Pages
-
-本项目已配置 GitHub Actions 自动部署到 GitHub Pages，配置文件为 `.github/workflows/docs-deploy.yml`。你需要在 GitHub 仓库中进行以下设置：
-
-- [ ] `settings > Actions > General`，滚动到页面底部，在 `Workflow permissions` 下，勾选 `Read and write permissions`，并点击保存按钮。
-
-- [ ] `settings > Pages`，在 `Build and deployment` 中，为 `Source` 选择 `Deploy from a branch`，为 `Branch` 选择 `gh-pages`，并点击保存按钮。
-  （首次创建时 `gh-pages` 分支可能不存在。你可以先完成上述设置，将代码推送到主分支，等待 `github actions` 完成，然后再进行设置。）
-
-- [ ] 修改 `docs/.vuepress/config.ts` 中的 `base` 选项：
-  - 如果你计划部署到 `https://<USERNAME>.github.io/`，可以跳过此步骤，因为 `base` 默认为 `"/"`。
-  - 如果你计划部署到 `https://<USERNAME>.github.io/<REPO>/`，即你的仓库 URL 是 `https://github.com/<USERNAME>/<REPO>`，则将 `base` 设置为 `"/<REPO>/"`。
-
-如需自定义域名，请参考 [Github Pages](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
-
 ## 版本控制
 
 ### 版本号含义
@@ -183,15 +134,6 @@ pnpm vp-update
 
 ### 当前版本
 - **v1.0.0**：初始版本，搭建完整目录结构和基础内容
-
-## 相关文档
-
-- [VuePress](https://vuepress.vuejs.org/)
-- [VuePress Theme Plume](https://theme-plume.vuejs.press/)
-
-## 许可证
-
-MIT License
 
 ## 总结
 

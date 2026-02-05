@@ -20,6 +20,8 @@ export default defineNavbarConfig([
   // { text: '归档', link: '/blog/archives/' },
   {
     text: '笔记',
-    items: [{ text: '前端面试', link: '/interview/README.md' }]
+    items: [
+      { text: 'Vue 文档', link: '/webDocView/README.md' }
+    ]
   },
 ])
