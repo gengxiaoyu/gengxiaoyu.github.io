@@ -48,7 +48,7 @@ jobs:
         run: pnpm docs:build
 
       - name: 构建时间统计
-        run: echo "构建完成时间: $(date '+%Y-%m-%d %H:%M:%S')"
+        run: echo '构建完成时间: $(date "'+%Y-%m-%d %H:%M:%S+'")'
 
       # 只有在 push 到 main 分支或手动触发时才部署
       - name: 部署到 GitHub Pages
