@@ -325,6 +325,773 @@ p::before {
 }
 ```
 
+### 8. CSS预处理器
+
+#### Sass/SCSS
+
+Sass是最流行的CSS预处理器，提供了变量、嵌套、混合宏等功能。
+
+```scss
+// 变量
+$primary-color: #4ecdc4;
+$secondary-color: #ff6b6b;
+$font-size-base: 16px;
+$border-radius: 4px;
+
+// 嵌套规则
+.container {
+  width: 100%;
+  padding: 20px;
+  
+  .header {
+    background: $primary-color;
+    padding: 15px;
+    
+    .title {
+      font-size: $font-size-base * 1.5;
+      color: #fff;
+    }
+    
+    .subtitle {
+      font-size: $font-size-base;
+      opacity: 0.8;
+    }
+  }
+  
+  .content {
+    background: #fff;
+    padding: 20px;
+    
+    p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// 混合宏（Mixin）
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style($bg-color, $text-color: #fff) {
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  background: $bg-color;
+  color: $text-color;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: darken($bg-color, 10%);
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// 使用混合宏
+.card {
+  @include flex-center;
+  flex-direction: column;
+  padding: 20px;
+  
+  @include responsive(768px) {
+    flex-direction: row;
+  }
+}
+
+.button {
+  @include button-style($primary-color);
+}
+
+.button-secondary {
+  @include button-style($secondary-color);
+}
+
+// 函数
+@function calculate-width($columns, $gap: 20px) {
+  @return ($columns * 100px) + (($columns - 1) * $gap);
+}
+
+.grid {
+  width: calculate-width(3); // 340px
+}
+
+// 继承（Extend）
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+
+.primary-button {
+  @extend .button;
+  background: $primary-color;
+  color: #fff;
+}
+
+.secondary-button {
+  @extend .button;
+  background: $secondary-color;
+  color: #fff;
+}
+
+// 循环
+@for $i from 1 through 5 {
+  .col-#{$i} {
+    width: $i * 20%;
+  }
+}
+
+@each $color in (red, blue, green) {
+  .text-#{$color} {
+    color: $color;
+  }
+}
+
+// 条件语句
+@mixin theme($theme) {
+  @if $theme == 'dark' {
+    background: #333;
+    color: #fff;
+  } @else if $theme == 'light' {
+    background: #fff;
+    color: #333;
+  } @else {
+    background: #f0f0f0;
+    color: #666;
+  }
+}
+
+.dark-theme {
+  @include theme('dark');
+}
+
+.light-theme {
+  @include theme('light');
+}
+
+// 模块化
+// _variables.scss
+$primary-color: #4ecdc4;
+$secondary-color: #ff6b6b;
+
+// _mixins.scss
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// _buttons.scss
+.button {
+  @include flex-center;
+  padding: 10px 20px;
+}
+
+// main.scss
+@import 'variables';
+@import 'mixins';
+@import 'buttons';
+```
+
+#### Less
+
+Less是另一个流行的CSS预处理器，语法更加简洁。
+
+```less
+// 变量
+@primary-color: #4ecdc4;
+@secondary-color: #ff6b6b;
+@font-size-base: 16px;
+@border-radius: 4px;
+
+// 嵌套
+.container {
+  width: 100%;
+  padding: 20px;
+  
+  .header {
+    background: @primary-color;
+    
+    .title {
+      font-size: @font-size-base * 1.5;
+    }
+  }
+}
+
+// 父选择器引用
+.button {
+  padding: 10px 20px;
+  background: @primary-color;
+  
+  &:hover {
+    background: darken(@primary-color, 10%);
+  }
+  
+  &.active {
+    background: darken(@primary-color, 20%);
+  }
+}
+
+// 混合宏
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  .flex-center();
+}
+
+// 带参数的混合宏
+.button-style(@bg-color, @text-color: #fff) {
+  padding: 10px 20px;
+  border: none;
+  border-radius: @border-radius;
+  background: @bg-color;
+  color: @text-color;
+}
+
+.button {
+  .button-style(@primary-color);
+}
+
+// 运算
+.width {
+  width: 100% - 20px;
+  margin: 10px;
+}
+
+.height {
+  height: 200px / 2;
+}
+
+// 函数
+@function calculate-width(@columns) {
+  @return @columns * 100px;
+}
+
+.grid {
+  width: calculate-width(3);
+}
+
+// 命名空间
+#bundle() {
+  .button() {
+    padding: 10px 20px;
+    border: none;
+  }
+  
+  .input() {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+  }
+}
+
+.container {
+  #bundle.button();
+  #bundle.input();
+}
+
+// 导入
+@import 'variables';
+@import 'mixins';
+```
+
+#### PostCSS
+
+PostCSS是一个CSS转换工具，通过插件系统实现各种功能。
+
+```javascript
+// postcss.config.js
+module.exports = {
+  plugins: [
+    require('autoprefixer')({
+      browsers: ['last 2 versions', '> 1%', 'not dead']
+    }),
+    require('cssnano')({
+      preset: 'default'
+    }),
+    require('@fullhuman/postcss-purgecss')({
+      content: ['./src/**/*.html', './src/**/*.js'],
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    })
+  ]
+};
+```
+
+```css
+/* 输入CSS */
+.button {
+  display: flex;
+  gap: 10px;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+/* 输出CSS（经过autoprefixer处理） */
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+```
+
+#### 面试要点
+- **CSS预处理器的作用是什么？**
+  提高CSS开发效率，支持变量、嵌套、混合宏、函数等特性，便于代码维护和复用
+- **Sass和Less的区别是什么？**
+  Sass功能更强大，有更多内置函数和特性；Less语法更简洁，学习曲线平缓；Sass使用$定义变量，Less使用@
+- **什么是Mixin？有什么作用？**
+  Mixin是可复用的代码块，可以接受参数，用于定义可重用的样式规则，减少代码重复
+- **PostCSS的作用是什么？**
+  PostCSS是一个CSS转换工具，通过插件系统实现自动添加浏览器前缀、CSS压缩、删除未使用的CSS等功能
+- **如何选择CSS预处理器？**
+  根据项目需求和个人偏好选择；Sass功能强大适合大型项目；Less简单易学适合小型项目；PostCSS可作为补充工具
+
+### 9. 性能优化
+
+#### 选择器优化
+
+```css
+/* 避免：过度嵌套 */
+.container .header .nav .menu .item .link {
+  color: blue;
+}
+
+/* 推荐：使用类选择器 */
+.nav-link {
+  color: blue;
+}
+
+/* 避免：通配符选择器 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 推荐：具体选择器 */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* 避免：标签选择器 */
+div.container {
+  width: 100%;
+}
+
+/* 推荐：类选择器 */
+.container {
+  width: 100%;
+}
+
+/* 避免：属性选择器 */
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+/* 推荐：类选择器 */
+.input-text {
+  border: 1px solid #ccc;
+}
+```
+
+#### 样式精简
+
+```css
+/* 避免：冗余样式 */
+.button {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* 推荐：简写属性 */
+.button {
+  margin: 10px;
+}
+
+/* 避免：重复样式 */
+.header {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 推荐：提取公共样式 */
+.text-base {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.header {
+  @extend .text-base;
+}
+
+.footer {
+  @extend .text-base;
+}
+
+/* 使用CSS变量减少重复 */
+:root {
+  --primary-color: #4ecdc4;
+  --secondary-color: #ff6b6b;
+  --spacing-unit: 8px;
+}
+
+.button {
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 3);
+  background: var(--primary-color);
+}
+
+.card {
+  padding: calc(var(--spacing-unit) * 3);
+  background: var(--secondary-color);
+}
+```
+
+#### CSS压缩
+
+```css
+/* 开发环境：保留格式和注释 */
+.button {
+  /* 主要按钮样式 */
+  padding: 10px 20px;
+  background: #4ecdc4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+/* 生产环境：压缩后 */
+.button{padding:10px 20px;background:#4ecdc4;color:#fff;border:none;border-radius:4px}
+```
+
+#### 关键CSS内联
+
+```html
+<!-- 内联首屏关键CSS -->
+<style>
+  .header {
+    background: #333;
+    padding: 20px;
+  }
+  
+  .hero {
+    height: 500px;
+    background: url('hero.jpg') center/cover;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+
+<!-- 其他CSS异步加载 -->
+<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+```
+
+#### 字体优化
+
+```css
+/* 字体显示策略 */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('font.woff2') format('woff2'),
+       url('font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* 交换显示策略 */
+}
+
+/* 字体子集化 */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('font-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF; /* 只包含拉丁字符 */
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('font-chinese.woff2') format('woff2');
+  unicode-range: U+4E00-9FFF; /* 只包含中文字符 */
+}
+```
+
+#### 减少重排和重绘
+
+```css
+/* 使用transform代替top/left */
+.element {
+  /* 避免：触发重排 */
+  left: 100px;
+  top: 100px;
+  
+  /* 推荐：使用transform */
+  transform: translate(100px, 100px);
+}
+
+/* 使用opacity代替visibility */
+.element {
+  /* 避免：触发重排 */
+  visibility: hidden;
+  
+  /* 推荐：使用opacity */
+  opacity: 0;
+}
+
+/* 批量DOM操作 */
+.batch-update {
+  /* 推荐：一次性修改多个属性 */
+  width: 100px;
+  height: 100px;
+  background: blue;
+  margin: 10px;
+}
+
+/* 使用will-change提示浏览器优化 */
+.animated-element {
+  will-change: transform, opacity;
+}
+```
+
+#### GPU加速
+
+```css
+/* 启用GPU加速 */
+.gpu-accelerated {
+  transform: translateZ(0);
+  /* 或 */
+  will-change: transform;
+  /* 或 */
+  backface-visibility: hidden;
+}
+
+/* 动画使用GPU加速 */
+.animated {
+  animation: slide 0.3s ease-out;
+  transform: translateZ(0);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+```
+
+#### 避免昂贵的属性
+
+```css
+/* 避免使用：box-shadow、filter、border-radius等 */
+.expensive {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: blur(10px);
+  border-radius: 50%;
+}
+
+/* 优化：减少使用频率 */
+.optimized {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 使用伪元素减少重绘 */
+.card {
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+```
+
+#### CSS Containment
+
+```css
+/* 使用containment隔离渲染 */
+.contain {
+  contain: strict; /* 或 content、layout、paint、size */
+}
+
+/* 部分containment */
+.layout-contain {
+  contain: layout;
+}
+
+.paint-contain {
+  contain: paint;
+}
+
+/* 实际应用 */
+.sidebar {
+  contain: layout paint;
+  overflow-y: auto;
+}
+```
+
+#### 响应式图片
+
+```html
+<!-- 使用srcset和sizes -->
+<img 
+  srcset="image-320w.jpg 320w,
+          image-640w.jpg 640w,
+          image-1280w.jpg 1280w"
+  sizes="(max-width: 640px) 100vw,
+         (max-width: 1280px) 50vw,
+         33vw"
+  src="image-1280w.jpg"
+  alt="Responsive image">
+
+<!-- 使用picture元素 -->
+<picture>
+  <source srcset="image.webp" type="image/webp">
+  <source srcset="image.jpg" type="image/jpeg">
+  <img src="image.jpg" alt="Fallback image">
+</picture>
+
+<!-- 使用lazy loading -->
+<img src="image.jpg" loading="lazy" alt="Lazy loaded image">
+```
+
+#### Content Visibility
+
+```css
+/* 使用content-visibility优化长列表 */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+}
+
+/* 优化表格 */
+.table-row {
+  content-visibility: auto;
+  contain-intrinsic-size: 50px;
+}
+```
+
+#### CSS代码分割
+
+```css
+/* 按功能分割CSS */
+/* main.css - 首屏样式 */
+/* vendor.css - 第三方库样式 */
+/* print.css - 打印样式 */
+/* critical.css - 关键CSS */
+
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="vendor.css">
+<link rel="stylesheet" href="print.css" media="print">
+```
+
+#### 性能检测工具
+
+```javascript
+// 使用Chrome DevTools
+// 1. Performance标签页：记录页面性能
+// 2. Coverage标签页：检查CSS使用率
+// 3. Lighthouse：综合性能评分
+
+// 使用CSS Stats
+// https://cssstats.com/
+
+// 使用PurgeCSS删除未使用的CSS
+// npm install -D purgecss
+
+// postcss.config.js
+module.exports = {
+  plugins: [
+    require('@fullhuman/postcss-purgecss')({
+      content: ['./src/**/*.html', './src/**/*.js'],
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+      safelist: {
+        standard: [/^active/, /^is-/],
+        deep: [/^bg-/]
+      }
+    })
+  ]
+};
+
+// 使用Critical提取关键CSS
+// npm install critical
+
+// critical.config.js
+module.exports = {
+  src: 'index.html',
+  css: ['styles.css'],
+  dest: 'index-critical.html',
+  inline: true,
+  minify: true,
+  extract: true,
+  width: 1200,
+  height: 800
+};
+```
+
+#### 面试要点
+- **如何优化CSS选择器性能？**
+  避免过度嵌套、使用类选择器、避免通配符和标签选择器、减少选择器层级
+- **什么是关键CSS？如何内联关键CSS？**
+  关键CSS是首屏渲染所需的CSS，内联到HTML中可以减少渲染阻塞，使用Critical等工具提取
+- **如何减少CSS文件大小？**
+  使用CSS压缩工具、删除未使用的CSS、使用简写属性、提取公共样式、使用CSS变量
+- **什么是重排和重绘？如何优化？**
+  重排是元素位置和尺寸变化，重绘是元素外观变化；使用transform代替top/left、批量DOM操作、使用will-change
+- **如何优化字体加载性能？**
+  使用font-display: swap、字体子集化、使用WOFF2格式、预加载关键字体
+- **CSS containment的作用是什么？**
+  隔离元素的渲染，告诉浏览器元素内容不会影响其他部分，提高渲染性能
+- **content-visibility属性有什么作用？**
+  跳过不可见元素的渲染工作，显著提高长列表和复杂页面的性能
+
 ## 实战练习
 
 ### 1. 实现三栏布局

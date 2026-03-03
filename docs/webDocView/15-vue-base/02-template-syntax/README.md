@@ -155,6 +155,120 @@ export default {
 </script>
 ```
 
+#### 特殊指令
+
+```vue
+<template>
+  <div>
+    <!-- v-pre: 跳过编译过程，直接输出原始内容 -->
+    <div v-pre>{{ this will not be compiled }}</div>
+    
+    <!-- v-cloak: 在Vue实例编译完成前隐藏元素，编译完成后移除 -->
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+    <div v-cloak>
+      {{ message }}
+    </div>
+    
+    <!-- v-once: 只渲染元素和组件一次，之后的更新将被忽略 -->
+    <div v-once>
+      <h1>{{ message }}</h1>
+      <p>{{ timestamp }}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello Vue!',
+      timestamp: Date.now()
+    }
+  },
+  mounted() {
+    // 修改message和timestamp
+    setTimeout(() => {
+      this.message = 'Updated!';
+      this.timestamp = Date.now();
+    }, 2000);
+  }
+}
+</script>
+
+<!-- v-pre应用场景 -->
+<!-- 1. 显示原始模板语法 -->
+<div v-pre>
+  <p>{{ this is raw text }}</p>
+  <p>v-if="condition"</p>
+</div>
+
+<!-- 2. 避免编译大型静态内容 -->
+<div v-pre>
+  <pre>
+    {{ large static content }}
+  </pre>
+</div>
+
+<!-- v-cloak应用场景 -->
+<!-- 1. 防止未编译的模板闪烁 -->
+<style>
+  [v-cloak] {
+    display: none;
+  }
+</style>
+<div id="app" v-cloak>
+  {{ message }}
+</div>
+
+<!-- 2. 配合CSS实现加载动画 -->
+<style>
+  [v-cloak] {
+    display: none;
+  }
+  
+  .loading {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+<div id="app">
+  <div v-cloak>
+    {{ message }}
+  </div>
+  <div v-if="!isLoaded" class="loading">
+    Loading...
+  </div>
+</div>
+
+<!-- v-once应用场景 -->
+<!-- 1. 静态内容优化 -->
+<div v-once>
+  <h1>{{ staticTitle }}</h1>
+  <p>{{ staticDescription }}</p>
+</div>
+
+<!-- 2. 初始值显示 -->
+<div>
+  <p>Initial value: <span v-once>{{ initialValue }}</span></p>
+  <p>Current value: {{ currentValue }}</p>
+</div>
+
+<!-- 3. 组件优化 -->
+<static-component v-once></static-component>
+
+<!-- 4. 列表初始值 -->
+<ul>
+  <li v-for="item in initialItems" v-once :key="item.id">
+    {{ item.text }}
+  </li>
+</ul>
+```
+
 #### 列表渲染
 
 ```vue
@@ -239,6 +353,13 @@ export default {
     <!-- 鼠标事件修饰符 -->
     <button @click.left="leftClick">Left Click</button>
     <button @click.right="rightClick">Right Click</button>
+    
+    <!-- .passive修饰符 -->
+    <div @scroll.passive="onScroll" class="scroll-container">
+      <div class="scroll-content">
+        <p v-for="n in 100" :key="n">Scroll item {{ n }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -280,10 +401,64 @@ export default {
     },
     rightClick() {
       console.log('Right click');
+    },
+    onScroll(event) {
+      console.log('Scrolling...', event.target.scrollTop);
     }
   }
 }
 </script>
+
+<style>
+.scroll-container {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.scroll-content {
+  height: 1000px;
+}
+</style>
+
+<!-- .passive修饰符应用场景 -->
+
+<!-- 1. 滚动事件优化 -->
+<div @scroll.passive="handleScroll" class="scroll-container">
+  <!-- 内容 -->
+</div>
+
+<!-- 2. 触摸事件优化（移动端） -->
+<div @touchmove.passive="handleTouchMove" class="touch-container">
+  <!-- 内容 -->
+</div>
+
+<!-- 3. 鼠标滚轮事件优化 -->
+<div @wheel.passive="handleWheel" class="wheel-container">
+  <!-- 内容 -->
+</div>
+
+<!-- passive修饰符原理 -->
+<!-- 传统事件监听器 -->
+<!-- element.addEventListener('scroll', handler, { passive: false }); -->
+<!-- 浏览器会等待handler执行完成，可能影响滚动性能 -->
+
+<!-- passive事件监听器 -->
+<!-- element.addEventListener('scroll', handler, { passive: true }); -->
+<!-- 浏览器不会等待handler执行完成，立即执行默认行为，提升性能 -->
+
+<!-- Vue中的passive修饰符 -->
+<!-- <div @scroll.passive="handleScroll"> -->
+<!-- 等同于 -->
+<!-- element.addEventListener('scroll', handler, { passive: true }); -->
+
+<!-- 注意：passive与prevent不能同时使用 -->
+<!-- 错误示例 -->
+<!-- <div @scroll.passive.prevent="onScroll"></div> -->
+
+<!-- 正确示例：如果需要prevent，不要使用passive -->
+<!-- <div @scroll="onScroll"></div> -->
 ```
 
 #### 表单处理
@@ -362,6 +537,378 @@ export default {
       lazyMessage: '',
       age: '',
       trimmedMessage: ''
+    }
+  }
+}
+</script>
+```
+
+#### 自定义表单控件
+
+```vue
+<template>
+  <div>
+    <!-- 自定义复选框组件 -->
+    <custom-checkbox v-model="checked">Check me</custom-checkbox>
+    <p>Checked: {{ checked }}</p>
+    
+    <!-- 自定义单选框组件 -->
+    <custom-radio v-model="selected" value="option1">Option 1</custom-radio>
+    <custom-radio v-model="selected" value="option2">Option 2</custom-radio>
+    <p>Selected: {{ selected }}</p>
+    
+    <!-- 自定义输入框组件 -->
+    <custom-input v-model="text" placeholder="Enter text"></custom-input>
+    <p>Text: {{ text }}</p>
+    
+    <!-- 自定义选择框组件 -->
+    <custom-select v-model="option" :options="options"></custom-select>
+    <p>Selected: {{ option }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      checked: false,
+      selected: 'option1',
+      text: '',
+      option: '',
+      options: [
+        { value: 'a', label: 'Option A' },
+        { value: 'b', label: 'Option B' },
+        { value: 'c', label: 'Option C' }
+      ]
+    }
+  }
+}
+</script>
+
+<!-- 自定义复选框组件 CustomCheckbox.vue -->
+<template>
+  <label class="custom-checkbox">
+    <input
+      type="checkbox"
+      :checked="modelValue"
+      @change="$emit('update:modelValue', $event.target.checked)"
+    >
+    <span class="checkbox-box"></span>
+    <slot></slot>
+  </label>
+</template>
+
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: Boolean,
+      default: false
+    }
+  },
+  emits: ['update:modelValue']
+}
+</script>
+
+<style>
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.checkbox-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+}
+
+.custom-checkbox input:checked + .checkbox-box {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.custom-checkbox input:checked + .checkbox-box::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<!-- 自定义单选框组件 CustomRadio.vue -->
+<template>
+  <label class="custom-radio">
+    <input
+      type="radio"
+      :value="value"
+      :checked="modelValue === value"
+      @change="$emit('update:modelValue', value)"
+    >
+    <span class="radio-box"></span>
+    <slot></slot>
+  </label>
+</template>
+
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: [String, Number],
+      default: ''
+    },
+    value: {
+      type: [String, Number],
+      required: true
+    }
+  },
+  emits: ['update:modelValue']
+}
+</script>
+
+<style>
+.custom-radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.custom-radio input {
+  display: none;
+}
+
+.radio-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.custom-radio input:checked + .radio-box {
+  border-color: #4CAF50;
+}
+
+.custom-radio input:checked + .radio-box::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<!-- 自定义输入框组件 CustomInput.vue -->
+<template>
+  <div class="custom-input">
+    <input
+      type="text"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
+      :placeholder="placeholder"
+      @focus="$emit('focus')"
+      @blur="$emit('blur')"
+    >
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: String,
+      default: ''
+    },
+    placeholder: {
+      type: String,
+      default: ''
+    }
+  },
+  emits: ['update:modelValue', 'focus', 'blur']
+}
+</script>
+
+<style>
+.custom-input input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.custom-input input:focus {
+  border-color: #4CAF50;
+}
+</style>
+
+<!-- 自定义选择框组件 CustomSelect.vue -->
+<template>
+  <div class="custom-select">
+    <select
+      :value="modelValue"
+      @change="$emit('update:modelValue', $event.target.value)"
+    >
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: [String, Number],
+      default: ''
+    },
+    options: {
+      type: Array,
+      default: () => []
+    }
+  },
+  emits: ['update:modelValue']
+}
+</script>
+
+<style>
+.custom-select select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+  min-width: 200px;
+}
+
+.custom-select select:focus {
+  border-color: #4CAF50;
+}
+</style>
+
+<!-- 自定义表单控件最佳实践 -->
+
+<!-- 1. 使用v-model的props和emits -->
+<template>
+  <custom-input v-model="message"></custom-input>
+</template>
+
+<!-- CustomInput.vue -->
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: String,
+      default: ''
+    }
+  },
+  emits: ['update:modelValue']
+}
+</script>
+
+<!-- 2. 支持v-model修饰符 -->
+<template>
+  <custom-input v-model.lazy="message"></custom-input>
+  <custom-input v-model.trim="message"></custom-input>
+  <custom-input v-model.number="age"></custom-input>
+</template>
+
+<!-- CustomInput.vue -->
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: [String, Number],
+      default: ''
+    },
+    modelModifiers: {
+      default: () => ({})
+    }
+  },
+  emits: ['update:modelValue'],
+  methods: {
+    emitValue(event) {
+      let value = event.target.value;
+      
+      if (this.modelModifiers.trim) {
+        value = value.trim();
+      }
+      
+      if (this.modelModifiers.number) {
+        value = Number(value);
+      }
+      
+      if (!this.modelModifiers.lazy) {
+        this.$emit('update:modelValue', value);
+      }
+    }
+  }
+}
+</script>
+
+<!-- 3. 支持多个v-model -->
+<template>
+  <user-name
+    v-model:first-name="firstName"
+    v-model:last-name="lastName"
+  ></user-name>
+</template>
+
+<!-- UserName.vue -->
+<script>
+export default {
+  props: {
+    firstName: String,
+    lastName: String
+  },
+  emits: ['update:firstName', 'update:lastName']
+}
+</script>
+
+<!-- 4. 自定义表单验证 -->
+<template>
+  <custom-input
+    v-model="email"
+    :error="emailError"
+    @blur="validateEmail"
+  ></custom-input>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      email: '',
+      emailError: ''
+    }
+  },
+  methods: {
+    validateEmail() {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!re.test(this.email)) {
+        this.emailError = 'Invalid email';
+      } else {
+        this.emailError = '';
+      }
     }
   }
 }
@@ -507,6 +1054,315 @@ Vue.directive('focus', {
   }
 });
 </script>
+```
+
+#### 模板引用
+
+```vue
+<template>
+  <div>
+    <!-- 基本用法 -->
+    <input ref="inputRef" placeholder="Focus me">
+    <button @click="focusInput">Focus Input</button>
+    
+    <!-- 访问DOM元素 -->
+    <div ref="containerRef" class="container">
+      <p>Container content</p>
+    </div>
+    <button @click="logContainer">Log Container</button>
+    
+    <!-- 访问子组件 -->
+    <child-component ref="childRef"></child-component>
+    <button @click="callChildMethod">Call Child Method</button>
+    
+    <!-- v-for中的ref -->
+    <ul>
+      <li v-for="item in items" :key="item.id" :ref="el => setItemRef(el, item.id)">
+        {{ item.text }}
+      </li>
+    </ul>
+    <button @click="logItemRefs">Log Item Refs</button>
+    
+    <!-- 动态ref -->
+    <div :ref="dynamicRef">Dynamic Ref</div>
+  </div>
+</template>
+
+<script>
+import ChildComponent from './ChildComponent.vue';
+
+export default {
+  components: {
+    ChildComponent
+  },
+  data() {
+    return {
+      message: 'Hello Vue!',
+      dynamicRef: 'containerRef',
+      items: [
+        { id: 1, text: 'Item 1' },
+        { id: 2, text: 'Item 2' },
+        { id: 3, text: 'Item 3' }
+      ],
+      itemRefs: {}
+    }
+  },
+  mounted() {
+    // 在mounted之后才能访问ref
+    console.log('Input ref:', this.$refs.inputRef);
+    console.log('Container ref:', this.$refs.containerRef);
+    console.log('Child ref:', this.$refs.childRef);
+    
+    // 自动聚焦输入框
+    this.$refs.inputRef.focus();
+  },
+  methods: {
+    focusInput() {
+      this.$refs.inputRef.focus();
+    },
+    logContainer() {
+      console.log('Container:', this.$refs.containerRef);
+      console.log('Container height:', this.$refs.containerRef.offsetHeight);
+    },
+    callChildMethod() {
+      this.$refs.childRef.childMethod();
+    },
+    setItemRef(el, id) {
+      if (el) {
+        this.itemRefs[id] = el;
+      }
+    },
+    logItemRefs() {
+      console.log('Item refs:', this.itemRefs);
+    }
+  }
+}
+</script>
+
+<!-- 子组件 ChildComponent.vue -->
+<template>
+  <div>
+    <h3>Child Component</h3>
+    <p>{{ childMessage }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      childMessage: 'Hello from child!'
+    }
+  },
+  methods: {
+    childMethod() {
+      console.log('Child method called!');
+      alert('Child method called!');
+    }
+  }
+}
+</script>
+
+<!-- 模板引用ref详细说明 -->
+
+<!-- 1. ref的基本用法 -->
+<input ref="myInput">
+<button @click="$refs.myInput.focus()">Focus</button>
+
+<!-- 2. 在v-for中使用ref -->
+<ul>
+  <li v-for="item in items" :key="item.id" :ref="setItemRef">
+    {{ item.text }}
+  </li>
+</ul>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [...],
+      itemRefs: []
+    }
+  },
+  methods: {
+    setItemRef(el) {
+      if (el) {
+        this.itemRefs.push(el);
+      }
+    }
+  }
+}
+</script>
+
+<!-- 3. 访问子组件 -->
+<child-component ref="myChild"></child-component>
+
+<script>
+export default {
+  methods: {
+    callChildMethod() {
+      this.$refs.myChild.childMethod();
+    }
+  }
+}
+</script>
+
+<!-- 4. ref的注意事项 -->
+<!-- ref只在组件渲染完成后才能访问 -->
+<!-- 不要在模板中直接使用$refs -->
+<!-- 不要在computed中使用$refs -->
+<!-- ref是响应式的，但ref指向的元素不是响应式的 -->
+```
+
+#### 模板注释
+
+```vue
+<template>
+  <div>
+    <!-- HTML注释：会被保留在DOM中 -->
+    <!-- 这是一个HTML注释 -->
+    <p>Content</p>
+    
+    <!-- Vue注释：会被编译器移除 -->
+    <!-- {{ 这个注释不会被渲染 }} -->
+    <p>Content</p>
+    
+    <!-- 条件注释 -->
+    <!-- <div v-if="false">这个div不会被渲染</div> -->
+    <p>Content</p>
+    
+    <!-- 多行注释 -->
+    <!--
+      这是一个多行注释
+      可以包含多行内容
+      不会被渲染到DOM中
+    -->
+    <p>Content</p>
+  </div>
+</template>
+
+<!-- 模板注释详细说明 -->
+
+<!-- 1. HTML注释 -->
+<!-- 这个注释会保留在DOM中 -->
+<div>Content</div>
+
+<!-- 2. Vue注释 -->
+<!-- {{ 这个注释会被编译器移除 }} -->
+<div>Content</div>
+
+<!-- 3. 条件注释 -->
+<!-- <div v-if="false">这个div不会被渲染</div> -->
+<div>Content</div>
+
+<!-- 4. 多行注释 -->
+<!--
+  这是一个多行注释
+  可以包含多行内容
+-->
+<div>Content</div>
+```
+
+#### 模板表达式限制
+
+```vue
+<template>
+  <div>
+    <!-- ✅ 正确：使用表达式 -->
+    <p>{{ message + ' World' }}</p>
+    <p>{{ isTrue ? 'Yes' : 'No' }}</p>
+    <p>{{ message.split('').reverse().join('') }}</p>
+    
+    <!-- ❌ 错误：使用语句 -->
+    <!-- <p>{{ var a = 1 }}</p> -->
+    <!-- <p>{{ if (true) { return 'yes' } } }</p> -->
+    <!-- <p>{{ for (let i = 0; i < 10; i++) { } }}</p> -->
+    
+    <!-- ✅ 正确：访问组件实例属性 -->
+    <p>{{ this.message }}</p>
+    <p>{{ this.greet() }}</p>
+    
+    <!-- ❌ 错误：访问全局对象 -->
+    <!-- <p>{{ window.location.href }}</p> -->
+    <!-- <p>{{ document.title }}</p> -->
+    <!-- <p>{{ console.log('hello') }}</p> -->
+    
+    <!-- ✅ 推荐：使用计算属性 -->
+    <p>{{ reversedMessage }}</p>
+    <p>{{ fullName }}</p>
+    
+    <!-- ❌ 不推荐：在模板中使用复杂逻辑 -->
+    <!-- <p>{{ message.split('').reverse().join('').toUpperCase() }}</p> -->
+    <!-- <p>{{ firstName + ' ' + lastName }}</p> -->
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello Vue!',
+      isTrue: true,
+      firstName: 'John',
+      lastName: 'Doe'
+    }
+  },
+  computed: {
+    reversedMessage() {
+      return this.message.split('').reverse().join('');
+    },
+    fullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
+  },
+  methods: {
+    greet() {
+      return 'Hello!';
+    }
+  }
+}
+</script>
+
+<!-- 模板表达式限制详细说明 -->
+
+<!-- 1. 只能使用表达式，不能使用语句 -->
+<!-- ✅ 正确 -->
+{{ message + ' World' }}
+{{ isTrue ? 'Yes' : 'No' }}
+{{ message.split('').reverse().join('') }}
+
+<!-- ❌ 错误 -->
+{{ var a = 1 }}
+{{ if (true) { return 'yes' } } }
+{{ for (let i = 0; i < 10; i++) { } }}
+
+<!-- 2. 不能访问全局对象 -->
+<!-- ✅ 正确 -->
+{{ this.message }}
+{{ this.greet() }}
+
+<!-- ❌ 错误 -->
+{{ window.location.href }}
+{{ document.title }}
+{{ console.log('hello') }}
+
+<!-- 3. 表达式应该保持简单 -->
+<!-- ✅ 推荐：将复杂逻辑移到计算属性 -->
+{{ reversedMessage }}
+
+<!-- ❌ 不推荐：在模板中使用复杂表达式 -->
+{{ message.split('').reverse().join('').toUpperCase() }}
+
+<!-- 4. 模板表达式的最佳实践 -->
+<!-- ✅ 推荐：使用计算属性 -->
+<p>{{ fullName }}</p>
+
+<!-- ✅ 推荐：使用方法 -->
+<p>{{ formatDate(date) }}</p>
+
+<!-- ❌ 不推荐：在模板中使用复杂逻辑 -->
+<p>{{ firstName + ' ' + lastName }}</p>
+<p>{{ new Date(date).toLocaleDateString() }}</p>
 ```
 
 ### 4. 模板编译

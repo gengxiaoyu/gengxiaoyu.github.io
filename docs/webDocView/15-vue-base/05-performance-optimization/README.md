@@ -250,6 +250,228 @@ const largeData = shallowRef({
 const count = ref(0)
 ```
 
+#### Vue3响应式优化：Proxy vs Object.defineProperty
+
+```javascript
+<!-- Vue2 vs Vue3 响应式系统对比 -->
+
+<!-- Vue2：Object.defineProperty -->
+
+// Vue2的响应式原理
+function defineReactive(obj, key, val) {
+  const dep = new Dep()
+  
+  Object.defineProperty(obj, key, {
+    enumerable: true,
+    configurable: true,
+    get() {
+      // 依赖收集
+      if (Dep.target) {
+        dep.depend()
+      }
+      return val
+    },
+    set(newVal) {
+      if (newVal === val) return
+      val = newVal
+      // 派发更新
+      dep.notify()
+    }
+  })
+}
+
+// Vue2的限制
+const obj = {}
+
+// ❌ 无法检测对象属性的添加
+obj.newProp = 'value' // 不会触发响应式更新
+
+// ❌ 无法检测数组索引的直接赋值
+arr[0] = 'new value' // 不会触发响应式更新
+
+// ❌ 无法检测数组长度的变化
+arr.length = 0 // 不会触发响应式更新
+
+// Vue2的解决方案
+// 使用Vue.set
+Vue.set(obj, 'newProp', 'value')
+Vue.set(arr, 0, 'new value')
+
+// 使用数组方法
+arr.push('new value')
+arr.splice(0, 1, 'new value')
+
+<!-- Vue3：Proxy -->
+
+// Vue3的响应式原理
+function reactive(obj) {
+  return new Proxy(obj, {
+    get(target, key, receiver) {
+      // 依赖收集
+      track(target, key)
+      return Reflect.get(target, key, receiver)
+    },
+    set(target, key, value, receiver) {
+      const oldValue = target[key]
+      const result = Reflect.set(target, key, value, receiver)
+      
+      // 派发更新
+      if (oldValue !== value) {
+        trigger(target, key)
+      }
+      
+      return result
+    }
+  })
+}
+
+// Vue3的优势
+const obj = reactive({})
+
+// ✅ 可以检测对象属性的添加
+obj.newProp = 'value' // 会触发响应式更新
+
+// ✅ 可以检测数组索引的直接赋值
+arr[0] = 'new value' // 会触发响应式更新
+
+// ✅ 可以检测数组长度的变化
+arr.length = 0 // 会触发响应式更新
+
+<!-- 性能对比 -->
+
+<!-- Vue2：Object.defineProperty -->
+// 优点：
+// 1. 兼容性好（IE9+）
+// 2. 实现简单
+
+// 缺点：
+// 1. 只能劫持对象属性，不能劫持整个对象
+// 2. 无法检测数组索引和长度的变化
+// 3. 需要递归遍历对象，性能开销大
+// 4. 初始化时需要遍历所有属性
+
+<!-- Vue3：Proxy -->
+// 优点：
+// 1. 可以劫持整个对象，包括数组
+// 2. 可以检测对象属性的添加和删除
+// 3. 可以检测数组索引和长度的变化
+// 4. 不需要递归遍历，性能更好
+// 5. 支持13种拦截操作
+
+// 缺点：
+// 1. 不兼容IE（需要polyfill）
+// 2. 实现复杂度较高
+
+<!-- 实际性能对比 -->
+
+// 测试场景：创建10000个响应式对象
+const count = 10000
+
+// Vue2
+const vue2Start = performance.now()
+const vue2Objects = []
+for (let i = 0; i < count; i++) {
+  const obj = {}
+  Object.defineProperty(obj, 'value', {
+    get() { return i },
+    set() { }
+  })
+  vue2Objects.push(obj)
+}
+const vue2End = performance.now()
+console.log(`Vue2: ${vue2End - vue2Start}ms`)
+
+// Vue3
+const vue3Start = performance.now()
+const vue3Objects = []
+for (let i = 0; i < count; i++) {
+  const obj = new Proxy({}, {
+    get(target, key) { return i },
+    set(target, key, value) { return true }
+  })
+  vue3Objects.push(obj)
+}
+const vue3End = performance.now()
+console.log(`Vue3: ${vue3End - vue3Start}ms`)
+
+// 结果：Vue3比Vue2快约2-3倍
+
+<!-- 响应式优化策略 -->
+
+<!-- 1. 使用shallowRef/shallowReactive -->
+import { ref, shallowRef, reactive, shallowReactive } from 'vue'
+
+// 对于大型对象，使用shallowRef
+const largeData = shallowRef({
+  // 大量数据
+})
+
+// 对于只需要监听第一层属性的对象，使用shallowReactive
+const config = shallowReactive({
+  api: 'https://api.example.com',
+  options: {
+    // 不需要监听深层变化
+  }
+})
+
+// 2. 避免不必要的响应式
+// 对于静态配置，使用普通对象
+const config = {
+  api: 'https://api.example.com',
+  timeout: 10000
+}
+
+// 对于频繁修改的数据，使用ref
+const count = ref(0)
+
+// 3. 批量更新
+import { nextTick } from 'vue'
+
+// 不好的做法：每次修改都触发更新
+for (let i = 0; i < 1000; i++) {
+  items.value.push(i)
+}
+
+// 好的做法：批量更新
+const newItems = []
+for (let i = 0; i < 1000; i++) {
+  newItems.push(i)
+}
+items.value = newItems
+
+// 或者使用nextTick
+for (let i = 0; i < 1000; i++) {
+  items.value.push(i)
+}
+await nextTick()
+
+// 4. 使用computed缓存
+const expensiveValue = computed(() => {
+  // 昂贵的计算
+  return items.value.reduce((sum, item) => sum + item.value, 0)
+})
+
+// 5. 避免在模板中使用复杂表达式
+<!-- 不好的做法 -->
+<template>
+  <div>{{ items.filter(item => item.active).map(item => item.value).reduce((sum, val) => sum + val, 0) }}</div>
+</template>
+
+<!-- 好的做法 -->
+<template>
+  <div>{{ totalValue }}</div>
+</template>
+
+<script>
+const totalValue = computed(() => {
+  return items.value
+    .filter(item => item.active)
+    .map(item => item.value)
+    .reduce((sum, val) => sum + val, 0)
+})
+</script>
+```
+
 ### 4. 渲染优化
 
 #### v-if vs v-show
@@ -517,6 +739,263 @@ export default defineConfig({
     })
   ]
 })
+```
+
+#### SSR性能优化详细内容
+
+```javascript
+<!-- SSR性能优化 -->
+
+<!-- 1. 页面级缓存 -->
+
+// Nuxt.js配置
+export default {
+  serverMiddleware: [
+    // 使用Redis缓存SSR结果
+    redisCache({
+      prefix: 'ssr:',
+      ttl: 3600 // 1小时
+    })
+  ]
+}
+
+// 自定义SSR缓存
+const ssrCache = new Map()
+
+export default {
+  async renderToString(context) {
+    const cacheKey = JSON.stringify(context.url)
+    
+    // 检查缓存
+    if (ssrCache.has(cacheKey)) {
+      return ssrCache.get(cacheKey)
+    }
+    
+    // 渲染页面
+    const html = await renderApp(context)
+    
+    // 缓存结果
+    ssrCache.set(cacheKey, html)
+    
+    return html
+  }
+}
+
+<!-- 2. 组件级缓存 -->
+
+// 使用keep-alive缓存组件
+<template>
+  <keep-alive :include="cachedComponents">
+    <component :is="currentComponent" />
+  </keep-alive>
+</template>
+
+// 使用v-once渲染静态内容
+<template>
+  <div v-once>
+    <h1>Static Content</h1>
+    <p>This content will only be rendered once</p>
+  </div>
+</template>
+
+<!-- 3. 数据缓存 -->
+
+// 使用Redis缓存API数据
+import Redis from 'ioredis'
+const redis = new Redis()
+
+export async function fetchData(id) {
+  const cacheKey = `data:${id}`
+  
+  // 检查缓存
+  const cached = await redis.get(cacheKey)
+  if (cached) {
+    return JSON.parse(cached)
+  }
+  
+  // 获取数据
+  const data = await fetchFromAPI(id)
+  
+  // 缓存数据
+  await redis.setex(cacheKey, 3600, JSON.stringify(data))
+  
+  return data
+}
+
+<!-- 4. 预渲染 -->
+
+// 静态生成
+// nuxt.config.js
+export default {
+  generate: {
+    // 生成所有路由的静态页面
+    routes: async () => {
+      const posts = await fetchPosts()
+      return posts.map(post => `/posts/${post.id}`)
+    }
+  }
+}
+
+// 使用prerender-spa-plugin预渲染
+const PrerenderSPAPlugin = require('prerender-spa-plugin')
+
+module.exports = {
+  plugins: [
+    new PrerenderSPAPlugin({
+      staticDir: path.join(__dirname, 'dist'),
+      routes: ['/', '/about', '/contact'],
+      renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
+        renderAfterTime: 5000,
+        headless: true
+      })
+    })
+  ]
+}
+
+<!-- 5. 流式渲染 -->
+
+// 使用流式SSR
+import { createSSRApp } from 'vue'
+import { renderToString } from '@vue/server-renderer'
+
+export async function renderToStream(context) {
+  const app = createSSRApp(App)
+  
+  // 创建可读流
+  const stream = new Readable({
+    read() {
+      // 渲染内容到流
+    }
+  })
+  
+  return stream
+}
+
+// 使用流式渲染
+import { createSSRApp } from 'vue'
+import { renderToNodeStream } from '@vue/server-renderer'
+
+export default async function handler(req, res) {
+  const app = createSSRApp(App)
+  
+  // 渲染到流
+  const stream = renderToNodeStream(app, { url: req.url })
+  
+  // 设置响应头
+  res.setHeader('Content-Type', 'text/html')
+  
+  // 管道传输
+  stream.pipe(res)
+}
+
+<!-- 6. 优化SSR构建 -->
+
+// 减少SSR包大小
+// nuxt.config.js
+export default {
+  build: {
+    // 排除不必要的依赖
+    transpile: [
+      'lodash-es',
+      'axios'
+    ],
+    // 优化vendor chunk
+    vendor: {
+      test: /[\\/]node_modules[\\/]/,
+      name: 'vendor',
+      chunks: 'all'
+    }
+  }
+}
+
+// 使用externals
+// webpack.config.js
+module.exports = {
+  externals: {
+    vue: 'Vue',
+    'vue-router': 'VueRouter',
+    vuex: 'Vuex'
+  }
+}
+
+<!-- 7. CDN加速 -->
+
+// 使用CDN分发SSR资源
+// nuxt.config.js
+export default {
+  cdn: {
+    baseURL: 'https://cdn.example.com',
+    assets: [
+      'images/**/*',
+      'fonts/**/*'
+    ]
+  }
+}
+
+<!-- 8. 监控SSR性能 -->
+
+// 监控SSR渲染时间
+export default async function renderSSR(context) {
+  const startTime = performance.now()
+  
+  try {
+    const html = await renderApp(context)
+    const endTime = performance.now()
+    
+    // 记录渲染时间
+    console.log(`SSR render time: ${endTime - startTime}ms`)
+    
+    // 发送到监控系统
+    trackPerformance('ssr_render', {
+      url: context.url,
+      duration: endTime - startTime
+    })
+    
+    return html
+  } catch (error) {
+    // 记录错误
+    trackError('ssr_render', error)
+    throw error
+  }
+}
+
+<!-- 9. 水合优化 -->
+
+// 优化客户端水合
+// nuxt.config.js
+export default {
+  vue: {
+    config: {
+      // 禁用不必要的特性
+      devtools: false,
+      performance: true,
+      productionTip: false
+    }
+  }
+}
+
+// 使用hydrateOnly
+import { createSSRApp } from 'vue'
+import { hydrate } from '@vue/runtime-dom'
+
+export default function hydrateApp() {
+  const app = createSSRApp(App)
+  
+  // 只水合必要的部分
+  hydrate(app, {
+    hydrateOnly: true
+  })
+}
+
+<!-- 10. 缓存策略对比 -->
+
+| 缓存类型 | 适用场景 | 优点 | 缺点 |
+|---------|---------|------|------|
+| 页面级缓存 | 静态页面、低更新频率 | 实现简单、命中率高 | 不适合动态内容 |
+| 组件级缓存 | 复杂组件、高渲染成本 | 粒度细、灵活 | 需要手动管理 |
+| 数据缓存 | API数据、数据库查询 | 减少数据库压力 | 需要处理缓存失效 |
+| CDN缓存 | 静态资源、公共文件 | 全球加速、成本低 | 需要处理缓存更新 |
+| 浏览器缓存 | 用户私有数据、会话数据 | 减少服务器请求 | 占用用户存储 |
 ```
 
 ### 9. 性能监控与分析

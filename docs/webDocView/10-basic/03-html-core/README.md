@@ -444,6 +444,437 @@ permalink: /webDocView/10-basic/03-html-core/
 </html>
 ```
 
+### 5. HTML最佳实践
+
+#### 代码规范
+
+```html
+<!-- 缩进规范：使用2个空格或4个空格 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>代码规范示例</title>
+</head>
+<body>
+  <div class="container">
+    <h1>标题</h1>
+    <p>段落内容</p>
+  </div>
+</body>
+</html>
+
+<!-- 命名规范：使用小写字母和连字符 -->
+<div class="main-container">
+  <div class="header-wrapper">
+    <h1 class="page-title">页面标题</h1>
+  </div>
+  <div class="content-section">
+    <p class="text-paragraph">段落内容</p>
+  </div>
+</div>
+
+<!-- 注释规范：清晰描述代码功能 -->
+<!-- 页面头部 -->
+<header class="site-header">
+  <nav class="main-navigation">
+    <!-- 导航菜单 -->
+    <ul class="nav-list">
+      <li><a href="#" class="nav-link">首页</a></li>
+      <li><a href="#" class="nav-link">关于</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- 标签闭合：所有标签必须正确闭合 -->
+<div class="container">
+  <p>段落内容</p>
+  <img src="image.jpg" alt="图片描述">
+</div>
+
+<!-- 属性引号：使用双引号包裹属性值 -->
+<a href="https://example.com" class="link">链接</a>
+<img src="image.jpg" alt="图片" width="300" height="200">
+```
+
+#### 性能优化
+
+```html
+<!-- 1. 减少HTTP请求：合并CSS和JS文件 -->
+<head>
+  <!-- 不推荐：多个CSS文件 -->
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style3.css">
+  
+  <!-- 推荐：合并后的CSS文件 -->
+  <link rel="stylesheet" href="styles.min.css">
+</head>
+
+<!-- 2. 优化图片：使用合适的格式和尺寸 -->
+<!-- 不推荐：大图片用于小显示区域 -->
+<img src="large-image.jpg" alt="图片" width="100" height="100">
+
+<!-- 推荐：使用合适尺寸的图片 -->
+<img src="small-image.jpg" alt="图片" width="100" height="100">
+
+<!-- 使用现代图片格式 -->
+<picture>
+  <source srcset="image.webp" type="image/webp">
+  <img src="image.jpg" alt="图片">
+</picture>
+
+<!-- 3. 使用CDN加速 -->
+<head>
+  <!-- 使用CDN加载常用库 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+
+<!-- 4. 延迟加载非关键资源 -->
+<head>
+  <!-- 关键CSS：内联或同步加载 -->
+  <link rel="stylesheet" href="critical.css">
+  
+  <!-- 非关键CSS：异步加载 -->
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- 脚本：延迟加载 -->
+  <script src="script.js" defer></script>
+</head>
+
+<!-- 5. 图片懒加载 -->
+<img src="placeholder.jpg" data-src="actual-image.jpg" alt="图片" loading="lazy">
+
+<!-- 6. 预加载关键资源 -->
+<head>
+  <link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="hero-image.jpg" as="image">
+</head>
+```
+
+#### 可访问性
+
+```html
+<!-- 1. 图片alt属性 -->
+<!-- 不推荐：缺少alt属性 -->
+<img src="image.jpg">
+
+<!-- 推荐：提供描述性alt文本 -->
+<img src="image.jpg" alt="一个穿着红色衬衫的男人在公园散步">
+
+<!-- 装饰性图片：使用空alt -->
+<img src="decorative.png" alt="">
+
+<!-- 2. 表单标签关联 -->
+<!-- 不推荐：label和input没有关联 -->
+<label>用户名：</label>
+<input type="text" name="username">
+
+<!-- 推荐：使用for和id关联 -->
+<label for="username">用户名：</label>
+<input type="text" id="username" name="username">
+
+<!-- 推荐：使用嵌套关联 -->
+<label>
+  用户名：
+  <input type="text" name="username">
+</label>
+
+<!-- 3. 键盘导航 -->
+<!-- 为交互元素添加tabindex -->
+<div tabindex="0" role="button">可聚焦的div</div>
+
+<!-- 使用accesskey提供快捷键 -->
+<a href="#" accesskey="h">首页 (Alt+H)</a>
+
+<!-- 4. 语义化标题结构 -->
+<!-- 不推荐：跳过标题级别 -->
+<h1>主标题</h1>
+<h3>副标题</h3>
+
+<!-- 推荐：按顺序使用标题 -->
+<h1>主标题</h1>
+<h2>副标题</h2>
+<h3>子标题</h3>
+
+<!-- 5. ARIA属性 -->
+<!-- 为动态内容添加ARIA属性 -->
+<div id="status" role="status" aria-live="polite">
+  操作成功
+</div>
+
+<!-- 为可折叠内容添加ARIA -->
+<button aria-expanded="false" aria-controls="menu">菜单</button>
+<ul id="menu" hidden>
+  <li><a href="#">首页</a></li>
+  <li><a href="#">关于</a></li>
+</ul>
+
+<!-- 6. 表单可访问性 -->
+<form>
+  <fieldset>
+    <legend>个人信息</legend>
+    <div>
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" required aria-required="true">
+    </div>
+    <div>
+      <label for="email">邮箱：</label>
+      <input type="email" id="email" name="email" required aria-required="true">
+    </div>
+  </fieldset>
+</form>
+```
+
+#### SEO优化
+
+```html
+<!-- 1. 标题标签 -->
+<head>
+  <!-- 页面标题：简洁、包含关键词 -->
+  <title>HTML最佳实践 - 前端开发指南</title>
+</head>
+
+<body>
+  <!-- 使用正确的标题层级 -->
+  <h1>HTML最佳实践</h1>
+  <h2>代码规范</h2>
+  <h3>缩进规范</h3>
+  <h3>命名规范</h3>
+  <h2>性能优化</h2>
+</body>
+
+<!-- 2. Meta标签 -->
+<head>
+  <!-- 描述标签 -->
+  <meta name="description" content="学习HTML最佳实践，包括代码规范、性能优化、可访问性和SEO优化">
+  
+  <!-- 关键词标签 -->
+  <meta name="keywords" content="HTML, 最佳实践, 前端开发, SEO">
+  
+  <!-- 作者标签 -->
+  <meta name="author" content="作者名称">
+  
+  <!-- Open Graph标签 -->
+  <meta property="og:title" content="HTML最佳实践">
+  <meta property="og:description" content="学习HTML最佳实践">
+  <meta property="og:image" content="https://example.com/image.jpg">
+  <meta property="og:url" content="https://example.com/article">
+  
+  <!-- Twitter Card标签 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HTML最佳实践">
+  <meta name="twitter:description" content="学习HTML最佳实践">
+  <meta name="twitter:image" content="https://example.com/image.jpg">
+</head>
+
+<!-- 3. 语义化结构 -->
+<body>
+  <header>
+    <h1>网站标题</h1>
+    <nav>
+      <ul>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">关于</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <article>
+      <h2>文章标题</h2>
+      <p>文章内容...</p>
+    </article>
+  </main>
+  
+  <aside>
+    <h3>侧边栏</h3>
+    <p>侧边栏内容...</p>
+  </aside>
+  
+  <footer>
+    <p>© 2026 网站版权</p>
+  </footer>
+</body>
+
+<!-- 4. 结构化数据 -->
+<head>
+  <!-- JSON-LD格式 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "HTML最佳实践",
+    "author": {
+      "@type": "Person",
+      "name": "作者名称"
+    },
+    "datePublished": "2026-02-05",
+    "description": "学习HTML最佳实践"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Microdata格式 -->
+  <article itemscope itemtype="https://schema.org/Article">
+    <h1 itemprop="headline">HTML最佳实践</h1>
+    <p itemprop="description">学习HTML最佳实践</p>
+    <time itemprop="datePublished" datetime="2026-02-05">2026年2月5日</time>
+  </article>
+</body>
+
+<!-- 5. 图片SEO -->
+<img src="image.jpg" alt="描述性文本" title="图片标题">
+
+<!-- 6. 链接优化 -->
+<a href="https://example.com/article" title="文章标题">阅读更多</a>
+```
+
+#### 响应式设计
+
+```html
+<!-- 1. Viewport设置 -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- 2. 响应式图片 -->
+<!-- 使用srcset和sizes -->
+<img 
+  srcset="image-320w.jpg 320w,
+          image-640w.jpg 640w,
+          image-1280w.jpg 1280w"
+  sizes="(max-width: 640px) 100vw,
+         (max-width: 1280px) 50vw,
+         33vw"
+  src="image-1280w.jpg"
+  alt="响应式图片">
+
+<!-- 使用picture元素 -->
+<picture>
+  <source media="(min-width: 1200px)" srcset="large.jpg">
+  <source media="(min-width: 768px)" srcset="medium.jpg">
+  <img src="small.jpg" alt="响应式图片">
+</picture>
+
+<!-- 3. 响应式嵌入内容 -->
+<iframe 
+  src="https://www.youtube.com/embed/video-id"
+  width="560" 
+  height="315"
+  loading="lazy"
+  title="视频标题">
+</iframe>
+
+<!-- 4. 响应式表格 -->
+<table class="responsive-table">
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>年龄</th>
+      <th>职业</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="姓名">张三</td>
+      <td data-label="年龄">25</td>
+      <td data-label="职业">工程师</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+@media (max-width: 768px) {
+  .responsive-table thead {
+    display: none;
+  }
+  
+  .responsive-table tr {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .responsive-table td {
+    display: block;
+    text-align: right;
+  }
+  
+  .responsive-table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}
+</style>
+```
+
+#### 安全性
+
+```html
+<!-- 1. 防止XSS攻击 -->
+<!-- 不推荐：直接输出用户输入 -->
+<div id="user-content"></div>
+<script>
+  const userInput = '<script>alert("XSS")<\/script>';
+  document.getElementById('user-content').innerHTML = userInput;
+</script>
+
+<!-- 推荐：使用textContent或HTML编码 -->
+<div id="user-content"></div>
+<script>
+  const userInput = '<script>alert("XSS")<\/script>';
+  document.getElementById('user-content').textContent = userInput;
+</script>
+
+<!-- 2. CSP（内容安全策略） -->
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
+</head>
+
+<!-- 3. HTTPS -->
+<!-- 使用HTTPS协议 -->
+<a href="https://example.com">安全链接</a>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+<!-- 4. 表单安全 -->
+<form action="submit.php" method="post">
+  <!-- 使用POST方法提交敏感数据 -->
+  <input type="hidden" name="csrf_token" value="token值">
+  <input type="text" name="username" autocomplete="username">
+  <input type="password" name="password" autocomplete="current-password">
+  <button type="submit">登录</button>
+</form>
+
+<!-- 5. 防止点击劫持 -->
+<head>
+  <style>
+    iframe {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <iframe src="https://example.com" sandbox="allow-scripts"></iframe>
+</body>
+```
+
+#### 面试要点
+- **HTML代码规范有哪些？**
+  缩进规范（2或4空格）、命名规范（小写+连字符）、注释规范、标签闭合、属性引号
+- **如何优化HTML性能？**
+  减少HTTP请求、优化图片、使用CDN、延迟加载非关键资源、预加载关键资源
+- **如何提高HTML可访问性？**
+  添加alt属性、关联label和input、正确的标题结构、使用ARIA属性、键盘导航支持
+- **HTML SEO优化的方法有哪些？**
+  优化标题标签、添加meta标签、使用语义化标签、添加结构化数据、优化图片和链接
+- **如何实现响应式HTML？**
+  设置viewport、使用响应式图片、响应式表格、媒体查询配合
+- **HTML安全性注意事项有哪些？**
+  防止XSS攻击、使用CSP、HTTPS、表单安全、防止点击劫持
+
 ## 实战练习
 
 ### 1. 构建基本HTML页面
