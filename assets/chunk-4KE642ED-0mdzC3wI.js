@@ -1,0 +1,1 @@
+import{m as e}from"./mermaid.esm.min-T6HX2X9s.js";function a(c,t){c.accDescr&&t.setAccDescription?.(c.accDescr),c.accTitle&&t.setAccTitle?.(c.accTitle),c.title&&t.setDiagramTitle?.(c.title)}e(a,"populateCommonDb");export{a as c};
